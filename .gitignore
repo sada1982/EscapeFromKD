@@ -1,0 +1,141 @@
+# Unreal Engine 5.8.x / Windows / Blueprint Project
+# このファイルは .uproject と同じフォルダに配置する
+
+# ========================================
+# UEが再生成できるデータ
+# ========================================
+/Binaries/
+/Intermediate/
+/Saved/
+/DerivedDataCache/
+
+# ========================================
+# プロジェクト内プラグインの一時データ
+# ========================================
+/Plugins/**/Intermediate/
+/Plugins/**/Saved/
+/Plugins/**/DerivedDataCache/
+
+# Plugins内のBinariesは除外しない
+# ソースを持たないプラグインの動作に必要なため
+
+# ========================================
+# Visual Studio / Rider
+# ========================================
+.vs/
+.idea/
+
+# 自動生成されるソリューション・プロジェクト
+*.sln
+*.slnx
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# 個人設定・IDEキャッシュ
+*.suo
+*.user
+*.userprefs
+*.sln.DotSettings.user
+*.opensdf
+*.sdf
+*.VC.db
+*.opendb
+
+# .vscodeは共有設定を含められるよう除外しない
+
+# ========================================
+# 一時ファイル
+# ========================================
+*.tmp
+*.temp
+*~
+
+# ========================================
+# OSが作成するファイル
+# ========================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ========================================
+# 以下はバージョン管理に残す
+# ========================================
+# *.uproject
+# Config/
+# Content/（.uasset・.umap・ビルド済みライティング等）
+# Build/（アイコン・プラットフォーム固有の設定等）
+# Plugins/（.uplugin・Content・Source・Binaries等）
+# Source/（将来追加した場合）
+# .gitignore
+# .gitattributes# Unreal Engine 5.8.x / Windows / Blueprint Project
+# このファイルは .uproject と同じフォルダに配置する
+
+# ========================================
+# UEが再生成できるデータ
+# ========================================
+/Binaries/
+/Intermediate/
+/Saved/
+/DerivedDataCache/
+
+# ========================================
+# プロジェクト内プラグインの一時データ
+# ========================================
+/Plugins/**/Intermediate/
+/Plugins/**/Saved/
+/Plugins/**/DerivedDataCache/
+
+# Plugins内のBinariesは除外しない
+# ソースを持たないプラグインの動作に必要なため
+
+# ========================================
+# Visual Studio / Rider
+# ========================================
+.vs/
+.idea/
+
+# 自動生成されるソリューション・プロジェクト
+*.sln
+*.slnx
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# 個人設定・IDEキャッシュ
+*.suo
+*.user
+*.userprefs
+*.sln.DotSettings.user
+*.opensdf
+*.sdf
+*.VC.db
+*.opendb
+
+# .vscodeは共有設定を含められるよう除外しない
+
+# ========================================
+# 一時ファイル
+# ========================================
+*.tmp
+*.temp
+*~
+
+# ========================================
+# OSが作成するファイル
+# ========================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ========================================
+# 以下はバージョン管理に残す
+# ========================================
+# *.uproject
+# Config/
+# Content/（.uasset・.umap・ビルド済みライティング等）
+# Build/（アイコン・プラットフォーム固有の設定等）
+# Plugins/（.uplugin・Content・Source・Binaries等）
+# Source/（将来追加した場合）
+# .gitignore
+# .gitattributes
