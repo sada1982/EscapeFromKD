@@ -1,0 +1,66 @@
+EscapeFromKD 3F 再現・差し替え記録（2026-11-13）
+
+対象
+  レベル: /Game/Main/Stage/KDStage
+  BP: /Game/Main/Stage/BP_Floor03
+  新規メッシュ・材質: /Game/Main/Stage/Floor03/SurveyV02
+  UE操作は通常のUnreal MCPを使用。HTTP直接接続は使用していない。
+
+再現資料と精度
+  https://my.matterport.com/show/?m=DG9hQWWe91g
+  ビューア内を移動し、平面図、開始実習室、隣接実習室、CAD教室、
+  吹き抜け沿いの廊下、展示スペース、階段・エレベーター前を確認した。
+  平面図の測定例9.20mを基準に比率を推定。測量図やスキャンモデルではない。
+  開始実習室は約8.05m×10.15m、高さ3.05m。学生机20台、椅子40脚、5列。
+  見えない部分、階段の先、ポスターや画面の内容、小物の細部は推定・代表表現。
+  2F/4Fは吹き抜け越しに見える周辺形状のみ。各階全体は作成していない。
+
+生成物（プロジェクトルートからの相対パス）
+  SourceAssets/Stages/Floor03/SurveyV02/EscapeFromKD_Floor03_v02.blend
+  SourceAssets/Stages/Floor03/SurveyV02/Export/EscapeFromKD_Floor03_v02.fbx
+  SourceAssets/Stages/Floor03/SurveyV02/Export/SM_F03V02_*.fbx（12分類）
+  SourceAssets/Stages/Floor03/SurveyV02/Export/export_manifest.json
+  SourceAssets/Stages/Floor03/SurveyV02/survey_build_report.json
+  SourceAssets/Stages/Floor03/SurveyV02/unreal_validation.json
+  SourceAssets/Stages/Floor03/build_floor03_survey.py
+  SourceAssets/Stages/Floor03/export_floor03_survey.py
+
+差し替え内容
+  BPの12個の既存StaticMeshComponentと配置済みActorのメッシュ参照を更新。
+  PlayerStart: X=402、Y=-73、Z=100cm、Yaw=-90度。
+  既存のステージ照明23灯を再配置し、新規19灯と補助光4灯を追加。
+  照明の到達範囲はUE表示に合わせて調整。補助光4灯は影なし。
+  Glass/Mice以外の新規メッシュでNaniteを有効化。
+  全12メッシュの衝突はUseComplexAsSimple。材質は既存を再利用し8材質を追加。
+  他教室とエレベーターを通行不可とする既存仕様を維持。
+  射撃、リコイル、ADS、リロード、キャラクター、プロジェクト設定は変更していない。
+
+確認
+  BlenderからFBXへ出力し、再読み込みで12メッシュ、UV、寸法を確認。
+  UEで12メッシュの参照、材質、衝突、開始位置を確認。
+  PIEで教室中央通路→教室出口→廊下の曲がり角→ロビー→下り階段を連続歩行。
+  下り踊り場（床-170cm）から3Fへ戻れること、上り階段（床+170cm）を確認。
+  経路の精密確認ではPIE中のみ歩行速度を120cm/sに変更。通常速度600cm/sは維持。
+  手すり、閉鎖教室の扉で進行が遮られることを確認。
+  最終確認の詳細はunreal_validation.jsonを参照。
+
+残る制約
+  机・ノートPCの一部細部で近ゼロ接線のインポート警告が残る。
+  崩れたUVと面積ゼロの面は出力コピーで修正済み。ゲーム内表示を目視確認した。
+  全教室の開放、他階全体の制作、実測寸法への完全一致は今回の対象外。
+
+復元
+  作業前バックアップ: Saved/Automation/Floor03Rebuild_20261112/Before/
+    Stage/         = Content/Main/Stage の作業前コピー
+    SourceFloor03/ = SourceAssets/Stages/Floor03 の作業前コピー
+  UEを閉じた状態でStage/BP_Floor03.uassetとStage/KDStage.umapを元の場所へ
+  戻せば旧メッシュ参照・旧配置へ復元できる。旧メッシュ・旧材質は変更していない。
+  新規SurveyV02アセットは復元後も残せる。削除は不要。
+  バックアップはSaved配下のためGit管理対象外。必要なら別媒体へ保管する。
+
+再生成
+  Blender 5.3でbuild_floor03_survey.pyを実行後、完了を待ってから
+  export_floor03_survey.pyを実行する。元のv01.blendは上書きしない。
+  UEへの更新は既存SurveyV02メッシュの「メッシュを再インポート」を使用。
+  再取り込み後に材質・Nanite・衝突設定を再確認する。
+  Gitへのコミット・プッシュは行っていない。

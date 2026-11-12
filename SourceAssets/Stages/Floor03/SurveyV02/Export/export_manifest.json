@@ -1,0 +1,935 @@
+{
+  "source": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\EscapeFromKD_Floor03_v02.blend",
+  "source_sha256": "9aae64d13bec354343c10d91d7303e0158b0f41cb765d1fe3e03657823e87555",
+  "combined_fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\EscapeFromKD_Floor03_v02.fbx",
+  "groups": [
+    {
+      "group": "Structure",
+      "name": "SM_F03V02_Structure",
+      "fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\SM_F03V02_Structure.fbx",
+      "bounds_blender_m": {
+        "min": [
+          0.0,
+          -0.07999999821186066,
+          -0.18000000715255737
+        ],
+        "max": [
+          8.130000114440918,
+          10.229999542236328,
+          3.049999952316284
+        ]
+      },
+      "triangles": 120,
+      "source_count": 10,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "repaired_uv_faces": 0,
+      "removed_degenerate_faces": 0,
+      "material_slots": [
+        "KD_F03_ClassroomCarpet",
+        "KD_F03_PaintWarmWhite",
+        "KD_F03_BlackPlastic"
+      ]
+    },
+    {
+      "group": "Ceilings",
+      "name": "SM_F03V02_Ceilings",
+      "fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\SM_F03V02_Ceilings.fbx",
+      "bounds_blender_m": {
+        "min": [
+          -22.469999313354492,
+          -19.06999969482422,
+          -0.18000000715255737
+        ],
+        "max": [
+          8.050000190734863,
+          20.299999237060547,
+          8.949999809265137
+        ]
+      },
+      "triangles": 11984,
+      "source_count": 223,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "repaired_uv_faces": 0,
+      "removed_degenerate_faces": 0,
+      "material_slots": [
+        "KD_F03_AcousticCeiling",
+        "KD_F03_PaintWarmWhite",
+        "KD_F03_SilverMetal",
+        "KD_F03_LightDiffuser",
+        "KD_F03_V02_DeskLaminate",
+        "KD_F03_DarkWindowFrames"
+      ]
+    },
+    {
+      "group": "ClosedClassrooms",
+      "name": "SM_F03V02_ClosedClassrooms",
+      "fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\SM_F03V02_ClosedClassrooms.fbx",
+      "bounds_blender_m": {
+        "min": [
+          -22.549999237060547,
+          -19.149999618530273,
+          -0.18000000715255737
+        ],
+        "max": [
+          8.130000114440918,
+          20.3799991607666,
+          3.0500001907348633
+        ]
+      },
+      "triangles": 12272,
+      "source_count": 37,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "repaired_uv_faces": 5270,
+      "removed_degenerate_faces": 0,
+      "material_slots": [
+        "KD_F03_ClassroomCarpet",
+        "KD_F03_PaintWarmWhite",
+        "KD_F03_V02_DoorOak",
+        "KD_F03_SilverMetal",
+        "KD_F03_DarkWindowFrames",
+        "KD_F03_BlackPlastic"
+      ]
+    },
+    {
+      "group": "ClassroomFixtures",
+      "name": "SM_F03V02_ClassroomFixtures",
+      "fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\SM_F03V02_ClassroomFixtures.fbx",
+      "bounds_blender_m": {
+        "min": [
+          -21.73000144958496,
+          -16.049999237060547,
+          0.0
+        ],
+        "max": [
+          7.928999900817871,
+          20.299999237060547,
+          2.869999885559082
+        ]
+      },
+      "triangles": 55084,
+      "source_count": 200,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "repaired_uv_faces": 22828,
+      "removed_degenerate_faces": 0,
+      "material_slots": [
+        "KD_F03_PosterBlue",
+        "KD_F03_Whiteboard",
+        "KD_F03_PosterOrange",
+        "KD_F03_BlackPlastic",
+        "KD_F03_SilverMetal",
+        "KD_F03_V02_Projection",
+        "KD_F03_PaintWarmWhite",
+        "KD_F03_DarkWindowFrames",
+        "KD_F03_LaptopScreen",
+        "KD_F03_V02_DeskLaminate",
+        "KD_F03_LightOak",
+        "KD_F03_V02_FireRed"
+      ]
+    },
+    {
+      "group": "GlazingFrames",
+      "name": "SM_F03V02_GlazingFrames",
+      "fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\SM_F03V02_GlazingFrames.fbx",
+      "bounds_blender_m": {
+        "min": [
+          -21.577882766723633,
+          -18.099300384521484,
+          0.0
+        ],
+        "max": [
+          8.130000114440918,
+          10.149999618530273,
+          3.049999952316284
+        ]
+      },
+      "triangles": 20760,
+      "source_count": 266,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "repaired_uv_faces": 8260,
+      "removed_degenerate_faces": 0,
+      "material_slots": [
+        "KD_F03_PaintWarmWhite",
+        "KD_F03_DarkWindowFrames",
+        "KD_F03_SilverMetal",
+        "KD_F03_Whiteboard",
+        "KD_F03_V02_DoorOak",
+        "KD_F03_BlackPlastic"
+      ]
+    },
+    {
+      "group": "Glass",
+      "name": "SM_F03V02_Glass",
+      "fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\SM_F03V02_Glass.fbx",
+      "bounds_blender_m": {
+        "min": [
+          -21.524667739868164,
+          -18.046228408813477,
+          0.37999993562698364
+        ],
+        "max": [
+          8.053999900817871,
+          10.31450080871582,
+          2.870000123977661
+        ]
+      },
+      "triangles": 168,
+      "source_count": 14,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "repaired_uv_faces": 0,
+      "removed_degenerate_faces": 0,
+      "material_slots": [
+        "KD_F03_ClearGlass"
+      ]
+    },
+    {
+      "group": "Corridors",
+      "name": "SM_F03V02_Corridors",
+      "fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\SM_F03V02_Corridors.fbx",
+      "bounds_blender_m": {
+        "min": [
+          -16.579999923706055,
+          -6.670000076293945,
+          -6.480000019073486
+        ],
+        "max": [
+          0.08000022172927856,
+          10.380000114440918,
+          8.949999809265137
+        ]
+      },
+      "triangles": 42916,
+      "source_count": 383,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "repaired_uv_faces": 9478,
+      "removed_degenerate_faces": 0,
+      "material_slots": [
+        "KD_F03_CorridorCarpet",
+        "KD_F03_PaintWarmWhite",
+        "KD_F03_BlackPlastic",
+        "KD_F03_SilverMetal",
+        "KD_F03_V02_GlassBlock",
+        "KD_F03_Concrete",
+        "KD_F03_PosterBlue",
+        "KD_F03_Whiteboard",
+        "KD_F03_PosterOrange",
+        "KD_F03_LightOak",
+        "KD_F03_V02_DeskLaminate",
+        "KD_F03_V02_FireRed"
+      ]
+    },
+    {
+      "group": "StairCore",
+      "name": "SM_F03V02_StairCore",
+      "fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\SM_F03V02_StairCore.fbx",
+      "bounds_blender_m": {
+        "min": [
+          -22.3799991607666,
+          -5.78000020980835,
+          -1.9199999570846558
+        ],
+        "max": [
+          -14.200000762939453,
+          -0.9199998378753662,
+          4.599999904632568
+        ]
+      },
+      "triangles": 2360,
+      "source_count": 65,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "repaired_uv_faces": 636,
+      "removed_degenerate_faces": 0,
+      "material_slots": [
+        "KD_F03_CorridorCarpet",
+        "KD_F03_PaintWarmWhite",
+        "KD_F03_SilverMetal",
+        "KD_F03_V02_StairDoor",
+        "KD_F03_V02_Brass",
+        "KD_F03_V02_ExitGreen",
+        "KD_F03_Whiteboard",
+        "KD_F03_BlackPlastic",
+        "KD_F03_V02_FireRed"
+      ]
+    },
+    {
+      "group": "Desks",
+      "name": "SM_F03V02_Desks",
+      "fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\SM_F03V02_Desks.fbx",
+      "bounds_blender_m": {
+        "min": [
+          -21.299999237060547,
+          -17.450000762939453,
+          0.0
+        ],
+        "max": [
+          7.774999618530273,
+          18.399999618530273,
+          0.7199999690055847
+        ]
+      },
+      "triangles": 137068,
+      "source_count": 89,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "repaired_uv_faces": 8,
+      "removed_degenerate_faces": 2128,
+      "material_slots": [
+        "KD_F03_LightOak",
+        "KD_F03_BlackPlastic",
+        "KD_F03_SilverMetal",
+        "KD_F03_DarkRubber",
+        "KD_F03_V02_DeskLaminate"
+      ]
+    },
+    {
+      "group": "Chairs",
+      "name": "SM_F03V02_Chairs",
+      "fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\SM_F03V02_Chairs.fbx",
+      "bounds_blender_m": {
+        "min": [
+          -18.89900016784668,
+          -17.29401969909668,
+          0.0
+        ],
+        "max": [
+          7.565000057220459,
+          17.73000144958496,
+          0.8499999642372131
+        ]
+      },
+      "triangles": 941700,
+      "source_count": 173,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "repaired_uv_faces": 791,
+      "removed_degenerate_faces": 0,
+      "material_slots": [
+        "KD_F03_BlackPlastic",
+        "KD_F03_DarkRubber",
+        "KD_F03_SilverMetal"
+      ]
+    },
+    {
+      "group": "Laptops",
+      "name": "SM_F03V02_Laptops",
+      "fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\SM_F03V02_Laptops.fbx",
+      "bounds_blender_m": {
+        "min": [
+          0.8941465616226196,
+          1.5414127111434937,
+          0.7200000286102295
+        ],
+        "max": [
+          6.846166610717773,
+          9.59749984741211,
+          0.948101282119751
+        ]
+      },
+      "triangles": 156492,
+      "source_count": 21,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "repaired_uv_faces": 147,
+      "removed_degenerate_faces": 336,
+      "material_slots": [
+        "KD_F03_BlackPlastic",
+        "KD_F03_DarkRubber",
+        "KD_F03_LaptopKeyboard",
+        "KD_F03_LaptopScreen"
+      ]
+    },
+    {
+      "group": "Mice",
+      "name": "SM_F03V02_Mice",
+      "fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\SM_F03V02_Mice.fbx",
+      "bounds_blender_m": {
+        "min": [
+          1.4200000762939453,
+          1.5200001001358032,
+          0.7200000286102295
+        ],
+        "max": [
+          7.080000400543213,
+          7.539999961853027,
+          0.7590000033378601
+        ]
+      },
+      "triangles": 8320,
+      "source_count": 20,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "repaired_uv_faces": 0,
+      "removed_degenerate_faces": 0,
+      "material_slots": [
+        "KD_F03_BlackPlastic",
+        "KD_F03_DarkRubber"
+      ]
+    }
+  ],
+  "materials": {
+    "KD_F03_ClassroomCarpet": {
+      "base_color_linear": [
+        0.1899999976158142,
+        0.20499999821186066,
+        0.20499999821186066,
+        1.0
+      ],
+      "roughness": 0.9399999976158142,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\carpet_grey_blue.png"
+      ],
+      "uv_scale_baked": 4.0
+    },
+    "KD_F03_PaintWarmWhite": {
+      "base_color_linear": [
+        0.800000011920929,
+        0.7900000214576721,
+        0.7300000190734863,
+        1.0
+      ],
+      "roughness": 0.8399999737739563,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_BlackPlastic": {
+      "base_color_linear": [
+        0.01600000075995922,
+        0.020999999716877937,
+        0.02500000037252903,
+        1.0
+      ],
+      "roughness": 0.44999998807907104,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_AcousticCeiling": {
+      "base_color_linear": [
+        0.8199999928474426,
+        0.8100000023841858,
+        0.7699999809265137,
+        1.0
+      ],
+      "roughness": 0.9300000071525574,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\ceiling_acoustic.png"
+      ],
+      "uv_scale_baked": 3.0
+    },
+    "KD_F03_SilverMetal": {
+      "base_color_linear": [
+        0.4300000071525574,
+        0.4699999988079071,
+        0.47999998927116394,
+        1.0
+      ],
+      "roughness": 0.3199999928474426,
+      "metallic": 0.7200000286102295,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_LightDiffuser": {
+      "base_color_linear": [
+        0.9399999976158142,
+        0.9700000286102295,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.3499999940395355,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        0.9399999976158142,
+        0.9700000286102295,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 3.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_V02_DeskLaminate": {
+      "base_color_linear": [
+        0.7200000286102295,
+        0.6600000262260437,
+        0.47999998927116394,
+        1.0
+      ],
+      "roughness": 0.47999998927116394,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_DarkWindowFrames": {
+      "base_color_linear": [
+        0.017999999225139618,
+        0.035999998450279236,
+        0.03400000184774399,
+        1.0
+      ],
+      "roughness": 0.36000001430511475,
+      "metallic": 0.2800000011920929,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_V02_DoorOak": {
+      "base_color_linear": [
+        0.47999998927116394,
+        0.28999999165534973,
+        0.08500000089406967,
+        1.0
+      ],
+      "roughness": 0.47999998927116394,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_PosterBlue": {
+      "base_color_linear": [
+        0.02500000037252903,
+        0.15000000596046448,
+        0.28999999165534973,
+        1.0
+      ],
+      "roughness": 0.7300000190734863,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\poster_blue_abstract.png"
+      ],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_Whiteboard": {
+      "base_color_linear": [
+        0.8999999761581421,
+        0.9200000166893005,
+        0.8899999856948853,
+        1.0
+      ],
+      "roughness": 0.27000001072883606,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_PosterOrange": {
+      "base_color_linear": [
+        0.44999998807907104,
+        0.1899999976158142,
+        0.05000000074505806,
+        1.0
+      ],
+      "roughness": 0.7300000190734863,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\poster_orange_abstract.png"
+      ],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_V02_Projection": {
+      "base_color_linear": [
+        0.550000011920929,
+        0.6899999976158142,
+        0.6700000166893005,
+        1.0
+      ],
+      "roughness": 0.8999999761581421,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        0.18000000715255737,
+        0.25,
+        0.23000000417232513,
+        1.0
+      ],
+      "emission_strength": 0.4000000059604645,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_LaptopScreen": {
+      "base_color_linear": [
+        0.03500000014901161,
+        0.11999999731779099,
+        0.2199999988079071,
+        1.0
+      ],
+      "roughness": 0.2800000011920929,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.5,
+      "image_files": [
+        "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\screen_editor.png"
+      ],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_LightOak": {
+      "base_color_linear": [
+        0.6700000166893005,
+        0.47999998927116394,
+        0.27000001072883606,
+        1.0
+      ],
+      "roughness": 0.4699999988079071,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\wood_light_oak.png"
+      ],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_V02_FireRed": {
+      "base_color_linear": [
+        0.6000000238418579,
+        0.017999999225139618,
+        0.012000000104308128,
+        1.0
+      ],
+      "roughness": 0.4000000059604645,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_ClearGlass": {
+      "base_color_linear": [
+        0.9100000262260437,
+        0.9700000286102295,
+        0.9800000190734863,
+        1.0
+      ],
+      "roughness": 0.02500000037252903,
+      "metallic": 0.0,
+      "transmission": 1.0,
+      "ior": 1.4600000381469727,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_CorridorCarpet": {
+      "base_color_linear": [
+        0.33000001311302185,
+        0.30000001192092896,
+        0.25999999046325684,
+        1.0
+      ],
+      "roughness": 0.9100000262260437,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\corridor_warm_grey.png"
+      ],
+      "uv_scale_baked": 4.0
+    },
+    "KD_F03_V02_GlassBlock": {
+      "base_color_linear": [
+        0.20000000298023224,
+        0.28999999165534973,
+        0.3100000023841858,
+        1.0
+      ],
+      "roughness": 0.1899999976158142,
+      "metallic": 0.2199999988079071,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_Concrete": {
+      "base_color_linear": [
+        0.3499999940395355,
+        0.36000001430511475,
+        0.3499999940395355,
+        1.0
+      ],
+      "roughness": 0.9100000262260437,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_V02_StairDoor": {
+      "base_color_linear": [
+        0.017999999225139618,
+        0.07500000298023224,
+        0.09000000357627869,
+        1.0
+      ],
+      "roughness": 0.550000011920929,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_V02_Brass": {
+      "base_color_linear": [
+        0.6299999952316284,
+        0.46000000834465027,
+        0.17000000178813934,
+        1.0
+      ],
+      "roughness": 0.33000001311302185,
+      "metallic": 0.6499999761581421,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_V02_ExitGreen": {
+      "base_color_linear": [
+        0.014999999664723873,
+        0.3799999952316284,
+        0.20000000298023224,
+        1.0
+      ],
+      "roughness": 0.36000001430511475,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_DarkRubber": {
+      "base_color_linear": [
+        0.00800000037997961,
+        0.010999999940395355,
+        0.013000000268220901,
+        1.0
+      ],
+      "roughness": 0.8299999833106995,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_LaptopKeyboard": {
+      "base_color_linear": [
+        0.03500000014901161,
+        0.03999999910593033,
+        0.05000000074505806,
+        1.0
+      ],
+      "roughness": 0.5,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\keyboard_keys.png"
+      ],
+      "uv_scale_baked": 1.0
+    }
+  },
+  "total_triangles": 1389244,
+  "roundtrip_mesh_count": 12,
+  "roundtrip_bounds_error_m": 1.9073486328125e-06,
+  "all_meshes_have_uv": true
+}

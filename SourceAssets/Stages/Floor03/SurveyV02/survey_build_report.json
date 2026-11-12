@@ -1,0 +1,543 @@
+{
+  "source_url": "https://my.matterport.com/show/?m=DG9hQWWe91g",
+  "blender_version": "5.3.0",
+  "measurement_sample_m": 9.2,
+  "sample_floorplan_pixels": 127,
+  "meters_per_reference_pixel": 0.07244094488188976,
+  "start_lab_dimensions_m": [
+    8.05,
+    10.15,
+    3.05
+  ],
+  "start_lab_rows": 5,
+  "start_lab_student_desks": 20,
+  "start_lab_student_chairs": 40,
+  "groups": {
+    "Structure": 10,
+    "Ceilings": 223,
+    "ClosedClassrooms": 37,
+    "ClassroomFixtures": 200,
+    "GlazingFrames": 266,
+    "Glass": 14,
+    "Corridors": 383,
+    "StairCore": 65,
+    "Desks": 89,
+    "Chairs": 173,
+    "Laptops": 21,
+    "Mice": 20
+  },
+  "lights": [
+    {
+      "name": "F03_GameLab",
+      "location_blender_m": [
+        1.5,
+        2.0,
+        2.72
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_GameLab",
+      "location_blender_m": [
+        1.5,
+        4.3,
+        2.72
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_GameLab",
+      "location_blender_m": [
+        1.5,
+        6.6,
+        2.72
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_GameLab",
+      "location_blender_m": [
+        1.5,
+        8.9,
+        2.72
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_GameLab",
+      "location_blender_m": [
+        4,
+        2.0,
+        2.72
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_GameLab",
+      "location_blender_m": [
+        4,
+        4.3,
+        2.72
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_GameLab",
+      "location_blender_m": [
+        4,
+        6.6,
+        2.72
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_GameLab",
+      "location_blender_m": [
+        4,
+        8.9,
+        2.72
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_GameLab",
+      "location_blender_m": [
+        6.5,
+        2.0,
+        2.72
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_GameLab",
+      "location_blender_m": [
+        6.5,
+        4.3,
+        2.72
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_GameLab",
+      "location_blender_m": [
+        6.5,
+        6.6,
+        2.72
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_GameLab",
+      "location_blender_m": [
+        6.5,
+        8.9,
+        2.72
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_Gallery",
+      "location_blender_m": [
+        -1.08,
+        1,
+        2.88
+      ],
+      "lumens": 1100,
+      "size_m": 1.1,
+      "temperature": 4500
+    },
+    {
+      "name": "F03_Gallery",
+      "location_blender_m": [
+        -1.08,
+        4,
+        2.88
+      ],
+      "lumens": 1100,
+      "size_m": 1.1,
+      "temperature": 4500
+    },
+    {
+      "name": "F03_Gallery",
+      "location_blender_m": [
+        -1.08,
+        7.3,
+        2.88
+      ],
+      "lumens": 1100,
+      "size_m": 1.1,
+      "temperature": 4500
+    },
+    {
+      "name": "F03_Gallery",
+      "location_blender_m": [
+        -1.08,
+        9.5,
+        2.88
+      ],
+      "lumens": 1100,
+      "size_m": 1.1,
+      "temperature": 4500
+    },
+    {
+      "name": "F03_Gallery",
+      "location_blender_m": [
+        -3.4,
+        -1.23,
+        2.88
+      ],
+      "lumens": 1100,
+      "size_m": 1.1,
+      "temperature": 4500
+    },
+    {
+      "name": "F03_Gallery",
+      "location_blender_m": [
+        -6,
+        -1.23,
+        2.88
+      ],
+      "lumens": 1100,
+      "size_m": 1.1,
+      "temperature": 4500
+    },
+    {
+      "name": "F03_Gallery",
+      "location_blender_m": [
+        -8.5,
+        -2,
+        2.88
+      ],
+      "lumens": 1100,
+      "size_m": 1.1,
+      "temperature": 4500
+    },
+    {
+      "name": "F03_Gallery",
+      "location_blender_m": [
+        -11.5,
+        -3,
+        2.88
+      ],
+      "lumens": 1100,
+      "size_m": 1.1,
+      "temperature": 4500
+    },
+    {
+      "name": "F03_Gallery",
+      "location_blender_m": [
+        -14.5,
+        -4.8,
+        2.88
+      ],
+      "lumens": 1100,
+      "size_m": 1.1,
+      "temperature": 4500
+    },
+    {
+      "name": "F03_Atrium",
+      "location_blender_m": [
+        -7.5,
+        5,
+        8.5
+      ],
+      "lumens": 14000,
+      "size_m": 6,
+      "temperature": 5800
+    },
+    {
+      "name": "F03_AdjacentLab",
+      "location_blender_m": [
+        -0.7,
+        13,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_AdjacentLab",
+      "location_blender_m": [
+        -0.7,
+        16.3,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_AdjacentLab",
+      "location_blender_m": [
+        -0.7,
+        19,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_AdjacentLab",
+      "location_blender_m": [
+        2.9,
+        13,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_AdjacentLab",
+      "location_blender_m": [
+        2.9,
+        16.3,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_AdjacentLab",
+      "location_blender_m": [
+        2.9,
+        19,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_AdjacentLab",
+      "location_blender_m": [
+        6.5,
+        13,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_AdjacentLab",
+      "location_blender_m": [
+        6.5,
+        16.3,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_AdjacentLab",
+      "location_blender_m": [
+        6.5,
+        19,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_CADLab",
+      "location_blender_m": [
+        -13.3,
+        -8.9,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_CADLab",
+      "location_blender_m": [
+        -13.3,
+        -12.5,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_CADLab",
+      "location_blender_m": [
+        -13.3,
+        -16.1,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_CADLab",
+      "location_blender_m": [
+        -16.4,
+        -8.9,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_CADLab",
+      "location_blender_m": [
+        -16.4,
+        -12.5,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_CADLab",
+      "location_blender_m": [
+        -16.4,
+        -16.1,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_CADLab",
+      "location_blender_m": [
+        -19.5,
+        -8.9,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_CADLab",
+      "location_blender_m": [
+        -19.5,
+        -12.5,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_CADLab",
+      "location_blender_m": [
+        -19.5,
+        -16.1,
+        2.8
+      ],
+      "lumens": 1900,
+      "size_m": 1.2,
+      "temperature": 5000
+    },
+    {
+      "name": "F03_Stair",
+      "location_blender_m": [
+        -19,
+        -3.35,
+        4.0
+      ],
+      "lumens": 1100,
+      "size_m": 2.5,
+      "temperature": 4500
+    },
+    {
+      "name": "F03_Lift",
+      "location_blender_m": [
+        -15,
+        -3.7,
+        2.85
+      ],
+      "lumens": 1100,
+      "size_m": 1.0,
+      "temperature": 4500
+    }
+  ],
+  "player_start_ue_cm": [
+    402,
+    -73,
+    100
+  ],
+  "walk_route_blender_m": [
+    [
+      4.02,
+      0.73
+    ],
+    [
+      4.02,
+      8.875
+    ],
+    [
+      -1.05,
+      8.875
+    ],
+    [
+      -1.05,
+      -1.2
+    ],
+    [
+      -8.8,
+      -1.2
+    ],
+    [
+      -14.5,
+      -3.2
+    ],
+    [
+      -16.5,
+      -3.2
+    ],
+    [
+      -16.5,
+      -2.0
+    ],
+    [
+      -21.5,
+      -2.0
+    ]
+  ],
+  "notes": [
+    "Viewer-derived proportions, not survey-grade dimensions.",
+    "Other classrooms remain closed, preserving the existing gameplay scope.",
+    "Visible atrium surroundings included; other complete floors are not built.",
+    "Stair flights beyond the photographed entrance are estimated.",
+    "Poster artwork, screen content and small equipment are representative original geometry/text, not scans."
+  ]
+}

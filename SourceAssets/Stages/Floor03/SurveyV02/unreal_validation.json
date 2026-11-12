@@ -1,0 +1,756 @@
+{
+  "date": "2026-11-13",
+  "reference_url": "https://my.matterport.com/show/?m=DG9hQWWe91g",
+  "level": "/Game/Main/Stage/KDStage",
+  "blueprint": "/Game/Main/Stage/BP_Floor03",
+  "source_blend_sha256": "9aae64d13bec354343c10d91d7303e0158b0f41cb765d1fe3e03657823e87555",
+  "combined_fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\EscapeFromKD_Floor03_v02.fbx",
+  "total_fbx_triangles": 1389244,
+  "fbx_roundtrip": {
+    "mesh_count": 12,
+    "all_meshes_have_uv": true,
+    "bounds_error_m": 0.0000019073486328125
+  },
+  "unreal_mesh_checks": [
+    {
+      "group": "Structure",
+      "mesh": {
+        "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Structure.SM_F03V02_Structure"
+      },
+      "collision": "CTF_UseComplexAsSimple",
+      "nanite": true,
+      "bounds": {
+        "min": {
+          "x": -0.00008943350258050486,
+          "y": -1023,
+          "z": -18
+        },
+        "max": {
+          "x": 813,
+          "y": 8,
+          "z": 305
+        },
+        "isValid": true
+      },
+      "material_assignments_valid": true,
+      "max_bounds_error_cm": 0.00008943350258050486
+    },
+    {
+      "group": "Ceilings",
+      "mesh": {
+        "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Ceilings.SM_F03V02_Ceilings"
+      },
+      "collision": "CTF_UseComplexAsSimple",
+      "nanite": true,
+      "bounds": {
+        "min": {
+          "x": -2246.999755859375,
+          "y": -2030,
+          "z": -18
+        },
+        "max": {
+          "x": 805,
+          "y": 1907.0001220703125,
+          "z": 895
+        },
+        "isValid": true
+      },
+      "material_assignments_valid": true,
+      "max_bounds_error_cm": 0.00017547607421875
+    },
+    {
+      "group": "ClosedClassrooms",
+      "mesh": {
+        "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_ClosedClassrooms.SM_F03V02_ClosedClassrooms"
+      },
+      "collision": "CTF_UseComplexAsSimple",
+      "nanite": true,
+      "bounds": {
+        "min": {
+          "x": -2254.999755859375,
+          "y": -2038,
+          "z": -18
+        },
+        "max": {
+          "x": 812.9999389648438,
+          "y": 1915.0001220703125,
+          "z": 305.0000305175781
+        },
+        "isValid": true
+      },
+      "material_assignments_valid": true,
+      "max_bounds_error_cm": 0.0001678466796875
+    },
+    {
+      "group": "ClassroomFixtures",
+      "mesh": {
+        "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_ClassroomFixtures.SM_F03V02_ClassroomFixtures"
+      },
+      "collision": "CTF_UseComplexAsSimple",
+      "nanite": true,
+      "bounds": {
+        "min": {
+          "x": -2173,
+          "y": -2030,
+          "z": 0
+        },
+        "max": {
+          "x": 792.8999633789062,
+          "y": 1605.0001220703125,
+          "z": 287
+        },
+        "isValid": true
+      },
+      "material_assignments_valid": true,
+      "max_bounds_error_cm": 0.0001983642578125
+    },
+    {
+      "group": "GlazingFrames",
+      "mesh": {
+        "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_GlazingFrames.SM_F03V02_GlazingFrames"
+      },
+      "collision": "CTF_UseComplexAsSimple",
+      "nanite": true,
+      "bounds": {
+        "min": {
+          "x": -2157.7880859375,
+          "y": -1014.9999389648438,
+          "z": 0
+        },
+        "max": {
+          "x": 813,
+          "y": 1809.93017578125,
+          "z": 305
+        },
+        "isValid": true
+      },
+      "material_assignments_valid": true,
+      "max_bounds_error_cm": 0.00019073486328125
+    },
+    {
+      "group": "Glass",
+      "mesh": {
+        "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Glass.SM_F03V02_Glass"
+      },
+      "collision": "CTF_UseComplexAsSimple",
+      "nanite": false,
+      "bounds": {
+        "min": {
+          "x": -2152.466796875,
+          "y": -1031.4500732421875,
+          "z": 37.99999237060547
+        },
+        "max": {
+          "x": 805.3999633789062,
+          "y": 1804.623046875,
+          "z": 287
+        },
+        "isValid": true
+      },
+      "material_assignments_valid": true,
+      "max_bounds_error_cm": 0.00020599365234375
+    },
+    {
+      "group": "Corridors",
+      "mesh": {
+        "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Corridors.SM_F03V02_Corridors"
+      },
+      "collision": "CTF_UseComplexAsSimple",
+      "nanite": true,
+      "bounds": {
+        "min": {
+          "x": -1658,
+          "y": -1038,
+          "z": -648
+        },
+        "max": {
+          "x": 8.000021934509277,
+          "y": 667.0001220703125,
+          "z": 895
+        },
+        "isValid": true
+      },
+      "material_assignments_valid": true,
+      "max_bounds_error_cm": 0.00011444091796875
+    },
+    {
+      "group": "StairCore",
+      "mesh": {
+        "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_StairCore.SM_F03V02_StairCore"
+      },
+      "collision": "CTF_UseComplexAsSimple",
+      "nanite": true,
+      "bounds": {
+        "min": {
+          "x": -2238,
+          "y": 92.00013732910156,
+          "z": -192
+        },
+        "max": {
+          "x": -1420,
+          "y": 578.000244140625,
+          "z": 460
+        },
+        "isValid": true
+      },
+      "material_assignments_valid": true,
+      "max_bounds_error_cm": 0.0002231597900390625
+    },
+    {
+      "group": "Desks",
+      "mesh": {
+        "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Desks.SM_F03V02_Desks"
+      },
+      "collision": "CTF_UseComplexAsSimple",
+      "nanite": true,
+      "bounds": {
+        "min": {
+          "x": -2129.999755859375,
+          "y": -1840,
+          "z": 0
+        },
+        "max": {
+          "x": 777.4998779296875,
+          "y": 1745.000244140625,
+          "z": 72
+        },
+        "isValid": true
+      },
+      "material_assignments_valid": true,
+      "max_bounds_error_cm": 0.0001678466796875
+    },
+    {
+      "group": "Chairs",
+      "mesh": {
+        "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Chairs.SM_F03V02_Chairs"
+      },
+      "collision": "CTF_UseComplexAsSimple",
+      "nanite": true,
+      "bounds": {
+        "min": {
+          "x": -1889.89990234375,
+          "y": -1773.000244140625,
+          "z": 0
+        },
+        "max": {
+          "x": 756.4999389648438,
+          "y": 1729.402099609375,
+          "z": 85
+        },
+        "isValid": true
+      },
+      "material_assignments_valid": true,
+      "max_bounds_error_cm": 0.00012969970703125
+    },
+    {
+      "group": "Laptops",
+      "mesh": {
+        "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Laptops.SM_F03V02_Laptops"
+      },
+      "collision": "CTF_UseComplexAsSimple",
+      "nanite": true,
+      "bounds": {
+        "min": {
+          "x": 89.41461181640625,
+          "y": -959.7500610351562,
+          "z": 72
+        },
+        "max": {
+          "x": 684.6166381835938,
+          "y": -154.1413116455078,
+          "z": 94.81012725830078
+        },
+        "isValid": true
+      },
+      "material_assignments_valid": true,
+      "max_bounds_error_cm": 0.0000762939453125
+    },
+    {
+      "group": "Mice",
+      "mesh": {
+        "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Mice.SM_F03V02_Mice"
+      },
+      "collision": "CTF_UseComplexAsSimple",
+      "nanite": false,
+      "bounds": {
+        "min": {
+          "x": 141.99993896484375,
+          "y": -754.0000610351562,
+          "z": 72
+        },
+        "max": {
+          "x": 708,
+          "y": -152.00001525878906,
+          "z": 75.9000015258789
+        },
+        "isValid": true
+      },
+      "material_assignments_valid": true,
+      "max_bounds_error_cm": 0.00006866455078125
+    }
+  ],
+  "player_start_cm": [
+    402,
+    -73,
+    100
+  ],
+  "player_start_yaw": -90,
+  "lights": {
+    "rect_lights": 42,
+    "point_fill_lights": 4,
+    "fill_cast_shadows": false,
+    "attenuation_radius_cm": {
+      "classrooms": 450,
+      "gallery": 330,
+      "stair": 650,
+      "atrium_rect": 1400,
+      "atrium_point": 1800,
+      "stair_point": 650
+    }
+  },
+  "walking_checks": [
+    {
+      "check": "spawn_aisle_at_default_speed",
+      "start": [
+        402,
+        -73,
+        98.15
+      ],
+      "end": [
+        402,
+        -969.35,
+        98.15
+      ],
+      "passed": true
+    },
+    {
+      "check": "classroom_front_exit",
+      "before": {
+        "location": {
+          "x": 402,
+          "y": -890.285037496194,
+          "z": 98.1500044320369
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "after": {
+        "location": {
+          "x": -117.12059000015256,
+          "y": -890.285037496194,
+          "z": 98.1500044320369
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "passed": true
+    },
+    {
+      "check": "atrium_gallery_length",
+      "before": {
+        "location": {
+          "x": -117.12059000015256,
+          "y": -890.285037496194,
+          "z": 98.1500044320369
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "after": {
+        "location": {
+          "x": -117.12059000015256,
+          "y": 108.84386198748666,
+          "z": 98.1500044320369
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "passed": true
+    },
+    {
+      "check": "gallery_corner",
+      "before": {
+        "location": {
+          "x": -117.12059000015256,
+          "y": 108.84386198748666,
+          "z": 98.1500044320369
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "after": {
+        "location": {
+          "x": -876.2409287667274,
+          "y": 108.84386198748666,
+          "z": 98.1500044320369
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "passed": true
+    },
+    {
+      "check": "lobby_diagonal",
+      "before": {
+        "location": {
+          "x": -876.2409287667274,
+          "y": 108.84386198748666,
+          "z": 98.1500044320369
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "after": {
+        "location": {
+          "x": -876.2409287667274,
+          "y": 307.96394177187995,
+          "z": 98.1500044320369
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "check": "lobby_to_stair_landing",
+      "before": {
+        "location": {
+          "x": -876.2409287667274,
+          "y": 307.96394177187995,
+          "z": 98.1500044320369
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "after": {
+        "location": {
+          "x": -1635.3612281942367,
+          "y": 307.96394177187995,
+          "z": 98.1500044320369
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "check": "align_stair_descent",
+      "before": {
+        "location": {
+          "x": -1635.3612281942367,
+          "y": 307.96394177187995,
+          "z": 98.1500044320369
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "after": {
+        "location": {
+          "x": -1635.3612281942367,
+          "y": 188.84388314713556,
+          "z": 98.1500044320369
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "check": "down_stair_flight",
+      "before": {
+        "location": {
+          "x": -1635.3612281942367,
+          "y": 188.84388314713556,
+          "z": 98.1500044320369
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "after": {
+        "location": {
+          "x": -2154.481431956291,
+          "y": 188.84388314713556,
+          "z": -71.85000033633469
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "check": "return_up_stair_flight",
+      "before": {
+        "location": {
+          "x": -2154.481431956291,
+          "y": 188.84388314713556,
+          "z": -71.85000033633469
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "after": {
+        "location": {
+          "x": -1635.3609995210165,
+          "y": 188.84388314713556,
+          "z": 97.98344312250174
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": -90.00000000000001,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "passed": true
+    }
+  ],
+  "upper_stair": {
+    "end": [
+      -2133.393,
+      470,
+      268.149987
+    ],
+    "passed": true,
+    "maxWalkSpeed": 600
+  },
+  "final_down_and_up_stair_at_600cm_s": [
+    {
+      "key": "W",
+      "transform": {
+        "location": {
+          "x": -2168.3931350224148,
+          "y": 188,
+          "z": -71.85000072761254
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    {
+      "key": "S",
+      "transform": {
+        "location": {
+          "x": -1634.9999997764783,
+          "y": 188,
+          "z": 98.10726048351785
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 180,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    }
+  ],
+  "atrium_rail_blocks_player": {
+    "after": {
+      "location": {
+        "x": -400,
+        "y": 48.122229891041655,
+        "z": 98.15000065800109
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.00000000000001,
+        "roll": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    "passed": true
+  },
+  "closed_classroom_door_blocks_player": {
+    "after": {
+      "location": {
+        "x": -117,
+        "y": -993.9066222150977,
+        "z": 98.14999731158599
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": -90.00000000000001,
+        "roll": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    "passed": true
+  },
+  "final_default_movement": {
+    "maxWalkSpeed": 600,
+    "mode": "MOVE_Walking",
+    "spawn": [
+      402,
+      -73,
+      98.15
+    ],
+    "central_aisle_end": [
+      402,
+      -969.0936,
+      98.15
+    ]
+  },
+  "blueprint_compile_warnings_as_errors": "passed",
+  "blueprint_runtime_errors": [],
+  "rendering_validation": "No new VSM overflow warnings after stage light attenuation adjustment and Nanite enablement; final PIE classroom/gallery/stairs reviewed.",
+  "remaining_import_warnings": [
+    "SM_F03V02_Desks: near-zero tangents/binormals on small furniture details",
+    "SM_F03V02_Laptops: near-zero tangents/binormals on small furniture details"
+  ],
+  "limitations": [
+    "Viewer-derived proportions, not survey-grade dimensions.",
+    "Other classrooms remain closed, preserving the existing gameplay scope.",
+    "Visible atrium surroundings included; other complete floors are not built.",
+    "Stair flights beyond the photographed entrance are estimated.",
+    "Poster artwork, screen content and small equipment are representative original geometry/text, not scans."
+  ],
+  "screenshots": [
+    "Unreal_Classroom.png",
+    "Unreal_Gallery.png",
+    "Unreal_Stairs.png"
+  ],
+  "backup_directory": "Saved/Automation/Floor03Rebuild_20261112/Before",
+  "original_blend_unchanged_sha256": "9e921c2a0c18822c43e7047f189184a192cfe1757cfccea1bf9d424f61413487",
+  "editor_operations_transport": "normal unreal-mcp",
+  "unrelated_gameplay_and_project_settings_changed": false,
+  "committed": false
+}
