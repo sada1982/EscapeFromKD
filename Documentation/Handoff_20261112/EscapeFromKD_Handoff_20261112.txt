@@ -1,0 +1,470 @@
+EscapeFromKD 作業引継資料
+2026年11月12日／職場環境から自宅環境への引継ぎ
+対象：3Fステージ、キャラクター、ライフル、ADS、リロード、射撃・Niagara、最新ADS照準補正
+
+【01 現在の到達点と、この資料の読み方】
+
+3Fの仮寸法ステージをBlenderで作成し、FBX化してUnreal Engineへ取り込み、BP_Floor03としてKDStageへ配置済み。実習室から廊下を通り、仮の下り階段1フライトの終端へ歩いて移動できることをPIEで確認した。
+
+キャラクターのメインBPはYou。SKM_Rifleを組み込んだ独立BP_Rifleを装備し、右クリック長押しのADS、Rキーのリロードとアニメーション、左クリック長押しの連射、中央レティクル、銃口からの着弾判定、マズルフラッシュ、着弾エフェクト、弾痕デカールを実装済み。
+
+最後の変更はADSの照準位置。中央のフロントサイトの「先端」がレティクル中心へ来るよう、ADS時のカメラ目標だけを補正した。モデルやモーションは変更していない。直前の実装作業では保存・コンパイル・PIE確認を完了し、PIEを停止している。
+
+最終マズルフラッシュは、白い芯と黄橙の尖った炎を持つ派手な表現。ユーザーから「概ねいい感じ」と評価された状態を保存している。
+
+この資料の根拠を次の3種類に分ける。
+・今回確認：引継作成時のローカル実ファイル、Git、設定、保存済み検証JSON・画像。
+・直前に確認済み：本チャットの実装時にMCP・PIEで読み戻し／確認した設定と挙動。今回Editorを再起動して再測定した値ではない。
+・未確認／未実装：自宅環境、パッケージ版、未制作の階層など。確認済みと混同しない。
+
+引継作成時点ではUnrealEditorプロセスが見つからず、通常のUnreal MCPは接続エラーだった。Editorを起動したり、サーバー・設定を変更したりして再確認はしていない。これは過去の実装時の接続・動作確認とは別の時点の状態である。
+
+今回追加したものはこの引継資料とその同梱証拠だけ。ゲームアセット、コード、Editor設定は変更していない。
+
+【02 プロジェクトとGitの基準点】
+
+プロジェクト名として使っている呼称：EscapeFromKD
+実際に開くuproject：myProject.uproject
+職場のプロジェクトルート：
+C:\Users\motoo\OneDrive\デスクトップ\まとめ\個人業務\ゲーム開発\UnrealEngine\GameProject_OPC\EscapeFromKD
+
+Unreal Engine：5.8.4（Engine Build.versionを今回確認）
+EngineAssociation：5.8
+Changelist：58902052
+Blueprint主体のプロジェクト。uprojectに独自C++ Modulesの宣言はない。
+Blender作成記録：5.3.0、シーン単位メートル。
+Git LFS：職場では3.7.1。
+
+Gitブランチ：main
+引継開始時のHEAD：f4b91fdd428c8b5b288917e9fbba436d1f8010a9
+コミット日：2026-11-12
+コミットメッセージ：プロジェクト作成中
+remote origin：https://github.com/sada1982/EscapeFromKD.git
+
+資料追加前のgit status --shortは出力なし、作業ツリーはクリーンだった。ローカルに記録されているorigin/mainとのahead/behindは0/0。ただし、この監査でfetchやリモート照会はしていないため、サーバー上の最新状態や自宅からのアクセス可否まで保証する値ではない。この引継資料自体のcommit／pushも行っていない。
+
+.gitattributesは*.uassetと*.umapをGit LFS対象にしている。LFS管理ファイルは今回のローカル一覧で301件。SourceAssetsの.blend／.fbxは現在のルールではLFS対象ではなく、通常のGitファイルとして追跡されている。
+
+/Game はプロジェクトの Content に対応する。
+例：/Game/Main/Character/You → Content/Main/Character/You.uasset
+この資料内のローカル相対パスは、特記がなければプロジェクトルートからの相対パス。
+
+【03 自宅で最初に開くもの】
+
+使用するLevel：/Game/Main/Stage/KDStage
+ステージBP：/Game/Main/Stage/BP_Floor03
+キャラクターBP：/Game/Main/Character/You
+銃BP：/Game/Main/Rifle/BP_Rifle
+
+重要：Config/DefaultEngine.iniの起動マップ設定は、今回確認した時点ではテンプレートのまま。
+EditorStartupMap=/Game/FirstPerson/Lvl_FirstPerson.Lvl_FirstPerson
+GameDefaultMap=/Game/FirstPerson/Lvl_FirstPerson.Lvl_FirstPerson
+GlobalDefaultGameMode=/Game/FirstPerson/Blueprints/BP_FirstPersonGameMode.BP_FirstPersonGameMode_C
+
+したがって、起動直後にテンプレートのLevelが開いても、KDStageが消えたとは判断しない。Content BrowserからKDStageを明示的に開く。現在のConfigのGlobalDefaultGameMode名だけで実際のPawnを推定せず、必要ならKDStageのWorld SettingsとPIEのPawnクラスを読み取ってYouであることを確認する。
+
+/Game/Main/KDMap と /Game/Main/Stage/KDMap も存在するが、今回のステージ配置・移動検証で使用したマップはKDStage。類似名のマップを整理・改名・削除しない。
+
+【04 ユーザーの確定方針・変更範囲】
+
+・学校の3F実習室から開始するゲーム。最終的には下階へ進み、エントランスから屋外へ出ればクリアとなる構想。
+・参考俯瞰画像の右下が開始実習室。その他の部屋は存在するが入れない仕様にする。
+・左側の部屋のすぐ隣に上り／下り階段、そのすぐ右にエレベーター。エレベーターはアクセス不可でよい。
+・初版は机・ドア等から推定した仮寸法。実寸との一致を保証せず、後から調整する。
+・講義で触る主要BPは分かりやすいMain配下に置く。キャラクター入力はYouで扱う。
+・ステージはContent/Main/Stage、キャラクターはContent/Main/Character、銃はContent/Main/Rifle。
+・Niagara等の射撃エフェクトは講義で扱わないため、Main外のContent/Effects/Weapons/Rifleに置く。
+・射撃はADS／非ADSの両方。現段階では弾数制限・リコイルを付けない。
+・発射レートは後で調整可能にする。
+・弾痕はZ-fightingを避ける目的でデカール方式を採用。
+・マズルフラッシュはスクリーンショットで目立つ派手な表現。
+・最新のADS修正ではモデルのモーションを変えず、カメラ側で照準位置を合わせる。
+・描画負荷の改善はユーザーが明示的に後回しにした。勝手に最適化やRenderer設定変更を始めない。
+
+作業ルール：依頼に必要な最小変更のみ。無断のリファクタ・改名・整形・整理・ついで修正は禁止。既存コメントは保護し、日本語コメントの追加が必要な場合はUTF-8。保護マーカーの領域を変更しない。コード変更の報告順はChange Summary → Reason → Impact Scope → Before → After。
+
+以前のMCP調査時には、ユーザーから通常のMCP接続を使い、存在しないToolを推測せず、HTTP直接接続を代替に使わないことを明示されている。自宅でもこの方針を引き継ぐ。現在の資料は過去の作業記録であり、記載した将来候補をすべて実装せよという追加依頼ではない。
+
+【05 3Fステージの制作範囲と仮寸法】
+
+参考資料はユーザーが提示したMatterportの3F俯瞰画像と実習室内の複数画像。実測図面やMatterportの測量データを取り込んだものではない。画面に出る移動用の円形マーカーは現実の床模様ではないため再現していない。
+
+制作範囲：開始実習室、廊下、連絡通路、左ロビー、閉鎖教室2室、階段コア、閉鎖エレベーター。
+
+実習室には机、キャスター椅子、ノートPC、マウス、講師机、ホワイトボード、時計、投影画面、窓・ブラインド、照明器具形状、天井・空調、棚・収納・ポスター等を配置。開始室の出入口は2箇所。木製引戸のパネルを開いた位置に配置している。
+
+項目 | 仮寸法・数量
+実習室 | 幅10.4m × 奥行11.5m
+天井 | 3.1m
+壁厚 | 0.18m
+廊下 | 幅2.4m
+中央通路 | 幅1.2m
+扉開口 | 幅1.25m × 高さ2.3m
+机 | 幅1.8m × 奥行0.6m × 高さ0.72m
+机の配置 | 6列、列間隔1.35m
+学生用家具 | 机24、椅子48、PC24、マウス24
+講師用家具 | 別途、机・椅子・PC各1
+階段 | 上り／下り各10段、蹴上0.17m、踏面0.28m、幅2.15m
+階段終端 | 3F床から各±1.7m、各1フライトと仮踊り場
+
+他教室は床・壁・屋根・閉じた入口の外形のみ。入室を塞ぐ形状はあるが、施錠・解錠・インタラクション等のゲーム機構を実装したわけではない。エレベーターも閉じた前壁、扉、表示、ボタンの外形までで、昇降機能はない。
+
+2F・4Fの本体、1Fエントランス、屋外、クリア判定は未制作。下り階段を通行できることを「2Fまで完成」と言い換えない。
+
+【06 Blender元データ・FBX・UE資産】
+
+元データの基点：SourceAssets/Stages/Floor03/
+・EscapeFromKD_Floor03_v01.blend：編集可能なBlenderシーン。
+・floor03_parameters.json：寸法・配置・制作範囲の注記。
+・build_floor03.py：構造・全体配置の生成。
+・build_furniture.py：家具の生成。
+・build_materials.py：材質・画像の生成。
+・export_floor03_fbx.py：FBX書き出しと検証。
+・build_report.json、build.log：生成記録。
+・Textures/：木目、カーペット、天井、キーボード、画面、抽象ポスター等。
+・Previews/：floor03_overview.png、classroom.png、entrance.png。
+
+生成画像を.blendへpackする実装になっている。見た目の微調整をした.blendに対して、生成スクリプトを無条件で再実行しない。自宅へ移した後はスクリプト内のパスと出力先を確認してから使用する。
+
+FBX：SourceAssets/Stages/Floor03/Export/
+統合FBX：EscapeFromKD_Floor03_v01.fbx（48,044,764 bytes）
+分割FBX：SM_F03_を接頭辞とする以下の12種類。
+Structure / Ceilings / ClosedClassrooms / ClassroomFixtures / GlazingFrames / Glass / Corridors / StairCore / Desks / Chairs / Laptops / Mice
+
+書き出し設定：Forward=-Y、Up=Z、単位換算あり、global_scale=1。
+FBX対象外：Blenderの照明、カメラ、World、配置参照Empty、俯瞰用文字ラベル、非表示の家具prototype。
+Blenderの照明をそのままUE照明として移したものではない。
+
+Export/export_manifest.jsonとexport_build.logの記録：384ソースObjectを12Meshへ集約、合計645,008 triangles。再importで12Meshと全MeshのUVを確認し、外接境界の最大誤差は約0.0000027418m。椅子373,380 tris、PC186,700 trisが大きな割合を占める。最適化はまだ行っていない。
+
+今回の.blend SHA256はmanifestと一致：
+9E921C2A0C18822C43E7047F189184A192CFE1757CFCCEA1BF9D424F61413487
+
+UEの取り込み先：/Game/Main/Stage/Floor03/
+12Meshの実際のアセット名は「SM_F03_SM_F03_Structure」等、SM_F03_が二重になっている。これは現行の名前である。資料に合わせるための改名や整理をしない。
+
+主要材質はKD_F03_系（LightOak、ClassroomCarpet、CorridorCarpet、PaintWarmWhite、ClearGlass、BlackPlastic、LaptopScreen、Whiteboard等）。同フォルダに画像資産も置かれている。screen_editorとscreen_editor_ncl1_1は両方存在する。利用状況を調べずに重複と判断して削除しない。
+
+/Game/Main/Stage/BP_Floor03 がこれらをまとめるステージBP。
+KDStage内の配置Actor記録：
+/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_Floor03_C_0
+
+Collisionを有効にした通行検証はあるが、全MeshのCollisionTraceFlag等を今回一括で読み戻した記録はない。具体的なCollision方式を推測で書き換えない。
+
+再生成時の重要な挙動：両主スクリプトはPath(__file__).resolve().parentを起点とし、職場PCの絶対パスはソースに固定されていない。floor03_parameters.jsonは入力であり、スクリプトが書き出す設定ファイルではない。
+・build_floor03.pyは、実行中BlenderのシーンObjectを全選択削除して再生成する。save_version=0で固定名.blendへ保存し、build_report.jsonとTexturesの8枚を上書きする。通常はPreviewsの3枚も更新し、--no-renderなら画像更新を省略する。
+・export_floor03_fbx.pyは保存済.blendをopen_mainfileで開くため、そのBlenderで編集中のシーンを置き換える。分割12FBX、統合FBX、export_manifest.jsonを上書きする。元.blend自体は保存せず、処理前後のSHA256一致を検査する。
+・build.logとexport_build.logは実行時の標準出力を保存した記録。
+・いずれもUEへの再importを行うスクリプトではない。FBXを更新しただけでは現在のUEアセットは更新されない。
+
+【07 KDStageの照明・移動確認】
+
+保存証拠：Saved/Automation/Floor03_20261112/route_check.json
+本引継パッケージにもEvidence/route_check.jsonとしてコピーした。
+
+記録された照明調整：RectLight 23灯、教室5000K、廊下4500K、Exposure EV100=6。
+PlayerStart：Location=(520,-80,100)cm、Yaw=-90度。
+
+検証方法：PIEでEnhanced Inputのforced keysとcontinuous IA_Moveを使用。CharacterMovementとCollisionを有効にしたまま移動させた。Actor Transformの直接書換やCollision無効化で通行を偽装したものではない。
+
+区間 | 到達位置cm
+開始 | (520,-80,98.15)
+中央通路 | (544.87,-1106.35,98.15)
+実習室出口 | (-196.60,-1012.85,98.15)
+廊下 | (-110.27,-74.84,98.15)
+連絡通路・左側 | (-1888.27,-74.84,98.15)
+階段入口 | (-1888.27,-892.85,98.15)
+下り階段終端 | (-1888.27,-1271.85,-71.85)
+
+最終状態はMOVE_Walking、速度0、verification.passed=true。高低差170cmは仮の10段と一致する。
+当時の移動パラメータ記録：Capsule半径約34cm／半高96cm、MaxWalkSpeed=600cm/s、MaxStepHeight=45cm、WalkableFloorAngle約44.765度。
+これはステージ通行確認時の記録であり、今回全変数をライブで再取得した値ではない。
+
+【08 キャラクター・銃のアセット構成】
+
+メインBPはテンプレート由来のキャラクターを移動・拡張したYou。キャラクターモデルをゼロから新規制作したものではない。
+
+アセット | 役割
+/Game/Main/Character/You | 入力、装備、ADS、Reload、射撃、Trace、レティクル初期化
+/Game/Main/Character/Animations/ABP_TP_Rifle | 三人称側アニメーション
+/Game/Main/Character/Animations/ABP_FP_Rifle | 一人称側、CopyPoseFromMesh／ControlRig
+/Game/Main/Character/Animations/Ctrl_HandAdjusment | 一人称側の手の調整用Control Rig
+/Game/Main/Character/Input/IA_ADS | ADS入力
+/Game/Main/Character/Input/IA_Reload | Reload入力
+/Game/Main/Character/Input/IA_Fire | 射撃入力
+/Game/Main/Character/UI/WBP_Reticle | 画面中央レティクル
+/Game/Input/IMC_Default | 入力マッピング。既存項目を保って追加
+/Game/Main/Rifle/BP_Rifle | 独立した銃BP、表示設定とADS目標
+/Game/Main/Rifle/Meshes/SKM_Rifle | 採用したSkeletal Mesh
+/Game/Main/Rifle/Meshes/SK_Rifle | Skeleton
+/Game/Main/Rifle/Meshes/PA_Rifle | Physics Asset
+/Game/Main/Rifle/Materials/M_Rifle | 銃マテリアル
+/Game/Main/Rifle/Textures/T_Rifle_BC | 銃ベースカラー
+/Game/Main/Rifle/Textures/T_Rifle_N | 銃ノーマル
+
+Ctrl_HandAdjusmentという綴りは既存のアセット名。そのまま扱い、誤字修正として改名しない。
+
+SKM_Rifleは既存のサンプル資産を使用。銃BPの導入のために別の射撃専用キャラクター一式へ置き換える方法は採用せず、ユーザーが選んだ独立BP_Rifleを用意した。元のサンプル依存やライセンス文書の調査を今回やり直したものではないため、外部公開・再配布時の条件を「無条件フリー」と断定しない。
+
+関連する既存資産はMain以外にも残る。例：/Game/Characters/Mannequins/Anims/Rifle/MM_Rifle_Reload、/Game/FirstPerson/Blueprints、/Game/Input。Content/Mainだけを別PCへコピーして完成プロジェクトになると考えない。
+
+【09 装備処理・コンポーネント関係】
+
+確認された主要階層：
+Capsule
+  CharacterMesh0
+    FirstPersonMesh
+      FirstPersonCamera
+      RifleFP
+
+FirstPersonCameraとRifleFPは兄弟。Absolute Location／Rotation／Scaleはfalse。銃をカメラの子へ付け替える構成ではない。
+
+YouのEquipRifleで、通常時カメラの相対位置・FOV・FirstPersonFOVを保存し、CameraのUsePawnControlRotationをfalseへ設定。FP用とWorld用の銃を、それぞれ対応するSkeletal MeshのHandGrip_RへSnap接続する。OwnerはYou。FP側ChildActorをEquippedRifleへ保持する。
+
+BP_RifleのConfigureViewはRifleMeshをNoCollisionにし、FirstPerson引数に応じてOnlyOwnerSee、OwnerNoSee、FirstPersonPrimitiveTypeを切り替える。FP用と外から見えるWorld用の銃を使い分ける構成である。World銃があることだけでネットワーク同期やマルチプレイ対応済みとは判断しない。
+
+BP_RifleにはADSViewがあり、RifleMeshのMuzzleソケットを基準とするカメラ目標を提供する。現在のADS位置調整はこの目標に対して行っている。
+
+【10 入力・ADS・リロードの流れ】
+
+操作 | 現在の動作
+右クリック押下／保持 | ADSへ補間
+右クリック解放／Canceled | 通常構えへ補間
+R | リロード動作とアニメーション
+左クリック押下 | 即時に1発、保持中は発射レートに沿って連射
+左クリック解放／Canceled | 連射を停止
+移動・視点・ジャンプ | テンプレート側の既存入力を利用。既存マッピングを削除していない
+
+キーイベントはYou内に置いている。IA_ADS.StartedでIsADS=true、Completed／Canceledでfalse。IA_Reload.StartedからReload。IA_Fire.StartedからStartFiring、Completed／CanceledからStopFiring。
+
+YouのTickはUpdateReloadStatus → UpdateADSの順。UpdateADSはIsADS && !IsReloadingをADSの目標状態にしてADSAlphaをFInterpToで補間し、カメラの位置・回転・FOV・FirstPersonFOVへ適用する。
+
+直前に読み戻した調整値：
+変数 | 値・意味
+ADSInterpSpeed | 12
+NormalFOV | CDO値90。EquipRifleで通常Camera値を保存し直す
+ADSFOV | 65
+NormalFirstPersonFOV | CDO値70。EquipRifleで通常値を保存し直す
+ADSFirstPersonFOV | 55
+NormalCameraLocation | CDO値(0,0,0)。実使用値は装備時に保存
+IsADS／IsReloading | 初期false
+ADSAlpha | 初期0、完全ADSで1
+
+カメラテンプレートの相対位置だけを直接変更しても、UpdateADSが毎Tick書き戻す。通常時の保存値とADSView目標、補間処理を確認してから調整する。
+
+リロードは弾薬管理ではなくモーション実装。YouからMM_Rifle_ReloadをPlaySlotAnimationAsDynamicMontageでDefaultSlotへ流し、Montage_IsActive等を用いて終了状態を追う構成。既存の歩行・ジャンプ・落下・着地・照準用アニメーションと組み合わせている。
+
+ABP_TP_RifleにはAO_Rifle、MF_Rifle_Idle_ADS、BS_Idle_Walk_Run、Jump／Fall／Land、LayeredBoneBlend、DefaultSlotへの参照がある。ABP_FP_RifleはCopyPoseFromMeshとCtrl_HandAdjusmentを用いる。実装時にはリロード中の腕IK干渉を抑え、頭・背骨側の補正を保持した。
+
+直前のPIE確認では、リロード中はADSAlphaが0へ戻り、射撃が抑制される。右クリックを保持していれば終了後にADSへ戻り、左クリックを保持していれば終了後に連射を再開する。
+
+ReloadのBlend秒数、PlayRate、全AnimGraphのピン接続を今回再取得できていない。正確な値を変更する際は、接続済みの現物を読んで確認する。ファイル参照名だけから新しいAnimGraphを組み直さない。
+
+【11 最新変更：ADSのフロントサイト先端合わせ】
+
+ユーザー指摘：レティクル中心にフロントサイトの下側が来ていたため、中央ポストの先端が中心へ来るようにしたい。モデルのモーションは変えず、カメラ位置で直したい。
+
+最終変更は2アセットのみ：/Game/Main/Rifle/BP_Rifle と /Game/Main/Character/You。
+
+項目 | 変更前 | 保存した最終値
+BP_RifleのSightOffset | (-65,0,6)cm | (-65,0,6.5)cm
+You.RifleFP.ChildActorTemplateのSightOffset | (-65,0,6)cm | (-65,0,6.5)cm
+ConfigureView内ADSViewのNewRotation | (0,0,0)度 | (Pitch=0.35,Yaw=0,Roll=0)度
+
+高さを0.5cm上げ、ADS目標のPitchを0.35度だけ補正した。高さだけを大きく上げると手前のサイト枠が中央ポストを隠したため、この組合せを採用している。カメラ位置のみの大きな移動ではなく、小さい位置＋角度の補正である。
+
+変更していないもの：銃モデル、Socket、アニメーション、AnimBP、通常構えのカメラ目標、FOV、入力、射撃ロジック。
+
+BP_Rifle.ConfigureViewの対象ノード：K2Node_CallFunction_20、SetRelativeLocationAndRotation、TargetはADSView。
+重要なChildActorTemplate参照：
+/Game/Main/Character/You.You_C:RifleFP_GEN_VARIABLE.RifleFP_GEN_VARIABLE_BP_Rifle_C_CAT
+
+BP_Rifleのクラス既定値だけを変えても、You側ChildActorTemplateに保存されたSightOffsetが優先される。この2箇所を揃えること。ノードIDやオブジェクト参照は現時点の調査手掛かりであり、再作成・再コンパイル後も無条件に同一と仮定しない。
+
+最終PIE確認：完全ADSで中心ポスト先端がレティクル中心に一致。確認用に一時的にレティクルを隠し、1286×760の取得画像上で中心(x643,y395)付近とポスト先端の位置を比較した。確認後はレティクルをHitTestInvisibleへ戻している。
+
+RMB解放でADSAlpha=0、RMBを保持してRでIsReloading=true／ADSAlpha=0、終了後IsReloading=false／ADSAlpha=1へ戻り、照準位置が維持されることを確認。両BPはwarnings_as_errorsでコンパイル成功、保存後dirty=false。最終画像はEvidence/ADS_Aligned.png。
+
+MCP入力の注意：このRotatorピンへのset_pin_valueは数値リテラル「0.35,0,0」が成功した。「(Pitch=...,Yaw=...,Roll=...)」形式では値が0へ戻った事例があるため、書込成功表示だけを信用せず、必ずピン値とRuntime Transformを読み戻す。
+
+RuntimeのChildActorを直接変更しようとするとcac.ExperimentalAllowPerInstanceChildActorPropertiesにより拒否された。cvarを有効化せず、所有側ChildActorComponentのChildActorTemplateを編集して対応した。この設定を回避目的で勝手に変更しない。
+
+【12 射撃・レティクル・着弾の実装詳細】
+
+射撃はProjectile Actorを飛ばす方式ではなく、2本のTraceによるHitscan。画面中央を狙いつつ、銃口と目標の間に障害物がある場合には、その障害物へ当たる構成にしている。
+
+直前に読み戻したYouの設定：
+変数 | 現在値・役割
+FireRate | 8発/秒＝480 RPM、Shootingカテゴリで編集可能
+TraceDistance | 15000cm＝150m
+BulletMarkLifetime | 60秒
+IsFiring | 初期false
+NextShotTime | 初期0、次に発射を許可するGame Time
+FireTimer | 連射TimerHandle
+ReticleWidget | 初期化時に作るUserWidget参照
+MuzzleFlashSystem | /Game/Effects/Weapons/Rifle/NS_RifleMuzzleFlash
+HitEffectSystem | /Game/Effects/Weapons/Rifle/NS_RifleImpact
+BulletDecalMaterial | /Game/Effects/Weapons/Rifle/Materials/M_BulletImpact
+
+StartFiring：
+1) IsFiring=true。
+2) Fireを即時に呼ぶ。
+3) Interval=1/Max(FireRate,0.1)秒でFireを呼ぶLoop Timerを開始し、FireTimerへ保存する。Max Once Per Frameを使用。
+
+StopFiring：
+1) IsFiring=false。
+2) ClearAndInvalidateTimerByHandleでFireTimerを停止・無効化する。
+
+Fire：
+1) IsFiring、!IsReloading、EquippedRifleが有効であることを確認。
+2) Game Time >= NextShotTimeを確認。
+3) 実際に発射するときにNextShotTime=Now+Intervalへ更新。
+4) RifleMeshのMuzzleソケットへNS_RifleMuzzleFlashをSpawnSystemAttached。
+5) マズルNiagaraのFirstPersonPrimitiveTypeをFirstPersonにする。
+6) MuzzleのWorld PositionをShotOriginとしてTraceShotへ渡す。
+
+TimerだけでなくNextShotTimeでも制限するため、押下と解放を素早く繰り返して発射レートを突破しない。FireRateを実行中の連射の途中で変更した場合、すでに動いているTimerの周期まで即時に再設定する実装とはしていない。通常はYouの既定値を調整してPIEを開始し、動作を見る。
+
+マズル生成設定：Muzzleへ相対位置0・相対回転0、KeepRelativeOffset、AutoActivate=true、AutoDestroy=true、PreCullCheck=false。
+
+TraceShot：
+1) PlayerControllerからViewportの中央座標を得て、DeprojectしてWorld方向を取得。
+2) FirstPersonCameraの位置からその方向へTraceDistanceのカメラTrace。
+3) カメラTraceがHitしたらImpact Point、HitしなければTrace終点を照準点にする。
+4) 銃口ShotOriginから照準点へ向かう方向を計算し、照準点を5cm越えた位置まで2本目のTrace。
+5) 2本目のTraceがHitした場合にだけ、着弾FXと弾痕を生成する。
+
+両TraceはVisibility、Trace Complex=true、Debug Drawなし。You自身、FP銃、World銃を除外する。画面中央の1本目のTraceだけで着弾を確定しない点が重要。
+
+着弾FX：NS_RifleImpactをHitComponent／HitBoneへ付着生成。位置はImpactPoint + ImpactNormal×2cm。MakeRotFromX(ImpactNormal)で+Xを面法線へ向け、KeepWorldPosition、AutoActivate／AutoDestroy=true、PreCullCheck=false。
+
+弾痕：M_BulletImpactをSpawnDecalAttached。HitComponent／HitBone、ImpactPoint、法線から作った回転、KeepWorldPosition。Decal Size=(1,3,3)cm、Lifetime=BulletMarkLifetime=60秒、FadeScreenSize=0。2cm浮かせる設定は着弾Niagara側であり、弾痕を2cm浮かせる設定ではない。
+
+弾痕は投影デカールなので、壁と同一平面に薄いPolygonを置く方式を避けている。ただし、全マテリアル・全種類のオブジェクトが必ずデカールを受けることまで検証したわけではない。壁とホワイトボードで表示を確認した。個数上限やプール化は今回の実装対象外。
+
+レティクル：BeginPlayのEquipRifle後にInitializeReticle。Owning Playerを指定してWBP_ReticleをCreate Widgetし、参照を保持してAddToViewport。中央アンカーの十字＋中心点で、HitTestInvisible、フォーカス不可。ADS中も表示する。
+
+弾数、予備弾、リコイル、発射音、ダメージ処理、敵・破壊・勝敗処理は、この射撃実装では追加していない。
+
+【13 マズルフラッシュ：最終採用版】
+
+アセット | 用途
+/Game/Effects/Weapons/Rifle/NS_RifleMuzzleFlash | 銃口閃光・前方炎・短い火花
+/Game/Effects/Weapons/Rifle/M_RifleMuzzleStar | マズル専用の放射状炎
+/Game/Effects/Weapons/Rifle/M_RifleMuzzleForward | マズル専用の前方炎
+/Game/Effects/Weapons/Rifle/NS_RifleImpact | 着弾時の閃光・火花
+/Game/Effects/Weapons/Rifle/M_RifleFlash | 元の閃光・火花用材質。Impact側で利用
+/Game/Effects/Weapons/Rifle/Materials/M_BulletImpact | 弾痕デカール材質
+
+形状は材質のCustomノードの自作HLSLによる手続き生成。参考画像から切り抜いたテクスチャや外部の完成FXパックを使ったものではない。UE標準Niagaraモジュールを組み合わせている。参考画像の作者や元動画URLは確認できていないため、推測で出典名を付けない。
+
+最終マズル改修で変更したのはNS_RifleMuzzleFlashと専用材質2個だけ。Impact・共有M_RifleFlash・弾痕は変更していない。共有材質を書き換えて着弾FXの見た目まで変えないための分離である。
+
+NS_RifleMuzzleFlashの設定：
+項目 | 最終値
+Simulation | CPU
+Emitter | FlashCore、DirectionalBurst
+Interpolated Spawn | NoInterpolation
+Spawn Script Usage | ParticleSpawnScript
+System Loop | Once、Duration 0.35秒
+FlashCore粒子数 | 1
+FlashCore Lifetime | 0.16秒
+FlashCore Sprite Size | 55cm
+FlashCore Color | (28,12,3)
+FlashCore Local Space | true
+FlashCore Alpha曲線 | 正規化年齢0→Alpha1、0.48→1、1→0
+ピーク保持時間 | 約0.0768秒、その後0.16秒までに消える
+DirectionalBurst Lifetime | 0.10～0.18秒
+
+FlashCoreには3つのRendererがある。追加挿入によって元のRendererのIndexがずれている。
+Index | 内容
+0 | 前方炎の上面、Custom Facing=(0,0,1)
+1 | 前方炎の側面、Custom Facing=(0,1,0)
+2 | カメラへ向く放射状炎
+
+前方炎用SetVariablesモジュール（ParticleSpawnScript）：
+SetVariables_C503D150471A0B5240F2BFB4FA55F21F
+Particles.MuzzleFlamePosition=(50,0,0)
+Particles.MuzzleFlameSize=(40,100)
+Particles.MuzzleFlameAlignment=(1,0,0)
+Particles.MuzzleFlameSideFacing=(0,1,0)
+Particles.MuzzleFlameTopFacing=(0,0,1)
+Particles.MuzzleFlameRotation=0
+
+2面を直交させ、銃口の+X方向へ幅40cm／長さ100cmで伸ばす。中心が+X50cmなので0～100cmが面の範囲。銃口後方へ突き抜ける配置ではない。FirstPerson描画補正により、画面上の見た目はWorldの100cmそのものとは異なる。
+
+両専用材質はUnlit、Additive、Two Sided、Niagara Sprite用。EmissiveはMaterialExpressionCustom_0、OpacityもCustomノード。UVとParticleColorを使用し、Opacity=形状mask×ParticleColor Alpha。
+
+発光領域 | Emissive RGB
+橙の外縁 | (48,5.6,0.16)
+黄色の炎 | (104,66,0.7)
+白い芯 | (480,460,380)
+
+出力にclamp(Color.r/28.0,0.2,2.0)を乗算。現在のColor.r=28なら倍率1。
+放射状炎は不均一な主枝6本と短枝11本。湾曲係数0.0325、白芯は枝長の約53～72%付近まで延ばして黄へ遷移。外側に約0.035UV幅／強度0.12のhaloを持つ。前方炎は根元が太く先が細い形で、約0.03UV幅／強度0.10のhaloを持つ。
+
+初期案の低輝度Translucentでは暗い針・板のように見えたため、現在は高HDRのAdditiveを採用。現在の形状・輝度を基準にし、途中のDraft画像を採用版と取り違えない。
+
+後で調整する場合の入口：
+・大きさ：FlashCoreのInitializeParticleにあるUniform Sprite Size=55。
+・時間：Lifetime=0.16とAlpha曲線のピーク保持比0.48を組み合わせて調整。
+・前方長さ：MuzzleFlameSizeのYとPositionのXを連動。長さ80なら中心40という関係を保つ。
+・形状と色：専用材質2個のCustomノード。M_RifleFlashはImpact側の資産なので別扱い。
+・必ず通常／ADSの両方を確認。ADSでは前方2面が薄く見えやすいため、カメラ向きの放射状Rendererを残している。
+
+【14 着弾FX・弾痕の最終状態】
+
+NS_RifleImpactはFlashCoreとDirectionalBurstの2Emitter。両方Local Space=true、NoInterpolation、Spawn Script Usage=ParticleSpawnScript。
+
+項目 | 最終値
+System／Core Duration | 0.65秒、Once
+Core粒子数 | 1
+Core Sprite Size | 45cm
+Core Lifetime | 0.30秒
+Core Color | (28,12,3)
+Spark粒子数 | 14
+Spark Lifetime | 0.35～0.55秒
+Spark幅 | 2～3cm
+Spark長さ | 8～14cm
+ScaleSpriteSizeBySpeed | Min／Maxとも(1,1)
+
+銃口FXと違い、World上のHitComponentに付着させて表示する。見えにくいからといってFirstPersonPrimitiveTypeを着弾側へ無条件に付けない。
+
+初期確認では小さいCoreがレティクルに重なり、短い寿命と低FPSも重なって見えづらかった。Runtime dumpではCore 1＋Spark 14が生存していることを切り分け、その後Coreを45cm、Sparkを上記サイズへ調整して表示を確認。試験時には面から10／50cm離したこともあるが、最終のオフセットは2cmへ戻している。
+
+M_BulletImpactは暗い穴と縁の欠けを表現する手続き的な弾痕材質。サイズ・寿命・生成位置はYou側のTraceShotで決まる。弾痕が残る時間を変更するときは、まずBulletMarkLifetimeを確認する。
+
+【15 実施した検証と未検証の範囲】
+
+確認項目 | 結果・証拠
+FBX再読込 | 12Mesh、全UV、外接境界誤差をmanifestに記録
+実習室→廊下→下り階段 | Collision有効のPIE移動で到達、route_check.json
+通常／ADS射撃 | 両方でマズル生成・着弾を確認
+LMB解放 | IsFiring=false、連射停止
+発射間隔 | RuntimeのFireRate=1で1秒未満の2クリックに対して新しい弾痕は1個。試験後8へ戻した。CDOの8は変更していない
+Reload中の発射 | 新しい弾痕が増えず、保持中なら終了後に射撃再開
+Reload中のADS | ADSAlpha=0へ戻り、RMB保持中なら終了後1へ戻る
+弾痕表示 | 壁・ホワイトボードで確認
+派手なマズル最終版 | 通常／ADSで確認。ADSで3発、解放後約1.2秒でMuzzle Niagara component数0
+ADS最終位置 | サイト先端と中心の一致、解放／Reload後の復帰を確認
+BPコンパイル | 最新のYou／BP_Rifleはwarnings_as_errorsで成功
+保存 | 最終変更対象dirty=false、PIE停止。資料追加前Git clean
+Runtimeログ | 射撃確認時にBlueprintRuntimeError／Accessed Noneなし
+
+上記は該当機能の直前の実装時の検証。引継作成のためにEditorを起動し直して、すべての試験を再実行したものではない。
+
+未検証：自宅PCでの見た目・性能、配布用パッケージビルド、別解像度での厳密なピクセル一致、ネットワーク対戦・Replication、すべての材質に対するDecal、長時間連射時の性能、全ステージ境界の網羅的Collision試験、完成した下階への進行。
+
+【16 既知の課題・保留した作業】
+
+描画負荷：PIE中にVideo memory has been exhausted／VRAM budget exceededの赤い警告が出た。保存画像にも残っている。Virtual Shadow Map関連のnon-Nanite marking overflowの警告も観測された。実装動作が確認できたことと、性能上の問題が解決したことは別。
+
+ユーザーは「描画負荷の件は後々解決」と指定済み。現行のRenderer設定を勝手に下げたり、StageのMeshを削減したりしない。将来依頼された場合に、椅子・PCの形状量、Mesh集約、メモリ、影、ライト、Niagara・Decal保持などを測ってから範囲を決める。
+
+現在のConfigではDX12／SM6、LumenのGI・反射、Virtual Shadow Maps、Ray Tracing、Substrateが有効で、Static Lightingは無効、Near Clip Plane=5。これは現状の記録であり、この資料に従って設定変更せよという意味ではない。
+
+制作待ち：2F以下、エントランス、屋外、ゲームクリア判定。その他教室の正式な入室制御、エレベーター動作も実装していない。
+
+FPS機能で今回追加していないもの：弾薬制限、リコイル、発射音、ダメージ・敵AI・破壊、弾薬消費を伴うReload、マルチプレイ対応。これらは今後の候補であり、次のユーザー指示なしに着手しない。
+
+次に実装する機能の具体的な依頼は、今回の引継依頼時点では未指定。最新ADS修正までを基準状態として作業を再開する。
