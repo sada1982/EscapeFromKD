@@ -1,6 +1,6 @@
 {
   "source": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\EscapeFromKD_Floor03_v02.blend",
-  "source_sha256": "9aae64d13bec354343c10d91d7303e0158b0f41cb765d1fe3e03657823e87555",
+  "source_sha256": "2f423416a9b0910777621ee70681fb18a634e2ec88163e7c2633b04745002e3b",
   "combined_fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\EscapeFromKD_Floor03_v02.fbx",
   "groups": [
     {
@@ -19,12 +19,12 @@
           3.049999952316284
         ]
       },
-      "triangles": 120,
-      "source_count": 10,
+      "triangles": 156,
+      "source_count": 8,
       "uv_layers": [
         "UVMap"
       ],
-      "repaired_uv_faces": 0,
+      "repaired_uv_faces": 7,
       "removed_degenerate_faces": 0,
       "material_slots": [
         "KD_F03_ClassroomCarpet",
@@ -40,7 +40,7 @@
         "min": [
           -22.469999313354492,
           -19.06999969482422,
-          -0.18000000715255737
+          2.7300000190734863
         ],
         "max": [
           8.050000190734863,
@@ -48,8 +48,8 @@
           8.949999809265137
         ]
       },
-      "triangles": 11984,
-      "source_count": 223,
+      "triangles": 12060,
+      "source_count": 191,
       "uv_layers": [
         "UVMap"
       ],
@@ -112,8 +112,8 @@
           2.869999885559082
         ]
       },
-      "triangles": 55084,
-      "source_count": 200,
+      "triangles": 55252,
+      "source_count": 194,
       "uv_layers": [
         "UVMap"
       ],
@@ -209,8 +209,8 @@
           8.949999809265137
         ]
       },
-      "triangles": 42916,
-      "source_count": 383,
+      "triangles": 88564,
+      "source_count": 298,
       "uv_layers": [
         "UVMap"
       ],
@@ -928,7 +928,7 @@
       "uv_scale_baked": 1.0
     }
   },
-  "total_triangles": 1389244,
+  "total_triangles": 1435172,
   "roundtrip_mesh_count": 12,
   "roundtrip_bounds_error_m": 1.9073486328125e-06,
   "all_meshes_have_uv": true

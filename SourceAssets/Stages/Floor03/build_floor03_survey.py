@@ -12,6 +12,7 @@ sys.path.insert(0, str(ROOT))
 from build_floor03 import box, boxes, cylinder, rail, text, camera, area_light, instance, surface_uv
 from build_furniture import FurnitureMesh
 from build_materials import _solid
+from repair_floor03_junctions import repair_junctions
 
 OUTPUT = ROOT / 'SurveyV02'
 GROUPS = ['Structure', 'Ceilings', 'ClosedClassrooms', 'ClassroomFixtures',
@@ -282,7 +283,10 @@ def main():
     hall_poly=[(0,10.15),(-2.18,10.15),(-2.18,0),(-13.12,0),(-15.2,-1),(-15.2,-5.7),(-16.5,-5.7),
                (-16.5,-6.67),(-10.37,-6.67),(-10.37,-6.16),(-6.81,-2.46),(0,-2.46)]
     polygon_slab('3F_gallery_floor',hall_poly,0,0.18,mats['hall'],cols['Corridors'])
-    polygon_slab('3F_gallery_ceiling',hall_poly,HEIGHT+0.12,0.12,mats['ceiling'],cols['Ceilings'])
+    # Upper gallery slabs already cover the near/front corridors; keep only the lobby ceiling.
+    ceiling_poly=[(-15.2,-2.46),(-15.2,-5.7),(-16.5,-5.7),(-16.5,-6.67),
+                  (-10.37,-6.67),(-10.37,-6.16),(-6.81,-2.46)]
+    polygon_slab('3F_gallery_ceiling',ceiling_poly,HEIGHT+0.12,0.12,mats['ceiling'],cols['Ceilings'])
     wall('Gallery_rear_end',(0,0),(0,-2.46),'Corridors')
     wall('Connector_outer',(0,-2.46),(-6.81,-2.46),'Corridors')
     wall('Lobby_diagonal_display',(-6.81,-2.46),(-10.37,-6.16),'Corridors')
@@ -332,15 +336,20 @@ def main():
         wall('Atrium_front_enclosure',(-15.2,0),(0,0),'Corridors',bottom,top)
     for level in (-3.15,0,3.15):
         floor_rect('Opposite_gallery_floor',(-15.2,-13.12,0,10.23),mats['hall'],cols['Corridors'],level)
-        floor_rect('Opposite_gallery_soffit',(-15.2,-13.12,0,10.23),mats['ceiling'],cols['Ceilings'],level+3.15)
+        # Intermediate ceilings already use the slab of the gallery floor above.
+        if level == 3.15:
+            floor_rect('Opposite_gallery_soffit',(-15.2,-13.12,0,10.23),mats['ceiling'],cols['Ceilings'],level+3.15)
     for level in (-3.15,3.15):
         floor_rect('Near_gallery_context_floor',(-2.18,0,0,10.15),mats['hall'],cols['Corridors'],level)
-        floor_rect('Near_gallery_context_soffit',(-2.18,0,0,10.15),mats['ceiling'],cols['Ceilings'],level+3.15)
-        wall('Near_gallery_context_back',(0,0),(0,10.15),'Corridors',level,level+3.15)
+        if level == 3.15:
+            floor_rect('Near_gallery_context_soffit',(-2.18,0,0,10.15),mats['ceiling'],cols['Ceilings'],level+3.15)
+        # Keep the lower wall below the 3F floor slab so its top does not overlap the doorways.
+        wall('Near_gallery_context_back',(0,0),(0,10.15),'Corridors',level,level+3.15-(0.18 if level == -3.15 else 0))
         floor_rect('Front_gallery_context_floor',(-15.2,0,-2.46,0),mats['hall'],cols['Corridors'],level)
-        floor_rect('Front_gallery_context_soffit',(-15.2,0,-2.46,0),mats['ceiling'],cols['Ceilings'],level+3.15)
-        wall('Front_gallery_context_back',(-15.2,-2.46),(0,-2.46),'Corridors',level,level+3.15)
-        wall('Front_gallery_context_return',(-15.2,-2.46),(-15.2,0),'Corridors',level,level+3.15)
+        if level == 3.15:
+            floor_rect('Front_gallery_context_soffit',(-15.2,0,-2.46,0),mats['ceiling'],cols['Ceilings'],level+3.15)
+        wall('Front_gallery_context_back',(-15.2,-2.46),(0,-2.46),'Corridors',level,level+3.15-(0.18 if level == -3.15 else 0))
+        wall('Front_gallery_context_return',(-15.2,-2.46),(-15.2,0),'Corridors',level,level+3.15-(0.18 if level == -3.15 else 0))
     floor_rect('Atrium_roof',(-15.3,0.1,-0.1,10.3),mats['ceiling'],cols['Ceilings'],8.95)
     for x,y in [(-1.08,1),(-1.08,4),(-1.08,7.3),(-1.08,9.5),(-3.4,-1.23),(-6,-1.23),(-8.5,-2),(-11.5,-3),(-14.5,-4.8)]:
         cylinder('Gallery_downlight',(x,y,HEIGHT-0.024),0.10,0.025,mats['light'],cols['Ceilings'],vertices=32)
@@ -397,6 +406,7 @@ def main():
     clock(2.8,20.15,2.5)
     for x in (-0.7,2.9,6.5):
         for y in (12,14.5,17,19.3):
+            if (x,y) in ((2.9,14.5),(6.5,17)): continue
             luminaire('AdjacentLab_fluorescent',x,y)
         for y in (13,16.3,19): light('F03_AdjacentLab',(x,y,2.8),cols['Lighting'])
     ac(2.9,14.5)
@@ -488,6 +498,7 @@ def main():
         box('Extinguisher_handle',(x,y,0.55),(0.14,0.05,0.03),mats['black'],cols['Corridors'])
         box('Extinguisher_label',(x,y-0.078,0.31),(0.105,0.008,0.20),mats['white'],cols['Corridors'])
 
+    repair_junctions()
     scene.world=bpy.data.worlds.get('Soft_Daylight')
     scene.world.node_tree.nodes['Background'].inputs['Strength'].default_value=0.18
     camera_specs=[('classroom',(4.02,0.73,1.7),(4,8,1.45),21),

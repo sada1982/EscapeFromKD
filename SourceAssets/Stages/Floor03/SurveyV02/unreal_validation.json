@@ -3,9 +3,9 @@
   "reference_url": "https://my.matterport.com/show/?m=DG9hQWWe91g",
   "level": "/Game/Main/Stage/KDStage",
   "blueprint": "/Game/Main/Stage/BP_Floor03",
-  "source_blend_sha256": "9aae64d13bec354343c10d91d7303e0158b0f41cb765d1fe3e03657823e87555",
+  "source_blend_sha256": "2f423416a9b0910777621ee70681fb18a634e2ec88163e7c2633b04745002e3b",
   "combined_fbx": "E:\\Project\\UE\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\Export\\EscapeFromKD_Floor03_v02.fbx",
-  "total_fbx_triangles": 1389244,
+  "total_fbx_triangles": 1435172,
   "fbx_roundtrip": {
     "mesh_count": 12,
     "all_meshes_have_uv": true,
@@ -46,7 +46,7 @@
         "min": {
           "x": -2246.999755859375,
           "y": -2030,
-          "z": -18
+          "z": 273
         },
         "max": {
           "x": 805,
@@ -751,6 +751,67 @@
   "backup_directory": "Saved/Automation/Floor03Rebuild_20261112/Before",
   "original_blend_unchanged_sha256": "9e921c2a0c18822c43e7047f189184a192cfe1757cfccea1bf9d424f61413487",
   "editor_operations_transport": "normal unreal-mcp",
+  "corridor_z_fighting_fix": {
+    "removed_duplicate_ceiling_slabs": 4,
+    "removed_triangles": 48,
+    "source_floor_samples_with_single_surface": 6,
+    "unchanged_export_groups": 11,
+    "unreal_reimported_mesh": "SM_F03V02_Ceilings",
+    "material_assignments_nanite_and_collision_preserved": true,
+    "pie_gallery_walk_distance_cm": 866.786057762866,
+    "pie_pawn_z_before_and_after_cm": 98.14999771118164,
+    "floor_collision_traces_passed": 5,
+    "visual_check": "Duplicate floor stripes absent at the same exit viewpoint, after walking, and in the connecting gallery.",
+    "level_and_blueprint_files_unchanged": true,
+    "evidence_directory": "Saved/Automation/CorridorZFight_20261113"
+  },
+  "doorway_z_fighting_fix": {
+    "modified_source_object": "Near_gallery_context_back",
+    "lower_wall_top_before_after_m": [0, -0.18],
+    "source_doorway_samples_with_single_surface": 4,
+    "unreal_reimported_mesh": "SM_F03V02_Corridors",
+    "material_assignments_nanite_and_collision_preserved": true,
+    "pie_doorways_crossed_without_height_change": 2,
+    "floor_collision_traces_passed": 4,
+    "visual_check": "Both doorway floor boundaries reviewed at oblique downward angles; no white overlapping wall tops visible.",
+    "evidence_directory": "Saved/Automation/DoorwayZFight_20261113"
+  },
+  "stage_junction_z_fighting_fix": {
+    "reported_lobby_cause": "Lower-floor Front_gallery_context_back/return wall tops overlapped the 3F floor at Z=0.",
+    "lower_wall_top_before_after_m": [0, -0.18],
+    "repaired_junctions": [
+      "Duplicate and intersecting atrium piers, caps, headers and glass-block mortar",
+      "Gallery ceiling overlap with upper gallery slabs",
+      "Opposite gallery wall/header overlap with floor edges",
+      "Overlapping skirting and whiteboard frame corners",
+      "Intersecting AC vents and two coincident adjacent-classroom fixture meshes"
+    ],
+    "source_mesh_groups_audited": 12,
+    "evaluated_source_polygons": 722451,
+    "camera_probes": 61,
+    "plane_tolerance_m": 0.00005,
+    "minimum_audited_face_area_m2": 0.00001,
+    "visible_coplanar_overlap_pairs_after": 0,
+    "remaining_hidden_internal_pairs": 334,
+    "sub_tolerance_boundary_slivers_excluded": 1,
+    "unreal_reimported_groups": ["Structure", "Ceilings", "ClassroomFixtures", "Corridors"],
+    "unchanged_fbx_groups": 8,
+    "material_assignments_nanite_and_collision_preserved": true,
+    "corridor_fbx_near_zero_tangent_triangles": 0,
+    "corridor_fbx_triangles_below_1e_minus_8_m2": 0,
+    "final_corridor_reimport_warnings": [],
+    "unreal_visual_viewpoints_reviewed": 12,
+    "floor_collision_traces_passed": 15,
+    "pie_reported_floor_joint_crossed": true,
+    "pie_floor_joint_height_change_cm": -0.0000011416343568271259,
+    "source_regeneration": "passed",
+    "regenerated_source_visible_coplanar_overlap_pairs": 0,
+    "level_and_blueprint_files_unchanged": true,
+    "light_actors_and_render_settings_unchanged": true,
+    "evidence_directory": "Saved/Automation/StageOverlapAudit_20261113",
+    "visual_check": "Reported lobby stripe absent before and after walking; doorways, galleries, ceiling junctions, stairs, atrium trim and classroom fixtures reviewed in PIE.",
+    "audit_limit": "Visibility checked from 61 playable-area camera probes with the stated geometry tolerances; hidden internal contacts are retained."
+  },
   "unrelated_gameplay_and_project_settings_changed": false,
   "committed": false
 }
