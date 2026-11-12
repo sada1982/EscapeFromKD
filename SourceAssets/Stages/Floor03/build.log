@@ -1,0 +1,17 @@
+C:\Users\motoo\OneDrive\デスクトップ\まとめ\個人業務\ゲーム開発\UnrealEngine\GameProject_OPC\EscapeFromKD\SourceAssets\Stages\Floor03\build_floor03.py:442: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes=True
+00:10.625  cycles           | WARNING HIPEW initialization failed: Error opening HIP dynamic library
+Info: Saved as "EscapeFromKD_Floor03_v01.blend"
+KD_BUILD_COMPLETE {"blender_version": "5.3.0", "units": "meters", "classroom_dimensions_m": [10.4, 11.5, 3.1], "student_desks": 24, "student_chairs": 48, "student_laptops": 24, "center_aisle_m": 1.2, "corridor_width_m": 2.4, "door_opening_m": 1.25, "objects": 423, "mesh_objects": 375, "shared_furniture_meshes": true, "ue_project_modified_by_build": false, "notes": ["画像を基にした仮寸法。実測値ではない。", "開始室は俯瞰画像の右下。机の列数と座席数も初版の仮配置。", "他室は外形と閉じた入口のみ。ゲームの入室制御は未実装。", "左側教室脇に上り・下り階段、その右に閉じたエレベーターを仮配置。", "階段は3Fに接続する各1フライトと仮踊り場のみ。2F・4F本体は含まない。", "Matterportの移動マーカーは実際の床模様として再現しない。"]}
+KD_RENDER_START classroom
+00:31.203  render           | Saved: 'C:\Users\motoo\OneDrive\デスクトップ\まとめ\個人業務\ゲーム開発\UnrealEngine\GameProject_OPC\EscapeFromKD\SourceAssets\Stages\Floor03\Previews\classroom.png'
+KD_RENDER_COMPLETE classroom
+KD_RENDER_START entrance
+00:52.203  render           | Saved: 'C:\Users\motoo\OneDrive\デスクトップ\まとめ\個人業務\ゲーム開発\UnrealEngine\GameProject_OPC\EscapeFromKD\SourceAssets\Stages\Floor03\Previews\entrance.png'
+KD_RENDER_COMPLETE entrance
+KD_RENDER_START floor03_overview
+01:04.797  render           | Saved: 'C:\Users\motoo\OneDrive\デスクトップ\まとめ\個人業務\ゲーム開発\UnrealEngine\GameProject_OPC\EscapeFromKD\SourceAssets\Stages\Floor03\Previews\floor03_overview.png'
+KD_RENDER_COMPLETE floor03_overview
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:33:43)
+
+Blender quit

@@ -1,0 +1,57 @@
+00:01.328  blend            | Read blend: "C:\Users\motoo\OneDrive\デスクトップ\まとめ\個人業務\ゲーム開発\UnrealEngine\GameProject_OPC\EscapeFromKD\SourceAssets\Stages\Floor03\EscapeFromKD_Floor03_v01.blend"
+
+FBX export starting... 'C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Structure.fbx'
+export finished in 0.0173 sec.
+KD_EXPORTED_GROUP Structure 9 108
+
+FBX export starting... 'C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Ceilings.fbx'
+export finished in 0.0208 sec.
+KD_EXPORTED_GROUP Ceilings 44 4644
+
+FBX export starting... 'C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_ClosedClassrooms.fbx'
+export finished in 0.0218 sec.
+KD_EXPORTED_GROUP ClosedClassrooms 18 5624
+
+FBX export starting... 'C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_ClassroomFixtures.fbx'
+export finished in 0.0373 sec.
+KD_EXPORTED_GROUP ClassroomFixtures 51 10036
+
+FBX export starting... 'C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_GlazingFrames.fbx'
+export finished in 0.0289 sec.
+KD_EXPORTED_GROUP GlazingFrames 29 8792
+
+FBX export starting... 'C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Glass.fbx'
+export finished in 0.0058 sec.
+KD_EXPORTED_GROUP Glass 8 96
+
+FBX export starting... 'C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Corridors.fbx'
+export finished in 0.0102 sec.
+KD_EXPORTED_GROUP Corridors 15 1764
+
+FBX export starting... 'C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_StairCore.fbx'
+export finished in 0.0197 sec.
+KD_EXPORTED_GROUP StairCore 87 4780
+
+FBX export starting... 'C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Desks.fbx'
+export finished in 0.1575 sec.
+KD_EXPORTED_GROUP Desks 25 39100
+
+FBX export starting... 'C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Chairs.fbx'
+export finished in 2.8106 sec.
+KD_EXPORTED_GROUP Chairs 49 373380
+
+FBX export starting... 'C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Laptops.fbx'
+export finished in 1.2220 sec.
+KD_EXPORTED_GROUP Laptops 25 186700
+
+FBX export starting... 'C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Mice.fbx'
+export finished in 0.1303 sec.
+KD_EXPORTED_GROUP Mice 24 9984
+
+FBX export starting... 'C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\EscapeFromKD_Floor03_v01.fbx'
+export finished in 2.9849 sec.
+FBX version: 7400
+KD_EXPORT_COMPLETE {"groups": 12, "sources": 384, "triangles": 645008, "combined_fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\EscapeFromKD_Floor03_v01.fbx", "roundtrip": {"mesh_count": 12, "all_meshes_have_uv": true, "bounds_blender_m": {"min": [-31.89000129699707, -1.0900027751922607, -1.9000000953674316], "max": [10.489999771118164, 24.290000915527344, 4.5]}, "maximum_bounds_error_m": 2.7418136596679688e-06}}
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:33:43)
+
+Blender quit

@@ -1,0 +1,1285 @@
+{
+  "source_blend": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\EscapeFromKD_Floor03_v01.blend",
+  "source_blend_sha256": "9e921c2a0c18822c43e7047f189184a192cfe1757cfccea1bf9d424f61413487",
+  "blender_version": "5.3.0",
+  "source_units": "meters",
+  "fbx_export": {
+    "axis_forward": "-Y",
+    "axis_up": "Z",
+    "apply_unit_scale": true,
+    "apply_scale_options": "FBX_SCALE_NONE",
+    "global_scale": 1.0
+  },
+  "combined_fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\EscapeFromKD_Floor03_v01.fbx",
+  "combined_bytes": 48044764,
+  "source_object_count": 384,
+  "bounds_blender_m": {
+    "min": [
+      -31.889999389648438,
+      -1.090000033378601,
+      -1.9000000953674316
+    ],
+    "max": [
+      10.489999771118164,
+      24.290000915527344,
+      4.5
+    ]
+  },
+  "groups": [
+    {
+      "group": "Structure",
+      "asset_name": "SM_F03_Structure",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Structure.fbx",
+      "source_objects": [
+        "Start_Classroom_Floor",
+        "Classroom_Back_Wall",
+        "Classroom_Teaching_Wall",
+        "Window_Wall_Sill",
+        "Window_Wall_Header",
+        "Window_Pier_00",
+        "Window_Pier_01",
+        "Window_Pier_02",
+        "Window_Last_Pier"
+      ],
+      "source_count": 9,
+      "bounds_blender_m": {
+        "min": [
+          0.0,
+          -0.09000000357627869,
+          -0.18000000715255737
+        ],
+        "max": [
+          10.489999771118164,
+          11.59000015258789,
+          3.1000001430511475
+        ]
+      },
+      "vertices": 72,
+      "triangles": 108,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "material_slots": [
+        "KD_F03_ClassroomCarpet",
+        "KD_F03_PaintWarmWhite"
+      ],
+      "origin_blender_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "file_bytes": 395836
+    },
+    {
+      "group": "Ceilings",
+      "asset_name": "SM_F03_Ceilings",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Ceilings.fbx",
+      "source_objects": [
+        "Start_Classroom_Ceiling",
+        "Ceiling_AC_Cassette_0",
+        "Ceiling_AC_Grille_0",
+        "Ceiling_AC_Cassette_1",
+        "Ceiling_AC_Grille_1",
+        "Ceiling_Tile_Joints",
+        "Ceiling_Luminaire",
+        "Ceiling_Light_Lens",
+        "Ceiling_Luminaire.001",
+        "Ceiling_Light_Lens.001",
+        "Ceiling_Luminaire.002",
+        "Ceiling_Light_Lens.002",
+        "Ceiling_Luminaire.003",
+        "Ceiling_Light_Lens.003",
+        "Ceiling_Luminaire.004",
+        "Ceiling_Light_Lens.004",
+        "Ceiling_Luminaire.005",
+        "Ceiling_Light_Lens.005",
+        "Ceiling_Luminaire.006",
+        "Ceiling_Light_Lens.006",
+        "Ceiling_Luminaire.007",
+        "Ceiling_Light_Lens.007",
+        "Ceiling_Luminaire.008",
+        "Ceiling_Light_Lens.008",
+        "Ceiling_Luminaire.009",
+        "Ceiling_Light_Lens.009",
+        "Ceiling_Luminaire.010",
+        "Ceiling_Light_Lens.010",
+        "Ceiling_Luminaire.011",
+        "Ceiling_Light_Lens.011",
+        "Right_Corridor_Ceiling",
+        "Connector_Ceiling",
+        "Lobby_Ceiling",
+        "Lift_Approach_Ceiling",
+        "Hall_Light_00",
+        "Hall_Light_01",
+        "Hall_Light_02",
+        "Hall_Light_03",
+        "Hall_Light_04",
+        "Hall_Light_05",
+        "Hall_Light_06",
+        "Hall_Light_07",
+        "Hall_Light_08",
+        "Hall_Light_09"
+      ],
+      "source_count": 44,
+      "bounds_blender_m": {
+        "min": [
+          -20.19999885559082,
+          -1.0,
+          2.9809999465942383
+        ],
+        "max": [
+          10.399999618530273,
+          13.699999809265137,
+          3.2100000381469727
+        ]
+      },
+      "vertices": 2520,
+      "triangles": 4644,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "material_slots": [
+        "KD_F03_AcousticCeiling",
+        "KD_F03_PaintWarmWhite",
+        "KD_F03_DarkWindowFrames",
+        "KD_F03_SilverMetal",
+        "KD_F03_LightDiffuser"
+      ],
+      "origin_blender_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "file_bytes": 484492
+    },
+    {
+      "group": "ClosedClassrooms",
+      "asset_name": "SM_F03_ClosedClassrooms",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_ClosedClassrooms.fbx",
+      "source_objects": [
+        "Adjacent_Classroom_Floor",
+        "Adjacent_Classroom_South",
+        "Adjacent_Classroom_North",
+        "Adjacent_Classroom_West",
+        "Adjacent_Classroom_East",
+        "Adjacent_Classroom_Roof",
+        "Adjacent_Classroom_Closed_Door",
+        "Adjacent_Classroom_Door_Slit",
+        "Adjacent_Classroom_Door_Label",
+        "Left_Classroom_Floor",
+        "Left_Classroom_South",
+        "Left_Classroom_North",
+        "Left_Classroom_West",
+        "Left_Classroom_East",
+        "Left_Classroom_Roof",
+        "Left_Classroom_Closed_Door",
+        "Left_Classroom_Door_Slit",
+        "Left_Classroom_Door_Label"
+      ],
+      "source_count": 18,
+      "bounds_blender_m": {
+        "min": [
+          -31.889999389648438,
+          -1.090000033378601,
+          -0.18000000715255737
+        ],
+        "max": [
+          10.489999771118164,
+          24.290000915527344,
+          3.2100000381469727
+        ]
+      },
+      "vertices": 5504,
+      "triangles": 5624,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "material_slots": [
+        "KD_F03_ClassroomCarpet",
+        "KD_F03_PaintWarmWhite",
+        "KD_F03_LightOak",
+        "KD_F03_DarkWindowFrames"
+      ],
+      "origin_blender_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "file_bytes": 982700
+    },
+    {
+      "group": "ClassroomFixtures",
+      "asset_name": "SM_F03_ClassroomFixtures",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_ClassroomFixtures.fbx",
+      "source_objects": [
+        "Back_Skirting",
+        "Front_Skirting",
+        "Whiteboard_Surface",
+        "Whiteboard_Stand_And_Frame",
+        "Whiteboard_Tray",
+        "Whiteboard_Eraser",
+        "Clock_Rim",
+        "Clock_Face",
+        "Clock_Tick_00",
+        "Clock_Tick_01",
+        "Clock_Tick_02",
+        "Clock_Tick_03",
+        "Clock_Tick_04",
+        "Clock_Tick_05",
+        "Clock_Tick_06",
+        "Clock_Tick_07",
+        "Clock_Tick_08",
+        "Clock_Tick_09",
+        "Clock_Tick_10",
+        "Clock_Tick_11",
+        "Clock_Hour_Hand",
+        "Clock_Minute_Hand",
+        "Projection_Screen",
+        "Projection_Screen_Roller",
+        "Presentation_Display_Back",
+        "Presentation_Display",
+        "Presentation_Display_Stand",
+        "Presentation_Display_Foot",
+        "Student_Poster_00",
+        "Poster_Heading_00",
+        "Student_Poster_01",
+        "Poster_Heading_01",
+        "Student_Poster_02",
+        "Poster_Heading_02",
+        "Student_Poster_03",
+        "Poster_Heading_03",
+        "Student_Poster_04",
+        "Poster_Heading_04",
+        "Student_Poster_05",
+        "Poster_Heading_05",
+        "Back_Equipment_Shelf",
+        "Equipment_Case_00",
+        "Equipment_Case_01",
+        "Equipment_Case_02",
+        "Equipment_Case_03",
+        "Equipment_Case_04",
+        "Equipment_Case_05",
+        "Back_Storage_Cabinet",
+        "Cabinet_Handle",
+        "Back_Storage_Cabinet.001",
+        "Cabinet_Handle.001"
+      ],
+      "source_count": 51,
+      "bounds_blender_m": {
+        "min": [
+          0.0,
+          0.0924999937415123,
+          0.0
+        ],
+        "max": [
+          10.399999618530273,
+          11.470000267028809,
+          3.0274999141693115
+        ]
+      },
+      "vertices": 9008,
+      "triangles": 10036,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "material_slots": [
+        "KD_F03_BlackPlastic",
+        "KD_F03_Whiteboard",
+        "KD_F03_SilverMetal",
+        "KD_F03_PosterBlue",
+        "KD_F03_DarkWindowFrames",
+        "KD_F03_LaptopScreen",
+        "KD_F03_PaintWarmWhite",
+        "KD_F03_PosterOrange",
+        "KD_F03_LightOak"
+      ],
+      "origin_blender_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "file_bytes": 830444
+    },
+    {
+      "group": "GlazingFrames",
+      "asset_name": "SM_F03_GlazingFrames",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_GlazingFrames.fbx",
+      "source_objects": [
+        "Dark_Window_Frame_00",
+        "Window_Blinds_00",
+        "Dark_Window_Frame_01",
+        "Window_Blinds_01",
+        "Dark_Window_Frame_02",
+        "Window_Blinds_02",
+        "Exterior_Window_Skirting",
+        "Hall_Glazing_Header",
+        "Hall_Glazing_Sill_00",
+        "Hall_Glazing_Frames_00",
+        "Hall_Skirting_00",
+        "Hall_Glazing_Sill_01",
+        "Hall_Glazing_Frames_01",
+        "Hall_Skirting_01",
+        "Hall_Glazing_Sill_02",
+        "Hall_Glazing_Frames_02",
+        "Hall_Skirting_02",
+        "Door_Jamb_0",
+        "Door_Jamb_0.001",
+        "Door_Top_Track_0",
+        "Open_Wood_Sliding_Panel_0",
+        "Door_Inset_Handle_0",
+        "Classroom_Name_0",
+        "Door_Jamb_1",
+        "Door_Jamb_1.001",
+        "Door_Top_Track_1",
+        "Open_Wood_Sliding_Panel_1",
+        "Door_Inset_Handle_1",
+        "Classroom_Name_1"
+      ],
+      "source_count": 29,
+      "bounds_blender_m": {
+        "min": [
+          -0.16099999845027924,
+          -0.042500000447034836,
+          0.0
+        ],
+        "max": [
+          10.427499771118164,
+          11.542499542236328,
+          3.0999999046325684
+        ]
+      },
+      "vertices": 8176,
+      "triangles": 8792,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "material_slots": [
+        "KD_F03_DarkWindowFrames",
+        "KD_F03_SilverMetal",
+        "KD_F03_BlackPlastic",
+        "KD_F03_PaintWarmWhite",
+        "KD_F03_LightOak"
+      ],
+      "origin_blender_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "file_bytes": 730588
+    },
+    {
+      "group": "Glass",
+      "asset_name": "SM_F03_Glass",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Glass.fbx",
+      "source_objects": [
+        "Window_Glass_00",
+        "Window_Glass_01",
+        "Window_Glass_02",
+        "Hall_Glass_00",
+        "Hall_Glass_01",
+        "Hall_Glass_02",
+        "Door_Slit_Glass_0",
+        "Door_Slit_Glass_1"
+      ],
+      "source_count": 8,
+      "bounds_blender_m": {
+        "min": [
+          -0.12600000202655792,
+          0.0,
+          0.4399999976158142
+        ],
+        "max": [
+          10.406999588012695,
+          11.5,
+          2.6999998092651367
+        ]
+      },
+      "vertices": 64,
+      "triangles": 96,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "material_slots": [
+        "KD_F03_ClearGlass"
+      ],
+      "origin_blender_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "file_bytes": 18668
+    },
+    {
+      "group": "Corridors",
+      "asset_name": "SM_F03_Corridors",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Corridors.fbx",
+      "source_objects": [
+        "Right_Wing_Corridor",
+        "Connecting_Corridor",
+        "Left_Lobby",
+        "Lift_Approach",
+        "Right_Corridor_Outer_Wall",
+        "Right_Corridor_End",
+        "Right_Corridor_South",
+        "Connector_South",
+        "Connector_North",
+        "Lobby_South",
+        "Lobby_East_Lower",
+        "Lobby_East_Middle",
+        "Lift_Approach_South",
+        "Lift_Approach_East",
+        "Corridor_Glass_Block_Feature"
+      ],
+      "source_count": 15,
+      "bounds_blender_m": {
+        "min": [
+          -20.19999885559082,
+          -1.090000033378601,
+          -0.18000000715255737
+        ],
+        "max": [
+          0.0,
+          13.789999961853027,
+          3.0999999046325684
+        ]
+      },
+      "vertices": 1176,
+      "triangles": 1764,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "material_slots": [
+        "KD_F03_CorridorCarpet",
+        "KD_F03_PaintWarmWhite",
+        "KD_F03_GlassBlocks"
+      ],
+      "origin_blender_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "file_bytes": 488124
+    },
+    {
+      "group": "StairCore",
+      "asset_name": "SM_F03_StairCore",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_StairCore.fbx",
+      "source_objects": [
+        "Stair_3F_Landing",
+        "Stair_Core_West",
+        "Stair_Core_East",
+        "Stair_Core_End",
+        "Down_To_2F_Step_00",
+        "Down_To_2F_Nosing_00",
+        "Down_To_2F_Step_01",
+        "Down_To_2F_Nosing_01",
+        "Down_To_2F_Step_02",
+        "Down_To_2F_Nosing_02",
+        "Down_To_2F_Step_03",
+        "Down_To_2F_Nosing_03",
+        "Down_To_2F_Step_04",
+        "Down_To_2F_Nosing_04",
+        "Down_To_2F_Step_05",
+        "Down_To_2F_Nosing_05",
+        "Down_To_2F_Step_06",
+        "Down_To_2F_Nosing_06",
+        "Down_To_2F_Step_07",
+        "Down_To_2F_Nosing_07",
+        "Down_To_2F_Step_08",
+        "Down_To_2F_Nosing_08",
+        "Down_To_2F_Step_09",
+        "Down_To_2F_Nosing_09",
+        "Down_To_2F_Provisional_Landing",
+        "Down_To_2F_Handrail",
+        "Down_To_2F_Post_00",
+        "Down_To_2F_Post_02",
+        "Down_To_2F_Post_04",
+        "Down_To_2F_Post_06",
+        "Down_To_2F_Post_08",
+        "Down_To_2F_Handrail.001",
+        "Down_To_2F_Post_00.001",
+        "Down_To_2F_Post_02.001",
+        "Down_To_2F_Post_04.001",
+        "Down_To_2F_Post_06.001",
+        "Down_To_2F_Post_08.001",
+        "Down_To_2F_Sign_Back",
+        "Down_To_2F_Sign",
+        "Up_To_4F_Step_00",
+        "Up_To_4F_Nosing_00",
+        "Up_To_4F_Step_01",
+        "Up_To_4F_Nosing_01",
+        "Up_To_4F_Step_02",
+        "Up_To_4F_Nosing_02",
+        "Up_To_4F_Step_03",
+        "Up_To_4F_Nosing_03",
+        "Up_To_4F_Step_04",
+        "Up_To_4F_Nosing_04",
+        "Up_To_4F_Step_05",
+        "Up_To_4F_Nosing_05",
+        "Up_To_4F_Step_06",
+        "Up_To_4F_Nosing_06",
+        "Up_To_4F_Step_07",
+        "Up_To_4F_Nosing_07",
+        "Up_To_4F_Step_08",
+        "Up_To_4F_Nosing_08",
+        "Up_To_4F_Step_09",
+        "Up_To_4F_Nosing_09",
+        "Up_To_4F_Provisional_Landing",
+        "Up_To_4F_Handrail",
+        "Up_To_4F_Post_00",
+        "Up_To_4F_Post_02",
+        "Up_To_4F_Post_04",
+        "Up_To_4F_Post_06",
+        "Up_To_4F_Post_08",
+        "Up_To_4F_Handrail.001",
+        "Up_To_4F_Post_00.001",
+        "Up_To_4F_Post_02.001",
+        "Up_To_4F_Post_04.001",
+        "Up_To_4F_Post_06.001",
+        "Up_To_4F_Post_08.001",
+        "Up_To_4F_Sign_Back",
+        "Up_To_4F_Sign",
+        "Lift_Shaft_Base",
+        "Lift_Shaft_West",
+        "Lift_Shaft_East",
+        "Lift_Shaft_Back",
+        "Lift_Closed_Front",
+        "Lift_Roof",
+        "Lift_Door_Frame",
+        "Lift_Closed_Door",
+        "Lift_Closed_Door.001",
+        "Lift_Indicator",
+        "Lift_Floor_Number",
+        "Lift_Call_Panel",
+        "Lift_Call_Button"
+      ],
+      "source_count": 87,
+      "bounds_blender_m": {
+        "min": [
+          -20.290000915527344,
+          7.96560001373291,
+          -1.9000000953674316
+        ],
+        "max": [
+          -11.309999465942383,
+          13.390000343322754,
+          4.5
+        ]
+      },
+      "vertices": 3728,
+      "triangles": 4780,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "material_slots": [
+        "KD_F03_Concrete",
+        "KD_F03_PaintWarmWhite",
+        "KD_F03_SilverMetal",
+        "KD_F03_DarkWindowFrames",
+        "KD_F03_Whiteboard",
+        "KD_F03_BlackPlastic",
+        "KD_F03_LightDiffuser"
+      ],
+      "origin_blender_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "file_bytes": 234940
+    },
+    {
+      "group": "Desks",
+      "asset_name": "SM_F03_Desks",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Desks.fbx",
+      "source_objects": [
+        "Student_Desk_00",
+        "Student_Desk_01",
+        "Student_Desk_02",
+        "Student_Desk_03",
+        "Student_Desk_04",
+        "Student_Desk_05",
+        "Student_Desk_06",
+        "Student_Desk_07",
+        "Student_Desk_08",
+        "Student_Desk_09",
+        "Student_Desk_10",
+        "Student_Desk_11",
+        "Student_Desk_12",
+        "Student_Desk_13",
+        "Student_Desk_14",
+        "Student_Desk_15",
+        "Student_Desk_16",
+        "Student_Desk_17",
+        "Student_Desk_18",
+        "Student_Desk_19",
+        "Student_Desk_20",
+        "Student_Desk_21",
+        "Student_Desk_22",
+        "Student_Desk_23",
+        "Instructor_Desk"
+      ],
+      "source_count": 25,
+      "bounds_blender_m": {
+        "min": [
+          1.0,
+          1.7000000476837158,
+          0.0
+        ],
+        "max": [
+          9.399999618530273,
+          11.0,
+          0.7199999690055847
+        ]
+      },
+      "vertices": 20200,
+      "triangles": 39100,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "material_slots": [
+        "KD_F03_LightOak",
+        "KD_F03_BlackPlastic",
+        "KD_F03_SilverMetal",
+        "KD_F03_DarkRubber"
+      ],
+      "origin_blender_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "file_bytes": 2669452
+    },
+    {
+      "group": "Chairs",
+      "asset_name": "SM_F03_Chairs",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Chairs.fbx",
+      "source_objects": [
+        "Student_Chair_00",
+        "Student_Chair_01",
+        "Student_Chair_02",
+        "Student_Chair_03",
+        "Student_Chair_04",
+        "Student_Chair_05",
+        "Student_Chair_06",
+        "Student_Chair_07",
+        "Student_Chair_08",
+        "Student_Chair_09",
+        "Student_Chair_10",
+        "Student_Chair_11",
+        "Student_Chair_12",
+        "Student_Chair_13",
+        "Student_Chair_14",
+        "Student_Chair_15",
+        "Student_Chair_16",
+        "Student_Chair_17",
+        "Student_Chair_18",
+        "Student_Chair_19",
+        "Student_Chair_20",
+        "Student_Chair_21",
+        "Student_Chair_22",
+        "Student_Chair_23",
+        "Student_Chair_24",
+        "Student_Chair_25",
+        "Student_Chair_26",
+        "Student_Chair_27",
+        "Student_Chair_28",
+        "Student_Chair_29",
+        "Student_Chair_30",
+        "Student_Chair_31",
+        "Student_Chair_32",
+        "Student_Chair_33",
+        "Student_Chair_34",
+        "Student_Chair_35",
+        "Student_Chair_36",
+        "Student_Chair_37",
+        "Student_Chair_38",
+        "Student_Chair_39",
+        "Student_Chair_40",
+        "Student_Chair_41",
+        "Student_Chair_42",
+        "Student_Chair_43",
+        "Student_Chair_44",
+        "Student_Chair_45",
+        "Student_Chair_46",
+        "Student_Chair_47",
+        "Instructor_Chair"
+      ],
+      "source_count": 49,
+      "bounds_blender_m": {
+        "min": [
+          1.2259793281555176,
+          1.0990796089172363,
+          0.0
+        ],
+        "max": [
+          9.174018859863281,
+          11.220000267028809,
+          0.8499999642372131
+        ]
+      },
+      "vertices": 190610,
+      "triangles": 373380,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "material_slots": [
+        "KD_F03_BlackPlastic",
+        "KD_F03_DarkRubber",
+        "KD_F03_SilverMetal"
+      ],
+      "origin_blender_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "file_bytes": 33337020
+    },
+    {
+      "group": "Laptops",
+      "asset_name": "SM_F03_Laptops",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Laptops.fbx",
+      "source_objects": [
+        "Student_Laptop_00",
+        "Student_Laptop_02",
+        "Student_Laptop_04",
+        "Student_Laptop_06",
+        "Student_Laptop_08",
+        "Student_Laptop_10",
+        "Student_Laptop_12",
+        "Student_Laptop_14",
+        "Student_Laptop_16",
+        "Student_Laptop_18",
+        "Student_Laptop_20",
+        "Student_Laptop_22",
+        "Student_Laptop_24",
+        "Student_Laptop_26",
+        "Student_Laptop_28",
+        "Student_Laptop_30",
+        "Student_Laptop_32",
+        "Student_Laptop_34",
+        "Student_Laptop_36",
+        "Student_Laptop_38",
+        "Student_Laptop_40",
+        "Student_Laptop_42",
+        "Student_Laptop_44",
+        "Student_Laptop_46",
+        "Instructor_Laptop"
+      ],
+      "source_count": 25,
+      "bounds_blender_m": {
+        "min": [
+          1.3799999952316284,
+          1.8625000715255737,
+          0.7200000286102295
+        ],
+        "max": [
+          8.319999694824219,
+          10.817500114440918,
+          0.948101282119751
+        ]
+      },
+      "vertices": 96750,
+      "triangles": 186700,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "material_slots": [
+        "KD_F03_BlackPlastic",
+        "KD_F03_DarkRubber",
+        "KD_F03_LaptopKeyboard",
+        "KD_F03_LaptopScreen"
+      ],
+      "origin_blender_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "file_bytes": 8603996
+    },
+    {
+      "group": "Mice",
+      "asset_name": "SM_F03_Mice",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Export\\SM_F03_Mice.fbx",
+      "source_objects": [
+        "Student_Mouse_00",
+        "Student_Mouse_02",
+        "Student_Mouse_04",
+        "Student_Mouse_06",
+        "Student_Mouse_08",
+        "Student_Mouse_10",
+        "Student_Mouse_12",
+        "Student_Mouse_14",
+        "Student_Mouse_16",
+        "Student_Mouse_18",
+        "Student_Mouse_20",
+        "Student_Mouse_22",
+        "Student_Mouse_24",
+        "Student_Mouse_26",
+        "Student_Mouse_28",
+        "Student_Mouse_30",
+        "Student_Mouse_32",
+        "Student_Mouse_34",
+        "Student_Mouse_36",
+        "Student_Mouse_38",
+        "Student_Mouse_40",
+        "Student_Mouse_42",
+        "Student_Mouse_44",
+        "Student_Mouse_46"
+      ],
+      "source_count": 24,
+      "bounds_blender_m": {
+        "min": [
+          1.8100000619888306,
+          1.8200000524520874,
+          0.7200000286102295
+        ],
+        "max": [
+          8.469999313354492,
+          8.670000076293945,
+          0.7590000033378601
+        ]
+      },
+      "vertices": 5136,
+      "triangles": 9984,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "material_slots": [
+        "KD_F03_BlackPlastic",
+        "KD_F03_DarkRubber"
+      ],
+      "origin_blender_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "file_bytes": 861516
+    }
+  ],
+  "materials": {
+    "KD_F03_ClassroomCarpet": {
+      "base_color_linear": [
+        0.1899999976158142,
+        0.20499999821186066,
+        0.20499999821186066,
+        1.0
+      ],
+      "roughness": 0.9399999976158142,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\carpet_grey_blue.png"
+      ],
+      "uv_scale_baked": 4.0
+    },
+    "KD_F03_PaintWarmWhite": {
+      "base_color_linear": [
+        0.800000011920929,
+        0.7900000214576721,
+        0.7300000190734863,
+        1.0
+      ],
+      "roughness": 0.8399999737739563,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_AcousticCeiling": {
+      "base_color_linear": [
+        0.8199999928474426,
+        0.8100000023841858,
+        0.7699999809265137,
+        1.0
+      ],
+      "roughness": 0.9300000071525574,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\ceiling_acoustic.png"
+      ],
+      "uv_scale_baked": 3.0
+    },
+    "KD_F03_DarkWindowFrames": {
+      "base_color_linear": [
+        0.017999999225139618,
+        0.035999998450279236,
+        0.03400000184774399,
+        1.0
+      ],
+      "roughness": 0.36000001430511475,
+      "metallic": 0.2800000011920929,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_SilverMetal": {
+      "base_color_linear": [
+        0.4300000071525574,
+        0.4699999988079071,
+        0.47999998927116394,
+        1.0
+      ],
+      "roughness": 0.3199999928474426,
+      "metallic": 0.7200000286102295,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_LightDiffuser": {
+      "base_color_linear": [
+        0.9399999976158142,
+        0.9700000286102295,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.3499999940395355,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        0.9399999976158142,
+        0.9700000286102295,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 3.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_LightOak": {
+      "base_color_linear": [
+        0.6700000166893005,
+        0.47999998927116394,
+        0.27000001072883606,
+        1.0
+      ],
+      "roughness": 0.4699999988079071,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\wood_light_oak.png"
+      ],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_BlackPlastic": {
+      "base_color_linear": [
+        0.01600000075995922,
+        0.020999999716877937,
+        0.02500000037252903,
+        1.0
+      ],
+      "roughness": 0.44999998807907104,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_Whiteboard": {
+      "base_color_linear": [
+        0.8999999761581421,
+        0.9200000166893005,
+        0.8899999856948853,
+        1.0
+      ],
+      "roughness": 0.27000001072883606,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_PosterBlue": {
+      "base_color_linear": [
+        0.02500000037252903,
+        0.15000000596046448,
+        0.28999999165534973,
+        1.0
+      ],
+      "roughness": 0.7300000190734863,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\poster_blue_abstract.png"
+      ],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_LaptopScreen": {
+      "base_color_linear": [
+        0.03500000014901161,
+        0.11999999731779099,
+        0.2199999988079071,
+        1.0
+      ],
+      "roughness": 0.2800000011920929,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.5,
+      "image_files": [
+        "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\screen_editor.png"
+      ],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_PosterOrange": {
+      "base_color_linear": [
+        0.44999998807907104,
+        0.1899999976158142,
+        0.05000000074505806,
+        1.0
+      ],
+      "roughness": 0.7300000190734863,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\poster_orange_abstract.png"
+      ],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_ClearGlass": {
+      "base_color_linear": [
+        0.9100000262260437,
+        0.9700000286102295,
+        0.9800000190734863,
+        1.0
+      ],
+      "roughness": 0.02500000037252903,
+      "metallic": 0.0,
+      "transmission": 1.0,
+      "ior": 1.4600000381469727,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_CorridorCarpet": {
+      "base_color_linear": [
+        0.33000001311302185,
+        0.30000001192092896,
+        0.25999999046325684,
+        1.0
+      ],
+      "roughness": 0.9100000262260437,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\corridor_warm_grey.png"
+      ],
+      "uv_scale_baked": 4.0
+    },
+    "KD_F03_GlassBlocks": {
+      "base_color_linear": [
+        0.2199999988079071,
+        0.3400000035762787,
+        0.38999998569488525,
+        1.0
+      ],
+      "roughness": 0.23999999463558197,
+      "metallic": 0.0,
+      "transmission": 0.25,
+      "ior": 1.4600000381469727,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_Concrete": {
+      "base_color_linear": [
+        0.3499999940395355,
+        0.36000001430511475,
+        0.3499999940395355,
+        1.0
+      ],
+      "roughness": 0.9100000262260437,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_DarkRubber": {
+      "base_color_linear": [
+        0.00800000037997961,
+        0.010999999940395355,
+        0.013000000268220901,
+        1.0
+      ],
+      "roughness": 0.8299999833106995,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [],
+      "uv_scale_baked": 1.0
+    },
+    "KD_F03_LaptopKeyboard": {
+      "base_color_linear": [
+        0.03500000014901161,
+        0.03999999910593033,
+        0.05000000074505806,
+        1.0
+      ],
+      "roughness": 0.5,
+      "metallic": 0.0,
+      "transmission": 0.0,
+      "ior": 1.5,
+      "emission_color_linear": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "image_files": [
+        "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\Textures\\keyboard_keys.png"
+      ],
+      "uv_scale_baked": 1.0
+    }
+  },
+  "excluded": [
+    "lighting",
+    "cameras",
+    "world",
+    "layout marker empties",
+    "overview labels",
+    "hidden furniture prototypes"
+  ],
+  "notes": [
+    "Materials with UV scale nodes have their scale baked into export mesh UVs.",
+    "Original Blender file is not overwritten.",
+    "Collision and Unreal materials require validation in Unreal Editor."
+  ],
+  "roundtrip_validation": {
+    "mesh_count": 12,
+    "all_meshes_have_uv": true,
+    "bounds_blender_m": {
+      "min": [
+        -31.89000129699707,
+        -1.0900027751922607,
+        -1.9000000953674316
+      ],
+      "max": [
+        10.489999771118164,
+        24.290000915527344,
+        4.5
+      ]
+    },
+    "maximum_bounds_error_m": 2.7418136596679688e-06
+  }
+}

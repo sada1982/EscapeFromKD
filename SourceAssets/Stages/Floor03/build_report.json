@@ -1,0 +1,27 @@
+{
+  "blender_version": "5.3.0",
+  "units": "meters",
+  "classroom_dimensions_m": [
+    10.4,
+    11.5,
+    3.1
+  ],
+  "student_desks": 24,
+  "student_chairs": 48,
+  "student_laptops": 24,
+  "center_aisle_m": 1.2,
+  "corridor_width_m": 2.4,
+  "door_opening_m": 1.25,
+  "objects": 423,
+  "mesh_objects": 375,
+  "shared_furniture_meshes": true,
+  "ue_project_modified_by_build": false,
+  "notes": [
+    "画像を基にした仮寸法。実測値ではない。",
+    "開始室は俯瞰画像の右下。机の列数と座席数も初版の仮配置。",
+    "他室は外形と閉じた入口のみ。ゲームの入室制御は未実装。",
+    "左側教室脇に上り・下り階段、その右に閉じたエレベーターを仮配置。",
+    "階段は3Fに接続する各1フライトと仮踊り場のみ。2F・4F本体は含まない。",
+    "Matterportの移動マーカーは実際の床模様として再現しない。"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "units": "meters",
+  "classroom_width": 10.4,
+  "classroom_depth": 11.5,
+  "ceiling_height": 3.1,
+  "wall_thickness": 0.18,
+  "corridor_width": 2.4,
+  "desk_rows": 6,
+  "desk_row_spacing": 1.35,
+  "desk_first_row_y": 2.0,
+  "center_aisle_width": 1.2,
+  "desk_width": 1.8,
+  "desk_depth": 0.6,
+  "desk_height": 0.72,
+  "door_width": 1.25,
+  "door_height": 2.3,
+  "stair_rise": 0.17,
+  "stair_tread": 0.28,
+  "stair_steps_per_preview_flight": 10,
+  "notes": [
+    "画像を基にした仮寸法。実測値ではない。",
+    "開始室は俯瞰画像の右下。机の列数と座席数も初版の仮配置。",
+    "他室は外形と閉じた入口のみ。ゲームの入室制御は未実装。",
+    "左側教室脇に上り・下り階段、その右に閉じたエレベーターを仮配置。",
+    "階段は3Fに接続する各1フライトと仮踊り場のみ。2F・4F本体は含まない。",
+    "Matterportの移動マーカーは実際の床模様として再現しない。"
+  ]
+}
