@@ -1,0 +1,138 @@
+{
+  "source_asset": "/Game/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Lgt_01",
+  "source_fbx_sha256": "fbffec63366d1f6aefbec0e30e11bbfe5c4764cba38ce9649ae9608bb1d6547e",
+  "original_blend_sha256_before": "5c38f7f3cae4afb0e9d1a96188f14984a2e93c4b8ebe977134d0257220f251e1",
+  "action": "AN_Admission_HitReact",
+  "duration_seconds": 0.7,
+  "fps": 30,
+  "keys": 22,
+  "bone_hierarchy": [
+    [
+      "root",
+      null
+    ],
+    [
+      "pelvis",
+      "root"
+    ],
+    [
+      "spine_01",
+      "pelvis"
+    ],
+    [
+      "spine_02",
+      "spine_01"
+    ],
+    [
+      "spine_03",
+      "spine_02"
+    ],
+    [
+      "neck",
+      "spine_03"
+    ],
+    [
+      "head",
+      "neck"
+    ],
+    [
+      "clavicle_l",
+      "spine_03"
+    ],
+    [
+      "upperarm_l",
+      "clavicle_l"
+    ],
+    [
+      "lowerarm_l",
+      "upperarm_l"
+    ],
+    [
+      "hand_l",
+      "lowerarm_l"
+    ],
+    [
+      "document",
+      "hand_l"
+    ],
+    [
+      "clavicle_r",
+      "spine_03"
+    ],
+    [
+      "upperarm_r",
+      "clavicle_r"
+    ],
+    [
+      "lowerarm_r",
+      "upperarm_r"
+    ],
+    [
+      "hand_r",
+      "lowerarm_r"
+    ],
+    [
+      "thigh_l",
+      "pelvis"
+    ],
+    [
+      "calf_l",
+      "thigh_l"
+    ],
+    [
+      "foot_l",
+      "calf_l"
+    ],
+    [
+      "ball_l",
+      "foot_l"
+    ],
+    [
+      "thigh_r",
+      "pelvis"
+    ],
+    [
+      "calf_r",
+      "thigh_r"
+    ],
+    [
+      "foot_r",
+      "calf_r"
+    ],
+    [
+      "ball_r",
+      "foot_r"
+    ]
+  ],
+  "rotation_mapping": {
+    "pelvis": "pelvis",
+    "spine_01": "spine_01",
+    "spine_02": "spine_03",
+    "spine_03": "spine_05",
+    "neck": "neck_02",
+    "head": "head",
+    "clavicle_l": "clavicle_l",
+    "upperarm_l": "upperarm_l",
+    "lowerarm_l": "lowerarm_l",
+    "hand_l": "hand_l",
+    "clavicle_r": "clavicle_r",
+    "upperarm_r": "upperarm_r",
+    "lowerarm_r": "lowerarm_r",
+    "hand_r": "hand_r"
+  },
+  "method": "World-space rotation deltas from source frame 0 over Admission Idle; five source spine joints mapped to three target joints. Pelvis translation retained, two-bone foot planting, hand-local clipboard unchanged. Exact Idle at both ends.",
+  "max_foot_drift_cm": 2.1360388800532144e-06,
+  "pelvis_reach_corrections_cm": [
+    [
+      3,
+      0.007397961349710158
+    ]
+  ],
+  "peak_head_delta_degrees": 44.318433750436434,
+  "peak_frame": 5,
+  "minimum_geometry_z_cm": 0.7999955415725708,
+  "max_clipboard_relative_error": 3.337860107421875e-05,
+  "final_idle_matrix_error": 1.52587890625e-05,
+  "original_blend_sha256_after": "5c38f7f3cae4afb0e9d1a96188f14984a2e93c4b8ebe977134d0257220f251e1",
+  "original_source_unchanged": true
+}

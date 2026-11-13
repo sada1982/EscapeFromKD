@@ -1,0 +1,38 @@
+[
+  {
+    "label": "hip_shot",
+    "time": 125.45222366484813,
+    "ads": false,
+    "reacting": true,
+    "reaction_end": 126.1522236529272,
+    "preview_state": 0,
+    "next_shot_time": 125.51472366484813
+  },
+  {
+    "label": "hip_hit_visible",
+    "time": 125.61889038491063,
+    "ads": false,
+    "reacting": true,
+    "reaction_end": 126.1522236529272,
+    "preview_state": 0,
+    "next_shot_time": 125.51472366484813
+  },
+  {
+    "label": "hip_recovered",
+    "time": 126.32555729779415,
+    "ads": false,
+    "reacting": false,
+    "reaction_end": 126.1522236529272,
+    "preview_state": 0,
+    "next_shot_time": 125.51472366484813
+  },
+  {
+    "label": "verification_complete",
+    "time": 126.32555729779415,
+    "ads": false,
+    "reacting": false,
+    "reaction_end": 126.1522236529272,
+    "preview_state": 0,
+    "next_shot_time": 125.51472366484813
+  }
+]

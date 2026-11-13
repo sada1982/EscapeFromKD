@@ -1,0 +1,259 @@
+{
+  "date": "2026-11-13",
+  "level": "/Game/Main/Stage/KDStage",
+  "blueprint": "/Game/Main/Enemy/BP_AdmissionRobot",
+  "preexisting_you_sha256": "233D2B158594CD28F462D5F6DB97E485EBCC70C5DAC1A512E0FDCADA59BFFAAC",
+  "preexisting_stage_sha256": "AE2654E8FB7F57E3D439016C27DE15A8236B58BD764D6B4CD62FDA2C00138AC9",
+  "you_unsaved_at_start": true,
+  "blueprint_compiled_warnings_as_errors": true,
+  "preview_states": {
+    "Idle": 0,
+    "Walk": 1,
+    "Run": 2,
+    "Fall": 3
+  },
+  "materials": [
+    "Ivory",
+    "Joints",
+    "Metal",
+    "Visor",
+    "Cyan",
+    "Agreement"
+  ],
+  "runtime_checks": [
+    {
+      "state": "Walk",
+      "verified": "Position advances on lobby floor at +90 cm/s; MOVE_Walking."
+    },
+    {
+      "state": "Run",
+      "verified": "After 180-degree turn, position returns at -180 cm/s; MOVE_Walking."
+    },
+    {
+      "state": "Fall",
+      "verified": "Single-play side-fall visibly reaches floor; velocity zero, MOVE_None, final pose held."
+    },
+    {
+      "state": "Reset",
+      "verified": "Returns to (-1400,350,98.15), yaw 0, then repeats; more than two cycles observed."
+    },
+    {
+      "state": "Paper",
+      "verified": "Physical left-hand clipboard rendered in PIE; heading 入学承諾書, choices はい / YES in source texture."
+    }
+  ],
+  "final_fbx_sha256": "494357B9B9C6A6FEE34F5F7F7F753C3CAA0647FE2B58D0483A96AE64E9F3EC07",
+  "final_stage_sha256": "F28D1FEDF39F3F1421D27D4862D037612FCE2E9C1611DA42A21F1FBA71D5C6E9",
+  "final_you_sha256": "233D2B158594CD28F462D5F6DB97E485EBCC70C5DAC1A512E0FDCADA59BFFAAC",
+  "you_disk_unchanged": true,
+  "you_unsaved_at_finish": true,
+  "final_skeletal_bounds_cm": {
+    "origin": {
+      "x": 1.6500034,
+      "y": 15.0499997,
+      "z": 94.9000076
+    },
+    "extent": {
+      "x": 44.8500004,
+      "y": 28.1499972,
+      "z": 94.10000765
+    }
+  },
+  "animation_duration_seconds": {
+    "Idle": 2,
+    "Walk": 1,
+    "Run": 0.6666666865,
+    "Fall": 1.6000000238
+  },
+  "skeleton": {
+    "custom_deform_bones": 24,
+    "unreal_imported_bones": 25,
+    "note": "UE includes AdmissionRig parent; no direct Manny compatibility claim."
+  },
+  "placed_actor": {
+    "label": "AdmissionRobot_Preview",
+    "ref": {
+      "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_AdmissionRobot_C_0"
+    },
+    "location": {
+      "x": -1400,
+      "y": 350,
+      "z": 98.15
+    },
+    "yaw": 0,
+    "previewEnabled": true
+  },
+  "representative_samples": [
+    {
+      "i": 0,
+      "state": 1,
+      "location": {
+        "x": -1309.9828999117017,
+        "y": 350,
+        "z": 98.15
+      },
+      "yaw": 0,
+      "velocity": {
+        "x": 90,
+        "y": 0,
+        "z": 0
+      },
+      "movementMode": "MOVE_Walking",
+      "maxWalkSpeed": 90
+    },
+    {
+      "i": 2,
+      "state": 2,
+      "location": {
+        "x": -1300.1028825181722,
+        "y": 350,
+        "z": 98.15
+      },
+      "yaw": 180,
+      "velocity": {
+        "x": -180,
+        "y": 0,
+        "z": 0
+      },
+      "movementMode": "MOVE_Walking",
+      "maxWalkSpeed": 180
+    },
+    {
+      "i": 3,
+      "state": 3,
+      "location": {
+        "x": -1360.1028957057,
+        "y": 350,
+        "z": 98.15
+      },
+      "yaw": 180,
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "movementMode": "MOVE_None",
+      "maxWalkSpeed": 180
+    },
+    {
+      "i": 6,
+      "state": 0,
+      "location": {
+        "x": -1400,
+        "y": 350,
+        "z": 98.15
+      },
+      "yaw": 0,
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "movementMode": "MOVE_Walking",
+      "maxWalkSpeed": 180
+    },
+    {
+      "i": 8,
+      "state": 1,
+      "location": {
+        "x": -1249.9999589845538,
+        "y": 350,
+        "z": 98.15
+      },
+      "yaw": 0,
+      "velocity": {
+        "x": 90,
+        "y": 0,
+        "z": 0
+      },
+      "movementMode": "MOVE_Walking",
+      "maxWalkSpeed": 90
+    },
+    {
+      "i": 10,
+      "state": 2,
+      "location": {
+        "x": -1306.1199721905589,
+        "y": 350,
+        "z": 98.15
+      },
+      "yaw": 180,
+      "velocity": {
+        "x": -180,
+        "y": 0,
+        "z": 0
+      },
+      "movementMode": "MOVE_Walking",
+      "maxWalkSpeed": 180
+    },
+    {
+      "i": 12,
+      "state": 3,
+      "location": {
+        "x": -1366.1200229290127,
+        "y": 350,
+        "z": 98.15
+      },
+      "yaw": 180,
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "movementMode": "MOVE_None",
+      "maxWalkSpeed": 180
+    },
+    {
+      "i": 15,
+      "state": 0,
+      "location": {
+        "x": -1400,
+        "y": 350,
+        "z": 98.15
+      },
+      "yaw": 0,
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "movementMode": "MOVE_Walking",
+      "maxWalkSpeed": 180
+    }
+  ],
+  "sample_note": "Properties, transform and velocity were read sequentially in separate MCP calls; samples are not atomic frame snapshots.",
+  "evidence": [
+    "UE_Idle.png",
+    "UE_Walk.png",
+    "UE_Run.png",
+    "UE_Fall.png",
+    "UE_Agreement_Closeup.png"
+  ],
+  "final_state": {
+    "pie_running": false,
+    "preview_enabled_on_level_instance": true,
+    "blueprint_dirty": false,
+    "level_dirty": false,
+    "screen_messages_restored": true,
+    "slate_observer_removed": true
+  },
+  "error_log_scan": {
+    "pattern": "(Blueprint Runtime Error|Accessed None|Error:.*Admission)",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"returnValue\":[]}"
+        }
+      ]
+    }
+  },
+  "scope_exclusions": [
+    "No chase/attack AI",
+    "No hit damage or death trigger connected",
+    "No You BP edits or explicit save",
+    "No original lighting or project-setting changes",
+    "No ragdoll implementation"
+  ],
+  "known_preexisting_condition": "Video memory exhausted warning existed before this work. Screen messages hidden only for screenshots and enabled again afterward."
+}

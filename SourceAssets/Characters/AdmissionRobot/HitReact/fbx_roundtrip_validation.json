@@ -1,0 +1,28 @@
+{
+  "reference_bones": 24,
+  "imported_bones": 24,
+  "hierarchy_identical": true,
+  "maximum_rest_matrix_error": 6.553188323974609,
+  "reference_object_scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+  ],
+  "imported_object_scale": [
+    0.009999999776482582,
+    0.009999999776482582,
+    0.009999999776482582
+  ],
+  "imported_actions": [
+    [
+      "AdmissionRig|Scene",
+      [
+        2.0,
+        23.0
+      ]
+    ]
+  ],
+  "mesh_count": 0,
+  "start_vs_existing_idle_matrix_error": 0.00012969970703125,
+  "endpoint_matrix_error": 7.62939453125e-06
+}

@@ -1,0 +1,103 @@
+{
+  "model": "SK_AdmissionRobot",
+  "rig": "AdmissionRig",
+  "skeleton": "SKEL_AdmissionRobot",
+  "height_m": 1.89,
+  "blender_forward": "-Y",
+  "up": "Z",
+  "unit_m": 0.01,
+  "geometry_units": "centimeters, actual vertex/rest-bone/keyframe translations; object scales 1",
+  "fbx_apply_scale_options": "FBX_SCALE_UNITS",
+  "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "neck",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "hand_l",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "hand_r",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r",
+    "document"
+  ],
+  "vertices": 26375,
+  "polygons": 26497,
+  "triangles": 52084,
+  "materials": [
+    "M_Admission_Joint",
+    "M_Admission_Ivory",
+    "M_Admission_Titanium",
+    "M_Admission_Grip",
+    "M_Admission_Agreement",
+    "M_Admission_Cyan"
+  ],
+  "document_bone": "document",
+  "document_parent": "hand_l",
+  "document_text": "入学承諾書",
+  "document_choices": [
+    "はい",
+    "YES"
+  ],
+  "actions": {
+    "Idle": {
+      "name": "AN_Admission_Idle",
+      "fps": 30,
+      "frames": [
+        1,
+        61
+      ],
+      "duration_seconds": 2.0,
+      "loop": true,
+      "speed_cm_s": 0
+    },
+    "Walk": {
+      "name": "AN_Admission_Walk",
+      "fps": 30,
+      "frames": [
+        1,
+        31
+      ],
+      "duration_seconds": 1.0,
+      "loop": true,
+      "speed_cm_s": 90
+    },
+    "Run": {
+      "name": "AN_Admission_Run",
+      "fps": 30,
+      "frames": [
+        1,
+        21
+      ],
+      "duration_seconds": 0.6666666666666666,
+      "loop": true,
+      "speed_cm_s": 180
+    },
+    "Fall": {
+      "name": "AN_Admission_Fall",
+      "fps": 30,
+      "frames": [
+        1,
+        49
+      ],
+      "duration_seconds": 1.6,
+      "loop": false,
+      "speed_cm_s": 0
+    }
+  },
+  "skinning": "Rigid segmented plates weighted to deformation bones; clipboard is independent rigid geometry weighted to document bone.",
+  "ue_note": "Import SK_AdmissionRobot_All.fbx with animations, convert scene and units. Verify character is approximately 189 cm tall. Locomotion clips are in-place. Fall finishes in side-lying pose and must not loop."
+}

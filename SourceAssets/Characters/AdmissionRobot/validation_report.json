@@ -1,0 +1,71 @@
+{
+  "bone_count": 24,
+  "vertex_count": 26375,
+  "uv_layers": [
+    "UVMap"
+  ],
+  "unit_scale": 0.009999999776482582,
+  "packed_images": [
+    "T_AdmissionAgreement_BaseColor.png"
+  ],
+  "actions": {
+    "Idle": {
+      "frames": 61,
+      "min_z_cm": 0.4658849835395813,
+      "max_z_cm": 189.31307983398438,
+      "last_min_z_cm": 0.799998939037323,
+      "last_max_z_cm": 189.0,
+      "loop_matrix_error": 0.0,
+      "document_hand_relative_matrix_error": 2.193450927734375e-05
+    },
+    "Walk": {
+      "frames": 31,
+      "min_z_cm": 0.4999857544898987,
+      "max_z_cm": 187.1750030517578,
+      "last_min_z_cm": 0.4999857544898987,
+      "last_max_z_cm": 184.6136932373047,
+      "loop_matrix_error": 0.0,
+      "document_hand_relative_matrix_error": 2.288818359375e-05
+    },
+    "Run": {
+      "frames": 21,
+      "min_z_cm": 0.49998772144317627,
+      "max_z_cm": 188.568603515625,
+      "last_min_z_cm": 0.49998772144317627,
+      "last_max_z_cm": 181.19473266601562,
+      "loop_matrix_error": 0.0,
+      "document_hand_relative_matrix_error": 1.621246337890625e-05
+    },
+    "Fall": {
+      "frames": 49,
+      "min_z_cm": 0.4999885559082031,
+      "max_z_cm": 189.9252471923828,
+      "last_min_z_cm": 0.49999237060546875,
+      "last_max_z_cm": 83.00601959228516,
+      "loop_matrix_error": null,
+      "document_hand_relative_matrix_error": 2.002716064453125e-05
+    }
+  },
+  "unweighted_vertices": 0,
+  "max_weight_sum_error": 0.0,
+  "fbx_version": 7400,
+  "fbx_native_mesh_bounds": {
+    "min": [
+      -43.19999694824219,
+      -43.20000076293945,
+      0.7999999523162842
+    ],
+    "max": [
+      46.5,
+      13.099996566772461,
+      189.00001525878906
+    ]
+  },
+  "fbx_animation_stacks": [
+    "b'AdmissionRig|AN_Admission_Fall\\x00\\x01AnimStack'",
+    "b'AdmissionRig|AN_Admission_Idle\\x00\\x01AnimStack'",
+    "b'AdmissionRig|AN_Admission_Run\\x00\\x01AnimStack'",
+    "b'AdmissionRig|AN_Admission_Walk\\x00\\x01AnimStack'"
+  ],
+  "all_vertex_coordinates_finite": true
+}

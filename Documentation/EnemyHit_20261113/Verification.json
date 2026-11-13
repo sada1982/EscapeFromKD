@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-13",
+  "implementation": "completed_and_saved",
+  "assets": [
+    "/Game/Effects/Weapons/NS_EnemyHitSparks",
+    "/Game/Main/Enemy/AdmissionRobot/AN_Admission_HitReact",
+    "/Game/Main/Enemy/BP_AdmissionRobot",
+    "/Game/Main/Enemy/AdmissionRobot/SK_AdmissionRobot",
+    "/Game/Main/Character/You",
+    "/Game/Main/Stage/KDStage"
+  ],
+  "verification": {
+    "native_left_click_enemy_hit": true,
+    "hip_fire_trace_to_enemy": true,
+    "spark_visible_in_game": true,
+    "hit_reaction_active_after_hit": true,
+    "hit_reaction_recovers_to_idle": true,
+    "reaction_duration_seconds": 0.7,
+    "hit_reaction_preserves_document_grip": true,
+    "other_you_graphs_unchanged": 12,
+    "trace_shot_original_nodes_preserved": 41,
+    "trace_shot_added_nodes": 2,
+    "non_enemy_impact_and_decal_path_preserved": true,
+    "hp_or_damage_or_death_added": false,
+    "blueprint_runtime_errors_in_log": 0,
+    "ads_runtime": "Not verified. The attempted automated ADS input did not activate IsADS; its screenshots were excluded from the delivered evidence.",
+    "wall_hit_runtime": "Not retested; original non-enemy branch and decal processing preserved by graph audit."
+  },
+  "cleanup": {
+    "pie_running": false,
+    "editor_time_dilation": 1,
+    "pie_time_dilation_before_stop": 1,
+    "screen_messages_restored": true,
+    "all_modified_assets_saved": true,
+    "skeleton_saved_and_not_dirty": true,
+    "temporary_slate_observers_removed": true
+  },
+  "level_change": "AdmissionRobot_Preview.PreviewEnabled=false. Existing automatic walk/run/fall demo disabled for shooting checks. Actor placement unchanged.",
+  "evidence_files": [
+    "Hit_HipFire.png",
+    "RuntimeVerification_Hip.json",
+    "Readme.txt"
+  ],
+  "graph_audit": "Saved/Automation/EnemyHit_20261113/final_graph_audit.json",
+  "backup": "Saved/Automation/EnemyHit_20261113/Before/"
+}
