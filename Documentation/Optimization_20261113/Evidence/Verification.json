@@ -1,0 +1,74 @@
+{
+  "existing_files_checked": 346,
+  "existing_files_changed": [
+    "Content/Main/Enemy/BP_AdmissionRobot.uasset",
+    "Content/Main/Stage/KDStage.umap"
+  ],
+  "new_collision_asset": "Content/Main/Enemy/AdmissionRobot/PA_AdmissionRobot_HitCollision.uasset",
+  "blueprint_status": {
+    "You": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "Stage": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "Enemy": "<BlueprintStatus.BS_UP_TO_DATE: 3>",
+    "Rifle": "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+  },
+  "dirty_maps": [],
+  "dirty_content": [],
+  "runtime_settings_restored": true,
+  "gameplay": [
+    {
+      "phase": "hip",
+      "samples": 59,
+      "ADS_seen": false,
+      "reaction_seen": true,
+      "sparks_seen": true,
+      "reload_seen": false,
+      "shot_time_values": 2,
+      "pitch_start": -8.0,
+      "pitch_end": -7.199999809265137
+    },
+    {
+      "phase": "ADS",
+      "samples": 56,
+      "ADS_seen": true,
+      "reaction_seen": true,
+      "sparks_seen": true,
+      "reload_seen": false,
+      "shot_time_values": 3,
+      "pitch_start": -7.199999809265137,
+      "pitch_end": -5.59999942779541
+    },
+    {
+      "phase": "burst",
+      "samples": 48,
+      "ADS_seen": false,
+      "reaction_seen": true,
+      "sparks_seen": true,
+      "reload_seen": false,
+      "shot_time_values": 9,
+      "pitch_start": -5.59999942779541,
+      "pitch_end": 0.8000006079673767
+    },
+    {
+      "phase": "reload",
+      "samples": 338,
+      "ADS_seen": false,
+      "reaction_seen": false,
+      "sparks_seen": false,
+      "reload_seen": true,
+      "shot_time_values": 1,
+      "pitch_start": 0.8000006079673767,
+      "pitch_end": 0.8000006079673767
+    },
+    {
+      "phase": "finished",
+      "samples": 24,
+      "ADS_seen": false,
+      "reaction_seen": false,
+      "sparks_seen": false,
+      "reload_seen": false,
+      "shot_time_values": 1,
+      "pitch_start": 0.8000006079673767,
+      "pitch_end": 0.8000006079673767
+    }
+  ]
+}

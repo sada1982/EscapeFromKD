@@ -1,0 +1,62 @@
+[
+  {
+    "rays": 25934,
+    "old_hits": 1462,
+    "new_hits": 1464,
+    "max_distance_cm": 0.3875920000064338,
+    "mean_distance_cm": 0.0009539983521330162,
+    "max_normal_angle_degrees": 16.087081677845216,
+    "pose": "Idle",
+    "position": 0.2,
+    "hit_mismatches": 2,
+    "over_2mm": 1
+  },
+  {
+    "rays": 25934,
+    "old_hits": 1560,
+    "new_hits": 1560,
+    "max_distance_cm": 0.12612200003976723,
+    "mean_distance_cm": 0.0013467683070539846,
+    "max_normal_angle_degrees": 14.75494401829642,
+    "pose": "Walk",
+    "position": 0.3,
+    "hit_mismatches": 0,
+    "over_2mm": 0
+  },
+  {
+    "rays": 25934,
+    "old_hits": 1514,
+    "new_hits": 1514,
+    "max_distance_cm": 0.20636100001213004,
+    "mean_distance_cm": 0.0013456322060964791,
+    "max_normal_angle_degrees": 16.08688071711714,
+    "pose": "Run",
+    "position": 0.15,
+    "hit_mismatches": 0,
+    "over_2mm": 1
+  },
+  {
+    "rays": 25934,
+    "old_hits": 1682,
+    "new_hits": 1682,
+    "max_distance_cm": 0.5629040000089994,
+    "mean_distance_cm": 0.0017523062807377615,
+    "max_normal_angle_degrees": 14.103135308829014,
+    "pose": "Fall",
+    "position": 0.8,
+    "hit_mismatches": 0,
+    "over_2mm": 1
+  },
+  {
+    "rays": 25934,
+    "old_hits": 1499,
+    "new_hits": 1500,
+    "max_distance_cm": 1.0538490000019116,
+    "mean_distance_cm": 0.0017951726229427985,
+    "max_normal_angle_degrees": 92.09475661662623,
+    "pose": "HitReact",
+    "position": 0.2,
+    "hit_mismatches": 1,
+    "over_2mm": 1
+  }
+]

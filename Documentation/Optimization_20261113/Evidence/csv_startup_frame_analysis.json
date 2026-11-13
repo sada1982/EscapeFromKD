@@ -1,0 +1,82 @@
+[
+  {
+    "label": "Home_Baseline_Classroom",
+    "first_frame_ms": 54.4911,
+    "remaining_frames": 599,
+    "remaining_mean_fps": 42.55289735396494,
+    "remaining_min_fps": 36.6710060690515,
+    "remaining_frames_below_60_fps": 599
+  },
+  {
+    "label": "Home_PerPolyOff_Classroom",
+    "first_frame_ms": 35.5158,
+    "remaining_frames": 599,
+    "remaining_mean_fps": 119.61389990996408,
+    "remaining_min_fps": 99.28120408244311,
+    "remaining_frames_below_60_fps": 0
+  },
+  {
+    "label": "Home_PerPolyOn_Repeat",
+    "first_frame_ms": 53.5262,
+    "remaining_frames": 599,
+    "remaining_mean_fps": 42.47688367569962,
+    "remaining_min_fps": 37.59963904346518,
+    "remaining_frames_below_60_fps": 599
+  },
+  {
+    "label": "Home_Convex_Classroom",
+    "first_frame_ms": 50.1204,
+    "remaining_frames": 599,
+    "remaining_mean_fps": 119.9221551056337,
+    "remaining_min_fps": 109.90097921772482,
+    "remaining_frames_below_60_fps": 0
+  },
+  {
+    "label": "Home_Baseline_1080_Classroom",
+    "first_frame_ms": 47.2956,
+    "remaining_frames": 599,
+    "remaining_mean_fps": 42.688557872261455,
+    "remaining_min_fps": 36.41833007389279,
+    "remaining_frames_below_60_fps": 599
+  },
+  {
+    "label": "Home_Convex_1080_Classroom",
+    "first_frame_ms": 41.0966,
+    "remaining_frames": 599,
+    "remaining_mean_fps": 118.79573648249792,
+    "remaining_min_fps": 97.77464898901012,
+    "remaining_frames_below_60_fps": 0
+  },
+  {
+    "label": "Home_Final_1080_Classroom",
+    "first_frame_ms": 48.3159,
+    "remaining_frames": 599,
+    "remaining_mean_fps": 115.04491524425984,
+    "remaining_min_fps": 73.14967887290975,
+    "remaining_frames_below_60_fps": 0
+  },
+  {
+    "label": "Home_Final_1080_Gallery",
+    "first_frame_ms": 36.2653,
+    "remaining_frames": 599,
+    "remaining_mean_fps": 118.39385278560476,
+    "remaining_min_fps": 106.61321790675608,
+    "remaining_frames_below_60_fps": 0
+  },
+  {
+    "label": "Home_Final_1080_Lobby",
+    "first_frame_ms": 44.4371,
+    "remaining_frames": 599,
+    "remaining_mean_fps": 119.91525774913816,
+    "remaining_min_fps": 111.01243339253998,
+    "remaining_frames_below_60_fps": 0
+  },
+  {
+    "label": "Home_Final_1080_Shooting",
+    "first_frame_ms": 44.1127,
+    "remaining_frames": 599,
+    "remaining_mean_fps": 117.65689610933393,
+    "remaining_min_fps": 93.92581738942584,
+    "remaining_frames_below_60_fps": 0
+  }
+]

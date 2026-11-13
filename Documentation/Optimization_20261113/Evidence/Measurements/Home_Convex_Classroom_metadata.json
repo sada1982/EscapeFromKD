@@ -1,0 +1,33 @@
+{
+  "label": "Home_Convex_Classroom",
+  "world": "/Game/Main/Stage/UEDPIE_0_KDStage.KDStage",
+  "viewport_size": [
+    1280,
+    722
+  ],
+  "pawn_location": "<Struct 'Vector' (0x0000022213658470) {x: 402.000000, y: -73.000000, z: 98.149998}>",
+  "control_rotation": "<Struct 'Rotator' (0x0000022213658470) {pitch: 0.000000, yaw: -90.000000, roll: 0.000000}>",
+  "frames": 600,
+  "per_poly_before": true,
+  "enemy_per_poly": false,
+  "enemy_physics_asset_override": "<Object '/Game/Main/Enemy/AdmissionRobot/PA_AdmissionRobot_HitCollision.PA_AdmissionRobot_HitCollision' (0x00000222E3D02800) Class 'PhysicsAsset'>",
+  "enemy_profile": "Custom",
+  "enemy_collision": "<CollisionEnabled.QUERY_ONLY: 1>",
+  "enemy_visibility_response": "<CollisionResponseType.ECR_BLOCK: 2>",
+  "enemy_tick": true,
+  "enemy_visible": true,
+  "enemy_asset_per_poly": true,
+  "cvars": {
+    "r.ScreenPercentage": "0",
+    "r.DynamicRes.OperationMode": "0",
+    "r.VSync": "0",
+    "t.MaxFPS": "0",
+    "r.TSR.History.ScreenPercentage": "200",
+    "r.Shadow.Virtual.MaxPhysicalPages": "4096",
+    "r.LumenScene.SurfaceCache.AtlasSize": "4096",
+    "sg.AntiAliasingQuality": "3",
+    "sg.ShadowQuality": "3",
+    "sg.GlobalIlluminationQuality": "3",
+    "sg.ReflectionQuality": "3"
+  }
+}
