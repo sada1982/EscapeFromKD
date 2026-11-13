@@ -1,0 +1,32 @@
+Admission Robot concept v01
+Created: 2026-11-13
+Method: Built-in image_gen.imagegen
+Output: Enemy_AdmissionRobot_v01.png
+Scope: Visual design and motion-pose concepts only; no Unreal assets modified, no mesh, rig or animations implemented or verified.
+Player reference: /Game/Characters/Mannequins/Meshes/SKM_Manny_Simple
+Required concept: Robot physically holds a paper labelled 強制入学同意書.
+
+PROMPT
+
+Use case: stylized-concept / character redesign
+Asset type: one polished widescreen 16:9 enemy character concept sheet for a 3D Unreal Engine game, clear enough to guide later modeling and animation.
+
+Input references:
+Image 1 is the existing comic enemy concept: robots physically holding a compulsory school-enrollment agreement. Preserve THIS core concept absolutely, but redesign the bulky toy-like robots into stylish humanoids. Do not copy the classroom scene, crowd, weapon, HUD, or blur.
+Image 2 is the current player robot Manny. Use its athletic human proportions, sculpted silver-white armor, dark articulated joints and refined humanoid design language as the primary design reference.
+
+Create ONE coherent enemy robot design repeated consistently across the sheet. Approximately 7.5 heads tall, normal human limb lengths, slim athletic build. Smooth elongated faceplate similar to Manny, a very narrow dark optical band with restrained cyan light to distinguish it as the admission robot, no human face, no box-shaped head or smiling mouth. Layered satin ivory/silver chest and limb plates with charcoal mechanical joints, minimal cyan accents. Small divided shoulder plates, open armpit clearance, a flexible segmented abdomen, compact separated hip armor, visible dark elbow and knee flexion gaps, articulated wrists and ankles, slim practical feet. No spikes, cape, bulky shoulder armor, dangling cables, weapons, or long skirt armor. Stylish, slightly intimidating in its relentless bureaucratic purpose, not a cute toy.
+
+NON-NEGOTIABLE PROP: a real paper agreement physically clipped onto a thin dark A4-size portrait clipboard, narrower than the robot's chest, gripped in its LEFT hand. It is a separate handheld prop, not a chest screen, shield, armor panel, hologram, or lettering printed on its torso. The paper headline must clearly read EXACTLY the Japanese text "強制入学同意書" (characters: 強 制 入 学 同 意 書). Use one bold readable line, with sparse form rules and a modest red square approval-stamp graphic beneath. Do not substitute 入学承諾書. Make the title easily readable in the large hero drawing and in one small enlarged document detail.
+
+Sheet composition on a clean muted medium-gray studio background with tasteful thin layout dividers:
+- Left approximately 45%: dominant high-detail three-quarter FRONT full-body hero pose, feet fully visible. Robot looks toward viewer; left hand presents the clipboard at lower-chest height with the paper facing the viewer. Right hand lightly gestures toward the agreement. Show the chest and mechanical articulation rather than obscuring the entire torso with paper.
+- Upper right: two smaller clean full-body reference views, SIDE and BACK, with the same armor, proportions and clipboard, to communicate shoulder, pelvis and knee clearance. Include a compact document close-up next to these views.
+- Lower right: three separated small full-body motion studies labeled WALK, RUN, FALL. SAME robot and same clipboard in every pose.
+WALK: natural forward step, left hand presents the document slightly forward, right arm free.
+RUN: believable bent-knee running stride, left elbow flexed and clipboard pulled close to the chest ABOVE the thighs, right arm counter-swings freely.
+FALL: a readable sideways falling/landing pose with body inclined near the floor, right arm bracing, knees bent; LEFT HAND STILL GRIPS the clipboard and it tilts naturally with the forearm, outside the torso. No body/prop interpenetration, no camera-facing floating paper, no detached limbs.
+Clear gaps around all poses, no overlapping figures, cropped feet or repeated decorative crowds. Design studies, not animation frames or a finished rig. No claim of tested animation compatibility.
+
+Rendering: professional contemporary game-character concept art, detailed realistic 3D hard-surface design with soft neutral studio lighting and crisp form readability. Keep consistent materials and anatomy across all views. No dramatic dark scenery, no motion blur. The only labels are the unobtrusive English view/action labels and the exact Japanese document headline; no invented game title, additional slogans, watermarks, or interface. Deliver one cohesive 16:9 concept sheet.
+

@@ -1,0 +1,29 @@
+Escape From KD title image v01
+Created: 2026-11-13
+Method: Built-in image_gen.imagegen
+Output: EscapeFromKD_Title_v01.png
+Background: current in-game school atrium, rather than an unverified exterior facade.
+Player mesh reference: /Game/Characters/Mannequins/Meshes/SKM_Manny_Simple
+No Unreal Editor assets or settings modified.
+
+PROMPT
+
+Use case: compositing / stylized-concept
+Asset type: widescreen 16:9 game title-screen key art, polished high-resolution cinematic 3D promotional illustration.
+Edit and reinterpret reference image 1 as the user's requested Escape From Tarkov parody titled "ESCAPE FROM KD".
+
+Input image roles:
+1. The attached Tarkov title art is the edit target and reference for composition, dark exposure, atmosphere, dramatic perspective, and distressed title lettering.
+2. The Manny asset thumbnail is the exact PLAYER ROBOT identity reference. Preserve its recognizable humanoid proportions and sculpted white/silver plate shapes over charcoal articulated joints, blank smooth elongated faceplate with a subtle central seam, no human face, no glowing eyes or visor.
+3. The current UE school atrium screenshot supplies the actual school architecture and the current white/light-gray angular futuristic rifle with dark top rail and iron sights. Use the architecture and rifle design, NOT its first-person framing or muzzle flash.
+4. The gallery image supplies the same school's architectural detail: large white rectangular pillars, three levels of open walkways, simple white horizontal safety rails, glazed classroom walls, wooden doors, and desks glimpsed through glass.
+
+Required changes to image 1:
+Replace the front-facing soldier with exactly ONE robot matching image 2, holding the rifle from image 3 in a plausible two-handed ready-to-aim pose, barrel diagonally toward the upper right as in image 1, robot face directed toward the viewer. Show the head, arms, torso and upper legs; make the robot the central hero in the upper two thirds. Preserve mechanical anatomy and clean recognizable armor silhouette; do not dress it as a human soldier or add a tactical helmet.
+Remove the back-facing soldier AND all other background people; only one robot in the entire picture.
+Replace the original environment with the school's multi-storey atrium from images 3 and 4, recognizable broad cream-white columns and layered white railings behind the robot, viewed from a dramatic slightly low angle. Keep the school intact. Architecture must remain recognizable rather than replaced by generic military ruins. No invented exterior facade.
+Replace all original title text with the exact words "ESCAPE FROM KD", spelled E S C A P E / F R O M / K D. Place an extremely legible distressed pale silver-white game-title wordmark in the lower center: "ESCAPE FROM" as the smaller upper line, "KD" very large beneath. Let the bottom of the lettering dissolve slightly into subtle architectural/grunge silhouettes. No other readable captions. No TARKOV lettering or unrelated logos.
+
+Keep the original reference's low overall brightness and dark cold blue-gray, desaturated cinematic atmosphere. Deep shadows at left and bottom, hazy cold backlight from the upper right, subtle dust and volumetric atmosphere, restrained silver rim light outlining the white robot. Do not turn it into a brightly lit white school render. Maintain tonal separation and enough body detail to identify Manny. Atmospheric and serious, with the parody coming from the school and robot replacement.
+Full-bleed 16:9 landscape, no white outer border, no user interface, no menu buttons, no watermark, no editor overlays, no warnings, no extra characters, no muzzle flash.
+

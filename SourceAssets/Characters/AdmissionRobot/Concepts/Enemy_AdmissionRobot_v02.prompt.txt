@@ -1,0 +1,19 @@
+Admission Robot concept v02
+Created: 2026-11-13
+Method: Built-in image_gen.imagegen, edit of Enemy_AdmissionRobot_v01.png
+Output: Enemy_AdmissionRobot_v02.png
+Requested change: Document title 入学承諾書; exactly two affirmative choices はい / YES.
+Scope: Concept sheet text revision only. No Unreal assets changed; model, rig and animations not implemented by this edit.
+
+PROMPT
+
+Use case: text-localization / precise-object-edit
+Edit the supplied enemy robot concept sheet. Make ONLY the following two text changes on the paper agreement wherever it appears, including the large document detail at upper right, the hero robot's clipboard, and the smaller SIDE, BACK, WALK, RUN and FALL views where the paper is visible:
+
+1. Replace the headline "強制入学同意書" with EXACTLY "入学承諾書". The five required characters are 入 学 承 諾 書. Remove "強制" entirely. Keep a strong black Japanese headline in the same position and style.
+2. The checkbox choices must be EXACTLY "□ はい    □ YES": one Japanese affirmative choice "はい" and one uppercase English affirmative choice "YES". Replace the old negative choice "いいえ" with "YES". Exactly two choices, both affirmative. Keep the field label before the choices and the other form contents unchanged.
+
+The joke is compulsory enrollment disguised as a normal agreement, so "強制" must NOT be printed anywhere on the revised image. Do not replace the title with 入学同意書; it must say 入学承諾書.
+
+Strict invariants: preserve the existing robot's design, armor, color, proportions, face, hands, clipboard geometry, every pose, composition, panel layout, framing, lighting, background, English view labels, and original image aspect ratio. Preserve the red stamp, signature/blank rules, name/birthdate fields and all unrelated document details. No new objects, no new branding, no redesign, no new captions. Only update the requested paper text consistently. The upper-right large close-up must make both the exact heading and the two choices exceptionally legible.
+
