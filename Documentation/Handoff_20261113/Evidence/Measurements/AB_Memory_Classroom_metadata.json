@@ -1,0 +1,18 @@
+{
+  "label": "AB_Memory_Classroom",
+  "world": "/Game/Main/Stage/UEDPIE_0_KDStage.KDStage",
+  "viewport_size": [
+    1914,
+    994
+  ],
+  "commands": [
+    "r.TSR.History.ScreenPercentage 100",
+    "r.Shadow.Virtual.MaxPhysicalPages 2048",
+    "r.LumenScene.SurfaceCache.AtlasSize 2048"
+  ],
+  "screen_percentage": "0",
+  "dynamic_resolution": "0",
+  "vsync": "0",
+  "max_fps": "0",
+  "frames": 600
+}

@@ -1,0 +1,512 @@
+Escape From KD — 自宅環境への作業引継ぎ
+作成日: 2026-11-13（日本時間）
+状態: ユーザーの指示により、3F最適化を安全な区切りで中断。
+文字コード: UTF-8
+
+0. 最初に読むこと
+=================
+現在の正本は、今回プッシュされるプロジェクト一式である。
+過去の資料に合わせてアセットや設定を戻さないこと。
+
+【今回の到達点】
+・3F最適化の原因調査、3条件の実測、椅子とノートPCの軽量モデル候補を作成した。
+・60 FPS以上の目標は未達成。完成した最適化として扱ってはいけない。
+・軽量モデル候補はBlender/FBXの検証まで。UEへのインポート・差し替えは未実施。
+・実験用の描画設定、計測設定、バックグラウンド制限設定は元に戻した。
+・PIEを終了。未保存のMap/Contentはなく、主要4BPはBS_UP_TO_DATE。
+・最適化開始以降、Content/Config内のファイルは変更していない。
+
+【次に行う最初の作業】
+敵のSkeletalMeshに設定されたPerPolyCollisionが、GameThreadのAnimation時間を
+増大させているかを、PIE内だけの有効／無効比較で切り分ける。
+これは未検証の仮説。原因が確定したとは扱わない。
+最初からモデルを差し替えたり、恒久的に画質を下げたりしない。
+具体的な再開手順は第8節。コピー用依頼文は同じフォルダのResume_Request.txt。
+
+【プッシュ対象】
+今回新規に作成した次の2フォルダを、既存プロジェクトと一緒に含める。
+  Documentation/Handoff_20261113/
+  SourceAssets/Stages/Floor03/OptimizedV03/
+コミット・プッシュは未実施。ユーザーが実施する。
+Saved内の計測証拠はGit対象外なので、必要なものを本資料のEvidenceへ複製した。
+新規FBX2件も既存.gitattributesによりGit LFS対象。自宅ではLFS実体の取得が必要。
+この資料だけ、またはContentだけの移動ではBlender編集元や検証証拠が不足する。
+
+1. 環境と接続
+=============
+職場側プロジェクトルート:
+C:/Users/motoo/OneDrive/デスクトップ/まとめ/個人業務/ゲーム開発/UnrealEngine/GameProject_OPC/EscapeFromKD
+プロジェクト: myProject.uproject
+UE: 5.8.4、CL 58902052、EngineAssociation 5.8
+Engine: C:/Program Files/Epic Games/UE_5.8
+Blender: 5.3.0
+CPU: Intel Core i7-12700H、14コア20スレッド
+RAM: 約32 GB
+GPU: NVIDIA GeForce RTX 3050 Laptop GPU、専用VRAM 4 GB
+RHI: D3D12 SM6。Intel内蔵GPUではなくRTXを使用していることを確認。
+UEログ上のドライバ: 621.14
+
+Gitブランチ: main
+最適化開始時HEAD: c4b8e4de76a28ae1ebfa813f0fb3879affbbea13
+Remote: https://github.com/sada1982/EscapeFromKD.git
+上記HEADは復旧・比較の基準。今回の新規資料と候補モデルはまだそのHEADに含まれない。
+最適化開始時の作業ツリーはクリーンだった。
+.uasset/.umap/.fbxはLFS。blendは通常Git。
+
+UE操作は通常のunreal-mcp経由。HTTP直接接続による代替は使用しない。
+list_toolsets / describe_toolsetで実在するTool名と引数を確認してからcall_toolする。
+EditorToolset.EditorAppToolsetにStartPIE/StopPIE/IsPIERunningが存在する。
+Pythonを使った計測はUEのコンソール経由で行った。自宅でも利用可能なAPIを再確認する。
+過去のSlateウィジェットID、ウィンドウID、observer IDはセッション限定で再利用不可。
+MCPが利用できない場合は、まず通常接続の状態確認と原因報告を行う。
+設定変更や不明なツール呼出しで強引に継続しない。
+
+自宅のGPU/VRAM/画面サイズは未確認。職場のFPS値をそのまま自宅の基準にしない。
+同一UEバージョンで開き、LFS実体・必要プラグインを確認してから再測定する。
+有効プラグインにはModelingToolsEditorMode、GameplayStateTree、AllToolsets、
+ModelContextProtocolが含まれる。uprojectにC++ Modulesの宣言はない。
+プラグイン本体・EngineインストールはプロジェクトのGitだけでは保証されない。
+
+2. ゲームの現在仕様と作業済み範囲
+=================================
+学校3Fの実習室から開始し、最終的には下階を経由してエントランスから外へ出る構想。
+現時点で作成・検証済みの主対象は3F。2F/1F全体と脱出クリア処理は未実装。
+他教室は存在するが入室不可。エレベーターも利用不可。
+
+現在の主要アセット:
+  Level                  /Game/Main/Stage/KDStage
+  ステージBP             /Game/Main/Stage/BP_Floor03
+  キャラクターメインBP   /Game/Main/Character/You
+  独立した銃BP           /Game/Main/Rifle/BP_Rifle
+  敵BP                   /Game/Main/Enemy/BP_AdmissionRobot
+  敵メッシュ             /Game/Main/Enemy/AdmissionRobot/SK_AdmissionRobot
+  レティクル             /Game/Main/Character/UI/WBP_Reticle
+  マズルフラッシュ       /Game/Effects/Weapons/Rifle/NS_RifleMuzzleFlash
+  汎用着弾FX             /Game/Effects/Weapons/Rifle/NS_RifleImpact
+  弾痕材質               /Game/Effects/Weapons/Rifle/Materials/M_BulletImpact
+  敵専用被弾FX           /Game/Effects/Weapons/NS_EnemyHitSparks
+
+EditorStartupMap / GameDefaultMapは両方KDStage。
+GameModeは/Game/FirstPerson/Blueprints/BP_FirstPersonGameMode。
+PIEのプレイヤーはYouを使用。講義用のキー入力はYouに集約する方針を維持。
+
+2-1. プレイヤーと射撃
+・SKM_Rifleを組み込んだBP_Rifleを装備。
+・右クリックを押している間ADS。Rでリロード、対応モーションあり。
+・左クリックによる射撃と連射レート、中央レティクル、銃口FX、着弾FX、弾痕あり。
+・弾数制限はない。
+・画面中央方向を狙い、銃口からのTraceShotで命中点を取得する既存処理。
+・派手なマズルフラッシュへ調整済み。
+・ADSの照準上端を中央へ合わせる調整はカメラ側で行った。既存モーションを変更しない。
+・リコイルは現在の最新版に存在する。古い「リコイル不要」の記載を根拠に削除しない。
+
+停止時にUEから読み取ったYouのデフォルト値:
+  fireRate              16 発/秒
+  recoilPitch           0.8
+  traceDistance         15000 cm
+  bulletMarkLifetime    60 秒
+  aDSFOV                65
+  aDSFirstPersonFOV      55
+  aDSInterpSpeed        12
+  reloadAnimation       /Game/Characters/Mannequins/Anims/Rifle/MM_Rifle_Reload
+数値と参照の原記録: Evidence/CurrentGameplayDefaults.json
+FPS最適化の名目で入力・連射速度・リコイル・ADSやリロードを変更しない。
+
+2-2. 3Fの現行モデルはSurveyV02
+原資料のMatterportとスクリーンショットから推定した学校3F。
+測量データではなく、確認できない部分や小物は代表表現。
+開始実習室は約8.05 m × 10.15 m、高さ3.05 m。
+学生机20台・椅子40脚・5列。フロア全体で机89台、椅子173脚、PC21台、マウス20個。
+開始位置: PlayerStart (402, -73, 100) cm、Yaw -90度。
+
+編集元:
+  SourceAssets/Stages/Floor03/SurveyV02/EscapeFromKD_Floor03_v02.blend
+  SourceAssets/Stages/Floor03/SurveyV02/Export/SM_F03V02_*.fbx（12分類）
+UEメッシュ:
+  /Game/Main/Stage/Floor03/SurveyV02
+BPには既存12個のStaticMeshComponentを維持。
+Glass/Miceを除く10分類でNanite有効。全12メッシュの衝突はUseComplexAsSimple。
+コンポーネントはStaticでTick無効。ここは既に適切で、未対策と誤認しない。
+
+過去の実機確認:
+実習室中央通路→出口→廊下→ロビー→下り階段を連続歩行。
+下り踊り場 -170 cmから3Fへ戻れ、上り側 +170 cmも確認。
+手すり・閉鎖教室の扉は通行を遮る。通常歩行速度600 cm/sは維持。
+2F/4Fは吹き抜け越しの周辺形状のみで、各階全体を制作したわけではない。
+詳細: Documentation/Floor03_Rebuild_20261113.txt
+
+2-3. 敵ロボット
+Blenderで作成したスタイリッシュな白/濃色の人型ロボット。
+入学承諾書を左手で保持するコンセプトを維持。
+書面の見出しは「入学承諾書」。選択肢は「はい / YES」。「強制」の文字は表示しない。
+書類は敵メッシュの一部で、document骨をhand_lの子にして保持関係を維持。
+24変形骨（UEではroot込み25骨）、6材質、26,375頂点・52,084三角形。
+AnimationSingleNode方式。
+
+PlayIdle / PlayWalk / PlayRun / PlayFall関数を用意。
+Idle 2秒、Walk 1秒、Run約0.667秒、Fall 1.6秒。
+WalkSpeed 90 cm/s、RunSpeed 180 cm/s。
+KDStage内のActorラベル: AdmissionRobot_Preview
+Actor位置: (-1400, 350, 98.15) cm、Yaw 0度。
+Actorパス: /Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_AdmissionRobot_C_0
+停止時はCDO・配置ActorともPreviewEnabled=false、配置Actor PreviewState=0。
+旧資料の自動歩行→走行→転倒ループは現在OFF。処理自体は残っている。
+敵AI、追跡、攻撃、HP、被弾による死亡はまだない。
+PlayFallが存在することと、死亡システムが実装済みであることは別。
+
+2-4. 敵への被弾反応（最適化前に実装済み）
+ReactToBulletHit(ImpactPoint, ImpactNormal)で敵専用火花と被弾モーションを再生。
+火花はImpactPoint + ImpactNormal * 2 cmに生成し、面法線に沿わせる。
+白黄色コア32 cm / 0.20秒、火花38個、長さ10–18 cm、幅2.5–4 cm、
+速度700 cm/s、寿命0.25–0.50秒。一度再生し自動破棄。
+既存の汎用着弾FXと共有材質は変更していない。
+
+被弾Anim:
+  /Game/Main/Enemy/AdmissionRobot/AN_Admission_HitReact
+既存MM_HitReact_Front_Lgt_01をBlenderで敵骨格へ変換。0.70秒、非加算。
+編集元: SourceAssets/Characters/AdmissionRobot/HitReact/
+被弾中はStopMovementImmediatelyと非ループ再生。
+UpdateHitReactionで終了後に元のIdle/Walk/Runへ戻す。連続被弾で先頭から再生。
+HP/ApplyDamage/被弾時の転倒・死亡処理は追加していない。
+
+YouのTraceShotにCastToBP_AdmissionRobotとReactToBulletHitの2ノードを追加。
+旧41ノードを維持し最終43ノード。他12グラフは変更前と一致した監査記録あり。
+敵以外の汎用FX分岐と、双方から既存弾痕生成へ合流する流れを維持。
+
+現在の命中判定:
+  Capsule: Visibility Ignore
+  MeshComponent: QueryOnly / Custom、Visibility Block、PerPolyCollision有効
+  SkeletalMeshアセット: PerPolyCollision有効
+既存の複雑なVisibility Traceで外形上の命中点を取得するための設定。
+これを性能の疑いだけで恒久的にOFFにすると、現在の命中精度を失う可能性がある。
+
+実際の非ADS左クリックで火花・よろけ・復帰をPIE確認済み。
+敵被弾実装後のADS保持射撃は、自動入力でIsADS=trueにできず、実射確認が未完了。
+共有TraceShotを使いADSグラフを変更していないが、「ADSも実機確認済み」とはしない。
+詳細: Documentation/EnemyHit_20261113/Readme.txt
+実画像: Documentation/EnemyHit_20261113/Hit_HipFire.png
+
+2-5. 宣伝用画像
+Documentation/Promotional/20261113/OPC_Atrium_Fire.png
+Documentation/Promotional/20261113/EscapeFromKD_Title_v01.png
+タイトル画像は採用候補として了承済み。タイトルメニューの実装完了を意味しない。
+
+3. 今回の最適化調査で分かったこと
+=================================
+要求: 現在約30 FPSの3Fを、最低60 FPS以上へ改善する。
+60 FPSのフレーム時間は16.67 ms。GPU時間だけでなくCPU/実フレームを確認する。
+今回の3つの有効計測は全て600フレーム。全フレームが16.67 msを超えている。
+
+【有効な計測条件】
+UE EditorのフローティングPIE、実習室の同一開始位置、移動・射撃なし。
+起動位置(402,-73,100) cm、Yaw -90度、Pitch/Roll 0度。
+PIEビューポート1914×994。厳密な1920×1080ではない。
+ProfileGPUで確認した内部解像度例1439×748→1914×994。
+r.ScreenPercentage=0の自動設定であり、ネイティブ100%比較ではない。
+r.DynamicRes.OperationMode=0、r.VSync=0、t.MaxFPS=0。
+8～12秒のウォームアップ後600フレーム。取得中はUE/MCP呼出しを行わない。
+計測中のみ背景CPU/Slateスロットリングを解除。停止時には復旧済み。
+ウィンドウ最小化等で約3 FPSに落ちた試行は無効として除外。
+CPU温度・電源・他プロセスは厳密には固定しておらず、別PCへ数値を外挿しない。
+
+集計値（平均ms、FPSは1000/平均FrameTime）:
+                                   Baseline       TSR100         Memory AB
+  平均FPS                           23.76          28.73          22.39
+  FrameTime                         42.084         34.809         44.661
+  GameThread                        31.612         34.740         44.656
+  GPU                               40.593         30.171         25.327
+  GT Animation（Exclusive）         23.363         25.399         32.452
+  GT UI                              3.994          5.067          5.711
+  RT Wait/Visibility                 6.533         26.906         34.751
+  1% low FPS                        19.33          22.14          18.70
+  GPU Local使用MB                 4056.34        3943.77        3376.00
+  GPU Local予算MB                 3367.70        3367.70        3367.70
+  GPU TSR                           16.264          2.471          2.422
+  GPU Lights                         9.263         10.447         10.403
+  GPU ShadowDepths                   3.144          2.381          1.827
+
+Baseline: TSR History=200、VSM PhysicalPages=4096、Lumen Atlas=4096。
+TSR100: r.TSR.History.ScreenPercentageだけを100へ変更。
+Memory AB: TSR100に加えてVSM PhysicalPages=2048、Lumen Atlas=2048。
+3条件とも診断用。恒久設定として採用していない。
+
+解釈:
+・TSR History100でGPUのTSR処理が大きく減少した。
+・Memory ABではGPUは25.3 msまで改善したが、CPUが44.7 msで律速した。
+・VRAM改善だけで60 FPSになったわけではない。
+・Memory ABのCPU悪化を、画質設定の変更が直接引き起こしたとは断定できない。
+・Memory ABを100フレームずつ6区間に分けたFrame平均は
+  44.614 / 45.253 / 44.247 / 44.565 / 44.540 / 44.746 msで安定。
+  短い最小化・非アクティブの3 FPS区間だけで説明できる形ではない。
+・AnimationというCSV区分は、単にAnimGraph計算だけを意味しない。
+  SkeletalMeshのTick・アニメ完了・変形や衝突更新などを含み得る。
+  どのActorのどの処理かは、現CSVだけでは確定していない。
+
+注意: CSV内のMaxFrameTime=33.3333は30 FPS上限の証拠ではない。
+UE5.8ソースではt.MaxFPS<=0のとき、CSV用TargetFPSの初期値が30になる。
+実際の上限・同期はt.MaxFPS/r.VSync等を別途確認する。
+
+有効データ（Evidence/CSVとEvidence/Measurements）:
+  Baseline_Classroom.csv
+  AB_TSR100_Classroom_Valid.csv
+  AB_Memory_Classroom.csv
+各metadata.json / summary.jsonを同梱。
+Before_Classroom.csv、AB_TSR100_Classroom.csv（Validなし）は中断・無効試行。
+有効比較に混ぜず、本資料にも有効CSVとして同梱していない。
+
+4. GPU/VRAMと照明の監査
+=======================
+RTX3050の4 GB VRAMに対し、BaselineのLocal使用約4056 MB、予算約3368 MB。
+赤いVRAM不足メッセージは実際の予算超過。表示を隠すことは性能改善ではない。
+主なメモリ使用はRenderTargetPool約2936 MB。
+通常テクスチャのwanted約10 MB、non-streaming約87 MBで、
+ステージ材質テクスチャの縮小を第一手にしても大幅改善は見込めない。
+RT geometry約17.6 MB、DistanceFieldAtlas約8 MB、NaniteRoot約16 MB。
+
+TSR100後のRenderTarget監査で確認:
+  VSM PhysicalPagePool 512 MB ×2
+  VSM HZB             約85.375 MB ×2
+  Lumen Atlas類       64 MB級の複数面と重複
+  RadianceCache       72.25/64/32 MBなどの組み合わせが複数
+同種資源の二重存在は確認済み。EditorとPIEの両ワールド由来という説明は推定。
+VSM4096→2048では2組で約597 MB減る理論見積り。
+Memory ABの複合変更では実測Local使用がBaselineから約680 MB減少。
+
+照明:
+RectLight42灯 + PointLight4灯。全てMovable。
+RectLight42灯は影ON、最大描画距離0（距離制限なし）。
+内訳: 開始実習室12、隣接教室9、CAD9、廊下/展示9、吹き抜け1、階段1、EV1。
+教室30灯のAttenuationRadiusは450 cm、廊下9灯は330 cm。
+吹き抜けPoint3灯は半径1800 cm、階段Point1灯とともに影なし。
+全灯がGI/Reflection/Translucencyに影響。
+実習室中央を最大16灯の減衰球が包含する上限計算あり。
+これは実際に16灯が同時描画されると測定した意味ではない。
+Unbound PostProcessは露出Min/Max=6、Bias=0が主な上書き。
+今回、照明の位置・数・影・明るさ・PPの保存値は変更していない。
+
+NaniteのGPU内訳例はVisBuffer約0.7 ms、BasePass約1.08 ms。
+現状では「三角形を減らせば直ちに60 FPS」とはいえない。
+巨大な分類別メッシュでもNaniteのクラスタカリングは働くので、
+非表示教室の全三角形が常に描画されるとは断定しない。
+詳細はEvidence/LightAudit、Evidence/ModelAudit、Evidence/PerfAuditを参照。
+
+5. 作成済みの軽量モデル候補（未採用）
+====================================
+フォルダ: SourceAssets/Stages/Floor03/OptimizedV03/
+  EscapeFromKD_Floor03_v03.blend
+  build_optimized_furniture.py
+  validate_optimized_furniture.py
+  optimization_report.json
+  validation_report.json
+  Readme.txt
+  Export/SM_F03V03_Chairs.fbx
+  Export/SM_F03V03_Laptops.fbx
+  Previews/Chair_Main_Comparison.png
+  Previews/Laptop_Comparison.png
+
+実際に使用中のSurveyV02 blendから作成。
+元のSurveyV02のblend/FBX/UEメッシュは変更していない。
+椅子とPC以外の10分類、配置・回転・縮尺・UV・材質割当を維持。
+
+椅子:
+  開始実習室+教員用41脚: 1脚7620→3810 tri
+  閉鎖CAD教室72脚:       1脚7620→1904 tri
+  閉鎖隣接教室60脚:      1脚1344→672 tri
+  カテゴリ合計: 941,700→333,618 tri（64.6%削減）
+PC:
+  キー/タッチパッド62部品の薄い箱のベベルを除去。立体の厚さは保持。
+  画面・筐体・ヒンジ・カメラは変更しない。
+  カテゴリ合計: 156,492→31,500 tri（79.9%削減）
+合計733,074 tri減少。2カテゴリ計1,098,192→365,118 tri。
+
+検証:
+・椅子の表面サンプル差: 主室最大0.568 mm、CAD2.524 mm、隣接0.512 mm。
+・PCの表面サンプル差: 最大0.341 mm。
+  頂点・面中心のサンプリング結果であり、全連続面に対する数学的誤差保証ではない。
+・FBXをBlenderへ再取り込みし三角形数とUVMapを確認。
+・座標/bounds差は0.002 mm未満。
+・主室椅子とPCの比較レンダを確認。CAD椅子は幾何検証のみで個別レンダ未実施。
+・最終validator終了コード0、optimized_source_unchanged=true。
+・自宅で旧絶対パスに依存しないよう、validatorのFBX参照を現フォルダのExportに変更。
+・JSON内の旧絶対パスは生成時の履歴。現在のファイルは本節の相対パスで探す。
+
+再生成/検証の例（プロジェクトルート、実際のBlender実行パスを指定）:
+  blender --background --python SourceAssets/Stages/Floor03/OptimizedV03/build_optimized_furniture.py
+  blender --background --python SourceAssets/Stages/Floor03/OptimizedV03/validate_optimized_furniture.py
+ビルドはOptimizedV03の出力を更新する。移動確認だけなら再生成は不要。
+validatorはblendを保存変更せず、検証JSONと比較画像を更新する。
+
+将来UEへ反映する場合:
+・新しい保存先案は/Game/Main/Stage/Floor03/OptimizedV03。
+・2個のStaticMeshを別名でインポートし、既存材質を再利用。
+・新規材質/テクスチャの自動生成は不要。
+・Chairs材質順: BlackPlastic / DarkRubber / SilverMetal（KD_F03_接頭辞）。
+・Laptops材質順: BlackPlastic / DarkRubber / LaptopKeyboard / LaptopScreen。
+・NaniteとUseComplexAsSimpleを現行と同様に設定。
+・BP_Floor03の既存12コンポーネントは維持し、Chairs/Laptopsの参照だけ差し替え。
+・BPテンプレートとKDStage配置Actorの両方の参照を確認する。
+・フロア全体を包む単一Convexを作らない。通路を塞ぐ危険がある。
+・近接/ADS/照明/衝突/射撃/廊下～階段移動を確認してから採用する。
+・描画負荷の効果は未測定。削減率をFPS改善率として扱わない。
+
+6. 停止時に復旧した状態
+=======================
+PIE終了、KDStageを開いた状態。
+dirty_maps=[]、dirty_content=[]、pie_worlds=[]。
+You / BP_Floor03 / BP_AdmissionRobot / BP_Rifleは存在し、全てBS_UP_TO_DATE。
+計測用のコールバックは終了。追加Slate observerは削除済み。
+通常の組み込みobserver_1のみ残る（次回のIDを保証するものではない）。
+Blenderによる候補生成・再検証プロセスも終了。
+
+復旧済みCVar:
+  r.TSR.History.ScreenPercentage       200
+  r.Shadow.Virtual.MaxPhysicalPages   4096
+  r.LumenScene.SurfaceCache.AtlasSize  4096
+  r.GPUCsvStatsEnabled                   0
+  r.ProfileGPU.ShowUI                 true
+  r.ScreenPercentage                    0
+  r.DynamicRes.OperationMode             0
+  r.Lumen.HardwareRayTracing             1
+  t.MaxFPS                              0
+  r.VSync                               0
+EditorPerformanceSettings:
+  bThrottleCPUWhenNotForeground=true
+  bAllowSlateThrottling=true
+  bMonitorEditorPerformance=false、bEnableVSync=falseを維持。
+背景設定は職場のEditorユーザー設定であり、自宅の設定へ強制転記する指示ではない。
+
+Content/Configの恒久変更はなし。
+現状のVRAM警告と低FPSは未解決なので、再開時に再表示されても復旧失敗とは限らない。
+撮影時のメッセージ非表示や時間倍率変更を最適化として採用しない。
+
+7. 停止時の整合性チェックと既知の制約
+====================================
+確認済み:
+・git diff --check成功。
+・git lfs fsck --objects HEAD成功。
+・新規FBX2件にLFSフィルタが適用されることを確認。
+・主要4BPのコンパイル状態はBS_UP_TO_DATE。
+・現在のUEログでBlueprint Runtime Error / Accessed None / LogPython: Errorは0件。
+・未保存Map/Contentなし、PIEなし。
+・最適化前バックアップと現行BP_Floor03/KDStage/DefaultEngine.iniのSHA256一致。
+
+SHA256:
+Content/Main/Stage/KDStage.umap
+  0A9C16812620D499F877ED43939FBA471BD86E57DDA57AB3E58C5783BB150229
+Content/Main/Stage/BP_Floor03.uasset
+  F455E7292C3349FB2E9EDBB66A733E7785E3D192D8B1F9FFB4CC260DBE1B15AB
+Config/DefaultEngine.ini
+  055C7DD9C746CED5941ADA473407642047C8760B7C6A6B8CFCBA74179F478F3E
+SourceAssets/Stages/Floor03/SurveyV02/EscapeFromKD_Floor03_v02.blend
+  2f423416a9b0910777621ee70681fb18a634e2ec88163e7c2633b04745002e3b
+
+範囲の限界:
+・Shippingビルド/Cook/パッケージ化の検証は行っていない。
+・60 FPSの達成保証、別PCの動作保証をした状態ではない。
+・既存SurveyV02の机/PCには近ゼロ接線のインポート警告が残る。
+  既存段階で見た目を確認済み。今回その警告を修正していない。
+・敵被弾のADS実射、軽量モデルのUE取り込み、別アングルの性能確認は未完了。
+・元からの問題と今回新たに生じたエラーを区別する。
+・Git LFS fsck HEADは既存HEADの検証。未コミットの新FBXがリモートへ届いたことを
+  証明するものではない。ユーザーのプッシュ後、自宅でLFS取得を確認する。
+
+8. 自宅での再開手順（この順序で進める）
+=======================================
+A. 同じ状態を開く
+1) ユーザーがプッシュした最新内容とLFS実体を取得する。
+   git status、HEAD、UEバージョン、GPU/VRAM、uprojectのプラグインを確認。
+2) 本資料とEvidence/checkpoint_validation.jsonを読む。
+   Unreal MCPのツールを再発見し、現在Level/PIE/未保存アセットを読み取り確認。
+3) KDStage / You / BP_Floor03 / BP_AdmissionRobot / BP_Rifleと既存設定を確認。
+   ユーザーの未保存変更があるなら勝手に保存・破棄しない。
+4) 軽量化候補はまだ未採用と確認。先にインポートしない。
+
+B. 最優先: CPU Animation負荷と敵PerPolyCollisionを切り分ける
+5) 自宅PCで現状の600フレーム基準を新規測定する。
+   カメラ、実表示解像度、内部解像度、品質、電源、PIEモードを記録。
+   PIEを前面にし、最小化しない。暖機後、計測中のMCP/UI操作を避ける。
+6) PIE中の敵MeshComponentのPerPolyCollision、プロファイル、応答、可視性、
+   Tick設定を読み取り記録する。
+7) 実在する公開APIを確認して、PIE中の敵MeshComponentだけPerPolyCollisionをOFF。
+   SkeletalMeshアセット/CDO、You、Stage、アニメTick、可視性を同時に変更しない。
+   SetEnablePerPolyCollision等の名前は利用先のスキーマ/UE APIで実在を確認して使う。
+8) 同条件・暖機後600フレームを測定し、GT Animation/GT/Frame/GPU/RT待ちを比較。
+   この間は命中精度が変わり得る。実験設定を保存しない。
+9) 元のフラグへ戻すかPIEを終了する。
+10) 明確に改善したら、CPUトレースで衝突更新等の所有処理を確認し、
+    軽量な敵の当たり判定へ置き換える最小案を検討する。
+    PhysicsAsset等を採用する場合も、現行Complex Visibility Traceとの適合を確認。
+    命中点・法線・火花・弾痕・書類・歩行・走行・よろけを壊さないこと。
+    改善しなければ敵のTick/表示、次にプレイヤーの骨格コンポーネントを個別に
+    切り分ける。複数項目を一度に変更しない。
+
+C. CPU原因の後でGPUとVRAMを詰める
+11) 新鮮な同条件ベースラインからTSR History100を再検証。
+12) VSM2048、Lumen Atlas2048を一つずつ確認。
+    VRAMだけでなく影・間接光・ちらつき・武器/敵の動きと実FPSを比較。
+13) 必要なら閉鎖教室の光源/影/距離を限定する案を検証。
+    実習室や廊下が真っ暗になるような一括削除はしない。
+14) 家具候補2件を新アセットで導入し、目視/衝突/フレーム時間を比較して採否を決定。
+15) 実習室・廊下・吹き抜け・階段、移動、非ADS/ADS射撃、連射被弾、リロードを確認。
+    平均FPSだけでなく1% low、GPU/CPU、VRAM超過も記録。
+    合意した解像度・画質で16.67 ms以下の持続可否を評価する。
+16) 確認できた最小変更だけ恒久保存。BP/Map/設定を検証し、結果を更新する。
+
+未実行の追加候補（必要性を確認してから扱う）:
+・Local ShadowのSMRT RayCount 8→4、選択的High品質。
+・RadianceCache ProbeResolution 32→16。
+・Nanite StreamingPool縮小（実使用量を測定してから）。
+・Lumen HardwareRT/RT経路の比較。
+・可視範囲に応じた光源・影・距離設定。
+・MegaLights（UE5.8では実験的。未導入・未検証）。
+・分類別巨大メッシュの分割やISM化（未実装、構造変更が必要）。
+これらを実施済みとして扱わない。まず現在観測されたCPU負荷を解明する。
+
+9. 引継ぎフォルダの証拠と再集計
+===============================
+Evidence/CSV/: 有効3条件の生CSV。
+Evidence/Measurements/: 各条件のメタデータ・集計JSON。
+Evidence/PerfAudit/: CPU切り分け、VRAM、RenderTarget、測定上の注意。
+Evidence/LightAudit/: 光源・コンポーネント・PPの実データ。
+Evidence/ModelAudit/: 元モデルと推奨案の実データ。
+Evidence/OriginalRuntimeSettings.json: 最適化開始時の読み取り値。
+Evidence/restored_runtime_settings.json: 終了時のCVar読み取り値。
+Evidence/checkpoint_validation.json: PIE/dirty/BP状態。
+Evidence/CurrentGameplayDefaults.json: 停止時のYou/敵CDO/配置敵の読み取り値。
+Evidence/StopState.json: 停止状態、検証範囲と次作業の要約。
+Evidence/FinalVerification.json: 引継ぎ作成後のファイル/Git等の最終検査。
+Evidence/ArtifactManifest.json: 新規引継ぎ・軽量化候補ファイルのサイズとSHA256。
+Tools/summarize_csv.py: UE CSVを再集計するPythonスクリプト。
+HistoricalScripts/: 今回のUE Python計測・復旧スクリプトの原記録。
+
+再集計例:
+  python -X utf8 Documentation/Handoff_20261113/Tools/summarize_csv.py <capture.csv> --out <summary.json>
+CSV末尾に記録されたヘッダーを解釈する。FPSは1000/平均FrameTime。
+HistoricalScriptsは職場の絶対パスを含む実施記録。
+そのまま自宅で実行せず、現プロジェクトのパス・現在設定・PIE状態に合わせて確認する。
+特に復旧スクリプトの値を、自宅の本来の設定と無関係に強制適用しない。
+
+資料の優先順位:
+  現在のプロジェクト実体・ユーザーの新しい指示
+  → 本資料と今回の証拠
+  → 2026-11-13の個別作業資料
+  → 2026-11-12の旧引継ぎ
+旧資料は経緯を知るために保持し、内容を上書きしていない。
+
+関連する既存資料:
+  Documentation/Handoff_20261112/EscapeFromKD_Handoff_20261112.txt
+  Documentation/Floor03_Rebuild_20261113.txt
+  Documentation/Enemy_AdmissionRobot_20261113/Readme.txt
+  Documentation/EnemyHit_20261113/Readme.txt
+11/12資料のStage V01、初期Map、リコイルなしなどは現在値ではない。
+敵初版資料のPreviewEnabled=trueも現在値ではない。
+
+参考（性能方針の背景、実測の代替ではない）:
+https://dev.epicgames.com/documentation/en-us/unreal-engine/lumen-performance-guide-for-unreal-engine
+https://dev.epicgames.com/documentation/en-us/unreal-engine/virtual-shadow-maps-in-unreal-engine
+https://dev.epicgames.com/documentation/en-us/unreal-engine/lumen-technical-details-in-unreal-engine
+
+停止地点の結論:
+ゲームは最適化開始前の保存済み状態を維持し、候補モデルと計測証拠を別途確保した。
+再開位置は「敵のPerPolyCollisionとCPU Animation時間のPIE限定A/B検証」。
+60 FPS改善作業の途中であり、未確認の最適化を有効にしたまま引き継いでいない。

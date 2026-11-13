@@ -1,0 +1,101 @@
+CPU bottleneck / handoff checkpoint — 2026-11-13
+
+Work stopped at the user's handoff request.
+This audit used only local source/log/CSV reads. No Editor/MCP operation or project
+setting change was performed by this agent.
+
+Observed CPU/GPU comparison (600 positive FrameTime samples each, mean ms):
+                                    Baseline       TSR100 valid       Memory AB
+FrameTime                            42.0843          34.8093           44.6608
+GameThreadTime                       31.6116          34.7395           44.6564
+GPUTime                              40.5934          30.1712           25.3271
+Exclusive/GameThread/Animation       23.3626          25.3990           32.4519
+Exclusive/GameThread/UI               3.9944           5.0666            5.7113
+Slate/GameThread/DrawPrePass           1.9982           2.5054            2.4857
+RT EventWait/Visibility               6.5335          26.9059           34.7508
+RT EventWait (other)                 27.9187            low               low
+
+Interpretation supported by the samples:
+- GPU work improved, but the Memory AB is CPU/GameThread limited.
+- The dominant measured GameThread category is Animation, not Stage geometry.
+- RT waiting for Visibility is consistent with it waiting for game-side completion.
+- Memory AB's six consecutive 100-frame windows are stable:
+  Frame means 44.614 / 45.253 / 44.247 / 44.565 / 44.540 / 44.746 ms.
+  GPU means approximately 25.3 ms throughout.
+  This is not shaped like a brief non-active/minimized 3 FPS segment.
+- Background processes, CPU power/thermal state, and live editor work remain possible
+  influences. Existing CSV categories cannot identify the exact offending actor.
+- GPU improvement alone cannot be reported as 60 FPS attainment.
+
+Important CSV caveat:
+MaxFrameTime=33.3333 is NOT evidence of a 30 FPS cap.
+LaunchEngineLoop.cpp1542 starts the CSV-only TargetFPS at 30 when t.MaxFPS<=0.
+The actual t.MaxFPS / VSync / game resolution must be read separately.
+
+Unverified leading hypothesis:
+The newly introduced enemy per-poly skeletal collision may be expensive each tick.
+Evidence supporting a targeted experiment, not proof:
+- Enemy build report: 26,375 vertices, 52,084 triangles.
+- Prior hit implementation enabled per-poly collision on its SkeletalMesh asset
+  and its CharacterMesh0 component.
+- SkeletalMeshComponent.cpp417 wraps parallel animation completion on GameThread
+  in CSV_SCOPED_TIMING_STAT_EXCLUSIVE(Animation).
+- SkeletalMeshComponent.cpp2033 also wraps TickComponent in that category.
+Thus CPU collision/deformation/finalization can appear inside Animation; the CSV
+label alone does not establish expensive animation graph evaluation.
+
+First next-session experiment (PIE runtime only; no saved-asset edits):
+1. Restore a repeatable camera, viewport size, current scene and test settings.
+   Confirm original persistent state and save no dirty user assets incidentally.
+2. Record the placed enemy's runtime Mesh per-poly flag, collision profile,
+   response settings and visibility/ticking flags.
+3. Capture an unchanged foreground 600-frame reference after warm-up.
+   Do not invoke UE/MCP tools during capture.
+4. Disable per-poly collision ONLY on the PIE enemy Mesh component using an
+   actually exposed/discovered API. Do not change You, the SkeletalMesh asset,
+   the stage collision, animation asset, mesh visibility, or animation ticking.
+   This experiment may temporarily alter bullet hit precision; do not save it.
+5. Warm up and capture the same 600 frames. Compare total FrameTime, GT,
+   Exclusive/GameThread/Animation, GPU and RT wait.
+6. Restore the recorded runtime flag or stop PIE. Do not persist a replacement
+   collision implementation until both performance and surface-hit behavior are
+   verified.
+7. If Animation time collapses, inspect scoped CPU traces/physics collision update
+   and evaluate a suitable lightweight enemy collision representation. Preserve
+   hit-point FX, document collision/grip and movement before choosing a fix.
+   If it does not, test enemy ticking/visibility separately, then player skeletal
+   components individually to identify ownership. These are diagnostics only.
+
+Other tested/untested boundaries:
+- The previous render-settings A/Bs are diagnostics and not final optimized project
+  settings. Root is restoring runtime settings before handoff.
+- High presets and Nanite pool changes remain proposed unless separately documented
+  as measured by root.
+- Do not report 60 FPS as achieved from the current captures.
+
+MegaLights source-only option for a later GPU experiment:
+Verified UE5.8 names (not older guessed names):
+  r.MegaLights.Supported = true, ReadOnly (shader compile support).
+  r.MegaLights.EnableForProject = 0, runtime mutable.
+  r.MegaLights.Allowed = 1, runtime mutable/scalability.
+  r.MegaLights.HardwareRayTracing = 1.
+  r.MegaLights.SoftwareRayTracing.Allow = 0.
+  r.MegaLights.NumSamplesPerPixel = 4 (supported 1/2/4).
+  r.MegaLights.DownsampleMode = 2 (half resolution).
+EnableForProject can be overridden by PostProcessVolume and individual lights.
+The code requires requested feature/showflags, compiled shader support, and HWRT
+or explicitly supported SW tracing data. Existing RTX + RT project is a potential
+candidate, not a verified supported configuration.
+The feature is labelled experimental by the local UE5.8 source. Stochastic
+sampling/denoising can change shadow noise, moving-object trails and small-light
+stability; it needs visual and gameplay comparisons. It does not address the
+current measured 32 ms GameThread Animation cost.
+Sources:
+Renderer/Private/MegaLights/MegaLights.cpp19-65 and 531-555.
+Renderer/Private/MegaLights/MegaLightsRayTracing.cpp149-161.
+
+Companion evidence:
+frame_cpu_comparison.json (all selected means, histograms, 100-frame windows).
+vram_audit.txt and render_target_memory_dump.json (memory diagnosis).
+measurement_notes.txt and summarize_csv.py (reproducible measurement).
+

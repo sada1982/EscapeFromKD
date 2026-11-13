@@ -1,0 +1,1142 @@
+{
+  "source": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\Saved\\Logs\\myProject.log",
+  "capture_command_line": "[2026.11.13-07.59.05:024][681]Cmd: r.DumpRenderTargetPoolMemory",
+  "entry_count": 128,
+  "sum_entry_mb": 2821.9590000000007,
+  "by_name": {
+    "Shadow.Virtual.PhysicalPagePool": {
+      "mb": 1024.0,
+      "count": 2
+    },
+    "Lumen.RadianceCache.FinalRadianceAtlas": {
+      "mb": 186.5,
+      "count": 4
+    },
+    "Shadow.Virtual.HZBPhysicalPagePool": {
+      "mb": 170.75,
+      "count": 2
+    },
+    "Lumen.RadianceCache.RadianceProbeAtlasTextureSource": {
+      "mb": 136.0,
+      "count": 4
+    },
+    "Lumen.Radiosity.SceneIndirectLighting": {
+      "mb": 128.0,
+      "count": 2
+    },
+    "Lumen.Radiosity.TraceRadianceAtlas": {
+      "mb": 128.0,
+      "count": 2
+    },
+    "Lumen.SceneDirectLighting": {
+      "mb": 128.0,
+      "count": 2
+    },
+    "Lumen.SceneFinalLighting": {
+      "mb": 128.0,
+      "count": 2
+    },
+    "Lumen.RadianceCache.DepthProbeAtlasTexture": {
+      "mb": 68.0,
+      "count": 4
+    },
+    "Lumen.SceneDepth": {
+      "mb": 64.0,
+      "count": 2
+    },
+    "VirtualTexture_Physical": {
+      "mb": 63.75,
+      "count": 1
+    },
+    "Shadow.Virtual.PrevPageFlags": {
+      "mb": 46.063,
+      "count": 2
+    },
+    "DistanceFields.DistanceFieldBrickTexture": {
+      "mb": 40.0,
+      "count": 5
+    },
+    "TSR.History.Color": {
+      "mb": 37.5,
+      "count": 1
+    },
+    "Shadow.Virtual.PageRequestFlags": {
+      "mb": 32.0,
+      "count": 2
+    },
+    "Shadow.Virtual.PrevPageTable": {
+      "mb": 32.0,
+      "count": 2
+    },
+    "Lumen.SceneAlbedo": {
+      "mb": 32.0,
+      "count": 2
+    },
+    "Lumen.SceneEmissive": {
+      "mb": 32.0,
+      "count": 2
+    },
+    "Lumen.SceneNormal": {
+      "mb": 32.0,
+      "count": 2
+    },
+    "Shadow.Virtual.PageFlags": {
+      "mb": 28.688,
+      "count": 1
+    },
+    "Lumen.Reflections.SpecularAndSecondMoment": {
+      "mb": 27.564,
+      "count": 3
+    },
+    "SceneColor": {
+      "mb": 27.564,
+      "count": 3
+    },
+    "Shadow.Virtual.PageTable": {
+      "mb": 20.0,
+      "count": 1
+    },
+    "SceneDepthZ": {
+      "mb": 18.376,
+      "count": 2
+    },
+    "TSR.History.Guide": {
+      "mb": 18.375,
+      "count": 1
+    },
+    "Lumen.Radiosity.ProbeSHBlueAtlas": {
+      "mb": 16.0,
+      "count": 2
+    },
+    "Lumen.Radiosity.ProbeSHGreenAtlas": {
+      "mb": 16.0,
+      "count": 2
+    },
+    "Lumen.Radiosity.ProbeSHRedAtlas": {
+      "mb": 16.0,
+      "count": 2
+    },
+    "Lumen.ScreenProbeGather.BackfaceDiffuseIndirect": {
+      "mb": 13.875,
+      "count": 3
+    },
+    "Lumen.ScreenProbeGather.DiffuseIndirect": {
+      "mb": 13.875,
+      "count": 3
+    },
+    "Lumen.ScreenProbeGather.RoughSpecularIndirect": {
+      "mb": 13.875,
+      "count": 3
+    },
+    "Lumen.ScreenProbeGather.ShortRangeAO": {
+      "mb": 13.875,
+      "count": 3
+    },
+    "StochasticLighting.DepthHistory": {
+      "mb": 13.875,
+      "count": 3
+    },
+    "StochasticLighting.NormalAndShadingInfoHistory": {
+      "mb": 13.875,
+      "count": 3
+    },
+    "TSR.History.Metadata": {
+      "mb": 7.5,
+      "count": 1
+    },
+    "Lumen.RadianceCache.RadianceProbeIndirectionTexture": {
+      "mb": 7.5,
+      "count": 6
+    },
+    "Lumen.ScreenProbeGather.ScreenProbeFilteredRadiance": {
+      "mb": 5.814,
+      "count": 3
+    },
+    "TSR.History.Moire": {
+      "mb": 4.625,
+      "count": 1
+    },
+    "Lumen.Reflections.NumFramesAccumulated": {
+      "mb": 3.564,
+      "count": 3
+    },
+    "Lumen.ScreenProbeGather.HistoryFastUpdateMode_NumFramesAccumulated": {
+      "mb": 3.564,
+      "count": 3
+    },
+    "HZBFurthest": {
+      "mb": 3.4379999999999997,
+      "count": 3
+    },
+    "Luminance": {
+      "mb": 1.875,
+      "count": 1
+    },
+    "Lumen.TranslucencyVolume.SHLightingNewHistory1": {
+      "mb": 1.125,
+      "count": 3
+    },
+    "Lumen.TranslucencyVolume.SHLightingNewHistory0": {
+      "mb": 0.75,
+      "count": 3
+    },
+    "Lumen.Radiosity.NumFramesAccumulatedAtlas": {
+      "mb": 0.5,
+      "count": 2
+    },
+    "Lumen.ScreenProbeGather.ScreenProbeTranslatedWorldPosition": {
+      "mb": 0.375,
+      "count": 3
+    },
+    "CombineLUTs": {
+      "mb": 0.25,
+      "count": 2
+    },
+    "VirtualTexture_PageTable": {
+      "mb": 0.188,
+      "count": 1
+    },
+    "Shading.GGXTransmissionEnergy": {
+      "mb": 0.125,
+      "count": 1
+    },
+    "ToonProfileTexture": {
+      "mb": 0.125,
+      "count": 1
+    },
+    "Lumen.ScreenProbeGather.ScreenProbeSceneDepth": {
+      "mb": 0.10500000000000001,
+      "count": 3
+    },
+    "HairLUT0": {
+      "mb": 0.062,
+      "count": 1
+    },
+    "SSProfiles": {
+      "mb": 0.035,
+      "count": 1
+    },
+    "SpecularProfileTexture": {
+      "mb": 0.031,
+      "count": 1
+    },
+    "AsciiTexture": {
+      "mb": 0.008,
+      "count": 1
+    },
+    "Shading.GGXMaxSpecEnergyTexture": {
+      "mb": 0.008,
+      "count": 1
+    },
+    "Shading.DiffuseEnergy": {
+      "mb": 0.004,
+      "count": 1
+    },
+    "Shading.GGXReflectionEnergy": {
+      "mb": 0.004,
+      "count": 1
+    },
+    "Shading.SheenEnergy": {
+      "mb": 0.004,
+      "count": 1
+    }
+  },
+  "entries": [
+    {
+      "mb": 512.0,
+      "extent": "16384x4096    [  2]  1mip(s)",
+      "name": "Shadow.Virtual.PhysicalPagePool",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 512.0,
+      "extent": "16384x4096    [  2]  1mip(s)",
+      "name": "Shadow.Virtual.PhysicalPagePool",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 85.375,
+      "extent": "8192x2048    [  1]  7mip(s)",
+      "name": "Shadow.Virtual.HZBPhysicalPagePool",
+      "format": "R32_FLOAT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 85.375,
+      "extent": "8192x2048    [  1]  7mip(s)",
+      "name": "Shadow.Virtual.HZBPhysicalPagePool",
+      "format": "R32_FLOAT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 72.25,
+      "extent": "4352x4352           1mip(s)",
+      "name": "Lumen.RadianceCache.FinalRadianceAtlas",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 72.25,
+      "extent": "4352x4352           1mip(s)",
+      "name": "Lumen.RadianceCache.FinalRadianceAtlas",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 64.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.RadianceCache.RadianceProbeAtlasTextureSource",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 64.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.RadianceCache.RadianceProbeAtlasTextureSource",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 64.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.Radiosity.SceneIndirectLighting",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 64.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.Radiosity.SceneIndirectLighting",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 64.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.Radiosity.TraceRadianceAtlas",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 64.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.Radiosity.TraceRadianceAtlas",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 64.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.SceneDirectLighting",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 64.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.SceneDirectLighting",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 64.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.SceneFinalLighting",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 64.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.SceneFinalLighting",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 63.75,
+      "extent": "8160x8160           1mip(s)",
+      "name": "VirtualTexture_Physical",
+      "format": "BC5",
+      "unused_frames": 0
+    },
+    {
+      "mb": 37.5,
+      "extent": "1920x1000    [  4]  2mip(s)",
+      "name": "TSR.History.Color",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 32.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.RadianceCache.DepthProbeAtlasTexture",
+      "format": "R16_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 32.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.RadianceCache.DepthProbeAtlasTexture",
+      "format": "R16_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 32.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.SceneDepth",
+      "format": "G16",
+      "unused_frames": 0
+    },
+    {
+      "mb": 32.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.SceneDepth",
+      "format": "G16",
+      "unused_frames": 0
+    },
+    {
+      "mb": 28.688,
+      "extent": "8192x 576           7mip(s)",
+      "name": "Shadow.Virtual.PageFlags",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 28.688,
+      "extent": "8192x 576           7mip(s)",
+      "name": "Shadow.Virtual.PrevPageFlags",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 21.0,
+      "extent": "2048x2048           3mip(s)",
+      "name": "Lumen.RadianceCache.FinalRadianceAtlas",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 21.0,
+      "extent": "2048x2048           3mip(s)",
+      "name": "Lumen.RadianceCache.FinalRadianceAtlas",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 20.0,
+      "extent": "8192x 576           1mip(s)",
+      "name": "Shadow.Virtual.PageRequestFlags",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 20.0,
+      "extent": "8192x 576           1mip(s)",
+      "name": "Shadow.Virtual.PageTable",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 20.0,
+      "extent": "8192x 576           1mip(s)",
+      "name": "Shadow.Virtual.PrevPageTable",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 18.375,
+      "extent": "1560x 752    [  4]  1mip(s)",
+      "name": "TSR.History.Guide",
+      "format": "A2B10G10R10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 17.375,
+      "extent": "8192x 384           7mip(s)",
+      "name": "Shadow.Virtual.PrevPageFlags",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 16.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.SceneAlbedo",
+      "format": "BC7",
+      "unused_frames": 0
+    },
+    {
+      "mb": 16.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.SceneAlbedo",
+      "format": "BC7",
+      "unused_frames": 0
+    },
+    {
+      "mb": 16.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.SceneEmissive",
+      "format": "BC6H",
+      "unused_frames": 0
+    },
+    {
+      "mb": 16.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.SceneEmissive",
+      "format": "BC6H",
+      "unused_frames": 0
+    },
+    {
+      "mb": 16.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.SceneNormal",
+      "format": "BC5",
+      "unused_frames": 0
+    },
+    {
+      "mb": 16.0,
+      "extent": "4096x4096           1mip(s)",
+      "name": "Lumen.SceneNormal",
+      "format": "BC5",
+      "unused_frames": 0
+    },
+    {
+      "mb": 12.0,
+      "extent": "8192x 384           1mip(s)",
+      "name": "Shadow.Virtual.PageRequestFlags",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 12.0,
+      "extent": "8192x 384           1mip(s)",
+      "name": "Shadow.Virtual.PrevPageTable",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 9.188,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.Reflections.SpecularAndSecondMoment",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 9.188,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.Reflections.SpecularAndSecondMoment",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 9.188,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.Reflections.SpecularAndSecondMoment",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 9.188,
+      "extent": "1560x 752           1mip(s)",
+      "name": "SceneColor",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 9.188,
+      "extent": "1560x 752           1mip(s)",
+      "name": "SceneColor",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 9.188,
+      "extent": "1560x 752           1mip(s)",
+      "name": "SceneColor",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 9.188,
+      "extent": "1560x 752           1mip(s)",
+      "name": "SceneDepthZ",
+      "format": "DepthStencil",
+      "unused_frames": 0
+    },
+    {
+      "mb": 9.188,
+      "extent": "1560x 752           1mip(s)",
+      "name": "SceneDepthZ",
+      "format": "DepthStencil",
+      "unused_frames": 0
+    },
+    {
+      "mb": 8.0,
+      "extent": "1024x1024x  8       1mip(s)",
+      "name": "DistanceFields.DistanceFieldBrickTexture",
+      "format": "G8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 8.0,
+      "extent": "1024x1024x  8       1mip(s)",
+      "name": "DistanceFields.DistanceFieldBrickTexture",
+      "format": "G8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 8.0,
+      "extent": "1024x1024x  8       1mip(s)",
+      "name": "DistanceFields.DistanceFieldBrickTexture",
+      "format": "G8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 8.0,
+      "extent": "1024x1024x  8       1mip(s)",
+      "name": "DistanceFields.DistanceFieldBrickTexture",
+      "format": "G8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 8.0,
+      "extent": "1024x1024x  8       1mip(s)",
+      "name": "DistanceFields.DistanceFieldBrickTexture",
+      "format": "G8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 8.0,
+      "extent": "1024x1024           1mip(s)",
+      "name": "Lumen.Radiosity.ProbeSHBlueAtlas",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 8.0,
+      "extent": "1024x1024           1mip(s)",
+      "name": "Lumen.Radiosity.ProbeSHBlueAtlas",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 8.0,
+      "extent": "1024x1024           1mip(s)",
+      "name": "Lumen.Radiosity.ProbeSHGreenAtlas",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 8.0,
+      "extent": "1024x1024           1mip(s)",
+      "name": "Lumen.Radiosity.ProbeSHGreenAtlas",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 8.0,
+      "extent": "1024x1024           1mip(s)",
+      "name": "Lumen.Radiosity.ProbeSHRedAtlas",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 8.0,
+      "extent": "1024x1024           1mip(s)",
+      "name": "Lumen.Radiosity.ProbeSHRedAtlas",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 7.5,
+      "extent": "1920x1000    [  4]  1mip(s)",
+      "name": "TSR.History.Metadata",
+      "format": "R8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.BackfaceDiffuseIndirect",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.BackfaceDiffuseIndirect",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.BackfaceDiffuseIndirect",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.DiffuseIndirect",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.DiffuseIndirect",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.DiffuseIndirect",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.RoughSpecularIndirect",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.RoughSpecularIndirect",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.RoughSpecularIndirect",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.ShortRangeAO",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.ShortRangeAO",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.ShortRangeAO",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752           1mip(s)",
+      "name": "StochasticLighting.DepthHistory",
+      "format": "R32_FLOAT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752           1mip(s)",
+      "name": "StochasticLighting.DepthHistory",
+      "format": "R32_FLOAT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752           1mip(s)",
+      "name": "StochasticLighting.DepthHistory",
+      "format": "R32_FLOAT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752           1mip(s)",
+      "name": "StochasticLighting.NormalAndShadingInfoHistory",
+      "format": "A2B10G10R10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752           1mip(s)",
+      "name": "StochasticLighting.NormalAndShadingInfoHistory",
+      "format": "A2B10G10R10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752           1mip(s)",
+      "name": "StochasticLighting.NormalAndShadingInfoHistory",
+      "format": "A2B10G10R10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.625,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "TSR.History.Moire",
+      "format": "R8G8B8A8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.0,
+      "extent": "1024x1024           1mip(s)",
+      "name": "Lumen.RadianceCache.RadianceProbeAtlasTextureSource",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 4.0,
+      "extent": "1024x1024           1mip(s)",
+      "name": "Lumen.RadianceCache.RadianceProbeAtlasTextureSource",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 2.25,
+      "extent": "192x  48x 48       1mip(s)",
+      "name": "Lumen.RadianceCache.RadianceProbeIndirectionTexture",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 2.25,
+      "extent": "192x  48x 48       1mip(s)",
+      "name": "Lumen.RadianceCache.RadianceProbeIndirectionTexture",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 2.25,
+      "extent": "192x  48x 48       1mip(s)",
+      "name": "Lumen.RadianceCache.RadianceProbeIndirectionTexture",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 2.0,
+      "extent": "1024x1024           1mip(s)",
+      "name": "Lumen.RadianceCache.DepthProbeAtlasTexture",
+      "format": "R16_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 2.0,
+      "extent": "1024x1024           1mip(s)",
+      "name": "Lumen.RadianceCache.DepthProbeAtlasTexture",
+      "format": "R16_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 1.938,
+      "extent": "784x 560           1mip(s)",
+      "name": "Lumen.ScreenProbeGather.ScreenProbeFilteredRadiance",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 1.938,
+      "extent": "784x 560           1mip(s)",
+      "name": "Lumen.ScreenProbeGather.ScreenProbeFilteredRadiance",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 1.938,
+      "extent": "784x 560           1mip(s)",
+      "name": "Lumen.ScreenProbeGather.ScreenProbeFilteredRadiance",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 1.875,
+      "extent": "1914x 994           1mip(s) Final",
+      "name": "Luminance",
+      "format": "R8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 1.375,
+      "extent": "1024x 512          10mip(s)",
+      "name": "HZBFurthest",
+      "format": "PF_R16F",
+      "unused_frames": 0
+    },
+    {
+      "mb": 1.375,
+      "extent": "1024x 512          10mip(s)",
+      "name": "HZBFurthest",
+      "format": "PF_R16F",
+      "unused_frames": 0
+    },
+    {
+      "mb": 1.188,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.Reflections.NumFramesAccumulated",
+      "format": "G8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 1.188,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.Reflections.NumFramesAccumulated",
+      "format": "G8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 1.188,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.Reflections.NumFramesAccumulated",
+      "format": "G8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 1.188,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.HistoryFastUpdateMode_NumFramesAccumulated",
+      "format": "R8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 1.188,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.HistoryFastUpdateMode_NumFramesAccumulated",
+      "format": "R8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 1.188,
+      "extent": "1560x 752    [  1]  1mip(s)",
+      "name": "Lumen.ScreenProbeGather.HistoryFastUpdateMode_NumFramesAccumulated",
+      "format": "R8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.688,
+      "extent": "1024x 256          10mip(s)",
+      "name": "HZBFurthest",
+      "format": "PF_R16F",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.375,
+      "extent": "49x  24x 26       1mip(s)",
+      "name": "Lumen.TranslucencyVolume.SHLightingNewHistory1",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.375,
+      "extent": "49x  24x 26       1mip(s)",
+      "name": "Lumen.TranslucencyVolume.SHLightingNewHistory1",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.375,
+      "extent": "49x  24x 26       1mip(s)",
+      "name": "Lumen.TranslucencyVolume.SHLightingNewHistory1",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.25,
+      "extent": "72x  24x 24       1mip(s)",
+      "name": "Lumen.RadianceCache.RadianceProbeIndirectionTexture",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.25,
+      "extent": "72x  24x 24       1mip(s)",
+      "name": "Lumen.RadianceCache.RadianceProbeIndirectionTexture",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.25,
+      "extent": "72x  24x 24       1mip(s)",
+      "name": "Lumen.RadianceCache.RadianceProbeIndirectionTexture",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.25,
+      "extent": "512x 512           1mip(s)",
+      "name": "Lumen.Radiosity.NumFramesAccumulatedAtlas",
+      "format": "R8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.25,
+      "extent": "512x 512           1mip(s)",
+      "name": "Lumen.Radiosity.NumFramesAccumulatedAtlas",
+      "format": "R8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.25,
+      "extent": "49x  24x 26       1mip(s)",
+      "name": "Lumen.TranslucencyVolume.SHLightingNewHistory0",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.25,
+      "extent": "49x  24x 26       1mip(s)",
+      "name": "Lumen.TranslucencyVolume.SHLightingNewHistory0",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.25,
+      "extent": "49x  24x 26       1mip(s)",
+      "name": "Lumen.TranslucencyVolume.SHLightingNewHistory0",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.188,
+      "extent": "256x 256           9mip(s)",
+      "name": "VirtualTexture_PageTable",
+      "format": "R16_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.125,
+      "extent": "32x  32x 32       1mip(s)",
+      "name": "CombineLUTs",
+      "format": "A2B10G10R10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.125,
+      "extent": "32x  32x 32       1mip(s)",
+      "name": "CombineLUTs",
+      "format": "A2B10G10R10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.125,
+      "extent": "98x  70           1mip(s)",
+      "name": "Lumen.ScreenProbeGather.ScreenProbeTranslatedWorldPosition",
+      "format": "A32B32G32R32F",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.125,
+      "extent": "98x  70           1mip(s)",
+      "name": "Lumen.ScreenProbeGather.ScreenProbeTranslatedWorldPosition",
+      "format": "A32B32G32R32F",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.125,
+      "extent": "98x  70           1mip(s)",
+      "name": "Lumen.ScreenProbeGather.ScreenProbeTranslatedWorldPosition",
+      "format": "A32B32G32R32F",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.125,
+      "extent": "32x  32x 32       1mip(s)",
+      "name": "Shading.GGXTransmissionEnergy",
+      "format": "G16R16",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.125,
+      "extent": "64x 133    [  1]  1mip(s)",
+      "name": "ToonProfileTexture",
+      "format": "FloatRGBA",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.062,
+      "extent": "1x   1           1mip(s)",
+      "name": "HairLUT0",
+      "format": "B8G8R8A8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.035,
+      "extent": "98x  70           1mip(s)",
+      "name": "Lumen.ScreenProbeGather.ScreenProbeSceneDepth",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.035,
+      "extent": "98x  70           1mip(s)",
+      "name": "Lumen.ScreenProbeGather.ScreenProbeSceneDepth",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.035,
+      "extent": "98x  70           1mip(s)",
+      "name": "Lumen.ScreenProbeGather.ScreenProbeSceneDepth",
+      "format": "R32_UINT",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.035,
+      "extent": "66x  64           1mip(s)",
+      "name": "SSProfiles",
+      "format": "A16B16G16R16",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.031,
+      "extent": "64x  64    [  2]  1mip(s)",
+      "name": "SpecularProfileTexture",
+      "format": "FloatR11G11B10",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.008,
+      "extent": "768x   8           1mip(s)",
+      "name": "AsciiTexture",
+      "format": "R8",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.008,
+      "extent": "32x  32           1mip(s)",
+      "name": "Shading.GGXMaxSpecEnergyTexture",
+      "format": "A16B16G16R16",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.004,
+      "extent": "32x  32           1mip(s)",
+      "name": "Shading.DiffuseEnergy",
+      "format": "G16",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.004,
+      "extent": "32x  32           1mip(s)",
+      "name": "Shading.GGXReflectionEnergy",
+      "format": "G16R16",
+      "unused_frames": 0
+    },
+    {
+      "mb": 0.004,
+      "extent": "32x  32           1mip(s)",
+      "name": "Shading.SheenEnergy",
+      "format": "G16R16",
+      "unused_frames": 0
+    }
+  ]
+}

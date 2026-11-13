@@ -1,0 +1,12 @@
+{
+  "r.TSR.History.ScreenPercentage": "200",
+  "r.Shadow.Virtual.MaxPhysicalPages": "4096",
+  "r.LumenScene.SurfaceCache.AtlasSize": "4096",
+  "r.GPUCsvStatsEnabled": "0",
+  "r.ProfileGPU.ShowUI": "true",
+  "r.ScreenPercentage": "0",
+  "r.DynamicRes.OperationMode": "0",
+  "r.Lumen.HardwareRayTracing": "1",
+  "t.MaxFPS": "0",
+  "r.VSync": "0"
+}

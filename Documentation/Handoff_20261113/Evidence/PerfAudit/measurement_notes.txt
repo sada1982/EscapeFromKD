@@ -1,0 +1,91 @@
+UE 5.8 stage performance measurement — source audit only (2026-11-13)
+No Editor operations or setting changes were made by this audit.
+
+Recommended capture:
+1. Record current t.MaxFPS, r.VSync, r.VSyncEditor, r.ScreenPercentage,
+   r.DynamicRes.OperationMode, all sg.* quality levels, resolution and camera pose.
+   Confirm PIE is foreground. Editor bThrottleCPUWhenNotForeground defaults true.
+2. Use identical PIE view size (e.g. actual 1920x1080 client viewport), fixed camera.
+   Keep gameplay time dilation at 1.0. Warm shaders, streaming, Lumen and VSM caches.
+3. Record and temporarily set r.GPUCsvStatsEnabled 1 if pass breakdown is needed.
+   Use the SAME profiler state for baseline and improved captures.
+4. Execute separately:
+     CsvProfile STARTFILE=StageBaseline.csv
+     CsvProfile FRAMES=600
+   First argument only is parsed; do not concatenate STARTFILE and FRAMES.
+   Alternate: CsvProfile START then CsvProfile STOP.
+   File defaults to Saved/Profiling/CSV/.
+5. Do not call UE/MCP tools during the 600-frame capture; those run on GameThread.
+   Local filesystem reads do not add UE task execution.
+6. After capture completion/writing, analyze with summarize_csv.py.
+   Mean FPS = 1000 / mean(FrameTime), not mean(1000/FrameTime).
+   Require p95/p99 frametime and >16.667 ms fraction, not just average FPS.
+7. Restore changed profiler CVars to their recorded values. STARTFILE persists
+   in session; reset to the captured original if needed, or use unique filenames.
+
+CSV data present in source:
+  FrameTime / GameThreadTime / RenderThreadTime / RHIThreadTime / GPUTime: ms.
+  GameThreadTime_CriticalPath / RenderThreadTime_CriticalPath: ms.
+  RHI/DrawCalls and RHI/PrimitivesDrawn.
+  GPUMem/LocalBudgetMB, LocalUsedMB, SystemBudgetMB, SystemUsedMB.
+  GPU per-pass CSV stats require r.GPUCsvStatsEnabled=1.
+  Sparse memory counters can have zero rows; the parser reports positive count.
+
+One-frame GPU breakdown:
+  Query original r.ProfileGPU.ShowUI.
+  Set r.ProfileGPU.ShowUI 0, execute ProfileGPU, read log.
+  Results always go to log; UI is suppressible. Default ShowStats includes draws,
+  dispatches, vertices and primitives. Restore original ShowUI afterwards.
+  One captured frame is diagnostic, not a stable performance result.
+
+Verified runtime A/B controls (do not blindly persist):
+  r.Lumen.HardwareRayTracing 0
+    Default in UE5.8 is 1. 0 falls back to software Lumen. Recreates render states;
+    allow warm-up, compare lighting and mesh-distance-field quality.
+  r.Lumen.DiffuseIndirect.Allow 0
+    Isolates GI cost, changes room illumination. Recreates render state.
+  r.Lumen.Reflections.Allow 0
+    Isolates reflection cost; changes metal/glass look.
+  r.Shadow.Virtual.Enable 0
+    Switches from VSM to conventional shadow rendering. Not “shadows off”.
+    Recreates render states. Compare after warm-up and restore afterwards.
+  r.Shadow.Virtual.ResolutionLodBiasLocal 1
+    +1 halves local-light shadow resolution. Lower page/work demand but quality loss.
+  r.Shadow.Virtual.SMRT.RayCountLocal 4
+    High scalability uses 4; Epic uses 8. Measure soft shadow noise/cost.
+  r.Lumen.Reflections.DownsampleFactor 2
+    High uses 2; Epic uses 1. Main reflection tracing cost control.
+  r.TSR.History.ScreenPercentage 100
+    High uses 100, Epic/Cinematic use 200. Reduces history resolution/work/memory
+    while retaining output resolution. Inspect detail stability/ghosting.
+  r.RayTracing.ForceAllRayTracingEffects 0
+    Broad diagnostic only. Default -1 (not forced), NEVER restore blindly to 1.
+
+Do not raise streaming pool to hide exhausted physical VRAM on 4 GB hardware.
+GPUMem LocalUsedMB versus actual LocalBudgetMB is the useful budget evidence.
+Reducing VSM page pool without monitoring allocation overflow can create missing
+shadows. Scene lights/shadow overlap and mesh/material budgets should be fixed first.
+
+Source anchors, all relative to Engine/Source:
+Runtime/Core/Private/ProfilingDebugging/CsvProfiler.cpp:
+  1048 command parser, 1118 CsvProfile registration, 4739 default CSV directory.
+Runtime/Launch/Private/LaunchEngineLoop.cpp:
+  1518–1525 default frame/CPU/GPU/RHI CSV timings.
+Runtime/RHI/Private/GPUProfiler.cpp:
+  112 ShowUI, 119 GPUCsvStatsEnabled, 2107 drawcalls, 2108 primitives, 2199 ProfileGPU.
+Runtime/RHI/Private/RHIStats.cpp:
+  65 GPUMem category, 91–97 memory CSV.
+Editor/UnrealEd/Private/EditorEngine.cpp:
+  1807 background render suppression, 5335 throttle.
+Editor/UnrealEd/Private/EditorPerformanceSettings.cpp:
+  21 background throttle default true.
+Runtime/Renderer/Private/Lumen/LumenHardwareRayTracingCommon.cpp: 17 hardware Lumen.
+Runtime/Renderer/Private/Lumen/LumenDiffuseIndirect.cpp: 31 GI allow.
+Runtime/Renderer/Private/Lumen/LumenReflections.cpp: 23 allow, 31 downsample factor.
+Runtime/Renderer/Private/VirtualShadowMaps/VirtualShadowMapArray.cpp:
+  161 VSM enable, 174 physical page pool, 682 local SMRT rays.
+Runtime/Renderer/Private/Shadows/ShadowSceneRenderer.cpp: 62 resolution LOD bias.
+Runtime/Renderer/Private/PostProcess/TemporalSuperResolution.cpp: 54 history percentage.
+Runtime/Renderer/Private/DeferredShadingRenderer.cpp: 294 broad RT effect override.
+Engine/Config/BaseScalability.ini: High (2) / Epic (3) values.
+

@@ -1,0 +1,22 @@
+Escape From KDの作業を自宅環境で再開する。
+最初にDocumentation/Handoff_20261113/EscapeFromKD_Handoff_20261113.txtと
+Evidence/StopState.json、Evidence/checkpoint_validation.json、
+Evidence/PerfAudit/cpu_bottleneck_handoff.txtを読み、現在のプロジェクトと照合してくれ。
+
+現在のプロジェクトを正本とし、古い資料に合わせて戻さないこと。
+今回の課題は3Fで最低60 FPS以上を目指す最適化。まだ未達成。
+OptimizedV03の椅子/PCはBlender/FBX検証済みだが、UEには未導入。
+職場での診断用描画設定は復旧し、PIEと計測処理は終了している。
+
+まず自宅PCの同条件ベースラインを測定し、敵のPIE内MeshComponentだけで
+PerPolyCollisionの有効/無効を比較して、GT Animation負荷の原因か確認してくれ。
+原因はまだ仮説。アセットのPerPolyCollisionやアニメTickを同時に変更しないこと。
+診断結果に基づいて最小変更を実装し、その後GPU/VRAM、家具候補の採用を検討する。
+60 FPSを達成したと述べる場合は、解像度/画質/測定条件と実測を示すこと。
+
+既存の射撃・ADS・リロード・リコイル、敵の命中点火花/よろけ、入学承諾書
+（はい/YES）、3Fの通行経路を維持する。HP・死亡・敵AIは追加しない。
+UE操作は通常のUnreal MCPで行い、Tool名/引数を調査してから使用する。
+HTTP直接接続の代替は使わない。未保存のユーザー変更を勝手に保存/破棄しない。
+自宅のパスやウィンドウIDに合わせ、職場の絶対パス/Slate IDを使い回さないこと。
+コミット・プッシュは依頼しない限り行わないこと。

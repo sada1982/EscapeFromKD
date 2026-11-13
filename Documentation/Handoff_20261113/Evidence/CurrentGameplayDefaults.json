@@ -1,0 +1,46 @@
+{
+  "recorded_at": "2026-11-13",
+  "source": "Normal Unreal MCP object-property reads before handoff; saved defaults, not arbitrary PIE overrides",
+  "You": {
+    "fireRate": 16,
+    "recoilPitch": 0.8,
+    "traceDistance": 15000,
+    "bulletMarkLifetime": 60,
+    "aDSFOV": 65,
+    "aDSFirstPersonFOV": 55,
+    "aDSInterpSpeed": 12,
+    "reloadAnimation": {
+      "refPath": "/Game/Characters/Mannequins/Anims/Rifle/MM_Rifle_Reload.MM_Rifle_Reload"
+    },
+    "muzzleFlashSystem": {
+      "refPath": "/Game/Effects/Weapons/Rifle/NS_RifleMuzzleFlash.NS_RifleMuzzleFlash"
+    },
+    "bulletDecalMaterial": {
+      "refPath": "/Game/Effects/Weapons/Rifle/Materials/M_BulletImpact.M_BulletImpact"
+    }
+  },
+  "BP_AdmissionRobot_CDO": {
+    "idleAnimation": {
+      "refPath": "/Game/Main/Enemy/AdmissionRobot/SK_AdmissionRobot_Anim_AdmissionRig_AN_Admission_Idle.SK_AdmissionRobot_Anim_AdmissionRig_AN_Admission_Idle"
+    },
+    "walkAnimation": {
+      "refPath": "/Game/Main/Enemy/AdmissionRobot/SK_AdmissionRobot_Anim_AdmissionRig_AN_Admission_Walk.SK_AdmissionRobot_Anim_AdmissionRig_AN_Admission_Walk"
+    },
+    "runAnimation": {
+      "refPath": "/Game/Main/Enemy/AdmissionRobot/SK_AdmissionRobot_Anim_AdmissionRig_AN_Admission_Run.SK_AdmissionRobot_Anim_AdmissionRig_AN_Admission_Run"
+    },
+    "fallAnimation": {
+      "refPath": "/Game/Main/Enemy/AdmissionRobot/SK_AdmissionRobot_Anim_AdmissionRig_AN_Admission_Fall.SK_AdmissionRobot_Anim_AdmissionRig_AN_Admission_Fall"
+    },
+    "hitReactAnimation": {
+      "refPath": "/Game/Main/Enemy/AdmissionRobot/AN_Admission_HitReact.AN_Admission_HitReact"
+    },
+    "previewEnabled": false,
+    "walkSpeed": 90,
+    "runSpeed": 180
+  },
+  "AdmissionRobot_Preview": {
+    "previewEnabled": false,
+    "previewState": 0
+  }
+}

@@ -1,0 +1,91 @@
+VRAM audit supplement — 2026-11-13
+Scope: local source/log/CSV read only. No MCP or Editor operations.
+
+Observed:
+Baseline_Classroom.csv:
+  RenderTargetPoolSize: 2936.324 MB, RenderTargetPoolUsed approx 2931.805 MB.
+  RT Geometry resident: 17.607 MB, referenced: 10.257 MB.
+  Streamed texture wanted: 9.977 MB; non-streaming mip memory: 86.719 MB.
+  Distance-field atlas: 8 MB, Nanite root allocation: 16 MB.
+  Transient GPU memory peak: 640 MB (aliasing peak: 128 MB).
+  Positive-sample local memory: approx 4056 MB; local budget approx 3368 MB.
+  Budget/used CSV fields contain zero rows, so raw row means are misleading.
+
+After TSR history 100, root executed r.DumpRenderTargetPoolMemory.
+Latest parsed dump: 2026.11.13-07.59.05:024.
+128 resource entries, sum approx 2821.959 MB.
+Largest groups:
+  Shadow.Virtual.PhysicalPagePool: 2 x 512 = 1024 MB.
+  Shadow.Virtual.HZBPhysicalPagePool: 2 x 85.375 = 170.75 MB.
+  Lumen large radiance-cache atlases: two sets of 72.25 + 64 + 32 MB.
+  Lumen SceneDirectLighting, Radiosity.SceneIndirectLighting,
+  SceneFinalLighting and Radiosity.TraceRadianceAtlas: each 2 x 64 MB.
+  Many resources have identical duplicated names/sizes and unused-frame=0.
+  Likely Editor-world + PIE-world ownership; this attribution is inference,
+  duplication itself is measured. Assets and view states may retain both sets.
+
+Exact inspection command:
+  r.DumpRenderTargetPoolMemory
+Registered by RenderCore/Private/RenderTargetPool.cpp124. Lists size/name/format/
+unused frames, sorted by descending memory.
+render_target_memory_dump.json stores parsed observed entries.
+
+Priority candidates (measure and visually validate, not automatically endorsed):
+1. r.Shadow.Virtual.MaxPhysicalPages 4096 -> 2048
+   High preset uses 2048. PhysicalPagePool is R32_UINT with two array slices;
+   static/dynamic count is always 2 in UE5.8 GetTotalAllocatedPhysicalPages().
+   Two retained world pools together should save about 512 MB, plus ~85.4 MB HZB.
+   ResolutionLodBiasLocal +1 halves local shadow resolution and can reduce page
+   demand if 2048 overflows. Do not accept missing shadows/page overflow.
+2. r.LumenScene.SurfaceCache.AtlasSize 4096 -> 3072 or 2048
+   Runtime configurable, detects size change and reallocates scene atlas.
+   2048 means 75% fewer atlas texels. The small floor may fit, but verify
+   oversubscribed warning, GI coverage and appearance before persistence.
+3. r.Lumen.ScreenProbeGather.RadianceCache.ProbeResolution 32 -> 16
+   High preset value. Runtime configurable; reduces rays per probe and atlas
+   resolution. Existing large atlas sets predict about 248 MB saving across
+   both sets. Avoid reducing ProbeAtlasResolutionInProbes just to save memory:
+   source explicitly warns overflow currently causes incorrect rendering.
+4. r.Nanite.Streaming.StreamingPoolSize 512 -> 128
+   Runtime configurable, excludes roots. Default ReservedResources=0.
+   Capture CsvCategory NaniteStreamingDetail enable first if needed:
+     NaniteStreamingDetail/StreamingPoolSizeMB
+     NaniteStreamingDetail/VisibleStreamingDataSizeMB
+   Compare against used size and streaming stability. Restore category disabled.
+   Root allocation only 16 MB, not a meaningful target.
+
+RT disabling/restart:
+r.Lumen.HardwareRayTracing 0 only selects software Lumen; it is not the global RT
+resource-release switch, and other consumers/caches can remain.
+r.RayTracing itself is ECVF_ReadOnly: permanent project-wide 0 requires restart.
+UE5.8 default r.RayTracing.EnableOnDemand=1 (also ReadOnly).
+When that is enabled, r.RayTracing.Enable 0 is runtime mutable.
+RayTracingGeometryManager.cpp1006-1019 calls EvictAllGeometries on transition and
+asserts TotalResidentSize==0. Thus BLAS eviction need not require restart.
+This does not prove every driver/RT allocation is immediately released.
+Since measured geometry residency is only 17.6 MB, RT geometry memory is not the
+main observed 0.7 GB over-budget cause. RT performance may still merit A/B.
+
+Avoid:
+- r.RenderTargetPoolMin reduction as a substitute for resizing live buffers.
+  It only evicts unused render targets; nearly all current entries are in use.
+- Texture streaming pool increase to conceal the physical VRAM overage.
+- Assuming a runtime A/B updates dormant Editor-owned view-state allocations.
+  A later Editor redraw or fresh PIE is needed to verify both sets resize.
+- Comparing a packaged game without Editor to Editor+PIE as the same memory test.
+
+Source anchors:
+RenderCore/Private/RenderTargetPool.cpp124 (dump), 374-460 (unused pool eviction).
+Renderer/Private/DeferredShadingRenderer.cpp278 (r.RayTracing ReadOnly).
+RenderCore/Private/RenderUtils.cpp49 (EnableOnDemand default1/read-only).
+Engine/Private/Rendering/RayTracingGeometryManager.cpp35,1006,1305,1732
+  (runtime enable, disable eviction, release buffers).
+Renderer/Private/Lumen/LumenScene.cpp127,1575 (atlas size/default/reallocation).
+Renderer/Private/Lumen/LumenScreenProbeGather.cpp643,657 (probe size/budget).
+Renderer/Private/VirtualShadowMaps/VirtualShadowMapArray.cpp1009-1044,1170
+  (page dimensions and 2 slices).
+Renderer/Private/VirtualShadowMaps/VirtualShadowMapCacheManager.cpp1098-1127
+  (recreate pool on size change, format R32_UINT).
+Engine/Private/Rendering/NaniteStreamingManager.cpp59,190,281,3094,3098
+  (pool size, reserved resources, detail category and stats).
+

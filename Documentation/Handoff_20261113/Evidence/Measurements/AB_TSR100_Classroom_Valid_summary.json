@@ -1,0 +1,479 @@
+{
+  "file": "C:\\Users\\motoo\\OneDrive\\デスクトップ\\まとめ\\個人業務\\ゲーム開発\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\Saved\\Profiling\\CSV\\AB_TSR100_Classroom_Valid.csv",
+  "sample_count": 600,
+  "skip_positive_frame_samples": 0,
+  "mean_fps": 28.727980882448016,
+  "one_percent_low_fps": 22.1380402742608,
+  "minimum_instantaneous_fps": 12.731555159462728,
+  "frames_over_16_667ms_percent": 100.0,
+  "columns": {
+    "FrameTime": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 34.8092685,
+      "median": 34.61715,
+      "p95": 36.763145,
+      "p99": 37.734680999999995,
+      "max": 78.545
+    },
+    "GameThreadTime": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 34.7395245,
+      "median": 34.58945,
+      "p95": 36.479045,
+      "p99": 37.904945,
+      "max": 39.1401
+    },
+    "RenderThreadTime": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.027720666666666668,
+      "median": 0.0012,
+      "p95": 0.0021049999999999953,
+      "p99": 0.006307999999999992,
+      "max": 8.1874
+    },
+    "GPUTime": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 30.171184333333333,
+      "median": 30.154600000000002,
+      "p95": 31.198125,
+      "p99": 31.602847999999998,
+      "max": 32.0264
+    },
+    "RHIThreadTime": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.15817483333333332,
+      "median": 0.14329999999999998,
+      "p95": 0.25681499999999996,
+      "p99": 0.28692799999999996,
+      "max": 0.3414
+    },
+    "GameThreadTime_CriticalPath": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 34.740429166666665,
+      "median": 34.58945,
+      "p95": 36.479045,
+      "p99": 37.904954,
+      "max": 39.1526
+    },
+    "RenderThreadTime_CriticalPath": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.027847833333333332,
+      "median": 0.0012,
+      "p95": 0.0021049999999999953,
+      "p99": 0.006307999999999992,
+      "max": 8.1946
+    },
+    "RHI/DrawCalls": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 324.875,
+      "median": 324.0,
+      "p95": 330.0,
+      "p99": 337.05999999999995,
+      "max": 352.0
+    },
+    "RHI/PrimitivesDrawn": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 254209.53666666665,
+      "median": 248027.0,
+      "p95": 300066.0,
+      "p99": 376921.0699999997,
+      "max": 516664.0
+    },
+    "GPUMem/LocalBudgetMB": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 3367.7,
+      "median": 3367.7,
+      "p95": 3367.7,
+      "p99": 3367.7,
+      "max": 3367.7
+    },
+    "GPUMem/LocalUsedMB": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 3943.7656,
+      "median": 3943.7656,
+      "p95": 3943.7656,
+      "p99": 3943.7656,
+      "max": 3943.7656
+    },
+    "GPUMem/SystemBudgetMB": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 15488.0352,
+      "median": 15488.0352,
+      "p95": 15488.0352,
+      "p99": 15488.0352,
+      "max": 15488.0352
+    },
+    "GPUMem/SystemUsedMB": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 372.0870125,
+      "median": 372.0742,
+      "p95": 372.5117,
+      "p99": 372.6992,
+      "max": 372.6992
+    },
+    "GPU/RayTracingGeometry": {
+      "samples": 600,
+      "positive_samples": 599,
+      "mean": 0.00035099999999999997,
+      "median": 0.0003,
+      "p95": 0.0009,
+      "p99": 0.0014,
+      "max": 0.0065
+    },
+    "GPU/DistanceFields": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.03219,
+      "median": 0.0312,
+      "p95": 0.03800999999999999,
+      "p99": 0.041004,
+      "max": 0.044
+    },
+    "GPU/AllocateRendertargets": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.0007303333333333334,
+      "median": 0.0007,
+      "p95": 0.0008,
+      "p99": 0.001000999999999999,
+      "max": 0.0083
+    },
+    "GPU/VisibilityCommands": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.0007496666666666667,
+      "median": 0.0007,
+      "p95": 0.0009049999999999954,
+      "p99": 0.0012,
+      "max": 0.0083
+    },
+    "GPU/UpdateLumenSceneBuffers": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.002882333333333333,
+      "median": 0.0028,
+      "p95": 0.0031,
+      "p99": 0.0077009999999999995,
+      "max": 0.0108
+    },
+    "GPU/GPUSceneUpdate": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.015874666666666665,
+      "median": 0.0151,
+      "p95": 0.0211,
+      "p99": 0.024806999999999992,
+      "max": 0.0282
+    },
+    "GPU/NaniteStreaming": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.000987,
+      "median": 0.0007,
+      "p95": 0.0018,
+      "p99": 0.002100999999999999,
+      "max": 0.0061
+    },
+    "GPU/NaniteReadback": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.10292116666666666,
+      "median": 0.1021,
+      "p95": 0.11961999999999998,
+      "p99": 0.129704,
+      "max": 0.1397
+    },
+    "GPU/FXSystemPreRender": {
+      "samples": 600,
+      "positive_samples": 240,
+      "mean": 0.0004096666666666667,
+      "median": 0.0,
+      "p95": 0.0011,
+      "p99": 0.0011,
+      "max": 0.0011
+    },
+    "GPU/BuildRenderingCommandsDeferred": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.045838833333333336,
+      "median": 0.0451,
+      "p95": 0.0522,
+      "p99": 0.057201999999999996,
+      "max": 0.0665
+    },
+    "GPU/Prepass": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.05164833333333333,
+      "median": 0.050949999999999995,
+      "p95": 0.059705,
+      "p99": 0.06410300000000001,
+      "max": 0.0703
+    },
+    "GPU/RenderVelocities": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.26273766666666665,
+      "median": 0.2605,
+      "p95": 0.29772,
+      "p99": 0.31852199999999997,
+      "max": 0.3447
+    },
+    "GPU/NaniteVisBuffer": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.8009205,
+      "median": 0.8004,
+      "p95": 0.836,
+      "p99": 0.8509359999999999,
+      "max": 0.8764
+    },
+    "GPU/NaniteBasePass": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 1.1542196666666666,
+      "median": 1.15355,
+      "p95": 1.2309050000000001,
+      "p99": 1.255439,
+      "max": 1.2922
+    },
+    "GPU/HZB": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.07565966666666667,
+      "median": 0.0748,
+      "p95": 0.0819,
+      "p99": 0.08600999999999999,
+      "max": 0.0953
+    },
+    "GPU/BeginOcclusionTests": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.0095455,
+      "median": 0.0072,
+      "p95": 0.019544999999999958,
+      "p99": 0.0226,
+      "max": 0.0317
+    },
+    "GPU/LightGrid": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.04720233333333333,
+      "median": 0.0458,
+      "p95": 0.0588,
+      "p99": 0.068601,
+      "max": 0.0758
+    },
+    "GPU/LightFunctionAtlasGeneration": {
+      "samples": 600,
+      "positive_samples": 56,
+      "mean": 9.533333333333334e-05,
+      "median": 0.0,
+      "p95": 0.001,
+      "p99": 0.0011,
+      "max": 0.0011
+    },
+    "GPU/LumenSceneUpdate": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.37294516666666666,
+      "median": 0.3563,
+      "p95": 0.46015999999999996,
+      "p99": 0.5913299999999988,
+      "max": 0.9249
+    },
+    "GPU/RayTracingDynamicGeometry": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.7086083333333333,
+      "median": 0.6985,
+      "p95": 0.8373149999999999,
+      "p99": 0.898955,
+      "max": 1.0883
+    },
+    "GPU/RayTracingScene": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.14391166666666666,
+      "median": 0.1432,
+      "p95": 0.15510999999999997,
+      "p99": 0.161605,
+      "max": 0.1776
+    },
+    "GPU/LumenScreenProbeGather": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.0381335,
+      "median": 0.0371,
+      "p95": 0.047805,
+      "p99": 0.0527,
+      "max": 0.0594
+    },
+    "GPU/Basepass": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.4655148333333333,
+      "median": 0.4572,
+      "p95": 0.54745,
+      "p99": 0.58668,
+      "max": 0.6197
+    },
+    "GPU/RenderDeferredLighting": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 1.6352456666666666,
+      "median": 0.80855,
+      "p95": 2.6252999999999997,
+      "p99": 2.656122,
+      "max": 2.7006
+    },
+    "GPU/ShadowDepths": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 2.3805675,
+      "median": 2.57805,
+      "p95": 2.94156,
+      "p99": 3.068931,
+      "max": 3.1815
+    },
+    "GPU/LumenReflections": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 1.7560053333333334,
+      "median": 1.7776999999999998,
+      "p95": 1.963005,
+      "p99": 2.015382,
+      "max": 2.0685
+    },
+    "GPU/TranslucentLighting": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.25020366666666666,
+      "median": 0.2509,
+      "p95": 0.26634499999999994,
+      "p99": 0.27240899999999996,
+      "max": 0.2847
+    },
+    "GPU/Lights": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 10.44715,
+      "median": 10.77605,
+      "p95": 11.751165,
+      "p99": 11.969766,
+      "max": 12.1548
+    },
+    "GPU/TemporalSuperResolution": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 2.4711595,
+      "median": 2.47195,
+      "p95": 2.5121450000000003,
+      "p99": 2.535453,
+      "max": 2.6816
+    },
+    "GPU/PostRenderOpsFX": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.0029095,
+      "median": 0.0024,
+      "p95": 0.0044,
+      "p99": 0.005000999999999999,
+      "max": 0.006
+    },
+    "GPU/FXSystemPostRenderOpaque": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.0037671666666666665,
+      "median": 0.0031,
+      "p95": 0.0058,
+      "p99": 0.0063,
+      "max": 0.0066
+    },
+    "GPU/Translucency": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.42518466666666666,
+      "median": 0.32265,
+      "p95": 0.5734,
+      "p99": 0.581707,
+      "max": 0.6177
+    },
+    "GPU/PostProcessing": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.5760656666666667,
+      "median": 0.5760000000000001,
+      "p95": 0.58475,
+      "p99": 0.595,
+      "max": 0.6297
+    },
+    "GPU/MotionBlur": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.19926416666666666,
+      "median": 0.1996,
+      "p95": 0.2018,
+      "p99": 0.20484099999999997,
+      "max": 0.213
+    },
+    "GPU/VirtualTextureUpdate": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.054293666666666664,
+      "median": 0.054,
+      "p95": 0.05851499999999999,
+      "p99": 0.064002,
+      "max": 0.0695
+    },
+    "GPU/FrameRenderFinish": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.013483333333333333,
+      "median": 0.0125,
+      "p95": 0.024204999999999994,
+      "p99": 0.026202999999999997,
+      "max": 0.036
+    },
+    "GPU/SlateUI": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 0.918038,
+      "median": 0.9159,
+      "p95": 0.950415,
+      "p99": 0.9628519999999999,
+      "max": 1.0013
+    },
+    "GPU/Unaccounted": {
+      "samples": 600,
+      "positive_samples": 600,
+      "mean": 4.8639915,
+      "median": 4.81325,
+      "p95": 5.29735,
+      "p99": 5.663872999999999,
+      "max": 11.6328
+    },
+    "GPU/BuildRenderingCommands": {
+      "samples": 600,
+      "positive_samples": 50,
+      "mean": 0.0010243333333333333,
+      "median": 0.0,
+      "p95": 0.0113,
+      "p99": 0.013408999999999992,
+      "max": 0.0185
+    }
+  }
+}

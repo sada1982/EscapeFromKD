@@ -1,0 +1,227 @@
+{
+  "Baseline_Classroom.csv": {
+    "frames": 600,
+    "all_metrics": {
+      "FrameTime": 42.0843,
+      "GPUTime": 40.5934,
+      "MaxFrameTime": 33.3333,
+      "GameThreadTime_CriticalPath": 31.613,
+      "GameThreadTime": 31.6116,
+      "Exclusive/RenderThread/EventWait": 27.9187,
+      "Exclusive/GameThread/Animation": 23.3626,
+      "CPUUsage_Idle": 22.6485,
+      "Exclusive/GameThread/EventWait": 10.5154,
+      "Exclusive/RenderThread/EventWait/Visibility": 6.5335,
+      "Exclusive/GameThread/UI": 3.9944,
+      "CPUUsage_Process": 2.681,
+      "Slate/GameThread/DrawPrePass": 1.9982,
+      "RHIThreadTime": 0.2969,
+      "Exclusive/GameThread/DeferredTickTime": 0.2061,
+      "Exclusive/GameThread/ViewportMisc": 0.2015,
+      "Exclusive/GameThread/WorldTickMisc": 0.1887,
+      "Exclusive/GameThread/Tickables": 0.1883,
+      "Exclusive/GameThread/TickActors": 0.1842,
+      "Exclusive/GameThread/EventWait/PostPhysics": 0.1662,
+      "Exclusive/GameThread/CharacterMovement": 0.1291,
+      "Slate/GameThread/DrawWindows_Private": 0.1185,
+      "Slate/GameThread/TickPlatform": 0.0995,
+      "Exclusive/GameThread/Physics": 0.0933,
+      "Exclusive/GameThread/DebugHUD": 0.0828,
+      "Exclusive/GameThread/Effects": 0.0774,
+      "Exclusive/GameThread/EndOfFrameUpdates": 0.0725,
+      "Exclusive/GameThread/PlayerControllerTick": 0.071,
+      "Exclusive/GameThread/EOSSDK": 0.0653,
+      "Exclusive/GameThread/RenderAssetStreaming": 0.0502
+    },
+    "frame_buckets": {
+      "0-16.667": 0,
+      "16.667-25": 0,
+      "25-33.333": 11,
+      "33.333-50": 568,
+      "50-100": 21,
+      "100-1000": 0
+    },
+    "chunks": [
+      {
+        "frame_mean": 42.064,
+        "gpu_mean": 40.506,
+        "gt_mean": 31.282
+      },
+      {
+        "frame_mean": 42.022,
+        "gpu_mean": 40.562,
+        "gt_mean": 31.581
+      },
+      {
+        "frame_mean": 42.283,
+        "gpu_mean": 40.793,
+        "gt_mean": 31.744
+      },
+      {
+        "frame_mean": 41.973,
+        "gpu_mean": 40.542,
+        "gt_mean": 31.69
+      },
+      {
+        "frame_mean": 41.909,
+        "gpu_mean": 40.492,
+        "gt_mean": 31.508
+      },
+      {
+        "frame_mean": 42.254,
+        "gpu_mean": 40.666,
+        "gt_mean": 31.864
+      }
+    ]
+  },
+  "AB_TSR100_Classroom_Valid.csv": {
+    "frames": 600,
+    "all_metrics": {
+      "FrameTime": 34.8093,
+      "GameThreadTime_CriticalPath": 34.7404,
+      "GameThreadTime": 34.7395,
+      "MaxFrameTime": 33.3333,
+      "GPUTime": 30.1712,
+      "Exclusive/RenderThread/EventWait/Visibility": 26.9059,
+      "Exclusive/GameThread/Animation": 25.399,
+      "CPUUsage_Idle": 20.9586,
+      "Exclusive/GameThread/UI": 5.0666,
+      "CPUUsage_Process": 3.2821,
+      "Slate/GameThread/DrawPrePass": 2.5054,
+      "Exclusive/GameThread/ViewportMisc": 0.2321,
+      "Exclusive/GameThread/WorldTickMisc": 0.213,
+      "Exclusive/GameThread/Tickables": 0.1964,
+      "Exclusive/GameThread/TickActors": 0.1823,
+      "Exclusive/GameThread/DeferredTickTime": 0.1787,
+      "Slate/GameThread/TickPlatform": 0.1656,
+      "RHIThreadTime": 0.1582,
+      "Slate/GameThread/DrawWindows_Private": 0.1493,
+      "Exclusive/GameThread/EventWait/PostPhysics": 0.14,
+      "Exclusive/GameThread/CharacterMovement": 0.1203,
+      "Exclusive/GameThread/DebugHUD": 0.0984,
+      "Exclusive/GameThread/Physics": 0.0927,
+      "Exclusive/GameThread/Effects": 0.0798,
+      "Exclusive/GameThread/EndOfFrameUpdates": 0.0788,
+      "Exclusive/GameThread/PlayerControllerTick": 0.0654,
+      "Exclusive/GameThread/EOSSDK": 0.0598,
+      "Exclusive/GameThread/RenderAssetStreaming": 0.0526,
+      "Slate/GameThread/PaintFastPath": 0.0511
+    },
+    "frame_buckets": {
+      "0-16.667": 0,
+      "16.667-25": 0,
+      "25-33.333": 47,
+      "33.333-50": 552,
+      "50-100": 1,
+      "100-1000": 0
+    },
+    "chunks": [
+      {
+        "frame_mean": 35.234,
+        "gpu_mean": 30.285,
+        "gt_mean": 34.824
+      },
+      {
+        "frame_mean": 34.615,
+        "gpu_mean": 30.162,
+        "gt_mean": 34.614
+      },
+      {
+        "frame_mean": 34.608,
+        "gpu_mean": 30.201,
+        "gt_mean": 34.61
+      },
+      {
+        "frame_mean": 34.861,
+        "gpu_mean": 30.137,
+        "gt_mean": 34.858
+      },
+      {
+        "frame_mean": 34.75,
+        "gpu_mean": 30.124,
+        "gt_mean": 34.743
+      },
+      {
+        "frame_mean": 34.788,
+        "gpu_mean": 30.118,
+        "gt_mean": 34.788
+      }
+    ]
+  },
+  "AB_Memory_Classroom.csv": {
+    "frames": 600,
+    "all_metrics": {
+      "FrameTime": 44.6608,
+      "GameThreadTime_CriticalPath": 44.6578,
+      "GameThreadTime": 44.6564,
+      "Exclusive/RenderThread/EventWait/Visibility": 34.7508,
+      "MaxFrameTime": 33.3333,
+      "Exclusive/GameThread/Animation": 32.4519,
+      "GPUTime": 25.3271,
+      "CPUUsage_Idle": 20.4544,
+      "Exclusive/GameThread/UI": 5.7113,
+      "CPUUsage_Process": 3.2417,
+      "Slate/GameThread/DrawPrePass": 2.4857,
+      "Exclusive/GameThread/ViewportMisc": 0.2616,
+      "Exclusive/GameThread/WorldTickMisc": 0.2468,
+      "Exclusive/GameThread/TickActors": 0.225,
+      "Exclusive/GameThread/Tickables": 0.2174,
+      "Exclusive/GameThread/DeferredTickTime": 0.2104,
+      "RHIThreadTime": 0.1903,
+      "Slate/GameThread/DrawWindows_Private": 0.1847,
+      "Exclusive/GameThread/EventWait/PostPhysics": 0.1455,
+      "Exclusive/GameThread/CharacterMovement": 0.1392,
+      "Exclusive/GameThread/DebugHUD": 0.1072,
+      "Slate/GameThread/TickPlatform": 0.1069,
+      "Exclusive/GameThread/Physics": 0.1023,
+      "Exclusive/GameThread/EndOfFrameUpdates": 0.0934,
+      "Exclusive/GameThread/Effects": 0.0925,
+      "RenderThreadTime_CriticalPath": 0.0885,
+      "RenderThreadTime": 0.0829,
+      "Exclusive/GameThread/PlayerControllerTick": 0.0749,
+      "Exclusive/GameThread/EOSSDK": 0.0707,
+      "Exclusive/GameThread/RenderAssetStreaming": 0.0627,
+      "Slate/GameThread/PaintFastPath": 0.0611
+    },
+    "frame_buckets": {
+      "0-16.667": 0,
+      "16.667-25": 0,
+      "25-33.333": 0,
+      "33.333-50": 591,
+      "50-100": 9,
+      "100-1000": 0
+    },
+    "chunks": [
+      {
+        "frame_mean": 44.614,
+        "gpu_mean": 25.339,
+        "gt_mean": 44.639
+      },
+      {
+        "frame_mean": 45.253,
+        "gpu_mean": 25.336,
+        "gt_mean": 45.233
+      },
+      {
+        "frame_mean": 44.247,
+        "gpu_mean": 25.358,
+        "gt_mean": 44.23
+      },
+      {
+        "frame_mean": 44.565,
+        "gpu_mean": 25.281,
+        "gt_mean": 44.566
+      },
+      {
+        "frame_mean": 44.54,
+        "gpu_mean": 25.32,
+        "gt_mean": 44.551
+      },
+      {
+        "frame_mean": 44.746,
+        "gpu_mean": 25.327,
+        "gt_mean": 44.719
+      }
+    ]
+  }
+}

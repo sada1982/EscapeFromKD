@@ -1,0 +1,3039 @@
+{
+  "audit_date": "2026-11-13",
+  "audit_scope": "Read-only normal Unreal MCP graph queries; only this audit file written. No PIE or UI operations.",
+  "baseline_file": "Before/You_Graphs.json",
+  "baseline_file_sha256": "947eba4a23b974bc43e6042b583b4f74d3d39c7b6d27ccf632277002c32e2208",
+  "you_graphs_before": 13,
+  "you_graphs_current": 13,
+  "you_graphs": [
+    {
+      "graph": "/Game/Main/Character/You.You:UserConstructionScript",
+      "nodes_before": 1,
+      "nodes_after": 1,
+      "sha256_before": "6a082a892ae882313b44e09cbce04f9baf3c9e7714d77b5e774dc3e32e7ec92e",
+      "sha256_after": "6a082a892ae882313b44e09cbce04f9baf3c9e7714d77b5e774dc3e32e7ec92e",
+      "added_nodes": [],
+      "removed_nodes": [],
+      "changed_existing_nodes": [],
+      "unchanged": true
+    },
+    {
+      "graph": "/Game/Main/Character/You.You:Move",
+      "nodes_before": 9,
+      "nodes_after": 9,
+      "sha256_before": "7181e05e387435cce459fd675c9d5bde862c42acaa66587b1ed9402d3e75112f",
+      "sha256_after": "7181e05e387435cce459fd675c9d5bde862c42acaa66587b1ed9402d3e75112f",
+      "added_nodes": [],
+      "removed_nodes": [],
+      "changed_existing_nodes": [],
+      "unchanged": true
+    },
+    {
+      "graph": "/Game/Main/Character/You.You:Aim",
+      "nodes_before": 5,
+      "nodes_after": 5,
+      "sha256_before": "96e9df099abe80d8369ee718da291a32a3d952fd224e26b4111a618635ccf3ec",
+      "sha256_after": "96e9df099abe80d8369ee718da291a32a3d952fd224e26b4111a618635ccf3ec",
+      "added_nodes": [],
+      "removed_nodes": [],
+      "changed_existing_nodes": [],
+      "unchanged": true
+    },
+    {
+      "graph": "/Game/Main/Character/You.You:EquipRifle",
+      "nodes_before": 25,
+      "nodes_after": 25,
+      "sha256_before": "df15b7360029c8a4b4ed3fc1114d7d5b5a38ed43a706ad2b5911398d9f878303",
+      "sha256_after": "df15b7360029c8a4b4ed3fc1114d7d5b5a38ed43a706ad2b5911398d9f878303",
+      "added_nodes": [],
+      "removed_nodes": [],
+      "changed_existing_nodes": [],
+      "unchanged": true
+    },
+    {
+      "graph": "/Game/Main/Character/You.You:UpdateADS",
+      "nodes_before": 34,
+      "nodes_after": 34,
+      "sha256_before": "62a6d488c6fb279816fc4314b80da880b9e110eadbc991fb8b23f3e85ca96e3e",
+      "sha256_after": "62a6d488c6fb279816fc4314b80da880b9e110eadbc991fb8b23f3e85ca96e3e",
+      "added_nodes": [],
+      "removed_nodes": [],
+      "changed_existing_nodes": [],
+      "unchanged": true
+    },
+    {
+      "graph": "/Game/Main/Character/You.You:Reload",
+      "nodes_before": 16,
+      "nodes_after": 16,
+      "sha256_before": "d45b58a63ffb74feb4115a1938d3843c47c7d308a7e5543382f74b7e1a6e2b03",
+      "sha256_after": "d45b58a63ffb74feb4115a1938d3843c47c7d308a7e5543382f74b7e1a6e2b03",
+      "added_nodes": [],
+      "removed_nodes": [],
+      "changed_existing_nodes": [],
+      "unchanged": true
+    },
+    {
+      "graph": "/Game/Main/Character/You.You:UpdateReloadStatus",
+      "nodes_before": 15,
+      "nodes_after": 15,
+      "sha256_before": "7eb81d7ab7663700d439a02e69e3567d68581f2043e1e79878ec6c96d63387fb",
+      "sha256_after": "7eb81d7ab7663700d439a02e69e3567d68581f2043e1e79878ec6c96d63387fb",
+      "added_nodes": [],
+      "removed_nodes": [],
+      "changed_existing_nodes": [],
+      "unchanged": true
+    },
+    {
+      "graph": "/Game/Main/Character/You.You:StartFiring",
+      "nodes_before": 9,
+      "nodes_after": 9,
+      "sha256_before": "f5aa0a178ef56e1189769dd29bf6c78cb16a3bf20221c0624ffcef016f848b7b",
+      "sha256_after": "f5aa0a178ef56e1189769dd29bf6c78cb16a3bf20221c0624ffcef016f848b7b",
+      "added_nodes": [],
+      "removed_nodes": [],
+      "changed_existing_nodes": [],
+      "unchanged": true
+    },
+    {
+      "graph": "/Game/Main/Character/You.You:StopFiring",
+      "nodes_before": 4,
+      "nodes_after": 4,
+      "sha256_before": "fc046622e4ff867d6371cc7d59b407362f9ac08453dbc7d8e3cf0b19d7bfcac0",
+      "sha256_after": "fc046622e4ff867d6371cc7d59b407362f9ac08453dbc7d8e3cf0b19d7bfcac0",
+      "added_nodes": [],
+      "removed_nodes": [],
+      "changed_existing_nodes": [],
+      "unchanged": true
+    },
+    {
+      "graph": "/Game/Main/Character/You.You:Fire",
+      "nodes_before": 35,
+      "nodes_after": 35,
+      "sha256_before": "26cf9cd1517cf0deca3415e3fed2a39d8f8cbd081d2e8f8505f6dfc3271761d6",
+      "sha256_after": "26cf9cd1517cf0deca3415e3fed2a39d8f8cbd081d2e8f8505f6dfc3271761d6",
+      "added_nodes": [],
+      "removed_nodes": [],
+      "changed_existing_nodes": [],
+      "unchanged": true
+    },
+    {
+      "graph": "/Game/Main/Character/You.You:TraceShot",
+      "nodes_before": 41,
+      "nodes_after": 43,
+      "sha256_before": "be8ace1f0eefc2e9a425baab9fb7b5ba0fb9d01a449178b00996461de65b6768",
+      "sha256_after": "8acf05fb6fee64650176a689b6dcba57a807f6c936c024ff807c73fffd351a76",
+      "added_nodes": [
+        "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_22",
+        "/Game/Main/Character/You.You:TraceShot.K2Node_DynamicCast_1"
+      ],
+      "removed_nodes": [],
+      "changed_existing_nodes": [
+        "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_15",
+        "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_18",
+        "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_21",
+        "/Game/Main/Character/You.You:TraceShot.K2Node_IfThenElse_1",
+        "/Game/Main/Character/You.You:TraceShot.K2Node_PromotableOperator_5"
+      ],
+      "unchanged": false
+    },
+    {
+      "graph": "/Game/Main/Character/You.You:InitializeReticle",
+      "nodes_before": 6,
+      "nodes_after": 6,
+      "sha256_before": "b7f843451bed90b748a29f18ed0a43a66222065a050ccec085a92eb26f0da47d",
+      "sha256_after": "b7f843451bed90b748a29f18ed0a43a66222065a050ccec085a92eb26f0da47d",
+      "added_nodes": [],
+      "removed_nodes": [],
+      "changed_existing_nodes": [],
+      "unchanged": true
+    },
+    {
+      "graph": "/Game/Main/Character/You.You:EventGraph",
+      "nodes_before": 29,
+      "nodes_after": 29,
+      "sha256_before": "c4948e10b226f7d6b335d7c8f2edd1d76160e09f08ab1b658cc46674d133987e",
+      "sha256_after": "c4948e10b226f7d6b335d7c8f2edd1d76160e09f08ab1b658cc46674d133987e",
+      "added_nodes": [],
+      "removed_nodes": [],
+      "changed_existing_nodes": [],
+      "unchanged": true
+    }
+  ],
+  "other_12_graphs_unchanged": true,
+  "trace_shot": {
+    "all_old_nodes_preserved": true,
+    "added_node_count": 2,
+    "added_nodes": [
+      {
+        "output_pins": [
+          {
+            "value": "",
+            "connected_pins": [
+              {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_18"
+                }
+              }
+            ],
+            "pin_id": {
+              "direction": "EGPD_Output",
+              "index_id": 0,
+              "node": {
+                "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_22"
+              }
+            },
+            "type_id": "実行",
+            "name": "then"
+          }
+        ],
+        "input_pins": [
+          {
+            "value": "",
+            "connected_pins": [
+              {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_DynamicCast_1"
+                }
+              }
+            ],
+            "pin_id": {
+              "direction": "EGPD_Input",
+              "index_id": 0,
+              "node": {
+                "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_22"
+              }
+            },
+            "type_id": "実行",
+            "name": "execute"
+          },
+          {
+            "value": "",
+            "connected_pins": [
+              {
+                "direction": "EGPD_Output",
+                "index_id": 2,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_DynamicCast_1"
+                }
+              }
+            ],
+            "pin_id": {
+              "direction": "EGPD_Input",
+              "index_id": 1,
+              "node": {
+                "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_22"
+              }
+            },
+            "type_id": "BP Admission Robot オブジェクト参照",
+            "name": "self"
+          },
+          {
+            "value": "0, 0, 0",
+            "connected_pins": [
+              {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_PromotableOperator_5"
+                }
+              }
+            ],
+            "pin_id": {
+              "direction": "EGPD_Input",
+              "index_id": 2,
+              "node": {
+                "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_22"
+              }
+            },
+            "type_id": "Vector",
+            "name": "ImpactPoint"
+          },
+          {
+            "value": "0, 0, 0",
+            "connected_pins": [
+              {
+                "direction": "EGPD_Output",
+                "index_id": 7,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_15"
+                }
+              }
+            ],
+            "pin_id": {
+              "direction": "EGPD_Input",
+              "index_id": 3,
+              "node": {
+                "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_22"
+              }
+            },
+            "type_id": "Vector",
+            "name": "ImpactNormal"
+          }
+        ],
+        "position": {
+          "x": 3000,
+          "y": 1900
+        },
+        "node": {
+          "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_22"
+        },
+        "type_id": "|ReactToBulletHit"
+      },
+      {
+        "output_pins": [
+          {
+            "value": "",
+            "connected_pins": [
+              {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_22"
+                }
+              }
+            ],
+            "pin_id": {
+              "direction": "EGPD_Output",
+              "index_id": 0,
+              "node": {
+                "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_DynamicCast_1"
+              }
+            },
+            "type_id": "実行",
+            "name": "then"
+          },
+          {
+            "value": "",
+            "connected_pins": [
+              {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_21"
+                }
+              }
+            ],
+            "pin_id": {
+              "direction": "EGPD_Output",
+              "index_id": 1,
+              "node": {
+                "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_DynamicCast_1"
+              }
+            },
+            "type_id": "実行",
+            "name": "CastFailed"
+          },
+          {
+            "value": "",
+            "connected_pins": [
+              {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_22"
+                }
+              }
+            ],
+            "pin_id": {
+              "direction": "EGPD_Output",
+              "index_id": 2,
+              "node": {
+                "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_DynamicCast_1"
+              }
+            },
+            "type_id": "BP Admission Robot オブジェクト参照",
+            "name": "AsBP Admission Robot"
+          }
+        ],
+        "input_pins": [
+          {
+            "value": "",
+            "connected_pins": [
+              {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_IfThenElse_1"
+                }
+              }
+            ],
+            "pin_id": {
+              "direction": "EGPD_Input",
+              "index_id": 0,
+              "node": {
+                "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_DynamicCast_1"
+              }
+            },
+            "type_id": "実行",
+            "name": "execute"
+          },
+          {
+            "value": "",
+            "connected_pins": [
+              {
+                "direction": "EGPD_Output",
+                "index_id": 9,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_15"
+                }
+              }
+            ],
+            "pin_id": {
+              "direction": "EGPD_Input",
+              "index_id": 1,
+              "node": {
+                "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_DynamicCast_1"
+              }
+            },
+            "type_id": "オブジェクト参照",
+            "name": "Object"
+          }
+        ],
+        "position": {
+          "x": 2600,
+          "y": 1900
+        },
+        "node": {
+          "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_DynamicCast_1"
+        },
+        "type_id": "ユーティリティ|Casting|CastToBP_AdmissionRobot"
+      }
+    ],
+    "existing_node_changes": [
+      {
+        "path": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_15",
+        "type": "コリジョン|BreakHitResult",
+        "position_before": {
+          "x": 2200,
+          "y": 840
+        },
+        "position_after": {
+          "x": 2200,
+          "y": 840
+        },
+        "pin_changes": [
+          {
+            "side": "output_pins",
+            "index": 7,
+            "before": {
+              "value": "0, 0, 0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_16"
+                  }
+                },
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_PromotableOperator_4"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 7,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_15"
+                }
+              },
+              "type_id": "Vector",
+              "name": "ImpactNormal"
+            },
+            "after": {
+              "value": "0, 0, 0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_16"
+                  }
+                },
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 3,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_22"
+                  }
+                },
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_PromotableOperator_4"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 7,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_15"
+                }
+              },
+              "type_id": "Vector",
+              "name": "ImpactNormal"
+            }
+          },
+          {
+            "side": "output_pins",
+            "index": 9,
+            "before": {
+              "value": "",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 9,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_15"
+                }
+              },
+              "type_id": "アクタ オブジェクト参照",
+              "name": "HitActor"
+            },
+            "after": {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_DynamicCast_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 9,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_15"
+                }
+              },
+              "type_id": "アクタ オブジェクト参照",
+              "name": "HitActor"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_18",
+        "type": "レンダリング|デカール|SpawnDecalAttached",
+        "position_before": {
+          "x": 2650,
+          "y": 1050
+        },
+        "position_after": {
+          "x": 2650,
+          "y": 1050
+        },
+        "pin_changes": [
+          {
+            "side": "input_pins",
+            "index": 0,
+            "before": {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_21"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_18"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            "after": {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_21"
+                  }
+                },
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_22"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_18"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_21",
+        "type": "Niagara|SpawnSystemAttached",
+        "position_before": {
+          "x": 2850,
+          "y": 100
+        },
+        "position_after": {
+          "x": 2850,
+          "y": 100
+        },
+        "pin_changes": [
+          {
+            "side": "input_pins",
+            "index": 0,
+            "before": {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_IfThenElse_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_21"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            "after": {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_DynamicCast_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_21"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/Game/Main/Character/You.You:TraceShot.K2Node_IfThenElse_1",
+        "type": "ユーティリティ|フロー制御|ブランチ",
+        "position_before": {
+          "x": 2200,
+          "y": 1050
+        },
+        "position_after": {
+          "x": 2200,
+          "y": 1050
+        },
+        "pin_changes": [
+          {
+            "side": "output_pins",
+            "index": 0,
+            "before": {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_21"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_IfThenElse_1"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            },
+            "after": {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_DynamicCast_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_IfThenElse_1"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/Game/Main/Character/You.You:TraceShot.K2Node_PromotableOperator_5",
+        "type": "演算|ベクター|vector+vector",
+        "position_before": {
+          "x": 3000,
+          "y": 1300
+        },
+        "position_after": {
+          "x": 3000,
+          "y": 1300
+        },
+        "pin_changes": [
+          {
+            "side": "output_pins",
+            "index": 0,
+            "before": {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 4,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_21"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_PromotableOperator_5"
+                }
+              },
+              "type_id": "Vector",
+              "name": "ReturnValue"
+            },
+            "after": {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 4,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_21"
+                  }
+                },
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 2,
+                  "node": {
+                    "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_CallFunction_22"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Character/You.You:TraceShot.K2Node_PromotableOperator_5"
+                }
+              },
+              "type_id": "Vector",
+              "name": "ReturnValue"
+            }
+          }
+        ]
+      }
+    ],
+    "existing_node_types_pin_values_and_positions_preserved": true,
+    "existing_node_types_and_pin_values_preserved": true,
+    "cast_failure_routes_to_existing_generic_fx": true,
+    "enemy_reaction_success_rejoins_existing_decal": true
+  },
+  "enemy_hit_graphs": [
+    {
+      "graph": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit",
+      "node_count": 18,
+      "node_types": [
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_FunctionEntry_0",
+          "type": "|ReactToBulletHit"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_2",
+          "type": "演算|ローテータ|MakeRotFromZ"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3",
+          "type": "Niagara|SpawnSystemAtLocation"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_0",
+          "type": "|GetPreviewState"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_0",
+          "type": "演算|Integer|NotEqual(Integer)"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_1",
+          "type": "|GetHitReactAnimation"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_5",
+          "type": "ユーティリティ|IsValid"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CommutativeAssociativeBinaryOperator_0",
+          "type": "演算|ブーリアン|ANDBoolean"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_IfThenElse_0",
+          "type": "ユーティリティ|フロー制御|ブランチ"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_0",
+          "type": "|SetIsHitReacting"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_6",
+          "type": "ユーティリティ|タイム|GetGameTimeInSeconds"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_7",
+          "type": "Animation|GetPlayLength"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_1",
+          "type": "演算|Float|float+float"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_1",
+          "type": "|SetHitReactEndTime"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_2",
+          "type": "|GetCharacterMovement"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_8",
+          "type": "コンポーネント|ムーブメント|StopMovementImmediately"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_3",
+          "type": "|GetMesh"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_9",
+          "type": "コンポーネント|アニメーション|PlayAnimation"
+        }
+      ],
+      "forbidden_hp_damage_fall_matches": [],
+      "nodes_snapshot": [
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_FunctionEntry_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            },
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 2,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_FunctionEntry_0"
+                }
+              },
+              "type_id": "Vector",
+              "name": "ImpactPoint"
+            },
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_2"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 2,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_FunctionEntry_0"
+                }
+              },
+              "type_id": "Vector",
+              "name": "ImpactNormal"
+            }
+          ],
+          "input_pins": [],
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_FunctionEntry_0"
+          },
+          "type_id": "|ReactToBulletHit"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "0, 0, 0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 3,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_2"
+                }
+              },
+              "type_id": "Rotator",
+              "name": "ReturnValue"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "0, 0, 0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 2,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_FunctionEntry_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_2"
+                }
+              },
+              "type_id": "Vector (リファレンス渡し)",
+              "name": "Z"
+            }
+          ],
+          "position": {
+            "x": 300,
+            "y": 230
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_2"
+          },
+          "type_id": "演算|ローテータ|MakeRotFromZ"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_IfThenElse_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            },
+            {
+              "value": "",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "Niagaraパーティクルシステムコンポーネント オブジェクト参照",
+              "name": "ReturnValue"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_FunctionEntry_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            {
+              "value": "/Game/Effects/Weapons/NS_EnemyHitSparks.NS_EnemyHitSparks",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "Niagaraシステム オブジェクト参照",
+              "name": "SystemTemplate"
+            },
+            {
+              "value": "0, 0, 0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_FunctionEntry_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 2,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "Vector",
+              "name": "Location"
+            },
+            {
+              "value": "0, 0, 0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_2"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 3,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "Rotator",
+              "name": "Rotation"
+            },
+            {
+              "value": "1.000000,1.000000,1.000000",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 4,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "Vector",
+              "name": "Scale"
+            },
+            {
+              "value": "true",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 5,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "bAutoDestroy"
+            },
+            {
+              "value": "true",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 6,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "bAutoActivate"
+            },
+            {
+              "value": "None",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 7,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "ENCPoolMethod Enum",
+              "name": "PoolingMethod"
+            },
+            {
+              "value": "false",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 8,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "bPreCullCheck"
+            }
+          ],
+          "position": {
+            "x": 650,
+            "y": 0
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+          },
+          "type_id": "Niagara|SpawnSystemAtLocation"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_0"
+                }
+              },
+              "type_id": "Integer",
+              "name": "PreviewState"
+            }
+          ],
+          "input_pins": [],
+          "position": {
+            "x": 700,
+            "y": 450
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_0"
+          },
+          "type_id": "|GetPreviewState"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CommutativeAssociativeBinaryOperator_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_0"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "ReturnValue"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_0"
+                }
+              },
+              "type_id": "Integer",
+              "name": "A"
+            },
+            {
+              "value": "3",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_0"
+                }
+              },
+              "type_id": "Integer",
+              "name": "B"
+            }
+          ],
+          "position": {
+            "x": 950,
+            "y": 450
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_0"
+          },
+          "type_id": "演算|Integer|NotEqual(Integer)"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_5"
+                  }
+                },
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_7"
+                  }
+                },
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 2,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_9"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_1"
+                }
+              },
+              "type_id": "アニメーションシーケンス オブジェクト参照",
+              "name": "HitReactAnimation"
+            }
+          ],
+          "input_pins": [],
+          "position": {
+            "x": 700,
+            "y": 650
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_1"
+          },
+          "type_id": "|GetHitReactAnimation"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "false",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CommutativeAssociativeBinaryOperator_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_5"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "ReturnValue"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_5"
+                }
+              },
+              "type_id": "オブジェクト参照",
+              "name": "Object"
+            }
+          ],
+          "position": {
+            "x": 950,
+            "y": 650
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_5"
+          },
+          "type_id": "ユーティリティ|IsValid"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "false",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_IfThenElse_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CommutativeAssociativeBinaryOperator_0"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "ReturnValue"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "false",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CommutativeAssociativeBinaryOperator_0"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "A"
+            },
+            {
+              "value": "false",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_5"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CommutativeAssociativeBinaryOperator_0"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "B"
+            }
+          ],
+          "position": {
+            "x": 1200,
+            "y": 450
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CommutativeAssociativeBinaryOperator_0"
+          },
+          "type_id": "演算|ブーリアン|ANDBoolean"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_IfThenElse_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            },
+            {
+              "value": "",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_IfThenElse_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "else"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_3"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_IfThenElse_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            {
+              "value": "true",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CommutativeAssociativeBinaryOperator_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_IfThenElse_0"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "Condition"
+            }
+          ],
+          "position": {
+            "x": 1500,
+            "y": 0
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_IfThenElse_0"
+          },
+          "type_id": "ユーティリティ|フロー制御|ブランチ"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            },
+            {
+              "value": "false",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_0"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "Output_Get"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_IfThenElse_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            {
+              "value": "true",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_0"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "IsHitReacting"
+            }
+          ],
+          "position": {
+            "x": 1800,
+            "y": 0
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_0"
+          },
+          "type_id": "|SetIsHitReacting"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "0.0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_6"
+                }
+              },
+              "type_id": "浮動小数点数(倍精度)",
+              "name": "ReturnValue"
+            }
+          ],
+          "input_pins": [],
+          "position": {
+            "x": 1400,
+            "y": 600
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_6"
+          },
+          "type_id": "ユーティリティ|タイム|GetGameTimeInSeconds"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "0.0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_7"
+                }
+              },
+              "type_id": "浮動小数点数(単精度)",
+              "name": "ReturnValue"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_7"
+                }
+              },
+              "type_id": "アニメーションアセット オブジェクト参照",
+              "name": "self"
+            }
+          ],
+          "position": {
+            "x": 1400,
+            "y": 800
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_7"
+          },
+          "type_id": "Animation|GetPlayLength"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_1"
+                }
+              },
+              "type_id": "浮動小数点数(倍精度)",
+              "name": "ReturnValue"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_6"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_1"
+                }
+              },
+              "type_id": "浮動小数点数(倍精度)",
+              "name": "A"
+            },
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_7"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_1"
+                }
+              },
+              "type_id": "浮動小数点数(倍精度)",
+              "name": "B"
+            }
+          ],
+          "position": {
+            "x": 1700,
+            "y": 600
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_1"
+          },
+          "type_id": "演算|Float|float+float"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_8"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_1"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            },
+            {
+              "value": "0.0",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_1"
+                }
+              },
+              "type_id": "浮動小数点数(倍精度)",
+              "name": "Output_Get"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_1"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            {
+              "value": "0.0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_PromotableOperator_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_1"
+                }
+              },
+              "type_id": "浮動小数点数(倍精度)",
+              "name": "HitReactEndTime"
+            }
+          ],
+          "position": {
+            "x": 2100,
+            "y": 0
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_1"
+          },
+          "type_id": "|SetHitReactEndTime"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_8"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_2"
+                }
+              },
+              "type_id": "キャラクター移動コンポーネント オブジェクト参照",
+              "name": "CharacterMovement"
+            }
+          ],
+          "input_pins": [],
+          "position": {
+            "x": 2050,
+            "y": 400
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_2"
+          },
+          "type_id": "|GetCharacterMovement"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_9"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_8"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableSet_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_8"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_2"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_8"
+                }
+              },
+              "type_id": "移動コンポーネント オブジェクト参照",
+              "name": "self"
+            }
+          ],
+          "position": {
+            "x": 2400,
+            "y": 0
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_8"
+          },
+          "type_id": "コンポーネント|ムーブメント|StopMovementImmediately"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_9"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_3"
+                }
+              },
+              "type_id": "スケルタルメッシュコンポーネント オブジェクト参照",
+              "name": "Mesh"
+            }
+          ],
+          "input_pins": [],
+          "position": {
+            "x": 2400,
+            "y": 450
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_3"
+          },
+          "type_id": "|GetMesh"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_9"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_8"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_9"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_3"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_9"
+                }
+              },
+              "type_id": "スケルタルメッシュコンポーネント オブジェクト参照",
+              "name": "self"
+            },
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_VariableGet_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 2,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_9"
+                }
+              },
+              "type_id": "アニメーションアセット オブジェクト参照",
+              "name": "NewAnimToPlay"
+            },
+            {
+              "value": "false",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 3,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_9"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "bLooping"
+            }
+          ],
+          "position": {
+            "x": 2750,
+            "y": 0
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:ReactToBulletHit.K2Node_CallFunction_9"
+          },
+          "type_id": "コンポーネント|アニメーション|PlayAnimation"
+        }
+      ]
+    },
+    {
+      "graph": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction",
+      "node_count": 13,
+      "node_types": [
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_FunctionEntry_0",
+          "type": "|UpdateHitReaction"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableGet_0",
+          "type": "|GetIsHitReacting"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_0",
+          "type": "ユーティリティ|フロー制御|ブランチ"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_0",
+          "type": "ユーティリティ|タイム|GetGameTimeInSeconds"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableGet_1",
+          "type": "|GetHitReactEndTime"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_PromotableOperator_0",
+          "type": "演算|Float|float>=float"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_1",
+          "type": "ユーティリティ|フロー制御|ブランチ"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableSet_0",
+          "type": "|SetIsHitReacting"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableGet_2",
+          "type": "|GetPreviewState"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_SwitchInteger_0",
+          "type": "ユーティリティ|フロー制御|Switch|整数型でスイッチ"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_1",
+          "type": "|PlayIdle"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_2",
+          "type": "|PlayWalk"
+        },
+        {
+          "path": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_3",
+          "type": "|PlayRun"
+        }
+      ],
+      "forbidden_hp_damage_fall_matches": [],
+      "nodes_snapshot": [
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_FunctionEntry_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            }
+          ],
+          "input_pins": [],
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_FunctionEntry_0"
+          },
+          "type_id": "|UpdateHitReaction"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "false",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableGet_0"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "IsHitReacting"
+            }
+          ],
+          "input_pins": [],
+          "position": {
+            "x": 0,
+            "y": 200
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableGet_0"
+          },
+          "type_id": "|GetIsHitReacting"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            },
+            {
+              "value": "",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "else"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_FunctionEntry_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            {
+              "value": "true",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableGet_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_0"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "Condition"
+            }
+          ],
+          "position": {
+            "x": 300,
+            "y": 0
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_0"
+          },
+          "type_id": "ユーティリティ|フロー制御|ブランチ"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "0.0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_PromotableOperator_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_0"
+                }
+              },
+              "type_id": "浮動小数点数(倍精度)",
+              "name": "ReturnValue"
+            }
+          ],
+          "input_pins": [],
+          "position": {
+            "x": 300,
+            "y": 250
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_0"
+          },
+          "type_id": "ユーティリティ|タイム|GetGameTimeInSeconds"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "0.0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_PromotableOperator_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableGet_1"
+                }
+              },
+              "type_id": "浮動小数点数(倍精度)",
+              "name": "HitReactEndTime"
+            }
+          ],
+          "input_pins": [],
+          "position": {
+            "x": 300,
+            "y": 400
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableGet_1"
+          },
+          "type_id": "|GetHitReactEndTime"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_PromotableOperator_0"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "ReturnValue"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_PromotableOperator_0"
+                }
+              },
+              "type_id": "浮動小数点数(倍精度)",
+              "name": "A"
+            },
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableGet_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_PromotableOperator_0"
+                }
+              },
+              "type_id": "浮動小数点数(倍精度)",
+              "name": "B"
+            }
+          ],
+          "position": {
+            "x": 600,
+            "y": 250
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_PromotableOperator_0"
+          },
+          "type_id": "演算|Float|float>=float"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableSet_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_1"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            },
+            {
+              "value": "",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_1"
+                }
+              },
+              "type_id": "実行",
+              "name": "else"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_1"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            {
+              "value": "true",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_PromotableOperator_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_1"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "Condition"
+            }
+          ],
+          "position": {
+            "x": 900,
+            "y": 0
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_1"
+          },
+          "type_id": "ユーティリティ|フロー制御|ブランチ"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_SwitchInteger_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableSet_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            },
+            {
+              "value": "false",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableSet_0"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "Output_Get"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_IfThenElse_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableSet_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            {
+              "value": "false",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableSet_0"
+                }
+              },
+              "type_id": "Boolean",
+              "name": "IsHitReacting"
+            }
+          ],
+          "position": {
+            "x": 1200,
+            "y": 0
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableSet_0"
+          },
+          "type_id": "|SetIsHitReacting"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_SwitchInteger_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableGet_2"
+                }
+              },
+              "type_id": "Integer",
+              "name": "PreviewState"
+            }
+          ],
+          "input_pins": [],
+          "position": {
+            "x": 1200,
+            "y": 250
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableGet_2"
+          },
+          "type_id": "|GetPreviewState"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_SwitchInteger_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "Default"
+            },
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_1"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_SwitchInteger_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "0"
+            },
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_2"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 2,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_SwitchInteger_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "1"
+            },
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Input",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_3"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 3,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_SwitchInteger_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "2"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableSet_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_SwitchInteger_0"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            {
+              "value": "0",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 0,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_VariableGet_2"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_SwitchInteger_0"
+                }
+              },
+              "type_id": "Integer",
+              "name": "Selection"
+            }
+          ],
+          "position": {
+            "x": 1500,
+            "y": 0
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_SwitchInteger_0"
+          },
+          "type_id": "ユーティリティ|フロー制御|Switch|整数型でスイッチ"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_1"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 1,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_SwitchInteger_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_1"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            {
+              "value": "",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_1"
+                }
+              },
+              "type_id": "Self オブジェクト参照",
+              "name": "self"
+            }
+          ],
+          "position": {
+            "x": 1800,
+            "y": 0
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_1"
+          },
+          "type_id": "|PlayIdle"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_2"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 2,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_SwitchInteger_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_2"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            {
+              "value": "",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_2"
+                }
+              },
+              "type_id": "Self オブジェクト参照",
+              "name": "self"
+            }
+          ],
+          "position": {
+            "x": 1800,
+            "y": 220
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_2"
+          },
+          "type_id": "|PlayWalk"
+        },
+        {
+          "output_pins": [
+            {
+              "value": "",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Output",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "実行",
+              "name": "then"
+            }
+          ],
+          "input_pins": [
+            {
+              "value": "",
+              "connected_pins": [
+                {
+                  "direction": "EGPD_Output",
+                  "index_id": 3,
+                  "node": {
+                    "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_SwitchInteger_0"
+                  }
+                }
+              ],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 0,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "実行",
+              "name": "execute"
+            },
+            {
+              "value": "",
+              "connected_pins": [],
+              "pin_id": {
+                "direction": "EGPD_Input",
+                "index_id": 1,
+                "node": {
+                  "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_3"
+                }
+              },
+              "type_id": "Self オブジェクト参照",
+              "name": "self"
+            }
+          ],
+          "position": {
+            "x": 1800,
+            "y": 440
+          },
+          "node": {
+            "refPath": "/Game/Main/Enemy/BP_AdmissionRobot.BP_AdmissionRobot:UpdateHitReaction.K2Node_CallFunction_3"
+          },
+          "type_id": "|PlayRun"
+        }
+      ]
+    }
+  ],
+  "enemy_hit_graphs_no_hp_damage_or_fall_calls": true,
+  "normalization": "Node maps keyed by full path; pin arrays sorted by index; connection arrays sorted by endpoint; all types, positions, values and links otherwise retained.",
+  "overall_pass": true
+}

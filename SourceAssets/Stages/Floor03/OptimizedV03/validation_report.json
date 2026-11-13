@@ -1,0 +1,36 @@
+{
+  "roundtrip": [
+    {
+      "group": "Chairs",
+      "triangles": 333618,
+      "bounds_error_m": 1.9073486328125e-06,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "materials": [
+        "KD_F03_BlackPlastic.001",
+        "KD_F03_DarkRubber.001",
+        "KD_F03_SilverMetal.001"
+      ]
+    },
+    {
+      "group": "Laptops",
+      "triangles": 31500,
+      "bounds_error_m": 9.5367431640625e-07,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "materials": [
+        "KD_F03_BlackPlastic.002",
+        "KD_F03_DarkRubber.002",
+        "KD_F03_LaptopKeyboard.001",
+        "KD_F03_LaptopScreen.001"
+      ]
+    }
+  ],
+  "images": [
+    "C:\\Users\\motoo\\OneDrive\\\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\\\u307e\u3068\u3081\\\u500b\u4eba\u696d\u52d9\\\u30b2\u30fc\u30e0\u958b\u767a\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\OptimizedV03\\Previews\\Chair_Main_Comparison.png",
+    "C:\\Users\\motoo\\OneDrive\\\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\\\u307e\u3068\u3081\\\u500b\u4eba\u696d\u52d9\\\u30b2\u30fc\u30e0\u958b\u767a\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\OptimizedV03\\Previews\\Laptop_Comparison.png"
+  ],
+  "optimized_source_unchanged": true
+}

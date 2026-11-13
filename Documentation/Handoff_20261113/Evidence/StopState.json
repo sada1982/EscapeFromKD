@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-13",
+  "status": "paused_at_user_request",
+  "task": "Floor03 optimization, target at least 60 FPS",
+  "target_achieved": false,
+  "first_next_task": "Fresh home baseline then PIE-only enemy MeshComponent PerPolyCollision on/off A/B; leading CPU hypothesis is unverified",
+  "baseline_commit": "c4b8e4de76a28ae1ebfa813f0fb3879affbbea13",
+  "branch": "main",
+  "editor_map": "/Game/Main/Stage/KDStage",
+  "pie_running": false,
+  "dirty_maps": [],
+  "dirty_content": [],
+  "content_and_config_unchanged_since_optimization_start": true,
+  "experimental_runtime_settings_restored": true,
+  "editor_background_throttle_restored": true,
+  "temporary_observer_removed": true,
+  "model_candidate": "SourceAssets/Stages/Floor03/OptimizedV03",
+  "model_candidate_imported_to_unreal": false,
+  "model_candidate_blender_validation": "PASS, exit code 0",
+  "model_candidate_fbx_triangles": {
+    "Chairs": 333618,
+    "Laptops": 31500
+  },
+  "committed": false,
+  "pushed": false,
+  "validation": {
+    "blueprints": [
+      "You",
+      "BP_Floor03",
+      "BP_AdmissionRobot",
+      "BP_Rifle"
+    ],
+    "blueprint_status": "BS_UP_TO_DATE",
+    "git_diff_check": "PASS",
+    "git_lfs_fsck_HEAD": "PASS",
+    "current_log_matching_blueprint_runtime_accessed_none_python_errors": 0,
+    "shipping_cook_or_package_tested": false
+  },
+  "known_remaining_issues": [
+    "Target 60 FPS not achieved",
+    "Original VRAM budget overrun remains with restored settings",
+    "CPU Animation cost actor/function ownership unresolved",
+    "Enemy hit response while ADS has not been validated in actual firing",
+    "OptimizedV03 UE import, runtime visuals, collision and performance not tested",
+    "Existing SurveyV02 near-zero tangent import warnings"
+  ],
+  "runtime_restored": {
+    "r.TSR.History.ScreenPercentage": 200,
+    "r.Shadow.Virtual.MaxPhysicalPages": 4096,
+    "r.LumenScene.SurfaceCache.AtlasSize": 4096,
+    "r.GPUCsvStatsEnabled": 0,
+    "r.ProfileGPU.ShowUI": true,
+    "r.ScreenPercentage": 0,
+    "r.DynamicRes.OperationMode": 0,
+    "r.Lumen.HardwareRayTracing": 1,
+    "t.MaxFPS": 0,
+    "r.VSync": 0
+  },
+  "editor_performance_settings": {
+    "bThrottleCPUWhenNotForeground": true,
+    "bAllowSlateThrottling": true,
+    "bMonitorEditorPerformance": false,
+    "bEnableVSync": false
+  }
+}

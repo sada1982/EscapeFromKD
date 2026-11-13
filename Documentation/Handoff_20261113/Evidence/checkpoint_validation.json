@@ -1,0 +1,28 @@
+{
+  "dirty_maps": [],
+  "dirty_content": [],
+  "pie_worlds": [],
+  "editor_world": "/Game/Main/Stage/KDStage.KDStage",
+  "blueprints": {
+    "You": {
+      "path": "/Game/Main/Character/You",
+      "exists": true,
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+    },
+    "BP_Floor03": {
+      "path": "/Game/Main/Stage/BP_Floor03",
+      "exists": true,
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+    },
+    "BP_AdmissionRobot": {
+      "path": "/Game/Main/Enemy/BP_AdmissionRobot",
+      "exists": true,
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+    },
+    "BP_Rifle": {
+      "path": "/Game/Main/Rifle/BP_Rifle",
+      "exists": true,
+      "status": "<BlueprintStatus.BS_UP_TO_DATE: 3>"
+    }
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "date": "2026-11-13",
+  "paths_relative_to_project_root": true,
+  "excluded": [
+    "This manifest itself"
+  ],
+  "files": [
+    {
+      "path": "Documentation/Handoff_20261113/EscapeFromKD_Handoff_20261113.txt",
+      "bytes": 31269,
+      "sha256": "e4d8d566c6b54c35c071477e4b36092a02ca160a7b6537bcebb012ccda08fa62"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/checkpoint_validation.json",
+      "bytes": 756,
+      "sha256": "4422fc76a13d4fb95980145882d280244f8931c942b445065dfe3268969f6d22"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/CSV/AB_Memory_Classroom.csv",
+      "bytes": 1250515,
+      "sha256": "5037a9ebcc3f450e63cdac9eacfe7fa55e572dec2d8d951c9e8af87b3ff63861"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/CSV/AB_TSR100_Classroom_Valid.csv",
+      "bytes": 1240720,
+      "sha256": "4242f528e5b177ac4190e007d7939f379e51e4f94c3af1a9393c9407cb65ae46"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/CSV/Baseline_Classroom.csv",
+      "bytes": 1265940,
+      "sha256": "4e54bc4b2a8fe627629fb267268afd697fde6b93336546c4605e6ece8bdb794a"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/CurrentGameplayDefaults.json",
+      "bytes": 1778,
+      "sha256": "82feb7c8ee723b09f246d9a59173cb3f08c0c2910c5a03db5f9dfe24f73ddb6a"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/EnemyHit_FinalGraphAudit.json",
+      "bytes": 107706,
+      "sha256": "cc45243ed6bddbc75b0371962ae5656e205187d57a165b09603a202e4c333e12"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/FinalEditorRead.json",
+      "bytes": 280,
+      "sha256": "fa83185e5d546b8c50b39194bdde3d97215f183921210f5e9da8089bb280e963"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/FinalVerification.json",
+      "bytes": 2338,
+      "sha256": "e8f27d88c3d05d6b1c1dca0e12021f6833d75ab781c999fc59e63eeb7eea24d0"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/LightAudit/audit_notes.txt",
+      "bytes": 3832,
+      "sha256": "8e32fe9854ee300d8765da1845f68e9270052a2817be95ac677bb8980238ec1c"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/LightAudit/baseline_scene.json",
+      "bytes": 112468,
+      "sha256": "19548d3e1c02d0f64e31f7a0f1748399658bd7d530b018f522557689c2cbceb2"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/Measurements/AB_Memory_Classroom_metadata.json",
+      "bytes": 417,
+      "sha256": "d5bc80b3e35c3299f821ed469783162f88bbf153e4c6e55250ef46844d83bc30"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/Measurements/AB_Memory_Classroom_summary.json",
+      "bytes": 12343,
+      "sha256": "733e179c77cee4f29e0cc8031d3f236ded66c5040172db4f7e2b0c507735fa0b"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/Measurements/AB_TSR100_Classroom_Valid_metadata.json",
+      "bytes": 327,
+      "sha256": "55f3c694ed21805fd321b6099ebf4da309ec9f9b2a117740dffc37ad732ebecc"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/Measurements/AB_TSR100_Classroom_Valid_summary.json",
+      "bytes": 12389,
+      "sha256": "bc76d66aa0f399c172dadc59fa5fa2ec5af5761dfafa0b4eb7d03903542c4baa"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/Measurements/Baseline_Classroom_metadata.json",
+      "bytes": 274,
+      "sha256": "c0e2958f0f660ace85a8139dda0b7982e9561fc5e442e90526ea34fc5f725a92"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/Measurements/Baseline_Classroom_summary.json",
+      "bytes": 12239,
+      "sha256": "f41b96b05987165eb740f64cf6fcbcc8ae4307f3c0a8b51299e190823e58e3df"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/ModelAudit/model_audit.json",
+      "bytes": 84281,
+      "sha256": "bec6bcbf5fe55f18a89c1180bcb88875e8258ee5e9328663f3037de59695dba7"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/ModelAudit/recommendations.json",
+      "bytes": 3824,
+      "sha256": "0b60efe61a46a8f98d619e21a37bd5f33849b2210c16e2ebfc35f37c6102835e"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/OriginalRuntimeSettings.json",
+      "bytes": 882,
+      "sha256": "932d85890b9cfd47fb253e40cdc054e629c59ddcd6fb478c8a2aa3715eba6b25"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/PerfAudit/cpu_bottleneck_handoff.txt",
+      "bytes": 5961,
+      "sha256": "5cb63443f66a6b1a93e802c9c96f2b92adf35cc4ec83456934129c7f06719193"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/PerfAudit/frame_cpu_comparison.json",
+      "bytes": 6966,
+      "sha256": "a6393dc24d4ab8631b2c0a78df3d523d0e29239ad70dde58b835f2120e5efef4"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/PerfAudit/measurement_notes.txt",
+      "bytes": 5234,
+      "sha256": "5e69021f127bfd35dcb273cd40701c761b2a9e1c3eb454262f0964fe136af94d"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/PerfAudit/render_target_memory_dump.json",
+      "bytes": 29973,
+      "sha256": "cd4771630f699549f7723c591fa7ad0f1ffde5ffd825e9beee174205db74fdf0"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/PerfAudit/vram_audit.txt",
+      "bytes": 5343,
+      "sha256": "08d4d70d09807cce69c4bfe72cbcb417ba00088f057d60a8c6cdf82d0644b9d8"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/restored_runtime_settings.json",
+      "bytes": 356,
+      "sha256": "257e8790fe726018cbac0b6ba8b9364eb80fa2e12f993f24407a5c102d44aea3"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Evidence/StopState.json",
+      "bytes": 2316,
+      "sha256": "e636cfeea750fe7808b3be148d578281ef5bae75f46258d78e5ea66458f34a9e"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/HistoricalScripts/capture_initial_settings.py",
+      "bytes": 1291,
+      "sha256": "89e0e2ff3ec83ac4aabd7fdf1ca98d79a3776475ade32f9d9442a058384c20cc"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/HistoricalScripts/capture_job.json",
+      "bytes": 191,
+      "sha256": "6419bbff5cf757dc2c4b91d90edda2de7700ea9da2e819b452cc99d2a0797b07"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/HistoricalScripts/capture_performance.py",
+      "bytes": 2124,
+      "sha256": "0c85ffe40463555e9441e0ce2772c3b98d718e94f83f812bac970208a05af8e0"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/HistoricalScripts/checkpoint_validation.py",
+      "bytes": 1137,
+      "sha256": "d347d375965991c1d3d3b9224357d005210505bab49dc294e177843ff448cb13"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/HistoricalScripts/restore_runtime_settings.py",
+      "bytes": 1137,
+      "sha256": "f14cc99d21c7f7fa6ed0f511f08358556956135a5df7ddf46220fe180081f250"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Resume_Request.txt",
+      "bytes": 1767,
+      "sha256": "6306b1d11f67f22bed96e5d781f21e3c3b433db1456f2799486f9bffcf10ea7b"
+    },
+    {
+      "path": "Documentation/Handoff_20261113/Tools/summarize_csv.py",
+      "bytes": 3160,
+      "sha256": "10813c046dbee796f88a5d9543295794ef4a9ae7c1a09551c9a1e2155a8b6704"
+    },
+    {
+      "path": "SourceAssets/Stages/Floor03/OptimizedV03/build_optimized_furniture.py",
+      "bytes": 12245,
+      "sha256": "334bb07c6e0392ab89c8a287e427d7aabf5af434ac5db8902a5584d93a715280"
+    },
+    {
+      "path": "SourceAssets/Stages/Floor03/OptimizedV03/EscapeFromKD_Floor03_v03.blend",
+      "bytes": 2863605,
+      "sha256": "f0ca37018a72f2bf2787d60a3245d2048954b1b09a6f59522ca37ea51c1324ac"
+    },
+    {
+      "path": "SourceAssets/Stages/Floor03/OptimizedV03/Export/SM_F03V03_Chairs.fbx",
+      "bytes": 31912108,
+      "sha256": "5899cba9bdb0ef4b728989e576e138e2872cecebaae99079ebe51694717b2ba2"
+    },
+    {
+      "path": "SourceAssets/Stages/Floor03/OptimizedV03/Export/SM_F03V03_Laptops.fbx",
+      "bytes": 2022300,
+      "sha256": "fa2f8a777b27d5ca057e77316588b6ea19f08ffc57b0fd8455a2cf9f202ecd31"
+    },
+    {
+      "path": "SourceAssets/Stages/Floor03/OptimizedV03/optimization_report.json",
+      "bytes": 3691,
+      "sha256": "8d6b5d4ef7a6fe5a6e0e0ba0bf7b9c8da978943382016a7feed3e250e83fecf6"
+    },
+    {
+      "path": "SourceAssets/Stages/Floor03/OptimizedV03/Previews/Chair_Main_Comparison.png",
+      "bytes": 679247,
+      "sha256": "714f5e758696e27d94dd27506b67b4e1a57f69140327e0d9245bc880a064793a"
+    },
+    {
+      "path": "SourceAssets/Stages/Floor03/OptimizedV03/Previews/Laptop_Comparison.png",
+      "bytes": 742756,
+      "sha256": "ce4d7ef3956b3e3f652ee5403232d392a1b216d24bf3471b32dd12d5b2ca28b7"
+    },
+    {
+      "path": "SourceAssets/Stages/Floor03/OptimizedV03/Readme.txt",
+      "bytes": 3605,
+      "sha256": "3f709eaf999915f45b87886068408108c368f6adab8d6bb63e625b9628c60ec0"
+    },
+    {
+      "path": "SourceAssets/Stages/Floor03/OptimizedV03/validate_optimized_furniture.py",
+      "bytes": 5369,
+      "sha256": "f15de22d1e4682adf3289afdba11ab31c0a28b88358ac1c227694db53eb20493"
+    },
+    {
+      "path": "SourceAssets/Stages/Floor03/OptimizedV03/validation_report.json",
+      "bytes": 1274,
+      "sha256": "cc8d3e039b0fc4d5a5c6ba274bc44c2345880a55966ede8bddac8c6e0c6abaef"
+    }
+  ]
+}

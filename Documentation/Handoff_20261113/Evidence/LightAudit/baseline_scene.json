@@ -1,0 +1,3706 @@
+{
+  "capture": "2026-11-13 before optimization",
+  "level": "/Game/Main/Stage/KDStage",
+  "read_only": true,
+  "lights": [
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_0"
+      },
+      "label": "F03_GameLab_01",
+      "transform": {
+        "location": {
+          "x": 150,
+          "y": -200,
+          "z": 272
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_0.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_0.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_1"
+      },
+      "label": "F03_GameLab_02",
+      "transform": {
+        "location": {
+          "x": 150,
+          "y": -430,
+          "z": 272
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_1.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_1.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_2"
+      },
+      "label": "F03_GameLab_03",
+      "transform": {
+        "location": {
+          "x": 150,
+          "y": -660,
+          "z": 272
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_2.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_2.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_3"
+      },
+      "label": "F03_GameLab_04",
+      "transform": {
+        "location": {
+          "x": 150,
+          "y": -890,
+          "z": 272
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_3.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_3.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_4"
+      },
+      "label": "F03_GameLab_05",
+      "transform": {
+        "location": {
+          "x": 400,
+          "y": -200,
+          "z": 272
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_4.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_4.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_5"
+      },
+      "label": "F03_GameLab_06",
+      "transform": {
+        "location": {
+          "x": 400,
+          "y": -430,
+          "z": 272
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_5.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_5.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_6"
+      },
+      "label": "F03_GameLab_07",
+      "transform": {
+        "location": {
+          "x": 400,
+          "y": -660,
+          "z": 272
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_6.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_6.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_7"
+      },
+      "label": "F03_GameLab_08",
+      "transform": {
+        "location": {
+          "x": 400,
+          "y": -890,
+          "z": 272
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_7.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_7.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_8"
+      },
+      "label": "F03_GameLab_09",
+      "transform": {
+        "location": {
+          "x": 650,
+          "y": -200,
+          "z": 272
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_8.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_8.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_9"
+      },
+      "label": "F03_GameLab_10",
+      "transform": {
+        "location": {
+          "x": 650,
+          "y": -430,
+          "z": 272
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_9.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_9.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_10"
+      },
+      "label": "F03_GameLab_11",
+      "transform": {
+        "location": {
+          "x": 650,
+          "y": -660,
+          "z": 272
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_10.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_10.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_11"
+      },
+      "label": "F03_GameLab_12",
+      "transform": {
+        "location": {
+          "x": 650,
+          "y": -890,
+          "z": 272
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_11.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_11.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_12"
+      },
+      "label": "F03_Gallery_13",
+      "transform": {
+        "location": {
+          "x": -108,
+          "y": -100,
+          "z": 288
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_12.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_12.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 330,
+        "intensity": 1100,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_13"
+      },
+      "label": "F03_Gallery_14",
+      "transform": {
+        "location": {
+          "x": -108,
+          "y": -400,
+          "z": 288
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_13.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_13.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 330,
+        "intensity": 1100,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_14"
+      },
+      "label": "F03_Gallery_15",
+      "transform": {
+        "location": {
+          "x": -108,
+          "y": -730,
+          "z": 288
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_14.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_14.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 330,
+        "intensity": 1100,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_15"
+      },
+      "label": "F03_Gallery_16",
+      "transform": {
+        "location": {
+          "x": -108,
+          "y": -950,
+          "z": 288
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_15.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_15.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 330,
+        "intensity": 1100,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_16"
+      },
+      "label": "F03_Gallery_17",
+      "transform": {
+        "location": {
+          "x": -340,
+          "y": 123,
+          "z": 288
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_16.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_16.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 330,
+        "intensity": 1100,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_17"
+      },
+      "label": "F03_Gallery_18",
+      "transform": {
+        "location": {
+          "x": -600,
+          "y": 123,
+          "z": 288
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_17.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_17.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 330,
+        "intensity": 1100,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_18"
+      },
+      "label": "F03_Gallery_19",
+      "transform": {
+        "location": {
+          "x": -850,
+          "y": 200,
+          "z": 288
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_18.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_18.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 330,
+        "intensity": 1100,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_19"
+      },
+      "label": "F03_Gallery_20",
+      "transform": {
+        "location": {
+          "x": -1150,
+          "y": 300,
+          "z": 288
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_19.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_19.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 330,
+        "intensity": 1100,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_20"
+      },
+      "label": "F03_Gallery_21",
+      "transform": {
+        "location": {
+          "x": -1450,
+          "y": 480,
+          "z": 288
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_20.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_20.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 330,
+        "intensity": 1100,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_21"
+      },
+      "label": "F03_Atrium_22",
+      "transform": {
+        "location": {
+          "x": -750,
+          "y": -500,
+          "z": 850
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_21.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_21.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 1400,
+        "intensity": 14000,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_22"
+      },
+      "label": "F03_AdjacentLab_23",
+      "transform": {
+        "location": {
+          "x": -70,
+          "y": -1300,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_22.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_22.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_23"
+      },
+      "label": "F03_AdjacentLab_24",
+      "transform": {
+        "location": {
+          "x": -70,
+          "y": -1630,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_23.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_23.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_24"
+      },
+      "label": "F03_AdjacentLab_25",
+      "transform": {
+        "location": {
+          "x": -70,
+          "y": -1900,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_24.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_24.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_25"
+      },
+      "label": "F03_AdjacentLab_26",
+      "transform": {
+        "location": {
+          "x": 290,
+          "y": -1300,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_25.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_25.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_26"
+      },
+      "label": "F03_AdjacentLab_27",
+      "transform": {
+        "location": {
+          "x": 290,
+          "y": -1630,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_26.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_26.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_27"
+      },
+      "label": "F03_AdjacentLab_28",
+      "transform": {
+        "location": {
+          "x": 290,
+          "y": -1900,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_27.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_27.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_28"
+      },
+      "label": "F03_AdjacentLab_29",
+      "transform": {
+        "location": {
+          "x": 650,
+          "y": -1300,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_28.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_28.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_29"
+      },
+      "label": "F03_AdjacentLab_30",
+      "transform": {
+        "location": {
+          "x": 650,
+          "y": -1630,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_29.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_29.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_30"
+      },
+      "label": "F03_AdjacentLab_31",
+      "transform": {
+        "location": {
+          "x": 650,
+          "y": -1900,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_30.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_30.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_31"
+      },
+      "label": "F03_CADLab_32",
+      "transform": {
+        "location": {
+          "x": -1330,
+          "y": 890,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_31.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_31.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_32"
+      },
+      "label": "F03_CADLab_33",
+      "transform": {
+        "location": {
+          "x": -1330,
+          "y": 1250,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_32.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_32.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_33"
+      },
+      "label": "F03_CADLab_34",
+      "transform": {
+        "location": {
+          "x": -1330,
+          "y": 1610.0000000000002,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_33.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_33.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_34"
+      },
+      "label": "F03_CADLab_35",
+      "transform": {
+        "location": {
+          "x": -1639.9999999999998,
+          "y": 890,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_34.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_34.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_35"
+      },
+      "label": "F03_CADLab_36",
+      "transform": {
+        "location": {
+          "x": -1639.9999999999998,
+          "y": 1250,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_35.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_35.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_36"
+      },
+      "label": "F03_CADLab_37",
+      "transform": {
+        "location": {
+          "x": -1639.9999999999998,
+          "y": 1610.0000000000002,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_36.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_36.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_37"
+      },
+      "label": "F03_CADLab_38",
+      "transform": {
+        "location": {
+          "x": -1950,
+          "y": 890,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_37.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_37.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_38"
+      },
+      "label": "F03_CADLab_39",
+      "transform": {
+        "location": {
+          "x": -1950,
+          "y": 1250,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_38.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_38.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_39"
+      },
+      "label": "F03_CADLab_40",
+      "transform": {
+        "location": {
+          "x": -1950,
+          "y": 1610.0000000000002,
+          "z": 280
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_39.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_39.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1900,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_40"
+      },
+      "label": "F03_Stair_41",
+      "transform": {
+        "location": {
+          "x": -1900,
+          "y": 335,
+          "z": 400
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_40.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_40.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 650,
+        "intensity": 1100,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_41"
+      },
+      "label": "F03_Lift_42",
+      "transform": {
+        "location": {
+          "x": -1500,
+          "y": 370,
+          "z": 285
+        },
+        "rotation": {
+          "pitch": -90,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_41.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.RectLight_41.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 450,
+        "intensity": 1100,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": true,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.PointLight_0"
+      },
+      "label": "F03_Atrium_Bounce_Upper",
+      "transform": {
+        "location": {
+          "x": -750,
+          "y": -500,
+          "z": 450
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.PointLight_0.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.PointLight_0.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 1800,
+        "intensity": 18000,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": false,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.PointLight_1"
+      },
+      "label": "F03_Atrium_Bounce_3F",
+      "transform": {
+        "location": {
+          "x": -750,
+          "y": -500,
+          "z": 50
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.PointLight_1.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.PointLight_1.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 1800,
+        "intensity": 12000,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": false,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.PointLight_2"
+      },
+      "label": "F03_Atrium_Bounce_Lower",
+      "transform": {
+        "location": {
+          "x": -750,
+          "y": -500,
+          "z": -300
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.PointLight_2.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.PointLight_2.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 1800,
+        "intensity": 8000,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": false,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    },
+    {
+      "actor": {
+        "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.PointLight_3"
+      },
+      "label": "F03_Stair_Bounce",
+      "transform": {
+        "location": {
+          "x": -1900,
+          "y": 335,
+          "z": 240
+        },
+        "rotation": {
+          "pitch": 0,
+          "yaw": 0,
+          "roll": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "components": [
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.PointLight_3.LightComponent0"
+        },
+        {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.PointLight_3.BillboardComponent_0"
+        }
+      ],
+      "properties": {
+        "mobility": "Movable",
+        "attenuationRadius": 650,
+        "intensity": 2000,
+        "intensityUnits": "Lumens",
+        "maxDrawDistance": 0,
+        "maxDistanceFadeRange": 0,
+        "castShadows": false,
+        "castStaticShadows": true,
+        "castDynamicShadows": true,
+        "castRaytracedShadow": "UseProjectSetting",
+        "bAffectTranslucentLighting": true,
+        "bAffectGlobalIllumination": true,
+        "bAffectReflection": true,
+        "bAllowMegaLights": true,
+        "megaLightsShadowMethod": "Default",
+        "bUseRayTracedDistanceFieldShadows": false,
+        "contactShadowLength": 0,
+        "shadowResolutionScale": 1,
+        "bVisible": true,
+        "indirectLightingIntensity": 1,
+        "volumetricScatteringIntensity": 1
+      }
+    }
+  ],
+  "post_process": {
+    "settings": {
+      "bOverride_TemperatureType": false,
+      "bOverride_WhiteTemp": false,
+      "bOverride_WhiteTint": false,
+      "bOverride_ColorSaturation": false,
+      "bOverride_ColorContrast": false,
+      "bOverride_ColorGamma": false,
+      "bOverride_ColorGain": false,
+      "bOverride_ColorOffset": false,
+      "bOverride_ColorSaturationShadows": false,
+      "bOverride_ColorContrastShadows": false,
+      "bOverride_ColorGammaShadows": false,
+      "bOverride_ColorGainShadows": false,
+      "bOverride_ColorOffsetShadows": false,
+      "bOverride_ColorSaturationMidtones": false,
+      "bOverride_ColorContrastMidtones": false,
+      "bOverride_ColorGammaMidtones": false,
+      "bOverride_ColorGainMidtones": false,
+      "bOverride_ColorOffsetMidtones": false,
+      "bOverride_ColorSaturationHighlights": false,
+      "bOverride_ColorContrastHighlights": false,
+      "bOverride_ColorGammaHighlights": false,
+      "bOverride_ColorGainHighlights": false,
+      "bOverride_ColorOffsetHighlights": false,
+      "bOverride_ColorCorrectionShadowsMax": false,
+      "bOverride_ColorCorrectionHighlightsMin": false,
+      "bOverride_ColorCorrectionHighlightsMax": false,
+      "bOverride_BlueCorrection": false,
+      "bOverride_ExpandGamut": false,
+      "bOverride_ToneCurveAmount": false,
+      "bOverride_TonemappingMethod": false,
+      "bOverride_FilmSlope": false,
+      "bOverride_FilmToe": false,
+      "bOverride_FilmShoulder": false,
+      "bOverride_FilmBlackClip": false,
+      "bOverride_FilmWhiteClip": false,
+      "bOverride_SceneColorTint": false,
+      "bOverride_SceneFringeIntensity": false,
+      "bOverride_ChromaticAberrationStartOffset": false,
+      "bOverride_bMegaLights": false,
+      "bOverride_MegaLightsFrontLayerTranslucency": false,
+      "bOverride_AmbientCubemapTint": false,
+      "bOverride_AmbientCubemapIntensity": false,
+      "bOverride_BloomMethod": false,
+      "bOverride_BloomIntensity": false,
+      "bOverride_BloomGaussianIntensity": false,
+      "bOverride_BloomThreshold": false,
+      "bOverride_Bloom1Tint": false,
+      "bOverride_Bloom1Size": false,
+      "bOverride_Bloom2Size": false,
+      "bOverride_Bloom2Tint": false,
+      "bOverride_Bloom3Tint": false,
+      "bOverride_Bloom3Size": false,
+      "bOverride_Bloom4Tint": false,
+      "bOverride_Bloom4Size": false,
+      "bOverride_Bloom5Tint": false,
+      "bOverride_Bloom5Size": false,
+      "bOverride_Bloom6Tint": false,
+      "bOverride_Bloom6Size": false,
+      "bOverride_BloomSizeScale": false,
+      "bOverride_BloomConvolutionIntensity": false,
+      "bOverride_BloomConvolutionTexture": false,
+      "bOverride_BloomConvolutionScatterDispersion": false,
+      "bOverride_BloomConvolutionSize": false,
+      "bOverride_BloomConvolutionCenterUV": false,
+      "bOverride_BloomConvolutionPreFilterMin": false,
+      "bOverride_BloomConvolutionPreFilterMax": false,
+      "bOverride_BloomConvolutionPreFilterMult": false,
+      "bOverride_BloomConvolutionBufferScale": false,
+      "bOverride_BloomDirtMaskIntensity": false,
+      "bOverride_BloomDirtMaskTint": false,
+      "bOverride_BloomDirtMask": false,
+      "bOverride_CameraShutterSpeed": false,
+      "bOverride_CameraISO": false,
+      "bOverride_AutoExposureMethod": false,
+      "bOverride_AutoExposureLowPercent": false,
+      "bOverride_AutoExposureHighPercent": false,
+      "bOverride_AutoExposureMinBrightness": true,
+      "bOverride_AutoExposureMaxBrightness": true,
+      "bOverride_AutoExposureSpeedUp": false,
+      "bOverride_AutoExposureSpeedDown": false,
+      "bOverride_AutoExposureBias": true,
+      "bOverride_AutoExposureBiasCurve": false,
+      "bOverride_AutoExposureMeterMask": false,
+      "bOverride_AutoExposureApplyPhysicalCameraExposure": false,
+      "bOverride_HistogramLogMin": false,
+      "bOverride_HistogramLogMax": false,
+      "bOverride_LocalExposureMethod": false,
+      "bOverride_LocalExposureHighlightContrastScale": false,
+      "bOverride_LocalExposureShadowContrastScale": false,
+      "bOverride_LocalExposureHighlightContrastCurve": false,
+      "bOverride_LocalExposureShadowContrastCurve": false,
+      "bOverride_LocalExposureHighlightThreshold": false,
+      "bOverride_LocalExposureShadowThreshold": false,
+      "bOverride_LocalExposureDetailStrength": false,
+      "bOverride_LocalExposureBlurredLuminanceBlend": false,
+      "bOverride_LocalExposureBlurredLuminanceKernelSizePercent": false,
+      "bOverride_LocalExposureHighlightThresholdStrength": false,
+      "bOverride_LocalExposureShadowThresholdStrength": false,
+      "bOverride_LocalExposureMiddleGreyBias": false,
+      "bOverride_LensFlareIntensity": false,
+      "bOverride_LensFlareTint": false,
+      "bOverride_LensFlareTints": false,
+      "bOverride_LensFlareBokehSize": false,
+      "bOverride_LensFlareBokehShape": false,
+      "bOverride_LensFlareThreshold": false,
+      "bOverride_VignetteIntensity": false,
+      "bOverride_VignetteType": false,
+      "bOverride_VignetteCenter": false,
+      "bOverride_VignetteColor": false,
+      "bOverride_VignetteSize": false,
+      "bOverride_VignetteSoftness": false,
+      "bOverride_VignetteTexture": false,
+      "bOverride_Sharpen": false,
+      "bOverride_FilmGrainIntensity": false,
+      "bOverride_FilmGrainIntensityShadows": false,
+      "bOverride_FilmGrainIntensityMidtones": false,
+      "bOverride_FilmGrainIntensityHighlights": false,
+      "bOverride_FilmGrainShadowsMax": false,
+      "bOverride_FilmGrainHighlightsMin": false,
+      "bOverride_FilmGrainHighlightsMax": false,
+      "bOverride_FilmGrainScale": false,
+      "bOverride_FilmGrainTexture": false,
+      "bOverride_AmbientOcclusionIntensity": false,
+      "bOverride_AmbientOcclusionStaticFraction": false,
+      "bOverride_AmbientOcclusionRadius": false,
+      "bOverride_AmbientOcclusionFadeDistance": false,
+      "bOverride_AmbientOcclusionFadeRadius": false,
+      "bOverride_AmbientOcclusionRadiusInWS": false,
+      "bOverride_AmbientOcclusionPower": false,
+      "bOverride_AmbientOcclusionBias": false,
+      "bOverride_AmbientOcclusionQuality": false,
+      "bOverride_AmbientOcclusionMipBlend": false,
+      "bOverride_AmbientOcclusionMipScale": false,
+      "bOverride_AmbientOcclusionMipThreshold": false,
+      "bOverride_AmbientOcclusionTemporalBlendWeight": false,
+      "bOverride_RayTracingAO": false,
+      "bOverride_RayTracingAOSamplesPerPixel": false,
+      "bOverride_RayTracingAOIntensity": false,
+      "bOverride_RayTracingAORadius": false,
+      "bOverride_IndirectLightingColor": false,
+      "bOverride_IndirectLightingIntensity": false,
+      "bOverride_ColorGradingIntensity": false,
+      "bOverride_ColorGradingLUT": false,
+      "bOverride_DepthOfFieldEnabled": false,
+      "bOverride_DepthOfFieldFocalDistance": false,
+      "bOverride_DepthOfFieldFstop": false,
+      "bOverride_DepthOfFieldMinFstop": false,
+      "bOverride_DepthOfFieldBladeCount": false,
+      "bOverride_DepthOfFieldSensorWidth": false,
+      "bOverride_DepthOfFieldSqueezeFactor": false,
+      "bOverride_DepthOfFieldDepthBlurRadius": false,
+      "bOverride_DepthOfFieldUseHairDepth": false,
+      "bOverride_DepthOfFieldPetzvalBokeh": false,
+      "bOverride_DepthOfFieldPetzvalBokehFalloff": false,
+      "bOverride_DepthOfFieldPetzvalExclusionBoxExtents": false,
+      "bOverride_DepthOfFieldPetzvalExclusionBoxRadius": false,
+      "bOverride_DepthOfFieldAspectRatioScalar": false,
+      "bOverride_DepthOfFieldMatteBoxFlags": false,
+      "bOverride_DepthOfFieldBarrelRadius": false,
+      "bOverride_DepthOfFieldBarrelLength": false,
+      "bOverride_DepthOfFieldDepthBlurAmount": false,
+      "bOverride_DepthOfFieldFocalRegion": false,
+      "bOverride_DepthOfFieldNearTransitionRegion": false,
+      "bOverride_DepthOfFieldFarTransitionRegion": false,
+      "bOverride_DepthOfFieldScale": false,
+      "bOverride_DepthOfFieldNearBlurSize": false,
+      "bOverride_DepthOfFieldFarBlurSize": false,
+      "bOverride_MobileHQGaussian": false,
+      "bOverride_DepthOfFieldOcclusion": false,
+      "bOverride_DepthOfFieldSkyFocusDistance": false,
+      "bOverride_DepthOfFieldVignetteSize": false,
+      "bOverride_MotionBlurAmount": false,
+      "bOverride_MotionBlurMax": false,
+      "bOverride_MotionBlurTargetFPS": false,
+      "bOverride_MotionBlurPerObjectSize": false,
+      "bOverride_ReflectionMethod": false,
+      "bOverride_LumenReflectionQuality": false,
+      "bOverride_ScreenSpaceReflectionIntensity": false,
+      "bOverride_ScreenSpaceReflectionQuality": false,
+      "bOverride_ScreenSpaceReflectionMaxRoughness": false,
+      "bOverride_ScreenSpaceReflectionRoughnessScale": false,
+      "bOverride_UserFlags": false,
+      "bOverride_RayTracingReflectionsMaxRoughness": false,
+      "bOverride_RayTracingReflectionsMaxBounces": false,
+      "bOverride_RayTracingReflectionsSamplesPerPixel": false,
+      "bOverride_RayTracingReflectionsShadows": false,
+      "bOverride_RayTracingReflectionsTranslucency": false,
+      "bOverride_TranslucencyType": false,
+      "bOverride_RayTracingTranslucencyMaxRoughness": false,
+      "bOverride_RayTracingTranslucencyRefractionRays": false,
+      "bOverride_RayTracingTranslucencySamplesPerPixel": false,
+      "bOverride_RayTracingTranslucencyShadows": false,
+      "bOverride_RayTracingTranslucencyRefraction": false,
+      "bOverride_RayTracingTranslucencyMaxPrimaryHitEvents": false,
+      "bOverride_RayTracingTranslucencyMaxSecondaryHitEvents": false,
+      "bOverride_RayTracingTranslucencyUseRayTracedRefraction": false,
+      "bOverride_DynamicGlobalIlluminationMethod": false,
+      "bOverride_LumenSceneLightingQuality": false,
+      "bOverride_LumenSceneDetail": false,
+      "bOverride_LumenSceneViewDistance": false,
+      "bOverride_LumenSceneLightingUpdateSpeed": false,
+      "bOverride_LumenFinalGatherQuality": false,
+      "bOverride_LumenFinalGatherLightingUpdateSpeed": false,
+      "bOverride_LumenFinalGatherScreenTraces": false,
+      "bOverride_LumenMaxTraceDistance": false,
+      "bOverride_LumenDiffuseColorBoost": false,
+      "bOverride_LumenAmbientOcclusionIntensity": false,
+      "bOverride_LumenSkylightLeaking": false,
+      "bOverride_LumenSkylightLeakingTint": false,
+      "bOverride_LumenFullSkylightLeakingDistance": false,
+      "bOverride_LumenRayLightingMode": false,
+      "bOverride_LumenReflectionsScreenTraces": false,
+      "bOverride_LumenFrontLayerTranslucencyReflections": false,
+      "bOverride_LumenMaxRoughnessToTraceReflections": false,
+      "bOverride_LumenMaxReflectionBounces": false,
+      "bOverride_LumenMaxRefractionBounces": false,
+      "bOverride_LumenSurfaceCacheResolution": false,
+      "bOverride_RayTracingGI": false,
+      "bOverride_RayTracingGIMaxBounces": false,
+      "bOverride_RayTracingGISamplesPerPixel": false,
+      "bOverride_PathTracingMaxBounces": false,
+      "bOverride_PathTracingSamplesPerPixel": false,
+      "bOverride_PathTracingMaxPathIntensity": false,
+      "bOverride_PathTracingEnableEmissiveMaterials": false,
+      "bOverride_PathTracingEnableReferenceDOF": false,
+      "bOverride_PathTracingEnableReferenceAtmosphere": false,
+      "bOverride_PathTracingEnableDenoiser": false,
+      "bOverride_PathTracingIncludeEmissive": false,
+      "bOverride_PathTracingIncludeDiffuse": false,
+      "bOverride_PathTracingIncludeIndirectDiffuse": false,
+      "bOverride_PathTracingIncludeSpecular": false,
+      "bOverride_PathTracingIncludeIndirectSpecular": false,
+      "bOverride_PathTracingIncludeVolume": false,
+      "bOverride_PathTracingIncludeIndirectVolume": false,
+      "bMobileHQGaussian": false,
+      "bloomMethod": "BM_SOG",
+      "autoExposureMethod": "AEM_Histogram",
+      "temperatureType": "TEMP_WhiteBalance",
+      "whiteTemp": 6500,
+      "whiteTint": 0,
+      "colorSaturation": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorContrast": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorGamma": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorGain": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 0
+      },
+      "colorSaturationShadows": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorContrastShadows": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorGammaShadows": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorGainShadows": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorOffsetShadows": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 0
+      },
+      "colorSaturationMidtones": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorContrastMidtones": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorGammaMidtones": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorGainMidtones": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorOffsetMidtones": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 0
+      },
+      "colorSaturationHighlights": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorContrastHighlights": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorGammaHighlights": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorGainHighlights": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "w": 1
+      },
+      "colorOffsetHighlights": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 0
+      },
+      "colorCorrectionHighlightsMin": 0.5,
+      "colorCorrectionHighlightsMax": 1,
+      "colorCorrectionShadowsMax": 0.09000000357627869,
+      "blueCorrection": 0.6000000238418579,
+      "expandGamut": 1,
+      "toneCurveAmount": 1,
+      "tonemappingMethod": "Filmic",
+      "filmSlope": 0.8799999952316284,
+      "filmToe": 0.550000011920929,
+      "filmShoulder": 0.25999999046325684,
+      "filmBlackClip": 0,
+      "filmWhiteClip": 0.03999999910593033,
+      "sceneColorTint": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "sceneFringeIntensity": 0,
+      "chromaticAberrationStartOffset": 0,
+      "bloomIntensity": 0.675000011920929,
+      "bloomGaussianIntensity": 1,
+      "bloomThreshold": -1,
+      "bloomSizeScale": 4,
+      "bloom1Size": 0.30000001192092896,
+      "bloom2Size": 1,
+      "bloom3Size": 2,
+      "bloom4Size": 10,
+      "bloom5Size": 30,
+      "bloom6Size": 64,
+      "bloom1Tint": {
+        "r": 0.3465000092983246,
+        "g": 0.3465000092983246,
+        "b": 0.3465000092983246,
+        "a": 1
+      },
+      "bloom2Tint": {
+        "r": 0.1379999965429306,
+        "g": 0.1379999965429306,
+        "b": 0.1379999965429306,
+        "a": 1
+      },
+      "bloom3Tint": {
+        "r": 0.11760000139474869,
+        "g": 0.11760000139474869,
+        "b": 0.11760000139474869,
+        "a": 1
+      },
+      "bloom4Tint": {
+        "r": 0.06599999964237213,
+        "g": 0.06599999964237213,
+        "b": 0.06599999964237213,
+        "a": 1
+      },
+      "bloom5Tint": {
+        "r": 0.06599999964237213,
+        "g": 0.06599999964237213,
+        "b": 0.06599999964237213,
+        "a": 1
+      },
+      "bloom6Tint": {
+        "r": 0.061000000685453415,
+        "g": 0.061000000685453415,
+        "b": 0.061000000685453415,
+        "a": 1
+      },
+      "bloomConvolutionIntensity": 1,
+      "bloomConvolutionScatterDispersion": 1,
+      "bloomConvolutionSize": 1,
+      "bloomConvolutionTexture": "None",
+      "bloomConvolutionCenterUV": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "bloomConvolutionPreFilterMin": 7,
+      "bloomConvolutionPreFilterMax": 15000,
+      "bloomConvolutionPreFilterMult": 15,
+      "bloomConvolutionBufferScale": 0.13300000131130219,
+      "bloomDirtMask": "None",
+      "bloomDirtMaskIntensity": 0,
+      "bloomDirtMaskTint": {
+        "r": 0.5,
+        "g": 0.5,
+        "b": 0.5,
+        "a": 1
+      },
+      "dynamicGlobalIlluminationMethod": "Lumen",
+      "indirectLightingColor": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "indirectLightingIntensity": 1,
+      "lumenRayLightingMode": "Default",
+      "lumenSceneLightingQuality": 1,
+      "lumenSceneDetail": 1,
+      "lumenSceneViewDistance": 20000,
+      "lumenSceneLightingUpdateSpeed": 1,
+      "lumenFinalGatherQuality": 1,
+      "lumenFinalGatherLightingUpdateSpeed": 1,
+      "lumenFinalGatherScreenTraces": true,
+      "lumenMaxTraceDistance": 20000,
+      "lumenDiffuseColorBoost": 1,
+      "lumenAmbientOcclusionIntensity": 1,
+      "lumenSkylightLeaking": 0,
+      "lumenSkylightLeakingTint": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "lumenFullSkylightLeakingDistance": 1000,
+      "lumenSurfaceCacheResolution": 1,
+      "reflectionMethod": "Lumen",
+      "lumenReflectionQuality": 1,
+      "lumenReflectionsScreenTraces": true,
+      "lumenFrontLayerTranslucencyReflections": false,
+      "lumenMaxRoughnessToTraceReflections": 0.4000000059604645,
+      "lumenMaxReflectionBounces": 1,
+      "lumenMaxRefractionBounces": 0,
+      "screenSpaceReflectionIntensity": 100,
+      "screenSpaceReflectionQuality": 50,
+      "screenSpaceReflectionMaxRoughness": 0.6000000238418579,
+      "bMegaLights": true,
+      "megaLightsFrontLayerTranslucency": false,
+      "ambientCubemapTint": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "ambientCubemapIntensity": 1,
+      "ambientCubemap": "None",
+      "cameraShutterSpeed": 60,
+      "cameraISO": 100,
+      "depthOfFieldFstop": 4,
+      "depthOfFieldMinFstop": 1.2000000476837158,
+      "depthOfFieldBladeCount": 5,
+      "autoExposureBias": 0,
+      "autoExposureBiasBackup": 0,
+      "bOverride_AutoExposureBiasBackup": false,
+      "autoExposureApplyPhysicalCameraExposure": true,
+      "autoExposureBiasCurve": "None",
+      "autoExposureMeterMask": "None",
+      "autoExposureLowPercent": 10,
+      "autoExposureHighPercent": 90,
+      "autoExposureMinBrightness": 6,
+      "autoExposureMaxBrightness": 6,
+      "autoExposureSpeedUp": 3,
+      "autoExposureSpeedDown": 1,
+      "histogramLogMin": -10,
+      "histogramLogMax": 20,
+      "localExposureMethod": "Bilateral",
+      "localExposureHighlightContrastScale": 1,
+      "localExposureShadowContrastScale": 1,
+      "localExposureHighlightContrastCurve": "None",
+      "localExposureShadowContrastCurve": "None",
+      "localExposureHighlightThreshold": 0,
+      "localExposureShadowThreshold": 0,
+      "localExposureDetailStrength": 1,
+      "localExposureBlurredLuminanceBlend": 0.6000000238418579,
+      "localExposureBlurredLuminanceKernelSizePercent": 50,
+      "localExposureHighlightThresholdStrength": 1,
+      "localExposureShadowThresholdStrength": 1,
+      "localExposureMiddleGreyBias": 0,
+      "lensFlareIntensity": 1,
+      "lensFlareTint": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "lensFlareBokehSize": 3,
+      "lensFlareThreshold": 8,
+      "lensFlareBokehShape": "None",
+      "lensFlareTints": [
+        {
+          "r": 1,
+          "g": 0.800000011920929,
+          "b": 0.4000000059604645,
+          "a": 0.6000000238418579
+        },
+        {
+          "r": 1,
+          "g": 1,
+          "b": 0.6000000238418579,
+          "a": 0.5299999713897705
+        },
+        {
+          "r": 0.800000011920929,
+          "g": 0.800000011920929,
+          "b": 1,
+          "a": 0.46000000834465027
+        },
+        {
+          "r": 0.5,
+          "g": 1,
+          "b": 0.4000000059604645,
+          "a": 0.38999998569488525
+        },
+        {
+          "r": 0.5,
+          "g": 0.800000011920929,
+          "b": 1,
+          "a": 0.3100000023841858
+        },
+        {
+          "r": 0.8999999761581421,
+          "g": 1,
+          "b": 0.800000011920929,
+          "a": 0.27000001072883606
+        },
+        {
+          "r": 1,
+          "g": 0.800000011920929,
+          "b": 0.4000000059604645,
+          "a": 0.2199999988079071
+        },
+        {
+          "r": 0.8999999761581421,
+          "g": 0.699999988079071,
+          "b": 0.699999988079071,
+          "a": 0.15000000596046448
+        }
+      ],
+      "vignetteIntensity": 0.4000000059604645,
+      "vignetteType": "CosineFourthLaw",
+      "vignetteCenter": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "vignetteColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 1
+      },
+      "vignetteSize": {
+        "x": 1,
+        "y": 1
+      },
+      "vignetteSoftness": 5,
+      "vignetteTexture": "None",
+      "sharpen": 0,
+      "filmGrainIntensity": 0,
+      "filmGrainIntensityShadows": 1,
+      "filmGrainIntensityMidtones": 1,
+      "filmGrainIntensityHighlights": 1,
+      "filmGrainShadowsMax": 0.09000000357627869,
+      "filmGrainHighlightsMin": 0.5,
+      "filmGrainHighlightsMax": 1,
+      "filmGrainScale": {
+        "x": 1,
+        "y": 1
+      },
+      "filmGrainTexture": "None",
+      "ambientOcclusionIntensity": 0.5,
+      "ambientOcclusionStaticFraction": 1,
+      "ambientOcclusionRadius": 200,
+      "ambientOcclusionRadiusInWS": false,
+      "ambientOcclusionFadeDistance": 8000,
+      "ambientOcclusionFadeRadius": 5000,
+      "ambientOcclusionPower": 2,
+      "ambientOcclusionBias": 3,
+      "ambientOcclusionQuality": 50,
+      "ambientOcclusionMipBlend": 0.6000000238418579,
+      "ambientOcclusionMipScale": 1.7000000476837158,
+      "ambientOcclusionMipThreshold": 0.009999999776482582,
+      "ambientOcclusionTemporalBlendWeight": 0.10000000149011612,
+      "rayTracingAO": false,
+      "rayTracingAOSamplesPerPixel": 1,
+      "rayTracingAOIntensity": 1,
+      "rayTracingAORadius": 200,
+      "colorGradingIntensity": 1,
+      "colorGradingLUT": "None",
+      "depthOfFieldEnabled": true,
+      "depthOfFieldSensorWidth": 24.576000213623047,
+      "depthOfFieldSqueezeFactor": 1,
+      "depthOfFieldFocalDistance": 0,
+      "depthOfFieldDepthBlurAmount": 1,
+      "depthOfFieldDepthBlurRadius": 0,
+      "depthOfFieldUseHairDepth": false,
+      "depthOfFieldPetzvalBokeh": 0,
+      "depthOfFieldPetzvalBokehFalloff": 1,
+      "depthOfFieldPetzvalExclusionBoxExtents": {
+        "x": 0,
+        "y": 0
+      },
+      "depthOfFieldPetzvalExclusionBoxRadius": 0,
+      "depthOfFieldAspectRatioScalar": 1,
+      "depthOfFieldBarrelRadius": 5,
+      "depthOfFieldBarrelLength": 0,
+      "depthOfFieldMatteBoxFlags": [
+        {
+          "pitch": 0,
+          "roll": 0,
+          "length": 0
+        },
+        {
+          "pitch": 0,
+          "roll": 0,
+          "length": 0
+        },
+        {
+          "pitch": 0,
+          "roll": 0,
+          "length": 0
+        }
+      ],
+      "depthOfFieldFocalRegion": 0,
+      "depthOfFieldNearTransitionRegion": 300,
+      "depthOfFieldFarTransitionRegion": 500,
+      "depthOfFieldScale": 0,
+      "depthOfFieldNearBlurSize": 15,
+      "depthOfFieldFarBlurSize": 15,
+      "depthOfFieldOcclusion": 0.4000000059604645,
+      "depthOfFieldSkyFocusDistance": 0,
+      "depthOfFieldVignetteSize": 200,
+      "motionBlurAmount": 0.5,
+      "motionBlurMax": 5,
+      "motionBlurTargetFPS": 30,
+      "motionBlurPerObjectSize": 0,
+      "translucencyType": "Raster",
+      "rayTracingTranslucencyMaxRoughness": 0.6000000238418579,
+      "rayTracingTranslucencyRefractionRays": 3,
+      "rayTracingTranslucencySamplesPerPixel": 1,
+      "rayTracingTranslucencyMaxPrimaryHitEvents": 4,
+      "rayTracingTranslucencyMaxSecondaryHitEvents": 2,
+      "rayTracingTranslucencyShadows": "Hard_shadows",
+      "rayTracingTranslucencyRefraction": true,
+      "rayTracingTranslucencyUseRayTracedRefraction": false,
+      "pathTracingMaxBounces": 32,
+      "pathTracingSamplesPerPixel": 2048,
+      "pathTracingMaxPathIntensity": 24,
+      "pathTracingEnableEmissiveMaterials": true,
+      "pathTracingEnableReferenceDOF": false,
+      "pathTracingEnableReferenceAtmosphere": false,
+      "pathTracingEnableDenoiser": true,
+      "pathTracingIncludeEmissive": true,
+      "pathTracingIncludeDiffuse": true,
+      "pathTracingIncludeIndirectDiffuse": true,
+      "pathTracingIncludeSpecular": true,
+      "pathTracingIncludeIndirectSpecular": true,
+      "pathTracingIncludeVolume": true,
+      "pathTracingIncludeIndirectVolume": true,
+      "userFlags": 0,
+      "weightedBlendables": {
+        "array": []
+      }
+    },
+    "priority": 0,
+    "blendWeight": 1,
+    "blendRadius": 100,
+    "bEnabled": true,
+    "bUnbound": true
+  },
+  "stage": {
+    "components": [
+      {
+        "component": {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_Floor03_C_0.Ceilings"
+        },
+        "properties": {
+          "staticMesh": {
+            "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Ceilings.SM_F03V02_Ceilings"
+          },
+          "mobility": "Static",
+          "castShadow": true,
+          "bCastDynamicShadow": true,
+          "bCastStaticShadow": true,
+          "bVisibleInRayTracing": true,
+          "bAffectDistanceFieldLighting": true,
+          "bDisallowNanite": false,
+          "boundsScale": 1,
+          "bUseAttachParentBound": false,
+          "lDMaxDrawDistance": 0,
+          "minDrawDistance": 0,
+          "bNeverDistanceCull": false,
+          "primaryComponentTick": {
+            "tickGroup": "TG_DuringPhysics",
+            "endTickGroup": "TG_PrePhysics",
+            "bTickEvenWhenPaused": false,
+            "bCanEverTick": false,
+            "bStartWithTickEnabled": true,
+            "bAllowTickOnDedicatedServer": true,
+            "tickInterval": 0
+          },
+          "overrideMaterials": [],
+          "bVisible": true
+        }
+      },
+      {
+        "component": {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_Floor03_C_0.Chairs"
+        },
+        "properties": {
+          "staticMesh": {
+            "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Chairs.SM_F03V02_Chairs"
+          },
+          "mobility": "Static",
+          "castShadow": true,
+          "bCastDynamicShadow": true,
+          "bCastStaticShadow": true,
+          "bVisibleInRayTracing": true,
+          "bAffectDistanceFieldLighting": true,
+          "bDisallowNanite": false,
+          "boundsScale": 1,
+          "bUseAttachParentBound": false,
+          "lDMaxDrawDistance": 0,
+          "minDrawDistance": 0,
+          "bNeverDistanceCull": false,
+          "primaryComponentTick": {
+            "tickGroup": "TG_DuringPhysics",
+            "endTickGroup": "TG_PrePhysics",
+            "bTickEvenWhenPaused": false,
+            "bCanEverTick": false,
+            "bStartWithTickEnabled": true,
+            "bAllowTickOnDedicatedServer": true,
+            "tickInterval": 0
+          },
+          "overrideMaterials": [],
+          "bVisible": true
+        }
+      },
+      {
+        "component": {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_Floor03_C_0.ClassroomFixtures"
+        },
+        "properties": {
+          "staticMesh": {
+            "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_ClassroomFixtures.SM_F03V02_ClassroomFixtures"
+          },
+          "mobility": "Static",
+          "castShadow": true,
+          "bCastDynamicShadow": true,
+          "bCastStaticShadow": true,
+          "bVisibleInRayTracing": true,
+          "bAffectDistanceFieldLighting": true,
+          "bDisallowNanite": false,
+          "boundsScale": 1,
+          "bUseAttachParentBound": false,
+          "lDMaxDrawDistance": 0,
+          "minDrawDistance": 0,
+          "bNeverDistanceCull": false,
+          "primaryComponentTick": {
+            "tickGroup": "TG_DuringPhysics",
+            "endTickGroup": "TG_PrePhysics",
+            "bTickEvenWhenPaused": false,
+            "bCanEverTick": false,
+            "bStartWithTickEnabled": true,
+            "bAllowTickOnDedicatedServer": true,
+            "tickInterval": 0
+          },
+          "overrideMaterials": [],
+          "bVisible": true
+        }
+      },
+      {
+        "component": {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_Floor03_C_0.ClosedClassrooms"
+        },
+        "properties": {
+          "staticMesh": {
+            "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_ClosedClassrooms.SM_F03V02_ClosedClassrooms"
+          },
+          "mobility": "Static",
+          "castShadow": true,
+          "bCastDynamicShadow": true,
+          "bCastStaticShadow": true,
+          "bVisibleInRayTracing": true,
+          "bAffectDistanceFieldLighting": true,
+          "bDisallowNanite": false,
+          "boundsScale": 1,
+          "bUseAttachParentBound": false,
+          "lDMaxDrawDistance": 0,
+          "minDrawDistance": 0,
+          "bNeverDistanceCull": false,
+          "primaryComponentTick": {
+            "tickGroup": "TG_DuringPhysics",
+            "endTickGroup": "TG_PrePhysics",
+            "bTickEvenWhenPaused": false,
+            "bCanEverTick": false,
+            "bStartWithTickEnabled": true,
+            "bAllowTickOnDedicatedServer": true,
+            "tickInterval": 0
+          },
+          "overrideMaterials": [],
+          "bVisible": true
+        }
+      },
+      {
+        "component": {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_Floor03_C_0.Corridors"
+        },
+        "properties": {
+          "staticMesh": {
+            "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Corridors.SM_F03V02_Corridors"
+          },
+          "mobility": "Static",
+          "castShadow": true,
+          "bCastDynamicShadow": true,
+          "bCastStaticShadow": true,
+          "bVisibleInRayTracing": true,
+          "bAffectDistanceFieldLighting": true,
+          "bDisallowNanite": false,
+          "boundsScale": 1,
+          "bUseAttachParentBound": false,
+          "lDMaxDrawDistance": 0,
+          "minDrawDistance": 0,
+          "bNeverDistanceCull": false,
+          "primaryComponentTick": {
+            "tickGroup": "TG_DuringPhysics",
+            "endTickGroup": "TG_PrePhysics",
+            "bTickEvenWhenPaused": false,
+            "bCanEverTick": false,
+            "bStartWithTickEnabled": true,
+            "bAllowTickOnDedicatedServer": true,
+            "tickInterval": 0
+          },
+          "overrideMaterials": [],
+          "bVisible": true
+        }
+      },
+      {
+        "component": {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_Floor03_C_0.Desks"
+        },
+        "properties": {
+          "staticMesh": {
+            "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Desks.SM_F03V02_Desks"
+          },
+          "mobility": "Static",
+          "castShadow": true,
+          "bCastDynamicShadow": true,
+          "bCastStaticShadow": true,
+          "bVisibleInRayTracing": true,
+          "bAffectDistanceFieldLighting": true,
+          "bDisallowNanite": false,
+          "boundsScale": 1,
+          "bUseAttachParentBound": false,
+          "lDMaxDrawDistance": 0,
+          "minDrawDistance": 0,
+          "bNeverDistanceCull": false,
+          "primaryComponentTick": {
+            "tickGroup": "TG_DuringPhysics",
+            "endTickGroup": "TG_PrePhysics",
+            "bTickEvenWhenPaused": false,
+            "bCanEverTick": false,
+            "bStartWithTickEnabled": true,
+            "bAllowTickOnDedicatedServer": true,
+            "tickInterval": 0
+          },
+          "overrideMaterials": [],
+          "bVisible": true
+        }
+      },
+      {
+        "component": {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_Floor03_C_0.Glass"
+        },
+        "properties": {
+          "staticMesh": {
+            "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Glass.SM_F03V02_Glass"
+          },
+          "mobility": "Static",
+          "castShadow": true,
+          "bCastDynamicShadow": true,
+          "bCastStaticShadow": true,
+          "bVisibleInRayTracing": true,
+          "bAffectDistanceFieldLighting": true,
+          "bDisallowNanite": false,
+          "boundsScale": 1,
+          "bUseAttachParentBound": false,
+          "lDMaxDrawDistance": 0,
+          "minDrawDistance": 0,
+          "bNeverDistanceCull": false,
+          "primaryComponentTick": {
+            "tickGroup": "TG_DuringPhysics",
+            "endTickGroup": "TG_PrePhysics",
+            "bTickEvenWhenPaused": false,
+            "bCanEverTick": false,
+            "bStartWithTickEnabled": true,
+            "bAllowTickOnDedicatedServer": true,
+            "tickInterval": 0
+          },
+          "overrideMaterials": [],
+          "bVisible": true
+        }
+      },
+      {
+        "component": {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_Floor03_C_0.GlazingFrames"
+        },
+        "properties": {
+          "staticMesh": {
+            "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_GlazingFrames.SM_F03V02_GlazingFrames"
+          },
+          "mobility": "Static",
+          "castShadow": true,
+          "bCastDynamicShadow": true,
+          "bCastStaticShadow": true,
+          "bVisibleInRayTracing": true,
+          "bAffectDistanceFieldLighting": true,
+          "bDisallowNanite": false,
+          "boundsScale": 1,
+          "bUseAttachParentBound": false,
+          "lDMaxDrawDistance": 0,
+          "minDrawDistance": 0,
+          "bNeverDistanceCull": false,
+          "primaryComponentTick": {
+            "tickGroup": "TG_DuringPhysics",
+            "endTickGroup": "TG_PrePhysics",
+            "bTickEvenWhenPaused": false,
+            "bCanEverTick": false,
+            "bStartWithTickEnabled": true,
+            "bAllowTickOnDedicatedServer": true,
+            "tickInterval": 0
+          },
+          "overrideMaterials": [],
+          "bVisible": true
+        }
+      },
+      {
+        "component": {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_Floor03_C_0.Laptops"
+        },
+        "properties": {
+          "staticMesh": {
+            "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Laptops.SM_F03V02_Laptops"
+          },
+          "mobility": "Static",
+          "castShadow": true,
+          "bCastDynamicShadow": true,
+          "bCastStaticShadow": true,
+          "bVisibleInRayTracing": true,
+          "bAffectDistanceFieldLighting": true,
+          "bDisallowNanite": false,
+          "boundsScale": 1,
+          "bUseAttachParentBound": false,
+          "lDMaxDrawDistance": 0,
+          "minDrawDistance": 0,
+          "bNeverDistanceCull": false,
+          "primaryComponentTick": {
+            "tickGroup": "TG_DuringPhysics",
+            "endTickGroup": "TG_PrePhysics",
+            "bTickEvenWhenPaused": false,
+            "bCanEverTick": false,
+            "bStartWithTickEnabled": true,
+            "bAllowTickOnDedicatedServer": true,
+            "tickInterval": 0
+          },
+          "overrideMaterials": [],
+          "bVisible": true
+        }
+      },
+      {
+        "component": {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_Floor03_C_0.Mice"
+        },
+        "properties": {
+          "staticMesh": {
+            "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Mice.SM_F03V02_Mice"
+          },
+          "mobility": "Static",
+          "castShadow": true,
+          "bCastDynamicShadow": true,
+          "bCastStaticShadow": true,
+          "bVisibleInRayTracing": true,
+          "bAffectDistanceFieldLighting": true,
+          "bDisallowNanite": false,
+          "boundsScale": 1,
+          "bUseAttachParentBound": false,
+          "lDMaxDrawDistance": 0,
+          "minDrawDistance": 0,
+          "bNeverDistanceCull": false,
+          "primaryComponentTick": {
+            "tickGroup": "TG_DuringPhysics",
+            "endTickGroup": "TG_PrePhysics",
+            "bTickEvenWhenPaused": false,
+            "bCanEverTick": false,
+            "bStartWithTickEnabled": true,
+            "bAllowTickOnDedicatedServer": true,
+            "tickInterval": 0
+          },
+          "overrideMaterials": [],
+          "bVisible": true
+        }
+      },
+      {
+        "component": {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_Floor03_C_0.StairCore"
+        },
+        "properties": {
+          "staticMesh": {
+            "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_StairCore.SM_F03V02_StairCore"
+          },
+          "mobility": "Static",
+          "castShadow": true,
+          "bCastDynamicShadow": true,
+          "bCastStaticShadow": true,
+          "bVisibleInRayTracing": true,
+          "bAffectDistanceFieldLighting": true,
+          "bDisallowNanite": false,
+          "boundsScale": 1,
+          "bUseAttachParentBound": false,
+          "lDMaxDrawDistance": 0,
+          "minDrawDistance": 0,
+          "bNeverDistanceCull": false,
+          "primaryComponentTick": {
+            "tickGroup": "TG_DuringPhysics",
+            "endTickGroup": "TG_PrePhysics",
+            "bTickEvenWhenPaused": false,
+            "bCanEverTick": false,
+            "bStartWithTickEnabled": true,
+            "bAllowTickOnDedicatedServer": true,
+            "tickInterval": 0
+          },
+          "overrideMaterials": [],
+          "bVisible": true
+        }
+      },
+      {
+        "component": {
+          "refPath": "/Game/Main/Stage/KDStage.KDStage:PersistentLevel.BP_Floor03_C_0.Structure"
+        },
+        "properties": {
+          "staticMesh": {
+            "refPath": "/Game/Main/Stage/Floor03/SurveyV02/SM_F03V02_Structure.SM_F03V02_Structure"
+          },
+          "mobility": "Static",
+          "castShadow": true,
+          "bCastDynamicShadow": true,
+          "bCastStaticShadow": true,
+          "bVisibleInRayTracing": true,
+          "bAffectDistanceFieldLighting": true,
+          "bDisallowNanite": false,
+          "boundsScale": 1,
+          "bUseAttachParentBound": false,
+          "lDMaxDrawDistance": 0,
+          "minDrawDistance": 0,
+          "bNeverDistanceCull": false,
+          "primaryComponentTick": {
+            "tickGroup": "TG_DuringPhysics",
+            "endTickGroup": "TG_PrePhysics",
+            "bTickEvenWhenPaused": false,
+            "bCanEverTick": false,
+            "bStartWithTickEnabled": true,
+            "bAllowTickOnDedicatedServer": true,
+            "tickInterval": 0
+          },
+          "overrideMaterials": [],
+          "bVisible": true
+        }
+      }
+    ]
+  },
+  "sample_radius_overlaps": [
+    {
+      "name": "PlayerStart_eye",
+      "x": 402,
+      "y": -73,
+      "z": 160,
+      "lights": [
+        "F03_GameLab_01",
+        "F03_GameLab_05",
+        "F03_GameLab_06",
+        "F03_GameLab_09",
+        "F03_GameLab_10",
+        "F03_Atrium_Bounce_Upper",
+        "F03_Atrium_Bounce_3F",
+        "F03_Atrium_Bounce_Lower"
+      ]
+    },
+    {
+      "name": "ClassroomCenter_eye",
+      "x": 400,
+      "y": -550,
+      "z": 160,
+      "lights": [
+        "F03_GameLab_01",
+        "F03_GameLab_02",
+        "F03_GameLab_03",
+        "F03_GameLab_04",
+        "F03_GameLab_05",
+        "F03_GameLab_06",
+        "F03_GameLab_07",
+        "F03_GameLab_08",
+        "F03_GameLab_09",
+        "F03_GameLab_10",
+        "F03_GameLab_11",
+        "F03_GameLab_12",
+        "F03_Atrium_22",
+        "F03_Atrium_Bounce_Upper",
+        "F03_Atrium_Bounce_3F",
+        "F03_Atrium_Bounce_Lower"
+      ]
+    },
+    {
+      "name": "ClassroomExit_eye",
+      "x": -105,
+      "y": -887.5,
+      "z": 160,
+      "lights": [
+        "F03_GameLab_03",
+        "F03_GameLab_04",
+        "F03_Gallery_15",
+        "F03_Gallery_16",
+        "F03_Atrium_22",
+        "F03_AdjacentLab_23",
+        "F03_Atrium_Bounce_Upper",
+        "F03_Atrium_Bounce_3F",
+        "F03_Atrium_Bounce_Lower"
+      ]
+    },
+    {
+      "name": "AtriumCorridor_eye",
+      "x": -600,
+      "y": 123,
+      "z": 160,
+      "lights": [
+        "F03_Gallery_17",
+        "F03_Gallery_18",
+        "F03_Gallery_19",
+        "F03_Atrium_22",
+        "F03_Atrium_Bounce_Upper",
+        "F03_Atrium_Bounce_3F",
+        "F03_Atrium_Bounce_Lower"
+      ]
+    },
+    {
+      "name": "EnemyLobby_eye",
+      "x": -1400,
+      "y": 350,
+      "z": 160,
+      "lights": [
+        "F03_Gallery_20",
+        "F03_Gallery_21",
+        "F03_Atrium_22",
+        "F03_Stair_41",
+        "F03_Lift_42",
+        "F03_Atrium_Bounce_Upper",
+        "F03_Atrium_Bounce_3F",
+        "F03_Atrium_Bounce_Lower",
+        "F03_Stair_Bounce"
+      ]
+    }
+  ],
+  "notes": [
+    "Radius sphere overlap is an upper-bound indicator, not a measured rendered-light count; walls, frustum, rectangular-light shape, and occlusion affect actual contribution.",
+    "PP only exposure min/max/bias overrides are enabled. Other PP stored values are defaults and do not prove active Lumen or MegaLights.",
+    "All light transforms/property values came from normal Unreal MCP read tools. No Editor mutation or selection/camera/PIE change."
+  ]
+}

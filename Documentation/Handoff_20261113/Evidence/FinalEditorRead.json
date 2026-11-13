@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-13",
+  "pie": false,
+  "observers": [
+    {
+      "identifier": "observer_1",
+      "root": true,
+      "rootRef": "",
+      "maxDepth": 0,
+      "cachedSnapshotSize": 69
+    }
+  ],
+  "source": "Normal Unreal MCP final read after handoff document creation"
+}

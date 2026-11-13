@@ -1,0 +1,122 @@
+{
+  "source": "C:\\Users\\motoo\\OneDrive\\\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\\\u307e\u3068\u3081\\\u500b\u4eba\u696d\u52d9\\\u30b2\u30fc\u30e0\u958b\u767a\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\SurveyV02\\EscapeFromKD_Floor03_v02.blend",
+  "source_sha256": "2f423416a9b0910777621ee70681fb18a634e2ec88163e7c2633b04745002e3b",
+  "chairs": {
+    "main": {
+      "ratio": 0.5,
+      "before_triangles": 7620,
+      "after_triangles": 3810,
+      "surface_distance": {
+        "max_m": 0.000567255134228617,
+        "mean_m": 0.00014365802177334413
+      },
+      "materials": [
+        "KD_F03_BlackPlastic",
+        "KD_F03_DarkRubber",
+        "KD_F03_SilverMetal"
+      ],
+      "instances": 41
+    },
+    "cad": {
+      "ratio": 0.25,
+      "before_triangles": 7620,
+      "after_triangles": 1904,
+      "surface_distance": {
+        "max_m": 0.002523454837501049,
+        "mean_m": 0.00045607294176048586
+      },
+      "materials": [
+        "KD_F03_BlackPlastic",
+        "KD_F03_DarkRubber",
+        "KD_F03_SilverMetal"
+      ],
+      "instances": 72
+    },
+    "adjacent": {
+      "ratio": 0.5,
+      "before_triangles": 1344,
+      "after_triangles": 672,
+      "surface_distance": {
+        "max_m": 0.0005112888175062835,
+        "mean_m": 0.00014112877806507273
+      },
+      "materials": [
+        "KD_F03_BlackPlastic",
+        "KD_F03_SilverMetal"
+      ],
+      "instances": 60
+    }
+  },
+  "groups": [
+    {
+      "name": "Chairs",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\\\u307e\u3068\u3081\\\u500b\u4eba\u696d\u52d9\\\u30b2\u30fc\u30e0\u958b\u767a\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\OptimizedV03\\Export\\SM_F03V03_Chairs.fbx",
+      "source_objects": 173,
+      "triangles": 333618,
+      "bounds": {
+        "min": [
+          -18.89861297607422,
+          -17.294147491455078,
+          0.0
+        ],
+        "max": [
+          7.565000057220459,
+          17.73000144958496,
+          0.8499999642372131
+        ]
+      },
+      "materials": [
+        "KD_F03_BlackPlastic",
+        "KD_F03_DarkRubber",
+        "KD_F03_SilverMetal"
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "removed_degenerate_faces": 0,
+      "repaired_uv_faces": 0
+    },
+    {
+      "name": "Laptops",
+      "fbx": "C:\\Users\\motoo\\OneDrive\\\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\\\u307e\u3068\u3081\\\u500b\u4eba\u696d\u52d9\\\u30b2\u30fc\u30e0\u958b\u767a\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\SourceAssets\\Stages\\Floor03\\OptimizedV03\\Export\\SM_F03V03_Laptops.fbx",
+      "source_objects": 21,
+      "triangles": 31500,
+      "bounds": {
+        "min": [
+          0.8941465616226196,
+          1.5414127111434937,
+          0.7200000286102295
+        ],
+        "max": [
+          6.846166610717773,
+          9.59749984741211,
+          0.948101282119751
+        ]
+      },
+      "materials": [
+        "KD_F03_BlackPlastic",
+        "KD_F03_DarkRubber",
+        "KD_F03_LaptopKeyboard",
+        "KD_F03_LaptopScreen"
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "removed_degenerate_faces": 336,
+      "repaired_uv_faces": 147
+    }
+  ],
+  "laptop": {
+    "selected_key_parts": 62,
+    "before_triangles": 7468,
+    "after_triangles": 1516,
+    "surface_distance": {
+      "max_m": 0.0003400486020836979,
+      "mean_m": 7.740388466931874e-05
+    },
+    "instances": 21
+  },
+  "other_ten_groups_unchanged": true,
+  "all_furniture_transforms_and_materials_unchanged": true,
+  "source_unchanged": true
+}

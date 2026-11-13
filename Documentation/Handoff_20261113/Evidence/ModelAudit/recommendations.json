@@ -1,0 +1,76 @@
+{
+  "source_modified": false,
+  "blender_read_only_process_completed": true,
+  "audit_file": "Saved/Automation/StageOptimization_20261113/ModelAudit/model_audit.json",
+  "source_triangles": 1437636,
+  "fbx_manifest_triangles": 1435172,
+  "difference": "Export removes degenerate bevel faces from desks and laptops; source retains editable geometry.",
+  "dominant_geometry": [
+    {
+      "group": "Chairs",
+      "triangles": 941700,
+      "percentage": 65.5,
+      "details": "113 rolling chairs at 7620 triangles plus 60 sled chairs at 1344 triangles."
+    },
+    {
+      "group": "Laptops",
+      "triangles": 156828,
+      "percentage": 10.9,
+      "details": "21 laptops; 60 tiny beveled keys contribute 6480 of 7468 triangles per laptop."
+    },
+    {
+      "group": "Desks",
+      "triangles": 139196,
+      "percentage": 9.7,
+      "details": "89 repeated desks, each 1564 source triangles."
+    }
+  ],
+  "closed_room_furniture": {
+    "chairs": 629280,
+    "desks": 106352,
+    "total": 735632,
+    "scene_percentage": 51.2
+  },
+  "textures": {
+    "generated_images": 8,
+    "dimensions": "512 x 512 each",
+    "priority": "low: texture reduction would not be the first model-side action"
+  },
+  "candidates": [
+    {
+      "priority": 1,
+      "action": "Measure GPU lighting, shadow and Lumen costs before committing model replacement.",
+      "reason": "Nanite triangle count alone does not predict final frame time."
+    },
+    {
+      "priority": 2,
+      "action": "Reduce the 1.5 mm laptop key bevels while retaining 3D keys, UVs and positions.",
+      "estimate": "60 keys x (108 - 12) triangles x 21 laptops = 120960 fewer source triangles; 8.4% of stage.",
+      "validation": "Needs close-camera before/after comparison; do not simplify laptop screen geometry or move any furniture."
+    },
+    {
+      "priority": 3,
+      "action": "Use lower-detail rolling chair prototypes for closed CAD room, with an optional nearer LOD for the playable room.",
+      "estimate": "72 CAD chairs at tested 1904 triangles instead of 7620 would remove 411552 source triangles (28.6% of stage).",
+      "validation": "Test-only decimation was performed on temporary in-memory copies; silhouettes, normals and visual quality have not been approved."
+    },
+    {
+      "priority": 4,
+      "action": "Replace globally baked repeated furniture with shared prototype meshes and ISM/HISM when memory or instance/fallback rendering measurements justify it.",
+      "estimate": "Existing Blender mesh-data sharing is lost during export join. Potential asset and fallback/BVH memory reduction is large; no FPS estimate.",
+      "validation": "Preserve positions, scales, orientation, materials, and existing collision/line-trace semantics."
+    },
+    {
+      "priority": 5,
+      "action": "Split structural categories by room and contiguous architectural surface if Lumen Surface Cache/Distance Field diagnostics show deficits.",
+      "reason": "Current furniture and several architecture groups span the whole floor; separate walls/floors/ceilings are recommended by Epic for Lumen.",
+      "validation": "Nanite already culls at cluster granularity, so a large bounding box does not automatically mean every triangle is drawn."
+    }
+  ],
+  "collision_warning": "Do not turn the combined furniture groups into one convex/simple collision hull. It could block existing aisles. Preserve current complex shooting traces and validate walking, doorways and stairs after any collider changes.",
+  "sources": [
+    "https://dev.epicgames.com/documentation/en-us/unreal-engine/lumen-technical-details-in-unreal-engine",
+    "https://dev.epicgames.com/documentation/unreal-engine/working-with-naniteenabled-content",
+    "https://dev.epicgames.com/documentation/unreal-engine/hybrid-nonnanite-and-nanite-content-workflows"
+  ]
+}

@@ -1,0 +1,1 @@
+{"label":"AB_Memory_Classroom","warmup":12,"frames":600,"commands":["r.TSR.History.ScreenPercentage 100","r.Shadow.Virtual.MaxPhysicalPages 2048","r.LumenScene.SurfaceCache.AtlasSize 2048"]}

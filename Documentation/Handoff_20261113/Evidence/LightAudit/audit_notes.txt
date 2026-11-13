@@ -1,0 +1,41 @@
+3F lighting and stage component read-only audit
+2026-11-13, /Game/Main/Stage/KDStage
+Normal unreal-mcp tools only. No Editor changes, UI, camera, or PIE actions.
+
+Facts:
+- 42 RectLights and 4 PointLights; all Movable.
+- All 42 RectLights cast shadows, static-object shadows, and dynamic-object shadows.
+- Every light has maxDrawDistance=0 and maxDistanceFadeRange=0 (no configured light distance culling).
+- Every light affects translucency, GI, and reflections.
+- Every light uses project-controlled ray-traced shadow choice; none forces distance-field shadows.
+- MegaLights is allowed on every light, but that alone does not mean MegaLights is enabled globally.
+- Main classroom: 12 shadowed RectLights, radius450cm, 1900lm.
+- Closed adjacent room: 9 shadowed RectLights, radius450cm, 1900lm.
+- Closed CAD room: 9 shadowed RectLights, radius450cm, 1900lm.
+- Gallery: 9 shadowed RectLights, radius330cm, 1100lm.
+- Atrium: 1 shadowed RectLight, radius1400cm, 14000lm.
+- Stair: 1 shadowed RectLight, radius650cm, 1100lm.
+- Lift: 1 shadowed RectLight, radius450cm, 1100lm.
+- Three atrium fill PointLights: radius1800cm, 18000/12000/8000lm, shadows disabled.
+- Stair fill PointLight: radius650cm, 2000lm, shadows disabled.
+- Main classroom center lies inside all12 classroom light spheres, the atrium RectLight sphere, and all3 large atrium fill spheres: upper-bound overlap16.
+- Radius overlap is not a measured contributing-light count. Walls, shape, frustum and occlusion still matter.
+- One unbound PostProcessVolume: only AutoExposureMinBrightness=6, MaxBrightness=6 and Bias=0 are explicitly overridden.
+- PP stored Lumen/MegaLights values are not active overrides.
+- Stage actor has12 StaticMeshComponents. All are Static, bCanEverTick=false, boundsScale=1, no parent-bound override.
+- All12 components cast shadows and participate in ray tracing/distance-field lighting. All have distance-cull limit0.
+- Stage transforms are identity; no per-component material overrides.
+
+Priority proposals for root to A/B measure:
+1. Profile shadow and local-light GPU passes before mesh simplification. The 42 shadowed movable RectLights are the strongest scene-specific candidate.
+2. Compare existing VSM/local-light setup with MegaLights if supported on this project/GPU. Existing lights already permit it. Confirm effective global CVar before interpreting PP defaults.
+3. Establish a sparse set of shadow-casting key lights, retaining other lights as fill only where light leakage and self-shadow change are acceptable. Keep stair/door safety lighting. This must be visually checked; disabling every shadow blindly would materially alter the scene.
+4. Add finite light draw distance/fade to inaccessible-room and distant-local lights, preserving them while their room is visible. Start from room dimensions and measured viewpoints, not an arbitrary global aggressive limit.
+5. Review the three1800cm atrium fill lights: their spheres extend to the main classroom and lobby. Reducing influence or overlap could reduce shading cost, but compare exposures because they currently brighten the surrounding floor.
+6. Evaluate whether local lights all need translucency lighting. Do not disable globally without checking the glazed classroom/atrium boundaries.
+7. Stage components are already static/non-ticking and only12 in number. Converting them to Static or disabling Tick yields no gain. Model-splitting/LOD/material work is owned by the model audit.
+8. Do not simply convert lights to Static: DefaultEngine.ini currently disables static lighting; bake workflow would need explicit additional project changes, lightmap validation, and rebuild.
+
+Data:
+baseline_scene.json contains all46 actor labels, transforms, component references, selected lighting values, complete PP settings, stage mesh component values and sample overlap labels.
+

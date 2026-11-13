@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-13",
+  "errors": [],
+  "json_files_parsed": 23,
+  "python_files_syntax_checked": 7,
+  "text_utf8_decode": "PASS",
+  "required_references_missing": [],
+  "baseline_hashes": {
+    "Content/Main/Stage/KDStage.umap": {
+      "sha256": "0a9c16812620d499f877ed43939fba471bd86e57dda57ab3e58c5783bb150229",
+      "matches": true
+    },
+    "Content/Main/Stage/BP_Floor03.uasset": {
+      "sha256": "f455e7292c3349fb2e9edbb66a733e7785e3d192d8b1f9ffb4cc260dbe1b15ab",
+      "matches": true
+    },
+    "Config/DefaultEngine.ini": {
+      "sha256": "055c7dd9c746ced5941ada473407642047c8760b7c6a6b8cfcba74179f478f3e",
+      "matches": true
+    },
+    "SourceAssets/Stages/Floor03/SurveyV02/EscapeFromKD_Floor03_v02.blend": {
+      "sha256": "2f423416a9b0910777621ee70681fb18a634e2ec88163e7c2633b04745002e3b",
+      "matches": true
+    }
+  },
+  "csv_recalculation": {
+    "Baseline_Classroom": {
+      "sample_count": 600,
+      "mean_fps": 23.76184557209037,
+      "matches": true
+    },
+    "AB_TSR100_Classroom_Valid": {
+      "sample_count": 600,
+      "mean_fps": 28.727980882448016,
+      "matches": true
+    },
+    "AB_Memory_Classroom": {
+      "sample_count": 600,
+      "mean_fps": 22.391018657898464,
+      "matches": true
+    }
+  },
+  "git_diff_check": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "git_status": {
+    "exit_code": 0,
+    "stdout": "?? Documentation/Handoff_20261113/\n?? SourceAssets/Stages/Floor03/OptimizedV03/",
+    "stderr": ""
+  },
+  "content_config_diff": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "git_lfs_candidate_attributes": {
+    "exit_code": 0,
+    "stdout": "SourceAssets/Stages/Floor03/OptimizedV03/Export/SM_F03V03_Chairs.fbx: filter: lfs\nSourceAssets/Stages/Floor03/OptimizedV03/Export/SM_F03V03_Laptops.fbx: filter: lfs",
+    "stderr": ""
+  },
+  "new_files_ignored": [],
+  "current_log_error_matches": [],
+  "live_editor_final_read": {
+    "date": "2026-11-13",
+    "pie": false,
+    "observers": [
+      {
+        "identifier": "observer_1",
+        "root": true,
+        "rootRef": "",
+        "maxDepth": 0,
+        "cachedSnapshotSize": 69
+      }
+    ],
+    "source": "Normal Unreal MCP final read after handoff document creation"
+  },
+  "result": "PASS"
+}
