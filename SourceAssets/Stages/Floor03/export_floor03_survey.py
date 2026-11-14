@@ -1,20 +1,25 @@
 import hashlib
 import json
+from math import radians
 import sys
 from pathlib import Path
 
 import bpy
 import bmesh
+from mathutils import Matrix
 
 ROOT = Path(__file__).resolve().parent
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(ROOT))
 from export_floor03_fbx import bounds, copy_mesh, write_fbx
+from build_floor03 import boxes
 
 SOURCE = ROOT/'SurveyV02'/'EscapeFromKD_Floor03_v02.blend'
 OUTPUT = ROOT/'SurveyV02'/'Export'
 GROUPS = ['Structure','Ceilings','ClosedClassrooms','ClassroomFixtures','GlazingFrames',
           'Glass','Corridors','StairCore','Desks','Chairs','Laptops','Mice']
+FLOOR02_ONLY_LIFT_PARTS = {'Lift_stainless_frame','Lift_closed_leaf','Lift_closed_leaf.001',
+                           'Lift_center_seam','Lift_indicator','Lift_number'}
 
 
 def repair_degenerate_uv(mesh):
@@ -52,6 +57,32 @@ def remove_degenerate_faces(mesh):
     return len(degenerate)
 
 
+def fit_stair_fire_door(copies, destination):
+    parts={obj.name.removeprefix('EXPORT_'):obj for obj in copies}
+    leaf=parts['Stair_floor_identity']
+    # Park the leaf against the side wall. Keep the lettering and exit sign at their original scale.
+    pivot=Matrix.Translation((-16.8,-5.64,1.5)).inverted()
+    mount=Matrix.Translation((-16.398,-6.085,1.5)) @ Matrix.Rotation(radians(-90),4,'Z')
+    leaf.data.transform(mount @ Matrix.Diagonal((1.5,1,1,1)) @ pivot)
+    for name in ('Stair_floor_3','Stair_exit_sign','Stair_exit_glyph'):
+        parts[name].data.transform(mount @ pivot)
+    metal=parts['Stair_Up_nosing'].data.materials[0]
+    frame=boxes('Fire_door_trim',[
+        ((-16.394,-6.611,1.50),(0.048,0.023,3.00)),
+        ((-16.394,-5.559,1.50),(0.048,0.023,3.00)),
+        ((-16.394,-6.085,3.015),(0.048,1.075,0.025)),
+        ((-16.377,-5.679,0.96),(0.010,0.008,0.085)),
+        ((-16.377,-5.641,0.96),(0.010,0.008,0.085)),
+        ((-16.377,-5.660,0.999),(0.010,0.030,0.007)),
+        ((-16.377,-5.660,0.921),(0.010,0.030,0.007)),
+    ],metal,destination)
+    copies.append(frame)
+    wall_material=parts['Stair_side'].data.materials[0]
+    copies.append(boxes('Stair_wall_return',[
+        ((-17.19,-5.70,1.435),(1.22,0.16,3.23)),
+    ],wall_material,destination))
+
+
 def main():
     source_hash=hashlib.sha256(SOURCE.read_bytes()).hexdigest()
     bpy.ops.wm.open_mainfile(filepath=str(SOURCE))
@@ -65,8 +96,14 @@ def main():
     records=[]
     for group in GROUPS:
         sources=[o for o in bpy.data.collections['Survey_'+group].objects if o.type in {'MESH','FONT'}]
+        if group=='StairCore':
+            # Keep the closed lift parts available to the 2F copy; 3F uses only the backing wall here.
+            # The parked fire door also supersedes that projecting backing wall.
+            sources=[o for o in sources if o.name not in FLOOR02_ONLY_LIFT_PARTS and o.name!='Lift_front']
         assert sources, group
         copies=[copy_mesh(o,destination,depsgraph,material_map,material_report) for o in sources]
+        if group=='StairCore':
+            fit_stair_fire_door(copies,destination)
         removed_faces=sum(remove_degenerate_faces(o.data) for o in copies) if group in {'Desks','Laptops'} else 0
         uv_repairs=sum(repair_degenerate_uv(o.data) for o in copies)
         bpy.ops.object.select_all(action='DESELECT')
