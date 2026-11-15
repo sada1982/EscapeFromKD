@@ -1,0 +1,69 @@
+Escape From KD — 自宅から職場への引き継ぎ
+2026年11月16日（日本時間）／11月15日夜の1F横拡張まで
+
+1. 職場で開く版
+==============
+UE 5.8.4 で myProject.uproject を開く。対象マップは /Game/Main/Stage/KDStage。
+階段から1Fを見ると、左のガラスブロック壁が外側に移り、ホールの主要部分は幅約14.9 m。
+同じフォルダの HallWidth_BeforeAfter.jpg で見分けられる。左列が拡張前、右列が拡張後。
+
+記録時の自宅 main は df9b637。このコミットに入っているのは11月15日の中間資料まで。
+横拡張のゲームファイル10件は保存・検証済みで、自宅の作業ツリーにある。
+Gitで引き継ぐ場合は、自宅で下記10件と引き継ぎ資料を一緒にコミット・プッシュする。
+職場では main で git pull --ff-only、続いて git lfs pull を実行してからUEを開く。
+版を照合する場合は、次のPowerShellコマンドで横拡張済みの実ファイルを確認できる。
+  Get-FileHash Content/Main/Stage/Floor01/SM_EntranceGallery.uasset -Algorithm SHA256
+  69A9366ACFEE03D401233705BC86F53C6DF065A601B7A4A95BFA7A545921FCFD
+
+2. 今回の変更と確認結果
+======================
+1Fは先に出口方向へ奥行きを伸ばし、増築部分の木床を既存床に合わせた。今回はそのホールを
+ガラスブロック側へさらに4.8 m広げた（主要部の幅は約10.1 mから約14.9 m）。
+ケースを新しい窓際に寄せ、展示台・テーブル・カフェ席を中央から出口寄りに分散した。
+家具は元の大きさのまま当たり判定も一緒に移動した。吹き抜け、垂れ幕、階段、白い出口は従来の位置。
+
+・1Fの床91点、新しい壁7か所、旧壁が通行を妨げていないことを21点、家具の当たり判定7か所で確認。
+・単体ゲームでプレイヤーを歩かせ、旧壁を2か所で横切り、新しい壁際で接地したまま止まることを確認。
+  出口手前から白い出口までの歩行も別に確認した。
+・2F・3Fを同一視点で撮影。2F〜4Fの当たり判定は拡張前後の全1,377点で一致した。
+  比較画像の上2段が1F、下2段が2Fと3F。横拡張後のマップ再読み込みも確認済み。
+
+横拡張で変わったゲームファイル（すべてプロジェクトルートからの相対パス）
+  Content/Main/Stage/Floor01/SM_EntranceGallery.uasset
+  Content/Main/Stage/Floor01/SM_ExitHallParquet.uasset
+  Content/Main/Stage/Floor02/SM_F02_SharedGallery.uasset
+  Content/Main/Stage/Floor03/OpenCampus/SM_OpenCampusDecor.uasset
+  SourceAssets/Stages/Floor01/EntranceGallery.blend
+  SourceAssets/Stages/Floor01/SM_EntranceGallery.fbx
+  SourceAssets/Stages/Floor01/SM_ExitHallParquet.fbx
+  SourceAssets/Stages/Floor02/SM_F02_SharedGallery.fbx
+  SourceAssets/Stages/Floor03/OpenCampus/OpenCampusDecor.blend
+  SourceAssets/Stages/Floor03/OpenCampus/SM_OpenCampusDecor.fbx
+Floor02・Floor03フォルダのメッシュは複数階で共有している。今回編集したのは、その中の
+1F部分の壁・窓・展示物。レベル配置を保存し直す必要はなく、変更は上記アセットと編集元に収まった。
+
+3. 引き継いだ仕様と採用物
+========================
+・3F実習室から2Fを経て1Fへ下り、1Fからは4F相当まで続く吹き抜けと垂れ幕を見上げられる。
+  2Fは3Fを基に実習室・階段・エレベーターの配置を揃えた。防火扉とエレベーターに階数を表示し、
+  2F・3Fの廊下天井は白に統一した。2Fの下り踊り場にあった落下箇所も修正済み。
+・採用済みの宣伝画像は Documentation/Promotional/20261115/EscapeFromKD_RobotAmbush_v04_1080p.png
+  （1920×1080）。白天井への修正後に、承認済みのロボット3体の構図で撮り直した版。
+・敵の衝突判定をボーン追従の凸形状に変更済み。描画モデルを保ち、NaniteのGPUメモリ予約を
+  512 MiBから128 MiBへ削減。銃口発光・通常着弾・敵の火花はNiagaraコンポーネントを再利用する。
+  比較試験で品質低下が出た影・間接照明の設定は元の値を採用している。
+
+4. 職場で再開する項目
+====================
+最初の実機確認は、横拡張済みの版での60 FPS維持。画質を維持する方針で、
+1080p・内部解像度100%・Epicの単体ゲームを使い、3F実習室、2F廊下、1F吹き抜け、
+連射・着弾の4場面を各600フレーム測る。平均FPS、1% Low、最長フレーム時間、
+16.67 msを超えた回数を記録する。職場PCの過去の記録は RTX 3050 Laptop／VRAM 4 GB。
+
+比較元は横拡張前の自宅実測（RTX 4080 SUPER）。4場面・計2,400フレームで16.67 ms超は0回。
+最も余裕が小さかった3F実習室は平均131.1 FPS、1% Low 67.4 FPS、最長15.58 ms。
+横拡張後は画面・衝突・歩行まで確認した。現行版の同条件での性能計測は自宅・職場・OPCとも未実施。
+
+白い出口までは通行可能。出口到達を検知し、白フェードでゲームを終了する処理は今後の実装項目。
+過去のステージ変更と4場面の計測表は Documentation/Handoff_20261115/EscapeFromKD_Handoff_20261115.txt、
+フレームごとの値と画面比較は Documentation/Handoff_20261115/Evidence.zip に収録。

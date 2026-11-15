@@ -1,5 +1,6 @@
 Escape From KD — 自宅作業の中間引継ぎ
 2026-11-15（日本時間）／自宅で制作継続中
+職場での再開は ../Handoff_20261116/EscapeFromKD_Handoff_20261116.txt を参照（1F横拡張後）。
 記録時のゲーム本体: main / 8c06027f974f6aef440af7e62b048ab6e4738891
 プロジェクト: myProject.uproject（UE 5.8.4）　プレイ用マップ: /Game/Main/Stage/KDStage
 以下のパスは、Evidence.zip 内のファイル名を除きプロジェクトルートからの相対パス。
