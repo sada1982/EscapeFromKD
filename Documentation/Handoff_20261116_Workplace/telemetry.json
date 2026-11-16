@@ -1,0 +1,18 @@
+{
+  "presentmon_pid": 34460,
+  "smi_pid": 17020,
+  "session": "KDExhibit42_1794807903",
+  "csv": "C:\\Users\\motoo\\OneDrive\\\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\\\u307e\u3068\u3081\\\u500b\u4eba\u696d\u52d9\\\u30b2\u30fc\u30e0\u958b\u767a\\UnrealEngine\\GameProject_OPC\\EscapeFromKD\\Saved\\Automation\\Exhibit42_20261116\\ShippingFinal\\presents_native.csv",
+  "start": {
+    "qpc": 212641587301,
+    "frequency": 10000000,
+    "utc_epoch_ns": 1794807903913216000,
+    "window_ns": 0
+  },
+  "end": {
+    "qpc": 213848003380,
+    "frequency": 10000000,
+    "utc_epoch_ns": 1794808024554061300,
+    "window_ns": 0
+  }
+}

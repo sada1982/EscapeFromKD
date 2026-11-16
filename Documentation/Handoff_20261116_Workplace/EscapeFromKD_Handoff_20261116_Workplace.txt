@@ -1,0 +1,94 @@
+Escape From KD　職場から次の作業環境への引継ぎ
+2026年11月16日（日本時間）　午後の展示用Windows Shipping版まで
+
+■ 次の担当者が最初にすること
+
+UE 5.8.4 の myProject.uproject と /Game/Main/Stage/KDStage を開く。先に第2節のハッシュで、職場で保存した照明マップを受け取ったことを確認する。
+画質の基準は1080p出力・内部54%。実習室から下り階段までは展示版で11回すべて完走した。初走は平均79.47 FPS、暖機後10走は平均85.67 FPS。どちらも1フレーム16.67 msを超えており、常時60 FPSは未達。
+次に調べるのは、実習室で歩き始めた直後の約457 msと、暖機後の教室内から出口までの繰り返す超過。両者を別々に計測する。下り階段そのものは全11走で超過0件だった。具体的な再開順は第6節に記載した。
+
+1　ゲームでできること／編集する場所
+
+・3F実習室を出て廊下・階段から2F、1Fエントランスの白い出口まで歩ける。2Fの踊り場の落下箇所と、1Fホールの横拡張（主要部分約14.9 m）は対応済み。4F相当の吹き抜けと垂れ幕を1Fから見上げられる。出口の到達検知とクリア時の白フェードは未実装。今回の性能測定区間は、3Fから最初の下り踊り場まで。
+・ステージの配置は Content/Main/Stage/KDStage.umap、3F本体は Content/Main/Stage/BP_Floor03.uasset。階別の素材は同フォルダーの Floor01、Floor02、Floor03、Blender・FBX編集元は SourceAssets/Stages/。開始マップとゲーム既定マップはともにKDStage。
+・講義で扱う入力は Content/Main/Character/You.uasset。右クリック保持でADS、Rでリロード、左クリック保持で連射。弾数制限はなく、現行版にはリコイルがある。装備は Content/Main/Rifle/BP_Rifle.uasset、メッシュは同フォルダーの Meshes/SKM_Rifle.uasset。中央レティクルは Content/Main/Character/UI/WBP_Reticle.uasset。マズルフラッシュ、着弾、弾痕があり、武器用の演出アセットは Content/Effects/Weapons/ 以下。ADSのサイト合わせにはカメラ補正を使用。
+・敵は Content/Main/Enemy/BP_AdmissionRobot.uasset。Blender編集元は SourceAssets/Characters/AdmissionRobot/AdmissionRobot_v01.blend。「入学承諾書」の選択肢は「はい」「YES」。待機・歩行・走行・転倒用モーションがあり、命中時は火花とよろけから元の動作に復帰する。敵HP・死亡判定・被弾から転倒への接続は未実装。ボーンに追従する凸形状の衝突判定、Niagaraの再利用、Naniteプール128 MiBは以前に採用済み。
+・タイトルの採用画像は Documentation/Promotional/20261113/EscapeFromKD_Title_v01.png、宣伝用のロボット集合画像は Documentation/Promotional/20261115/EscapeFromKD_RobotAmbush_v04_1080p.png。今回の変更は照明・展示用ビルド・計測資料に限られる。
+
+2　版を取り違えずに渡す
+
+作成時、職場の main と取得済みの origin/main は 1da98fbdabfb8ed9729d26c80473db6185baff34。今朝の1F横拡張はこのコミットに含まれる。午後の照明変更は保存済みで、コミット・プッシュ前。以下はプロジェクトルートからの相対パス。
+
+  照明マップ　Content/Main/Stage/KDStage.umap
+  現在の実体　166,396 bytes
+  SHA-256　628DA8595B47616AFA9D4ABC2B7D2EE73F69F91AE0B5ED5E9CF572D577A7EB9B
+  照合コマンド　(Get-FileHash -LiteralPath .\Content\Main\Stage\KDStage.umap).Hash
+  旧HEADのマップは165,044 bytes、SHA-256の先頭は E795BF7C。こちらなら午後の照明はまだ入っていない。
+
+Gitで渡す場合は上記マップと、Documentation/ 内の次の6フォルダーを対象にする。ゲームの追跡済み差分はマップ1件。受取側では配布するコミットを取得してから git lfs pull を実行し、UEを開く前にハッシュを照合する。
+  WorkplacePerformance_20261116/       職場PCの初期4場面
+  ClassroomPerformanceAB_20261116/     TSR履歴・VRAMの切り分け
+  Route54Performance_20261116/         内部54%の歩行試験
+  Light54Performance_20261116/         灯別・投影物別の試験
+  Exhibit42_20261116/                  確定した照明・Shipping実測・再ビルド用ソース
+  Handoff_20261116_Workplace/          本書と再集計用のtelemetry.json
+
+コミット前に持ち運ぶ場合は Saved/Handoff_20261116_Workplace/EscapeFromKD_Workplace_Delta_20261116.zip を使う。上記マップと6フォルダーをプロジェクト相対パスで同梱した。受取側の基礎は上記コミットとGit LFSの実体一式。ZIPを別フォルダーに展開して内容を照合し、同じ基礎のチェックアウトに反映する。受取側で同じマップを既に編集している場合は、その差分を先に確認する。
+
+3　職場で何を調べ、どこまで採用したか
+
+職場は Core i7-12700H、RAM 32 GiB、RTX 3050 Laptop GPU（4 GiB）、UE 5.8.4。既存エディタを開いたまま測定した。以下の前半は開発用の単体ゲームでの診断、最終行の展示版は第4節のShipping実測。相互のFPS差には実行形式や計測負荷の違いも含まれる。
+
+・初期の1080p・Epicでは、3F実習室7.41 FPS、2F廊下8.89 FPS、1F吹き抜け9.06 FPS、連射・着弾11.17 FPS。全4場面でGPUのローカルVRAM予算を超過した。
+・内部100%のままTSR履歴を200%から100%にすると、実習室の同一試験は7.48→8.72 FPS。履歴だけでは不足した。影やLumenの作業バッファを調整し、出力1080pのまま内部54%にすると、静止した教室では平均約60 FPSに届いたが、詳細計測を外しても600フレーム中157件が超過した。
+・内部54%を固定した従来照明の歩行試験は、暖機後の基準走で平均63.14 FPS、189/536フレームが超過。影あり42灯をMegaLightsにする試作では全経路約74.6〜74.7 FPS。全61灯の切替では廊下が暗くなったため、無影の補助光19灯を従来方式に残した。椅子・机の投影一括停止や、広場メッシュのNanite化は採用していない。
+・保存したKDStageでは、無限範囲の既存Post Process VolumeでMegaLightsを有効化。有影Rect Light 42灯に許可、無影19灯は従来方式。実習室 F03_GameLab_01〜12 の12灯だけ、MegaLightsの影の取得をVirtual Shadow Mapに指定した。残る有影30灯は既定の影方式。実習室は各1,900 lm、発光面120×20 cmのまま。プロジェクト既定の r.MegaLights.EnableForProject=0 と両立する構成。
+・机脚・キャスター周囲の6領域で測った従来照明との平均画像差（8ビットRGB）は、切替直後6.79、実習室4灯を補正すると4.41、12灯を補正した保存版は0.94。従来方式を再撮影した場合の差は0.43。キャスター下の明暗差は従来9.66、補正前5.14、保存版9.92。机脚の一点は従来3.02、保存版4.33で少し濃い。並べた写真は Documentation/Exhibit42_20261116/ContactShadows.jpg。
+
+4　確定した展示版の成績
+
+Win64 Shipping、D3D12/SM6、1920×1080、固定内部54%、TSR履歴100%、品質11項目Epic。VSM上限2,048ページ、Lumen Surface Cache Atlas 3,072、Radiance Cache Probe 16、SMRT局所レイ4、Naniteプール128 MiB。動的解像度・VSync・FPS上限は無効。展示用設定は独立したビルド用コピーに適用し、実行中の値も確認した。
+
+利用者が職場PCで作業を続けられるよう、物理入力先を切り替えない専用Windowsデスクトップで計測した。同じShipping実行ファイルに計測用引数を指定し、Youの通常のCharacterMovementと当たり判定で8区間を歩いた。各周の開始地点だけを揃え、全11周が踊り場に到達した。新規ゲームユーザー設定での初走1回、同一プロセスでの暖機後10回。OS・GPUドライバの共有キャッシュは保持。
+
+ ゲーム本体のDXGI Present間隔     平均FPS     P95       P99       最長        1,000/60 ms超過
+ 初走1回                         79.47    16.90 ms  21.92 ms  456.82 ms     35 / 659    (5.31%)
+ 暖機後10回の合算                85.67    15.29 ms  17.65 ms   22.99 ms    137 / 7,261  (1.89%)
+
+独立に記録したゲームTickでも、初走は平均78.68 FPS、最長448.15 ms、超過21/660。暖機後は85.68 FPS、最長25.25 ms、超過109/7,271。上表はゲームがWindowsにフレームを渡す間隔。物理モニター1台は別作業中で、ゲームの有効な画面表示間隔は0件だった。実機での前面表示は未検証。
+初走最長の456.82 msは、移動開始約0.09〜0.55秒の実習室内。暖機後の超過137件は、教室中央通路74、教室出口まで44、廊下14、接続通路2、階段への進入3。階段を下る区間は0件で、暖機後の最長16.55 ms。今回の走行には、2F以降・1F出口・戦闘中の負荷は含まれない。
+
+5　展示版を配布する／別のPCで再現する
+
+そのまま試せる実行形式は Saved/ExhibitBuild_20261116/Windows/myProject.exe。別PCで同じビルドを動かすには Windows フォルダー全体（26ファイル、521.7 MiB）をコピーする。Saved/ はGit対象外で、転送用差分ZIPにも出荷物は含めていない。
+最終Cookはエラー0・警告0。照合する本体は Windows/myProject/Binaries/Win64/myProject-Win64-Shipping.exe で、SHA-256 は A2A54963D1DE2247FC8E3142BB4919546DAA2FB20C1897A45783C7D97104A7A9。これは配布した実物の照合値。再ビルドした場合はそのビルドの値を別に記録する。
+
+再ビルドと計測に使うアーカイブは Documentation/Exhibit42_20261116/Evidence.zip。以下のPowerShell例は、照合済みプロジェクトをカレントにして使う。作業先 C:\KDQA は書き込み可能な例。BuildCopyは未作成の場所を指定する。
+
+  $project = (Get-Location).Path
+  Expand-Archive -LiteralPath .\Documentation\Exhibit42_20261116\Evidence.zip -DestinationPath C:\KDQA\Evidence
+  & C:\KDQA\Evidence\ExhibitProfile\Build-WindowsExhibit.ps1 -ProjectRoot $project -BuildCopy C:\KDQA\BuildCopy -ArchiveDir C:\KDQA\Package
+
+職場のビルド環境はUE 5.8.4、VS 2022のC++ツールチェーン（MSVC 14.44）、Windows SDK 10.0.22621。UEを別の場所に入れた場合はスクリプトの -EngineRoot にそのエンジンのルートを指定する。ExhibitProfile/Config と Source は独立コピーだけに組み込まれる。普段のエディタの「パッケージ化」だけではこの展示プロファイルと自動歩行モードは付かない。
+
+既存データの確認にはゲーム起動は不要。展開した Shipping/condition_summary.csv が初走・暖機後の表、walks.csv が各周、segments.csv が各区間。Shipping/route/ の settings.txt、events.csv、frames.csv、landing_back.png で設定・通過座標・各Tick・到達画像を確認できる。本書の隣の telemetry.json はこの測定の時刻対応表。過去データを再集計する場合は次の2行を使う。再集計による書き換え先は展開した作業コピー。職場で元の11走の walks.csv とバイト単位で一致することを確認した。
+
+  Copy-Item -LiteralPath .\Documentation\Handoff_20261116_Workplace\telemetry.json -Destination C:\KDQA\Evidence\Shipping\telemetry.json
+  python C:\KDQA\Evidence\Measurements\native_metrics.py C:\KDQA\Evidence\Shipping
+
+新しく同じ非フォーカス条件で測る場合は、UEエディタを開いたまま、次を実行する。通常プレイで起動する外側のmyProject.exeと、自動計測に指定する内側のShipping本体を区別する。
+
+  python C:\KDQA\Evidence\Measurements\exhibit_native_launch.py C:\KDQA\Package\Windows\myProject\Binaries\Win64\myProject-Win64-Shipping.exe C:\KDQA\Run01 --laps 11
+  python C:\KDQA\Evidence\Measurements\native_metrics.py C:\KDQA\Run01
+
+各測定は新しい出力フォルダーへ。職場スクリプトはWindows版Python、UE 5.8同梱のPresentMon 1.8、PATH上の nvidia-smi.exe、英数字の一時ディレクトリを使う。エンジンの設置先が違う場合は展開した Measurements/exhibit_telemetry.py 内のPresentMonパスも合わせる。この手順は入力先を奪わず、ゲーム側のPresentとTickを再測定する。
+
+6　次の作業と判定基準
+
+① 受取版のマップSHAを確認する。まず第5節の既存記録で、内部54%、42灯／19灯、8区間の完走を基準として共有する。別PCの数値にはGPU・VRAM・画面の使い方を併記し、職場のRTX 3050の結果と区別する。
+② 初走の教室を計測する。プレイヤーの移動開始を時刻ゼロに揃え、最初の約0.55秒でCPU・GPU・アセット読み込み・PSO準備の時系列を照合する。456.82 msの原因は未特定。プロファイラーを有効にした原因調査と、無効にした性能判定を分ける。
+③ 同じ照明と画質で、暖機後の教室中央から出口までを調べる。職場ではこの2区間だけで118/137件。候補を一つずつ変え、元の視点で机脚・キャスターの影を比べた上で、同じ経路の初走1回と暖機後10回を再測定する。
+④ 展示用の画面を使える時に、前面表示のShippingでPresentMonの有効なDisplayed間隔を採る。全周が完走し、初走と暖機後それぞれで 1,000/60 ms を超えた件数を判定する。最終目標は両方0件。1F出口クリア演出と敵HPは性能調査とは別の未実装項目。
+
+次セッションに渡す依頼文
+「Documentation/Handoff_20261116_Workplace/EscapeFromKD_Handoff_20261116_Workplace.txt を読み、まずKDStageのハッシュを照合してくれ。内部54%と今の接地影を維持して、初走の実習室で起きた約457 msと、暖機後の教室中央〜出口の超過を別々に調べてほしい。このPCを別作業に使っている間は、入力やフォーカスを奪わずに測ってくれ。」
