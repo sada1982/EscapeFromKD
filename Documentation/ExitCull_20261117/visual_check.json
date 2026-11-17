@@ -1,0 +1,38 @@
+{
+  "both_sizes": [
+    [
+      1920,
+      1080
+    ],
+    [
+      1920,
+      1080
+    ]
+  ],
+  "block_8px_MAE_RGB255": {
+    "image": 0.42011316872427984,
+    "left_table_legs": 0.4545454545454546,
+    "near_chair_base": 0.5919732441471571,
+    "middle_aisle_table_foot": 0.49553571428571425
+  },
+  "ROIs": {
+    "left_table_legs": [
+      101,
+      938,
+      372,
+      1033
+    ],
+    "near_chair_base": [
+      576,
+      950,
+      766,
+      1055
+    ],
+    "middle_aisle_table_foot": [
+      735,
+      837,
+      849,
+      970
+    ]
+  }
+}

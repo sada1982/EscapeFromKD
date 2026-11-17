@@ -1,0 +1,112 @@
+Escape From KD　職場からの作業引継ぎ
+2026年11月17日　対象：UE 5.8.4／KDStage／Windows展示版
+
+■ 次回はここから
+
+実習室から下り階段までプレイできる正式展示版は ExitCull。新規配布先で教室出口に出ていた100 ms級の初回停止は軽減した。残っているのは、暖機後にも実習室中央と出口で繰り返し16.67 msを超える問題。最新の5候補には、超過件数とP99の両方を安定して改善したものがなかった。
+
+最初の作業は、職場で収録したUnreal Insightsトレースを自宅で開き、教室出口へ旋回して1～2 m進む間のLumen間接光とBasePassを子タイマーまで比較すること。この短い区間だけで39/220フレームが超過し、20周すべてで再現した。既存の記録から始められる。具体的な位置、比較手順、採否条件は第4節。
+
+■ 1　渡す版と照合方法
+
+持ち出し用ZIP：Saved/Handoff_20261117_Workplace/EscapeFromKD_Handoff_20261117_Workplace.zip
+空のフォルダーへ展開する。中身は次のとおり。以降、プロジェクト側のパスは myProject.uproject のあるフォルダーを基準とする。
+
+  READ_FIRST.txt         本書。プロジェクト側の原本は Documentation/Handoff_20261117_Workplace/ にある。
+  Official/Windows/      実測した正式展示版。26ファイル、585,540,671バイト。通常プレイは直下の myProject.exe。
+  ProjectDelta/          現作業ツリーからの引継ぎ差分。編集資産、展示用ビルドソース、11/17の資料をプロジェクトと同じ相対パスで収納。
+  MeasuredSource/        正式展示版の作成元に残っていたKDStage.umap。現作業マップと別に保管した比較用原本。
+  Trace/                 同じ診断走行の game.utrace、同期マーカー anchors.csv、歩行イベント、位置・提出時刻データ。
+  RouteTools/            フォーカスを奪わずに正式版を実走・集計する既存スクリプト。使用方法は第5節。
+  SHA256SUMS.txt         同梱ファイルのSHA-256。照合対象は展開後の実ファイル。
+
+職場の正式版は Saved/ExhibitBuild_20261117_ExitCull/Windows/。Saved はGitの対象外。コピーする際はWindowsフォルダー全体が必要。照合するのは内側の myProject/Binaries/Win64/myProject-Win64-Shipping.exe。
+  正式版ゲーム本体 SHA-256　EC99CEF10D90F3E3F7305CE059440284F763FD316F26221630492DA2506CC5BF
+  正式版 myProject-Windows.ucas　D801EFF881F5A3D6B376ABF18152EA2AFB96169415A25B90B3A74D8CA6B7CA40
+
+編集を再開するときの基準コミットは main の fdb6d49317e15ad7ca7d4d8fddb06b4e408216a0（職場のローカルに記録された origin/main と同じ）。差分ZIPはプロジェクト全体の代替にはならない。Gitで受け取る場合は当該コミットとLFS実体を揃え、その後に受け取った差分を照合する。自宅に独自の変更がある場合は別の作業コピーで比較できる。今回の引継ぎ作成ではコミット・プッシュしていない。
+
+現作業ツリーで追跡済みの変更は BP_Floor03.uasset、Floor02/SM_F02_Plaza.uasset、KDStage.umap の3件（Content/Main/Stage/ 以下）。Build/Exhibit/ の9ファイルと Floor03/ShadowCasters/ の採用済み6メッシュ、11/17の資料は引継ぎ作成時点で未追跡。ProjectDeltaに収録した。
+
+特にKDStage.umapは正式版作成後の16:19に保存されている。2つとも166,396バイトだが、80バイト異なる。保存日時、エディタ視点などに差を確認した。実行時の映像・性能の一致は未検証。自宅で現ソースから再クックした版は、正式配布済みの版とは別に記録する。
+  現作業マップのSHA-256　　　　 C2274857AF50BDB3D71DCE9B70BACE3A71560F19C839074B11E80BAE25866D13
+  正式版作成元・基準HEADのマップ　628DA8595B47616AFA9D4ABC2B7D2EE73F69F91AE0B5ED5E9CF572D577A7EB9B
+  BP_Floor03、SM_F02_Plaza、影6メッシュは、現ソースと正式版作成元でファイル内容が一致した。
+
+■ 2　ゲームの状態と採用済みの対策
+
+3F実習室から廊下・階段、2Fを経て1Fエントランスの白い出口まで歩ける。今回の性能判定の終点は3Fから下りた最初の踊り場。講義で触るプレイヤー入力は Content/Main/Character/You.uasset、装備は Content/Main/Rifle/BP_Rifle.uasset。ADS、リロード、連射、レティクル、発射・着弾演出がある。敵は Content/Main/Enemy/BP_AdmissionRobot.uasset。「入学承諾書」の選択肢は「はい」「YES」。歩行・走行・転倒素材、被弾時の火花・よろけがある。敵HP・死亡判定、1F出口でのクリア判定・白フェードは今後のゲーム実装。校舎・キャラクターのBlender元データは SourceAssets/Stages/ と SourceAssets/Characters/AdmissionRobot/。
+
+展示画質は1920×1080、内部54%固定、TSR履歴100%、Epic、D3D12/SM6。動的解像度・VSync・FPS上限は無効。影あり42灯をMegaLights、影なし補助光19灯を従来方式とし、実習室12灯はVirtual Shadow Map（VSM）。VSMは2,048ページ、局所影のレイ数4、Lumen Surface Cache Atlas 3,072、Probe解像度16、Naniteストリーミングプール128 MiB。机脚と椅子の車輪周辺6箇所が影の比較基準。
+
+11/17に採用した変更と、同じ条件で比較した当時の結果
+  ・起動時、ロード画面の間に実描画とRHI・高優先度PSOの準備を待って入力を解放。待機の有無だけを変えた測定では、初走最長590.85 → 39.80 ms。長い処理の一部を操作開始前へ移した。低速環境向けの12秒の救済条件あり。
+  ・2F広場 SM_F02_Plaza のNaniteを有効化し、全精度フォールバックと元の衝突を維持。暖機10周で超過214/6,961 → 164/7,015、P99 18.30 → 17.87 ms。
+  ・ロード中に廊下入口と6 m先を事前描画。机・椅子の影専用メッシュはそれぞれ3室に分けて計6部品とした。表示メッシュと衝突は元のまま。部屋別影だけを変えた暖機20周で、実習室中央の超過145 → 121、全経路280 → 251、全経路P99 17.738 → 17.620 ms。後述する「実習室をさらに4分割」は別の試験。
+  ・新規展開時に初めて必要になる FInstanceCull_CS の該当Compute PSO 1件をロード中に準備する処理を追加。5つの新しい配布先ずつの初走で、教室出口の最長は無効34.40～196.84 ms、有効19.41～25.76 ms。これが現行のExitCull版。OS・ドライバーの共有キャッシュは保持した。
+
+まれな停止も記録済み。階段手前57.31 msは先頭のPresent呼び出し内に46.99 ms。一方、廊下58.18 / 40.34 msと階段手前47.59 msはPresentから戻った後に次のTick開始が遅れた。後者と同規模の停止は追加のShipping暖機80周で再発せず、元の個別原因は未確定。これらと、次節の毎周の超過は別々に扱う。
+
+■ 3　直近の実測と見送った対策
+
+職場機は Core i7-12700H、RAM 32 GiB、RTX 3050 Laptop GPU（4 GiB）、AC給電。エディタを開いたまま、物理入力先を切り替えない専用デスクトップでYouを8地点に沿って移動させた。1起動11周、1周目が初走、2～11周が暖機後。主スワップチェーンのPresent開始間隔で計測した。物理画面への表示間隔は別途確認が必要。
+
+正式版2起動の暖機20周は232/14,310件（1.62%）超過、P99 17.3892 ms、最長22.7703 ms。超過の内訳は実習室中央115、教室出口71、廊下28、接続路5、ロビー0、階段手前11、折り返し1、下り1。中央と出口で件数の80.17%、予算を超えた時間の86.88%。2区間とも20周すべてで超えた。
+
+診断版で同じ場所・向きの通常フレームと比較すると、ゲームスレッドの描画同期待ちを含むアイドルが中央で平均4.21 ms、出口で2.63 ms長い。中央の遅いGPUフレームではLumen間接光が1.18 ms、ShadowDepthsが0.93 ms、MegaLightsが0.54 ms長かった。出口で旋回して1～2 mに絞るとLumenが0.90 ms、BasePassが0.74 ms長い。親子パス、並列キューの時間は重なる。
+
+エディタの3Dキューには約333 ms周期で投入があった。別の同時診断40周では、その仕事の未完了期間と重なると10.71%、重ならないと0.72%が超過した。キューの未完了には待ち時間も含まれる。元の232件をすべてエディタに帰属させる根拠はない。
+
+単独比較                         暖機周／条件　　超過件数（通常→候補）　P99 ms（通常→候補）
+ゲームのGPU優先度を上げる               20             206 → 227           17.1860 → 17.2362
+実習室内の机・椅子の影を各4分割         20             259 → 235           17.4579 → 17.5317
+エディタのGPU優先度を下げる             10              98 → 126           17.1818 → 17.4038
+Lumen拡散間接光を同期実行               10              98 → 278           17.1818 → 19.3727
+80 FPS上限                               10              87 → 117           16.8649 → 17.9962
+
+4分割は接地影を維持できたが、順序を逆にした組で件数の増減方向が揃わなかった。80 FPS上限はGPU使用率中央値が99%から94%になっても中央・出口とも超過が増えた。エディタ最小化は途中で戻ったため有効な比較が足りない。設定の実効値が変わらなかったLumen・上限設定の試行は上表から除外した。
+
+同じ正式版の前後対照は、暖機10周で98/7,340・P99 17.1818 msと87/7,298・16.8649 ms。計20周で185/14,638（1.26%）、P99 17.0882 ms。232件と185件の差は同一版の測定変動。全フレーム60 FPSは未達。
+
+■ 4　次回の目標と進め方
+
+① 自宅で職場トレースを読む。Trace/game.utrace をUE 5.8のUnreal Insightsで開く。Trace/anchors.csv の KD_DiagnosticLapStart と Trace/route/events.csv の lap_start を周回順で対応させ、同じ診断起動の時計を揃える（9周、同期点のばらつき0.575 ms）。Trace/all_intervals.csv で leg=1、202≦X<302 cm の範囲が出口旋回後1～2 m。Xは302から202へ減る。前回の診断はこの範囲で予算超過GPUフレーム10件／84件。位置・向きが近い別周の予算内フレームを対照に、LumenScreenProbeGather と BasePass の子タイマーを比較する。中央通路は次の比較対象。生トレースに必要な細目がない場合は、取れている粒度までを記録する。
+
+② 次回の最初の成果物は、出口で遅いフレームと通常フレームの対照表。周回、座標・向き、提出間隔、GPUフレーム時間、差が出た子パス、組数、周回間で差が同方向かを載せる。Windows側のエディタGPUトレースと、このDevelopmentトレースは別起動。既存記録で切り分けきれない場合のみ、同一走行でゲームGPUパスとエディタGPUキューを同期収録し、エディタの仕事と重なる場合・離れた場合の両方で比較する。
+
+③ 原因が絞れたら、該当する描画処理に対する変更を一つだけ隔離版で試す。通常→候補→候補→通常の順で各11周。初走を別集計し、暖機は各条件20周。全経路と中央・出口それぞれの超過件数／母数、超過率、P99を出す。固定露出・同一視点で机脚と車輪6箇所を通常版の再撮影差と照合し、窓・廊下・出口の見え方も確認する。前後の対照に対し超過件数・P99が繰り返し減り、画質と接地影が保てたものを採用候補とする。最終目標は初走・暖機後とも1000/60 ms超が0件。P99だけで全フレーム達成とは判定できない。
+
+自宅機で走る場合はGPU・VRAM・ドライバー・電源・エディタの状態を記録し、その機械の通常版と比較する。職場RTX 3050での採否は職場の正式版で再確認する。2F以降、戦闘中、実際の画面への表示間隔は今回の測定範囲外。
+
+■ 5　再現手順と資料の所在
+
+まず既存の集計を見る場合は Documentation/WarmTail_20261117/Measurements.zip。Original/original_232_and_controls.csv は超過232件と対照、Original/bins_1m.csv は1 m刻み、Insights/exit_1to2m.json は出口のGPU時間、Quality/ は固定画角の比較、Summary/ は対策前後の集計。これらを含む11/17の資料は持ち出しZIP内の ProjectDelta/Documentation/ にもある。生の .utrace と同期点は外側の Trace/ に入れてある。
+
+正式版を再計測するときのPowerShell例。以下は持ち出しZIPを C:\KDQA\Handoff に展開した場合。エディタを開き、AC給電を確認。計測はWindows版Python・UE 5.8同梱のPresentMon 1.8・PATH上の nvidia-smi.exe を使用し、TEMPは半角英数字のパスを使う。UEの設置先が標準と違うときは、展開した RouteTools/Exhibit42_20261116/exhibit_telemetry.py のPMパスを実際の場所に合わせる。出力先は毎回新しい名前を指定する。
+
+  $kdKit = 'C:\KDQA\Handoff'
+  $kdRun = 'C:\KDQA\WarmBaseline01'
+  $kdExe = Join-Path $kdKit 'Official/Windows/myProject/Binaries/Win64/myProject-Win64-Shipping.exe'
+  $env:KD_PSO_DIAG = '0'
+  $env:KD_EXTRA_ARGS_JSON = '[]'
+  python -B "$kdKit/RouteTools/ExitFirst_20261117/run.py" "$kdExe" "$kdRun" --laps 11
+  python -B "$kdKit/RouteTools/StairWarm_20261117/stair_spatial.py" "$kdRun"
+
+route/result.txt の success=1・reason=landing・lap=11、settings.txt の開始／終了時の値を確認（settings.txt はroute/内）。stair_summary.json の warm → all に件数とP99、all_intervals.csv に各フレームの位置と間隔。Windowsの実際の入力先を保つ。職場の古い(run_one.ps1)にはエディタPID・ウィンドウハンドルが固定されているため、上記は独立した起動手順にしてある。
+
+現作業ツリーから展示版を作り直す場合は、プロジェクトルートから次を実行する。UE 5.8.4、VS 2022のC++ツールチェーンおよびWindows SDKが前提。BuildCopyとArchiveDirには新しい場所を使う。
+  & .\Build\Exhibit\Build-WindowsExhibit.ps1 -ProjectRoot (Get-Location).Path -BuildCopy 'C:\KDQA\BuildCopy01' -ArchiveDir 'C:\KDQA\Rebuild01'
+再ビルド後は一意の版としてハッシュを記録する。非入力の実走にはOfficialと同じく内側のShipping.exeを使う。
+
+詳細資料の順序（Documentation/ 以下）
+  Handoff_20261116_Workplace/      11/16までのゲーム全体・操作・照明・展示画質
+  WorkplacePerformance_20261117/   職場の負荷整理と当初の改善候補
+  StartupShadow_20261117/          起動準備と2F広場Nanite
+  RouteHitches_20261117/           廊下の事前描画・机椅子の部屋別影
+  ExitCull_20261117/               現行の配布版、初走PSO対策と新規展開比較
+  StairWarm_20261117/              暖機後の階段手前57.31 ms
+  GalleryWarm_20261117/            廊下58.18／40.34 ms、階段手前47.59 ms
+  WarmTail_20261117/               暖機後232件、GPU内訳、単独候補5件
+
+次回そのまま渡せる依頼文
+「11/17職場の引継ぎを読んで、まず同梱の職場トレースで、教室出口へ旋回した直後1～2 mの遅いGPUフレームを同地点の通常フレームと比較してくれ。Lumen間接光とBasePassのどの子処理に差があるかを出し、記録が足りなければ次の収録項目を特定してほしい。画質と接地影を維持し、PCの入力先を奪わず、自宅の数値は職場の基準と分けて扱ってくれ。」
