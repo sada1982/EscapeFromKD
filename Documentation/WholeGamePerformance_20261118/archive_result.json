@@ -1,0 +1,17 @@
+{
+  "archive": "OptimizationEvidence.zip",
+  "files": 1944,
+  "bytes": 41945128,
+  "sha256": "97eecb9ef7a44970c9217f268a72f405d7566873c01eff434985d67ae3dd0edd",
+  "crc_check": "passed by archive_evidence.py after archive creation",
+  "required_entries_verified": [
+    "manifest.json",
+    "README.txt",
+    "automation/PENDING_EXECUTION.txt",
+    "automation/formal_package_proof.json",
+    "results/FinalPartialComparison/comparison.txt",
+    "results/FinalPartialComparison/comparison.json",
+    "results/FinalPartialFigures/partial_scene_p99_round_2.png"
+  ],
+  "formal_runtime_status": "deferred_by_user"
+}

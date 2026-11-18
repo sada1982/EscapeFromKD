@@ -4,9 +4,11 @@
 #include "RenderCommandFence.h"
 
 class APlayerController;
+class IConsoleVariable;
 class FCorridorWarmupView;
 struct FExitCullWarmup;
 class SWidget;
+class STextBlock;
 class UGameViewportClient;
 
 class FExhibitStartupGate
@@ -22,6 +24,9 @@ public:
 
 private:
     void ReleaseInput();
+    void UpdateLoadingFrameCap(uint32 PsoPending);
+    void RestoreLoadingFrameCap();
+    void LoadingFrameCapChanged(IConsoleVariable* Variable);
     void AfterDraw();
     void StopWatchingDraws();
     enum class EWarmView { Entrance, Corridor, Return };
@@ -30,12 +35,14 @@ private:
     TWeakObjectPtr<UGameViewportClient> Viewport;
     TWeakObjectPtr<APlayerController> Player;
     TSharedPtr<SWidget> Overlay;
+    TSharedPtr<STextBlock> LoadingText;
     TSharedPtr<SWidget> Cover;
     TSharedPtr<FCorridorWarmupView, ESPMode::ThreadSafe> CorridorView;
     TSharedPtr<FExitCullWarmup, ESPMode::ThreadSafe> ExitCull;
     FDelegateHandle DrawHandle;
     FRenderCommandFence Fence;
     uint64 StartQpc = 0, LastQpc = 0, StableQpc = 0, OpenQpc = 0;
+    uint64 ResourceReadyQpc = 0;
     uint64 EntranceQpc = 0, CorridorQpc = 0, RestoreQpc = 0;
     int32 PhaseDraws = 0, EntranceDraws = 0, CorridorDraws = 0, ViewApplications = 0;
     bool bSkipEntrance = false;
@@ -47,4 +54,10 @@ private:
     int32 Draws = 0, LastDraws = 0, StableFrames = 0;
     bool bFenceSubmitted = false, bInputGuard = false, bPreviouslyIgnored = false, bRecording = false, bRestoreVerified = false;
     FString Reason, Diagnostics;
+    IConsoleVariable* LoadingMaxFps = nullptr;
+    FDelegateHandle LoadingMaxFpsHandle;
+    FString PreviousMaxFps, LoadingCapStatus = TEXT("disabled");
+    uint32 PreviousMaxFpsPriority = 0;
+    int32 LoadingFpsLimit = 30, LoadingCapApplies = 0, LoadingCapRestores = 0;
+    bool bLoadingCapActive = false, bWritingLoadingCap = false, bLoadingCapExternalChange = false;
 };

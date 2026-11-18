@@ -126,6 +126,13 @@ void FExhibitStartupGate::Begin(UGameViewportClient& InViewport, APlayerControll
         Reason = TEXT("bypass");
         return;
     }
+    FParse::Value(FCommandLine::Get(),TEXT("KDStartupMaxFPS="),LoadingFpsLimit);
+    if (LoadingFpsLimit != 0 && LoadingFpsLimit != 30)
+    {
+        LoadingFpsLimit = 0;
+        LoadingCapStatus = TEXT("invalid_argument_disabled");
+    }
+    if (LoadingFpsLimit == 30) LoadingCapStatus = TEXT("waiting_for_pso");
     if (InPlayer.GetPawn()) StartingPawn = InPlayer.GetPawn()->GetActorLocation();
     if (bRecording)
     {
@@ -149,8 +156,8 @@ void FExhibitStartupGate::Begin(UGameViewportClient& InViewport, APlayerControll
             .BorderBackgroundColor(FLinearColor(0.025f,0.03f,0.04f,0.90f))
             .Padding(FMargin(28.0f,12.0f))
             [
-                SNew(STextBlock)
-                .Text(NSLOCTEXT("KDExhibit", "StartupLoading", "Loading..."))
+                SAssignNew(LoadingText, STextBlock)
+                .Text(NSLOCTEXT("KDExhibit", "StartupLoading", "準備中…"))
                 .Font(FCoreStyle::GetDefaultFontStyle("Regular",18))
                 .ColorAndOpacity(FLinearColor::White)
             ]
@@ -189,6 +196,7 @@ void FExhibitStartupGate::SwitchCorridorView(EWarmView Next, uint64 Now)
     if (Player.IsValid() && Player->PlayerCameraManager) Player->PlayerCameraManager->SetGameCameraCutThisFrame();
     PhaseDraws = Draws;
     StableFrames = 0;
+    ResourceReadyQpc = 0;
     bFenceSubmitted = false;
 }
 
@@ -214,10 +222,17 @@ void FExhibitStartupGate::Tick(uint64 Now)
     LastQpc = Now;
     const bool bFenceReady = bFenceSubmitted && Fence.IsFenceComplete();
     const uint32 PsoPending = FShaderPipelineCache::NumPrecompilesRemaining();
+    UpdateLoadingFrameCap(PsoPending);
     const int32 AsyncPackages = GetNumAsyncPackages();
     // Texture streaming may keep requesting optional mips on a memory-constrained display.
     // Wait for startup packages and PSOs; observe optional streaming independently.
-    const bool bSettled = bFenceReady && Draws > LastDraws && PsoPending == 0 && AsyncPackages == 0 && WallMs <= 33.34;
+    const bool bResourcesReady = bFenceReady && Draws > LastDraws && PsoPending == 0 && AsyncPackages == 0;
+    if (bResourcesReady)
+    {
+        if (!ResourceReadyQpc) ResourceReadyQpc = Now;
+    }
+    else ResourceReadyQpc = 0;
+    const bool bSettled = bResourcesReady && (WallMs <= 33.34 || (Now - ResourceReadyQpc) * SecondsPerCycle >= 1.0);
     LastDraws = Draws;
     if (bSettled)
     {
@@ -238,24 +253,29 @@ void FExhibitStartupGate::Tick(uint64 Now)
     }
     if (OpenQpc) return;
     const double Elapsed = (Now - StartQpc) * SecondsPerCycle;
+    if (LoadingText.IsValid())
+    {
+        const FText Format = Elapsed >= 30.0
+            ? NSLOCTEXT("KDExhibit", "StartupLoadingLong", "準備中… 残り{0}件\n初回の準備には時間がかかる場合があります\n終了する場合はウィンドウを閉じてください")
+            : NSLOCTEXT("KDExhibit", "StartupLoadingRemaining", "準備中… 残り{0}件");
+        LoadingText->SetText(FText::Format(Format,FText::AsNumber(static_cast<int64>(PsoPending)+AsyncPackages)));
+    }
     if (CorridorView.IsValid())
     {
-        if (!EntranceQpc && !CorridorQpc && bFenceReady && Draws >= 3 && Elapsed < 10.0)
+        if (!EntranceQpc && !CorridorQpc && StableFrames >= 8)
         {
             SwitchCorridorView(bSkipEntrance?EWarmView::Corridor:EWarmView::Entrance,Now);
             return;
         }
         if (EntranceQpc && !CorridorQpc && !RestoreQpc)
         {
-            if (StableFrames >= 8 && CorridorView->Applications > 0 && Elapsed < 11.0)
+            if (StableFrames >= 8 && CorridorView->Applications > 0)
                 SwitchCorridorView(EWarmView::Corridor,Now);
-            else if (Elapsed >= 11.0)
-                SwitchCorridorView(EWarmView::Return,Now);
             return;
         }
         if (CorridorQpc && !RestoreQpc)
         {
-            if ((StableFrames >= 8 && CorridorView->Applications > 0) || Elapsed >= 11.0)
+            if (StableFrames >= 8 && CorridorView->Applications > 0)
                 SwitchCorridorView(EWarmView::Return,Now);
             return;
         }
@@ -270,17 +290,77 @@ void FExhibitStartupGate::Tick(uint64 Now)
         }
     }
     const bool bReady = (!ExitCull || ExitCull->Completed.Load() != 0) && StableFrames >= 12 && (Now - StableQpc) * SecondsPerCycle >= 0.30;
-    if (bReady || (Now - StartQpc) * SecondsPerCycle >= 12.0)
+    if (bReady)
     {
         OpenQpc = Now;
-        Reason = bReady ? TEXT("settled") : TEXT("timeout");
+        Reason = TEXT("settled");
         ReleaseInput();
         if (!bRecording) StopWatchingDraws();
     }
 }
 
+void FExhibitStartupGate::LoadingFrameCapChanged(IConsoleVariable*)
+{
+    if (bLoadingCapActive && !bWritingLoadingCap) bLoadingCapExternalChange = true;
+}
+
+void FExhibitStartupGate::UpdateLoadingFrameCap(uint32 PsoPending)
+{
+    if (LoadingFpsLimit != 30 || OpenQpc) return;
+    if (bLoadingCapActive && (PsoPending == 0 || bLoadingCapExternalChange)) RestoreLoadingFrameCap();
+    if (bLoadingCapActive || bLoadingCapExternalChange || PsoPending == 0) return;
+    LoadingMaxFps = IConsoleManager::Get().FindConsoleVariable(TEXT("t.MaxFPS"));
+    if (!LoadingMaxFps) { LoadingCapStatus = TEXT("cvar_missing");return; }
+    const float Current = LoadingMaxFps->GetFloat();
+    if (!FMath::IsFinite(Current)) { LoadingCapStatus = TEXT("invalid_original_value");return; }
+    if (Current > 0 && Current <= LoadingFpsLimit) { LoadingCapStatus = TEXT("existing_cap_already_lower");return; }
+    PreviousMaxFps = LoadingMaxFps->GetString();
+    PreviousMaxFpsPriority = LoadingMaxFps->GetFlags() & ECVF_SetByMask;
+    LoadingMaxFpsHandle = LoadingMaxFps->OnChangedDelegate().AddRaw(this,&FExhibitStartupGate::LoadingFrameCapChanged);
+    bLoadingCapActive = bWritingLoadingCap = true;
+    if (PreviousMaxFpsPriority == ECVF_SetByConstructor)
+        LoadingMaxFps->Set(static_cast<float>(LoadingFpsLimit),ECVF_SetByConstructor);
+    else
+        LoadingMaxFps->ReplaceCurrentPriorityAndTag(static_cast<float>(LoadingFpsLimit));
+    bWritingLoadingCap = false;
+    ++LoadingCapApplies;
+    LoadingCapStatus = TEXT("active");
+    if (LoadingMaxFps->GetFloat() != LoadingFpsLimit || (LoadingMaxFps->GetFlags() & ECVF_SetByMask) != PreviousMaxFpsPriority)
+    {
+        bLoadingCapExternalChange = true;
+        RestoreLoadingFrameCap();
+    }
+}
+
+void FExhibitStartupGate::RestoreLoadingFrameCap()
+{
+    if (!bLoadingCapActive || !LoadingMaxFps) return;
+    const bool Owned = !bLoadingCapExternalChange && LoadingMaxFps->GetFloat() == LoadingFpsLimit &&
+        (LoadingMaxFps->GetFlags() & ECVF_SetByMask) == PreviousMaxFpsPriority;
+    LoadingMaxFps->OnChangedDelegate().Remove(LoadingMaxFpsHandle);
+    LoadingMaxFpsHandle.Reset();
+    bLoadingCapActive = false;
+    if (Owned)
+    {
+        if (PreviousMaxFpsPriority == ECVF_SetByConstructor)
+            LoadingMaxFps->Set(*PreviousMaxFps,ECVF_SetByConstructor);
+        else
+            LoadingMaxFps->ReplaceCurrentPriorityAndTag(*PreviousMaxFps);
+        ++LoadingCapRestores;
+        LoadingCapStatus = LoadingMaxFps->GetString() == PreviousMaxFps &&
+            (LoadingMaxFps->GetFlags() & ECVF_SetByMask) == PreviousMaxFpsPriority ? TEXT("restored") : TEXT("restore_changed");
+        if (LoadingCapStatus != TEXT("restored")) bLoadingCapExternalChange = true;
+    }
+    else
+    {
+        bLoadingCapExternalChange = true;
+        LoadingCapStatus = TEXT("external_change_preserved");
+    }
+}
+
 void FExhibitStartupGate::ReleaseInput()
 {
+    RestoreLoadingFrameCap();
     if (bInputGuard && Viewport.IsValid())
     {
         if (Player.IsValid() && Player->GetPawn()) ReleasedPawn = Player->GetPawn()->GetActorLocation();
@@ -307,6 +387,7 @@ void FExhibitStartupGate::ReleaseInput()
     if (CorridorView.IsValid()) CorridorView->bActive = false;
     CorridorView.Reset();
     Overlay.Reset();
+    LoadingText.Reset();
 }
 
 void FExhibitStartupGate::StopWatchingDraws()
@@ -324,6 +405,11 @@ void FExhibitStartupGate::End()
 void FExhibitStartupGate::WriteReport(const FString& Directory) const
 {
     if (!bRecording) return;
+    const IConsoleVariable* MaxFps = IConsoleManager::Get().FindConsoleVariable(TEXT("t.MaxFPS"));
+    const FString CapProof = FString::Printf(TEXT("requested_fps=%d\nstatus=%s\napplies=%d\nrestores=%d\nactive=%d\nexternal_change=%d\nprevious_value=%s\nprevious_priority=%u\nfinal_value=%s\nfinal_priority=%u\n"),
+        LoadingFpsLimit,*LoadingCapStatus,LoadingCapApplies,LoadingCapRestores,bLoadingCapActive?1:0,bLoadingCapExternalChange?1:0,
+        *PreviousMaxFps,PreviousMaxFpsPriority,MaxFps?*MaxFps->GetString():TEXT("missing"),MaxFps?(MaxFps->GetFlags() & ECVF_SetByMask):0);
+    FFileHelper::SaveStringToFile(CapProof,*FPaths::Combine(Directory,TEXT("startup_frame_cap.txt")),FFileHelper::EEncodingOptions::ForceUTF8WithoutBOM);
     FFileHelper::SaveStringToFile(Diagnostics,*FPaths::Combine(Directory,TEXT("startup.csv")),FFileHelper::EEncodingOptions::ForceUTF8WithoutBOM);
     const IConsoleVariable* Priority = IConsoleManager::Get().FindConsoleVariable(TEXT("r.PSOPrecaching.MinPriorityForActivePrecacheRequests"));
     const FString Summary = FString::Printf(TEXT("reason=%s\nstart_qpc=%llu\nopen_qpc=%llu\ninput_restored=%d\npso_min_priority=%d\ncorridor_qpc=%llu\nreturn_qpc=%llu\ncorridor_draws=%d\ncorridor_view_applications=%d\ncorridor_eye=%s\npawn_start=%s\npawn_released=%s\n"),

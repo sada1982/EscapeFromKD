@@ -1,0 +1,85 @@
+Escape From KD　職場作業の引継ぎ　2026年11月18日
+対象　UE 5.8.4／KDStage／Windows展示版
+パスは myProject.uproject のあるフォルダーを基準とする。
+
+■ 再開地点
+
+次は旧正式展示版「ExitCull」で、3F実習室から下り階段までの8地点を20周測り直す。前回は20周を完走したが、6周目に約0.8秒Editorが前景化して比較条件が変わった。FinalBeforeFormal の数値は採用せず、次は FinalBeforeFormal2 を使う。その後、同じ条件で新正式版20周、最後に診断版で敵10体・120秒を測る。
+
+職場でEditorを使用するため、ユーザーがこの3件を延期した。新正式版はビルド・Cook・パッケージ作成まで成功、実行検証は未着手。全階を歩いた診断版では初走の長い停止が減った。3F吹抜けと実習室では今も60 FPSのフレーム予算を超える。全区間での安定60 FPSは未達。
+
+■ 引き継ぐ版と差分
+
+・編集の基準は main、HEAD 0e62a642869a8ac46e6eff754aa0ebf788527a66。11/18の採用差分は作業ツリーの次の3ファイルにある。資料作成時点では未コミット。
+    Build/Exhibit/Config/Windows/WindowsEngine.ini
+    Build/Exhibit/Source/myProject/ExhibitStartupGate.cpp
+    Build/Exhibit/Source/myProject/ExhibitStartupGate.h
+・11/17までのステージ、操作、敵、接地影の状態は Documentation/Handoff_20261117_Workplace/EscapeFromKD_Handoff_20261117_Workplace.txt を参照。11/18は展示版の起動処理を変更した。正式ビルド作成時に、作業開始時とプロジェクト直下のContent/Config計367ファイルのハッシュが一致した。
+・展示画質は出力1920×1080、内部解像度54%、TSR履歴100%、Epic。影を落とす42灯はMegaLights、補助光19灯は従来方式。実習室12灯はVSMで机脚・キャスターの接地影を保つ。ゲーム中のFPS上限は0（無制限）。
+
+次の各 Windows/ から見た照合対象は myProject/Binaries/Win64/myProject-Win64-Shipping.exe。用途とSHA-256は次のとおり。
+  旧正式版／20周の対照　Saved/ExhibitBuild_20261117_ExitCull/Windows/
+    ec99cef10d90f3e3f7305ce059440284f763fd316f26221630492da2506cc5bf
+  新正式版／20周の検証　Saved/ExhibitBuild_20261118_AllPso/Windows/
+    a005a30dab4319d0c25e56c248f6890b064a193e0be87180490287f3a1c3ce82
+  診断版／敵10体の試験　Saved/Automation/OptimizeAll_20261118/Variants/FinalAfterProbe/Windows/
+    35e0f1ae4972fbadf9fa7794b9c6d3fe5b57865a1ed26647fcf036f394761f0e
+診断版の前後比較は同じクック済みコンテナを使用した。新正式版は現ソースから新規Cookした。旧正式版の作成元と現ソースには、前回から記録しているKDStageの保存情報・Editor視点の差がある。
+
+■ 採用した対策と代償
+
+旧版は高優先度のPSO（描画パイプラインの事前準備）を主に待ち、最長12秒で入力を解放していた。今回は全優先度の保留分、非同期ロード、描画の完了を確認してから開始する。入口・廊下を事前描画して元の視点へ戻す処理も維持した。画面に準備件数を表示し、PSOが残る間だけ30 FPSに制限する。元から上限が低い場合や、他の処理が上限を変更した場合はその指定を尊重する。
+
+診断版での新規展開時の操作開始は旧方式が約9～11秒、新方式が約51～55秒。全PSOを待つ条件同士では、ロード中の上限を無制限から30 FPSに変更すると平均79.13秒から53.06秒へ短縮した。職場PCで実測15の生成スレッドは既定のまま。更新後の診断版で、上限0、既存上限20、外部が同値30を再設定、準備中のウィンドウ終了の4ケースを確認した。
+
+■ 有効な実測
+
+職場PCはCore i7-12700H、RTX 3050 Laptop 4 GiB、RAM 31.75 GiB。最終診断8起動はAC給電、Editorを通常サイズで開いたまま背景に置き、Slate.AllowSlateToSleep=0。計測対象は独立デスクトップ上のShipping。判定はPresent開始間隔が1000/60 msを超えたフレーム数、P99（99パーセンタイル）、最大値で行った。
+
+3F実習室から2Fを経て1F出口に至る全階経路（28地点）の初周。AとBは前後の起動順を反転した独立比較。
+                    最大停止 前→後         P99 前→後          16.67 ms超過／総区間 前→後
+  A                    210.23→29.49 ms      16.44→15.77 ms       14/1538→ 9/1655
+  B                    376.83→25.69 ms      17.57→15.98 ms       19/1586→12/1667
+最長停止は3Fから2Fへ下りる階段の折返し後。変更後は経路走行中のCPU使用量も減った。個々の停止を起こしたPSO名は未特定。2～4周目の再訪でもP99はAで15.97→15.80 ms、Bで17.03→15.59 ms。旧版は再訪中もCPU競合が残っていた。
+
+14場面を止まって測った比較では、全体の超過数はAで117→150、Bで161→119（各16,772区間）と変化の向きが揃わなかった。変更後2巡目のP99は吹抜けを見下ろす場面で19.29～19.60 ms、実習室開始地点で18.18～18.45 ms。吹抜けは継続的なGPU負荷が最も重く、遅いフレームには待ち時間も残る。
+
+先行の敵10体・120秒試験では平均11.54 ms、P99 15.09 ms、超過16/10,397。既存の移動・モーション・射撃・被弾演出を含む。当時はEditor最大化・Slate=1だったため、最終条件での10体試験は別に残している。
+
+■ 今回は採用しなかった案
+
+・照明の範囲変更は接地影を含む126画像で確認し、候補5種を実測した。暗くなる箇所があり、速度向上も一貫しなかった。
+・廊下メッシュの21分割、椅子とPCの減面、PCだけの減面は、衝突を照合して比較した。P99・超過数の改善はなく、椅子には陰影の差も出た。
+・EditorのSlate休止はGPU占有を少し下げたが、ゲームのP99改善は再現しなかった。元の値0へ復元済み。
+・教室を切り出したLightmass試作は、PC背面・椅子・出入口の陰影差とUV警告が残り、画質判定で棄却した。ベイク方式の速度は未測定。
+
+■ 再開時の手順
+
+1. 測定を再開するときに、AC給電、PC/GPU・ドライバー、Editorの現在のPID・ウィンドウ・表示サイズを読み取り確認する。通常のUnreal MCPでPIE停止とSlate値を確認。ユーザーの入力先を奪わず、3回とも同じ表示条件で測る。別のPCで測った結果には機種と条件を明記し、そのPC内で旧版と新版を比較する。
+
+2. ランナーは Saved/Automation/OptimizeAll_20261118/run_final_validation.py。共通の呼び出し形式は下記。角括弧の箇所は実際のパス・値へ置換する。
+   python -B [ランナー] [内側のShipping EXE] [試験名] --mode [モード] --editor [現在のPID] --state [現在のidentityとoriginalを記録したJSON] --expected-window normal --condition-evidence [現在の表示条件・Slate読戻しJSON] [旧版のみ --baseline] --execute
+   --executeを省けば実行計画のみ表示する。旧PID・HWNDや過去の表示状態は再利用せず、監視用のstateと測定条件のevidenceをそれぞれ指定する。新規配布先とUserDirは試験ごとに生成する。ドライバーの共有キャッシュは前回も保持した。
+   stateの作成には editor_window_state.py の読取専用操作 inspect を使える。出力の identity と window をそれぞれ identity、original のキー名でUTF-8（BOMなし）のJSONへ保存する。evidenceの項目例は editor_session_normal.json を参照。
+
+3. 次の順で1件ずつ実行する。
+   ① FinalBeforeFormal2　旧正式版、formal-route、--baseline あり。3F実習室～下り階段の8地点×20周。
+   ② FinalAfterFormal　　新正式版、formal-route、同じ8地点×20周。新Cookでもexit_cullが enabled=1、permutation>=0、requested/completedとも正か確認する。
+   ③ FinalAfterStress10　 診断版、stress-ten。吹抜けで敵10体・120秒の実射撃／被弾、エフェクト数の推移、PSOスレッドCPUを確認する。
+   各回で正常終了・完走・給電・Editorの表示条件を確認する。前回の旧正式版走行はEditor前景化、別のロード試験はバッテリーへの切替で無効になっている。再試行には未使用の試験名を付ける。
+
+4. 有効な記録が揃ったら、同じフォルダーの final_comparison_analysis.py で順序AとBを別々に集計する。Bの旧版14場面は有効な FinalBeforeSurveyB2 を使う。正式版の前後2走はA/B共通の参照。初走・経路再訪それぞれのP99、超過数／総数、最大停止を比較し、敵10体は独立して判定する。結果を Optimization_20261118.txt と formal_package_proof.json に追記する。
+
+■ 資料と持ち出し範囲
+
+Documentation/WholeGamePerformance_20261118/
+  Optimization_20261118.txt　　　採用・棄却理由、機能試験、各測定の数値と無効理由
+  WholeGamePerformance_20261118.txt　変更前の全階・戦闘の負荷診断
+  Optimization_P99_Round2.png　　変更前後の場面別P99と60 FPS予算線
+  OptimizationEvidence.zip　　　計測スクリプト、集計データ、ビルド証跡、選定画像
+  archive_result.json　　　　　 ZIPのサイズ・SHA-256・照合結果
+
+Saved/ はGit管理外。別PCへ移る際、Gitから受け取る対象は基準コミットに加え、上記の正式変更3ファイルと11/18の資料。計測に使う場合は旧正式・新正式・診断版それぞれの Windows/ 一式と、診断版に隣接する proof.json も職場の保存先から用意する。証跡ZIPは実行ファイルやクック済み資産を含まない。ランナーは配布先へのハードリンクを使うため、各パッケージと FreshDeployments は同じ対応ボリュームに置く。
+
+職場と同じ監視を別PCで使うには、64ビットWindows Python、UE同梱のPresentMon 1.8、NVIDIA GPUとnvidia-smi.exeが必要。Saved/Automation/ 以下の OptimizeAll_20261118 のスクリプト、Exhibit42_20261116 のヘルパー、Route54_20261116/Telemetry/vidmm_sample.dll を元の相対配置で揃える。DLLは証跡ZIPに含まれない。PresentMonのインストール先は exhibit_telemetry.py の PM と照合する。
+再集計には results/ の各試験・監視・制御記録と、診断版の SourceSnapshot/ が必要。別PCでは証跡ZIPの variants/<版名>/source/ からスナップショットを復元し、解析用コピーの plan.json が指す旧PCの絶対パスを対応させる。各回の生の経路記録は metadata.json が指す一時フォルダーにある。移送する場合はその記録も回収する。
